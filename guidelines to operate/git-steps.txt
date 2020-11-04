@@ -1,0 +1,6 @@
+***please git pull every time before development***
+
+**git pull**
+1. git add .		(if you want to add new files/folders)  "." includes all the updates
+2. git commit -m "xxxxxx"	(comment on this update)
+3. git push
