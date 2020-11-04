@@ -1,0 +1,39 @@
+!slot <facilities:internal.'{"ref":["地點"]}'>;
+!intention <english>;
+
+<english>:<contact_pos>|
+    <lib_pos>|
+    <greeting>|
+    <cm_rm_pos>;
+//All grammar-event
+
+//All context grammar-event
+
+//All rules
+<how_to>:How (can I <contact> [to])|How to <contact>;
+<cmroom_細>:Lounge Room|細 com;
+<lib>:([the ]Library)|Lib|Libra|圖書館;
+<request_chi>:(我(想|[需]要)[知|知道|了解])|[話|講[畀|比|俾]]我知;
+<kec>:KEC|Kowloon East [Campus];
+<what_is>:What is;
+<contact>:connect|contact;
+<cmroom_大>:Common Room|大 com;
+<request_eng>:(I want to [ask|know])|Tell me [[more ]about];
+<where_beginning>:Where is;
+//All templates
+//All grammars
+//*C:How can I contact to KEC
+//*C:How can I contact KEC
+//*A:Kowloon East Campus  Office Hotline: \n37622000 \n
+<contact_pos>:<How_to> <KEC> [Office];
+//*C:where is library
+//*A:It's is on the 4th floor
+<lib_pos>:<where_beginning>(<Lib>)[of <KEC>];
+//*C:hihi
+//*C:hi
+//*A:hello
+<greeting>:hi[hi]|hello;
+//*C:Where is common room
+//*A:It's at 3/F of KEC Campus
+<cm_rm_pos>:<where_beginning>(<CMRoom_大>|<CMRoom_細>);
+//All context grammars
