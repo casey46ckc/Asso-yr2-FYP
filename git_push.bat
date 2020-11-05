@@ -1,4 +1,4 @@
-set /P message=Enter the commited message for pushing: 
+set /P message=Leave the commit message here: 
 git pull
 git add .
 git commit -m "%message%"
