@@ -1,0 +1,13 @@
+{
+	"data" : {
+		"userValidLibs" : [{
+			"config" : {
+				"domain" : "ST_USER",
+				"name" : "facilities"
+			},
+			"data" : "Discussion Room|Discussion rm|Discuss rm\nComputer Lab|Comp Lab\nStudent Common Room|Common Room|cm rm|大Com\nStudent Lounge|Lounge|細Com\nLibrary|libra|lib
+Study Room|Study rm"
+		}]
+	},
+	"data_type" : "config"
+}
