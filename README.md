@@ -40,8 +40,8 @@ Steps to communicate with the Spacebot
 Questions you may ask/ valid input messages
 1. hi/hello/bye     
 2. Tell me the contact of (KEC/Kowloon east campus/IEC/island east campus/fortress tower centre/ fortress tower center)?
-3. Where is the (library/lib/libra/common room/”k”大com/”vm2”細com/com rm/study room/discussion room/computer lab)?
-4. Which floor is (library/lib/libra/common room/”k”大com/”vm2”細com/com rm/study room/discussion room/computer lab)?
+3. Where is the (library/lib/libra/common room/大com/細com/com rm/study room/discussion room/computer lab)?
+4. Which floor is (library/lib/libra/common room/大com/細com/com rm/study room/discussion room/computer lab)?
 
 Remarks:
 **Punctuations are considered as skipper in Olami and they are not considered in processing, therefore, users are not necessary to add a “?”. The chatbot recognize it’s a question from the “wh” keywords.**
