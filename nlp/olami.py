@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 # for KEC
 dis_rm_str = ['discussion room','discussion rm','discuss rm']
 sty_rm_str = ['study room', 'study rm']
-cm_rm_str = ['student common room', 'common room', 'cm room', 'cm rm', 'student common rm', 'common rm','大com','大common']
+cm_rm_str = ['student common room', 'common room', 'cm room', 'cm rm', 'student common rm', 'common rm','大com','大common', 'com room', 'com rm']
 lounge_str = ['student lounge', 'lounge', '細com', '細common']
 comp_lab_str = ['computer lab', 'comp lab']
 lib_str = ['library', 'libra', 'lib']
@@ -23,7 +23,7 @@ lib_str = ['library', 'libra', 'lib']
 kec_str=['kowloon east campus','kec']
 cita_str=['clothing industry training authority', 'cita']
 iec_str=['island east campus', 'iec']
-ftc_str=['fortress tower centre','ftc']
+ftc_str=['fortress tower centre','fortress tower center','ftc']
 adc_unc_str=['admiralty centre & united centre', 'admiralty centre and united centre', 'adc and unc', 'adc & unc', 'adc&unc']
 
 # TODO: built objects by import .json instead of hard coding
@@ -123,15 +123,15 @@ class Olami:
                         if 'office' == slot['name']:
                             tmp_str = slot['value'].lower()
                             if tmp_str in kec_str:
-                                return f'The office hotine is {"3762 2000"}. Please contact them within their office hour:' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)", "0830 – 1630 (Sunday)"])
+                                return f'The office hotline is {"3762 2000"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)", "0830 – 1630 (Sunday)"])
                             elif tmp_str in cita_str:
-                                return f'The office hotine is {"3762 0110"}. Please contact them within their office hour:' + "\n".join(["0900 – 2000 (Weekdays)", "0900 – 1800 (Saturday)"])
+                                return f'The office hotline is {"3762 0110"}. Please contact them within their office hour:\n' + "\n".join(["0900 – 2000 (Weekdays)", "0900 – 1800 (Saturday)"])
                             elif tmp_str in iec_str:
-                                return f'The office hotine is {"3762 0033"}. Please contact them within their office hour:' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
+                                return f'The office hotline is {"3762 0033"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
                             elif tmp_str in ftc_str:
-                                return f'The office hotine is {"3762 0988"}. Please contact them within their office hour:' + "\n".join(["0830 – 1930 (Weekdays)"])
+                                return f'The office hotline is {"3762 0988"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)"])
                             elif tmp_str in adc_unc_str:
-                                return f'The office hotine is {"2910 7620"}. Please contact them within their office hour:' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
+                                return f'The office hotline is {"2910 7620"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
                             else:
                                 return 'Sorry. The contact of building office cannot be found. Please try again.'
         return 'Sorry. I cannot get your meaning. Can you ask in other manner?'
