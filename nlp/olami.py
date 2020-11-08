@@ -15,8 +15,8 @@ logger = logging.getLogger(__name__)
 # for KEC
 dis_rm_str = ['discussion room','discussion rm','discuss rm']
 sty_rm_str = ['study room', 'study rm']
-cm_rm_str = ['student common room', 'common room', 'cm rm', 'student common rm', 'common rm']
-lounge_str = ['大com', 'student lounge', 'lounge', '細com']
+cm_rm_str = ['student common room', 'common room', 'cm room', 'cm rm', 'student common rm', 'common rm','大com','大common']
+lounge_str = ['student lounge', 'lounge', '細com', '細common']
 comp_lab_str = ['computer lab', 'comp lab']
 lib_str = ['library', 'libra', 'lib']
 # for the buildings
@@ -99,7 +99,7 @@ class Olami:
                 modifier = nli_obj['semantic'][0]['modifier']
                 if len(modifier) > 0:
                     if 'greeting' in modifier:
-                        return desc['result'] + " " + type
+                        return desc['result']
                     elif 'closing' in modifier:
                         return "See you again!"
                     elif 'place' in modifier:
@@ -114,7 +114,7 @@ class Olami:
                             elif tmp_str in lib_str:
                                 return f"{slot['value'].lower()} is at the 4/F"
                             elif tmp_str in sty_rm_str:
-                                return f'There are {len(study_rm)} discussion rooms in KEC. They are ' + ','.join(study_rm)
+                                return f'There are {len(study_rm)} study rooms in KEC. They are ' + ','.join(study_rm)
                             else:
                                 return 'Sorry. The facilities cannot be found in KEC. Please try again.'
 
