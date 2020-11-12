@@ -1,3 +1,4 @@
+pipenv --rm
 pipenv install --three python-telegram-bot flask gunicorn requests
 start cmd /k pipenv run python main.py
 start cmd /k ngrok http 5000
