@@ -2,7 +2,7 @@ very first: (pipenv install --three python-telegram-bot flask gunicorn requests)
 1. pipenv run python main.py
 2. ngrok http 5000  --> https://api.telegram.org/bot{$token}/setWebhook?url={$webhook_url}
 
-https://api.telegram.org/bot1245594409:AAFrCtnQn6Och-qrTvaIzh_7W6hc8jF0iVE/setWebhook?url=https://d9d368e5a941.ngrok.io/hook
+https://api.telegram.org/bot1245594409:AAFrCtnQn6Och-qrTvaIzh_7W6hc8jF0iVE/setWebhook?url=https://196ebfb7e7a1.ngrok.io/hook
 
 ****Create a new file(any type) in terminal****
 type nul> XXXX.XX
@@ -10,3 +10,4 @@ type nul> XXXX.XX
 ****OLAMI****
 ac:casey46ckc
 pw:space2021
+
