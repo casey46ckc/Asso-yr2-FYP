@@ -30,7 +30,7 @@ start_message = []
 help_message = ['Where is <facility name in KEC>?', 'Which floor <facility name in KEC> is?', 'Tell me the contact of <block name of HKUSpace>?']
 
 # initial the reply keyboard from start
-reply_kb_start = ReplyKeyboardMarkup([['Where is the library?'],['Tell me the contact of KEC']])
+reply_kb_start = ReplyKeyboardMarkup([['Where is the library?'],['Tell me the contact of KEC']], one_time_keyboard=True)
 
 
 @app.route('/hook', methods=['POST'])
@@ -70,10 +70,11 @@ dispatcher = Dispatcher(bot, None)
 
 # Add handler for handling message, there are many kinds of message. For this handler, it particular handle text
 # message.
-dispatcher.add_handler(MessageHandler(Filters.text, reply_handler))
+
 dispatcher.add_handler(CommandHandler('start', start_handler))
 dispatcher.add_handler(CommandHandler('help', help_handler))
 dispatcher.add_error_handler(error_handler)
+dispatcher.add_handler(MessageHandler(Filters.text, reply_handler))
 
 if __name__ == "__main__":
     # Running server
