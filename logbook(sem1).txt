@@ -157,11 +157,13 @@
 26/11/2020:
 • research and find the way to apply our NLP modules to machine learning (we found that it is genuinely a challenge with respect to how we started the implementation of this chatbot)
 • analysis and take references with others' chatbot samples with machine learning approach implemented in the first place
+• recognize that there's exist a library called nltk which would be useful for nlp as it contain many predefined dictionary and function to tokenise the message
 • recognize that it may be necessary to rebuild a list of input data (or word vector list) from the predefined repository at the start of machine learning application, TensorFlow may need to be introduced to our fyp
 • recognize it might require a 24/7 server (not a test one) for machine learning, Heroku may need to be introduced into the application
 
 11th week:
 02/12/2020:
+• learn how to make use of nltk
 • learn how to handle the Heroku server and try to initialize one
 • learn how to use TensorFlow function to build the word vector list and do machine learning
 
