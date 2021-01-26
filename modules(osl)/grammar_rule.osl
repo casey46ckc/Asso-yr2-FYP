@@ -1,0 +1,21 @@
+!intention <grammar_rule>;
+
+<grammar_rule>:;
+//All grammar-event
+
+//All context grammar-event
+
+//All rules
+<personal_pronoun_end>:me|us|you|then|him|her|it;
+<is_are>:is|are|was|were|will be;
+<conjunction>:and|but|or|because|after|so;
+<preposition>:at|in|on|for|by|at|in|on|into|from;
+<personal_pronoun_begining>:I|We|You|They|He|She|It;
+<have_has>:have|had|has;
+<possessive_pronoun>:my|our|your|their|his|her|it;
+<article>:the;
+//All templates
+<verb_to_be:template>: [=verb,be=]$(verb) to $(be);
+<ask_be:template>: [=ask,be=]$(ask) $(be);
+//All grammars
+//All context grammars

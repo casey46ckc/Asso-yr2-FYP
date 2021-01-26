@@ -1,0 +1,23 @@
+!intention <greet>;
+!modifier <greet> : closing|greeting;
+
+<greet>:<closing>|
+    <greeting>;
+//All grammar-event
+
+//All context grammar-event
+
+//All rules
+<closing_words>:bye+|goodbye|see you|good (night|nite)|Have' 'a' 'nice' 'day;
+<greeting_words>:hi|hello;
+//All templates
+<verb_to_be:template>: [=verb,be=]$(verb) to $(be);
+<ask_be:template>: [=ask,be=]$(ask) $(be);
+//All grammars
+//*C:bye
+<closing>:<closing_words{@=closing}><?tail()>;
+//*C:Good morning
+//*A:Hi! Thank you for using spacebot
+//*A:Hello! Thank you for using spacebot
+<greeting>:<?head()>(<greeting_words>+|Good (morning|afternoon|evening))<{@=greeting}>;
+//All context grammars

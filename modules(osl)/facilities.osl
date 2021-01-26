@@ -1,0 +1,61 @@
+!slot <campus:internal.'{"ref":["地點"]}'>;
+!slot <office:internal.'{"ref":["地點"]}'>;
+!slot <facilities:internal.'{"ref":["地點"]}'>;
+!intention <facilities>;
+!modifier <facilities> : contact|place;
+!modifier <facilities> : contact|place;
+
+<facilities>:<contact_place2>|
+    <facilities_place_1>|
+    <facilities_place_3>|
+    <campus_contact>|
+    <facilities_place5>|
+    <facilities_place4>|
+    <fundamental_test>;
+//All grammar-event
+
+//All context grammar-event
+
+//All rules
+<cmroom_細>:Lounge Room|細 com|細 common|Lounge rm|細common|細com;
+<lib>:Library|Lib|Libra|圖書館;
+<iec>:Island East Campus|IEC;
+<kec>:KEC|Kowloon East Campus;
+<adc_unc>:(Admiralty Centre ('&'|and) United Centre)|(ADC (and|'&') UNC);
+<facilities_in_kec>:Discussion Room|Computer Lab|<CMRoom_大>|<CMRoom_細>|<Lib>|Study Room;
+<have_has>:have|had|has;
+<what_is>:What is;
+<ftc>:Fortress Tower Centre|FTC|Fortress Tower Center;
+<contact>:contact' '[detail|details|number];
+<cmroom_大>:Common Room|大 com|大common|cm rm|cm room|cmrm|com room|com rm;
+<request_chi>:(我(想|[需]要)[知|知道|了解])|[話|講[畀|比|俾]]我知;
+<article>:the;
+<campus_list>:<KEC>|<CITA>|<FTC>|<IEC>|<ADC_UNC>;
+<how_to_contact>:(How can I (get [<article>] <contact> of|[get [to]] <contact> to))|How to <contact>;
+<cita>:Clothing Industry Training Authority|CITA;
+<where_beginning>:Where is;
+<request_eng>:(I want to [ask|know])|Tell me [[more ]about];
+//All templates
+<ask_be:template>: [=ask,be=]$(ask) $(be);
+<verb_to_be:template>: [=verb,be=]$(verb) to $(be);
+//All grammars
+//*C:Tell me the contact of KEC
+<contact_place2>:<?head()><request_eng>[<article>]<contact>of<campus_list{office=$}><{@=contact}>[Office];
+//*C:where is the library
+//*C:where is the common room
+//*C:where is common room
+//*A:nice try
+<facilities_place_1>:<?head()><where_beginning>[<article>]<facilities_in_kec{facilities=$}><{@=place}>;
+//*C:where the library is
+//*C:Tell me where lib is
+<facilities_place_3>:[<request_eng>] (where|which floor) [<article>] <facilities_in_kec{facilities=$}><{@=place}> is;
+//*C:How can I contact to KEC
+//*C:How can I get contact to the IEC
+<campus_contact>:<?head()><How_to_contact>[<article>[Office of]]<campus_list{office=$}><{@=contact}>;
+//*C:Which floor cm rm belongs to
+<facilities_place5>:Which floor[<article>]<facilities_in_kec{facilities=$}><{@=place}>belongs to;
+//*C:which floor has lib
+<facilities_place4>:(Which floor)<have_has><facilities_in_kec{facilities=$}><{@=place}>;
+//*C:library
+<fundamental_test>:<facilities_in_kec{facilities=$}><{@=place}>;
+//All context grammars
