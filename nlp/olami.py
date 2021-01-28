@@ -141,7 +141,7 @@ class Olami:
                     pass
                 elif modifier == 'yn_igcse_replace_ielts':
                     pass
-            elif category == 'facility':
+            elif category == 'facilities':
                 if modifier == 'location_nospecific':
                     pass
                 elif modifier == 'openinghour_facility_nospecific':
@@ -215,7 +215,7 @@ class Olami:
                             pass
                         elif intent_category == "admin":
                             pass
-                        elif intent_category == "facility":
+                        elif intent_category == "facilities":
                             if 'place' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'facilities' == slot['name']:
@@ -248,7 +248,7 @@ class Olami:
                                         return 'Sorry. The contact of building office cannot be found. Please try again.'
                             elif 'location_nospecific' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]
-                                if 'facility' == slot['name']:
+                                if 'facilities' == slot['name']:
                                     tmp_str = slot['value'].lower()
                             elif 'campus_have_nospecific' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]
@@ -257,18 +257,18 @@ class Olami:
                             elif 'campus_have' in modifier:
                                 slots = nli_obj['semantic'][0]['slots']
                                 if len(slots) == 2:
-                                    if 'facility' == slots[0]['name']:
+                                    if 'facilities' == slots[0]['name']:
                                         tmp_str = slot[0]['value'].lower()
                                     if 'campus' == slots[1]['name']:
                                         tmp_str = slot[1]['value'].lower()
                             elif 'openinghour_facility_nospecific' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]
-                                if 'facility' == slot['name']:
+                                if 'facilities' == slot['name']:
                                     tmp_str = slot['value'].lower()
                             elif 'openinghour_facility' in modifier:
                                 slots = nli_obj['semantic'][0]['slots']
                                 if len(slots) == 2:
-                                    if 'facility' == slots[0]['name']:
+                                    if 'facilities' == slots[0]['name']:
                                         tmp_str = slot[0]['value'].lower()
                                     if 'campus' == slots[1]['name']:
                                         tmp_str = slot[1]['value'].lower()
@@ -277,7 +277,7 @@ class Olami:
                             elif 'yn_facility_open' in modifier:
                                 slots = nli_obj['semantic'][0]['slots']
                                 if len(slots) == 2:
-                                    if 'facility' == slots[0]['name']:
+                                    if 'facilities' == slots[0]['name']:
                                         tmp_str = slot[0]['value'].lower()
                                     if 'campus' == slots[1]['name']:
                                         tmp_str = slot[1]['value'].lower()
