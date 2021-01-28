@@ -212,6 +212,39 @@ class Olami:
                                 return 'Indeed. the associate programme is aimed to assist the students to promote their academic position to undergraduate level but not for profession purpose. Students are supposed to apply NON-JUPAS before they are graduated'
                             elif 'howto_webpage_university' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]                                
+                                if 'university' == slot['name']:
+                                    tmp_str = slot['value'].lower()
+                                    if tmp_str in cityu_str:
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                    elif tmp_str in hkbu_str:
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                    elif tmp_str in lu_str:
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                    elif tmp_str in cuhk_str:
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                    elif tmp_str in edu_str:
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                    elif tmp_str in polyu_str:
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                    elif tmp_str in hkust_str:
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                    elif tmp_str in hku_str:
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                    elif tmp_str in hsu_str:
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                    elif tmp_str in syu_str:
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                    elif tmp_str in hkou_str:
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                    else:
+                                        return 'Sorry. I do not have the non-JUPAS information of ' + slot['value'] + '. You may refer to the non-JUPAS information of universities as followed:\n' + '\n'.join(li_uandlink_str)
+                            elif 'howto_apply_university' in modifier:
+                                return "You can apply the non-jupas from any University's non-jupas page. The links are as followed:\n" + '\n'.join(li_uandlink_str)
+                            elif 'nonjupas_nospecific' in modifier:
+                                return 'Which university are you refering to?' + '\n'.join(li_u_str)
+                            elif 'howto_webpage_university' in modifier:
+                                if len(nli_obj['semantic'][0]['slots']) > 0:
+                                    slot = nli_obj['semantic'][0]['slots'][0]                                
                                     if 'university' == slot['name']:
                                         tmp_str = slot['value'].lower()
                                         if tmp_str in cityu_str:
@@ -238,99 +271,66 @@ class Olami:
                                             return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
                                         else:
                                             return 'Sorry. I do not have the non-JUPAS information of ' + slot['value'] + '. You may refer to the non-JUPAS information of universities as followed:\n' + '\n'.join(li_uandlink_str)
-                            elif 'howto_apply_university' in modifier:
-                                return "You can apply the non-jupas from any University's non-jupas page. The links are as followed:\n" + '\n'.join(li_uandlink_str)
-                            elif 'nonjupas_nospecific' in modifier:
-                                return 'Which university are you refering to?' + '\n'.join(li_u_str)
-                            elif 'howto_webpage_university' in modifier:
-                                if len(nli_obj['semantic'][0]['slots']) > 0:
-                                    slot = nli_obj['semantic'][0]['slots'][0]                                
-                                        if 'university' == slot['name']:
-                                            tmp_str = slot['value'].lower()
-                                            if tmp_str in cityu_str:
-                                                return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                            elif tmp_str in hkbu_str:
-                                                return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                            elif tmp_str in lu_str:
-                                                return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                            elif tmp_str in cuhk_str:
-                                                return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                            elif tmp_str in edu_str:
-                                                return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                            elif tmp_str in polyu_str:
-                                                return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                            elif tmp_str in hkust_str:
-                                                return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                            elif tmp_str in hku_str:
-                                                return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                            elif tmp_str in hsu_str:
-                                                return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                            elif tmp_str in syu_str:
-                                                return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                            elif tmp_str in hkou_str:
-                                                return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                            else:
-                                                return 'Sorry. I do not have the non-JUPAS information of ' + slot['value'] + '. You may refer to the non-JUPAS information of universities as followed:\n' + '\n'.join(li_uandlink_str)
                                 else:
                                     return 'Which programe and university you want to apply/ have applied?'
                             elif 'whenis_deadline' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]                                
-                                    if 'university' == slot['name']:
-                                        tmp_str = slot['value'].lower()
-                                        if tmp_str in cityu_str:
-                                            return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
-                                        elif tmp_str in hkbu_str:
-                                            return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
-                                        elif tmp_str in lu_str:
-                                            return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
-                                        elif tmp_str in cuhk_str:
-                                            return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
-                                        elif tmp_str in edu_str:
-                                            return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
-                                        elif tmp_str in polyu_str:
-                                            return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
-                                        elif tmp_str in hkust_str:
-                                            return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
-                                        elif tmp_str in hku_str:
-                                            return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
-                                        elif tmp_str in hsu_str:
-                                            return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
-                                        elif tmp_str in syu_str:
-                                            return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
-                                        elif tmp_str in hkou_str:
-                                            return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                if 'university' == slot['name']:
+                                    tmp_str = slot['value'].lower()
+                                    if tmp_str in cityu_str:
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                    elif tmp_str in hkbu_str:
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                    elif tmp_str in lu_str:
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                    elif tmp_str in cuhk_str:
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                    elif tmp_str in edu_str:
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                    elif tmp_str in polyu_str:
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                    elif tmp_str in hkust_str:
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                    elif tmp_str in hku_str:
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                    elif tmp_str in hsu_str:
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                    elif tmp_str in syu_str:
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                    elif tmp_str in hkou_str:
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
                             elif 'yn_num_referenceletter_matter' in modifier:
                                 return 'Each university and programme may vary. Which programe and university you want to apply/ have applied?'
                             elif 'whenis_start_publicexam' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]                                
-                                    if 'publicexam' == slot['name']:
-                                        tmp_str = slot['value'].lower()
-                                        if tmp_str in publicexam_str:
-                                            if tmp_str == publicexam_str[0]:
-                                                return 'You may refer to [HTTP] for more information.'
-                                            elif tmp_str == publicexam_str[1]:
-                                                return 'You may refer to [HTTP] for more information.'
-                                            elif tmp_str == publicexam_str[2]:
-                                                return 'You may refer to [HTTP] for more information.'
-                                            elif tmp_str == publicexam_str[3]:
-                                                return 'You may refer to [HTTP] for more information.'
-                                            elif tmp_str == publicexam_str[4]:
-                                                return 'You may refer to [HTTP] for more information.'
+                                if 'publicexam' == slot['name']:
+                                    tmp_str = slot['value'].lower()
+                                    if tmp_str in publicexam_str:
+                                        if tmp_str == publicexam_str[0]:
+                                            return 'You may refer to [HTTP] for more information.'
+                                        elif tmp_str == publicexam_str[1]:
+                                            return 'You may refer to [HTTP] for more information.'
+                                        elif tmp_str == publicexam_str[2]:
+                                            return 'You may refer to [HTTP] for more information.'
+                                        elif tmp_str == publicexam_str[3]:
+                                            return 'You may refer to [HTTP] for more information.'
+                                        elif tmp_str == publicexam_str[4]:
+                                            return 'You may refer to [HTTP] for more information.'
                             elif 'whencan_apply_publicexam' in modifier:
-                                 slot = nli_obj['semantic'][0]['slots'][0]                                
-                                    if 'publicexam' == slot['name']:
-                                        tmp_str = slot['value'].lower()
-                                        if tmp_str in publicexam_str:
-                                            if tmp_str == publicexam_str[0]:
-                                                return 'You can apply it before [DEADLINE] / at anytime. Please refer to [HTTP] for more information.'
-                                            elif tmp_str == publicexam_str[1]:
-                                                return 'You can apply it before [DEADLINE] / at anytime. Please refer to [HTTP] for more information.'
-                                            elif tmp_str == publicexam_str[2]:
-                                                return 'You can apply it before [DEADLINE] / at anytime. Please refer to [HTTP] for more information.'
-                                            elif tmp_str == publicexam_str[3]:
-                                                return 'You can apply it before [DEADLINE] / at anytime. Please refer to [HTTP] for more information.'
-                                            elif tmp_str == publicexam_str[4]:
-                                                return 'You can apply it before [DEADLINE] / at anytime. Please refer to [HTTP] for more information.'
+                                slot = nli_obj['semantic'][0]['slots'][0]                                
+                                if 'publicexam' == slot['name']:
+                                    tmp_str = slot['value'].lower()
+                                    if tmp_str in publicexam_str:
+                                        if tmp_str == publicexam_str[0]:
+                                            return 'You can apply it before [DEADLINE] / at anytime. Please refer to [HTTP] for more information.'
+                                        elif tmp_str == publicexam_str[1]:
+                                            return 'You can apply it before [DEADLINE] / at anytime. Please refer to [HTTP] for more information.'
+                                        elif tmp_str == publicexam_str[2]:
+                                            return 'You can apply it before [DEADLINE] / at anytime. Please refer to [HTTP] for more information.'
+                                        elif tmp_str == publicexam_str[3]:
+                                            return 'You can apply it before [DEADLINE] / at anytime. Please refer to [HTTP] for more information.'
+                                        elif tmp_str == publicexam_str[4]:
+                                            return 'You can apply it before [DEADLINE] / at anytime. Please refer to [HTTP] for more information.'
                             elif 'yn_igcse_replace_ielts' in modifier:
                                 return 'Each university and programme may vary. Which programe and university you want to apply/ have applied?'
                         elif intent_category == "finance":
