@@ -206,7 +206,7 @@ class Olami:
                         elif intent_category == "admin":
                             pass
                         elif intent_category == "facility":
-                            elif 'place' in modifier:
+                            if 'place' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'facilities' == slot['name']:
                                     tmp_str = slot['value'].lower()
@@ -248,9 +248,9 @@ class Olami:
                                 slots = nli_obj['semantic'][0]['slots']
                                 if len(slots) == 2:
                                     if 'facility' == slots[0]['name']:
-                                        tmp_str = slot[0]['value'].lower()
+                                        tmp_str = slots[0]['value'].lower()
                                     if 'campus' == slots[1]['name']:
-                                        tmp_str = slot[1]['value'].lower()
+                                        tmp_str = slots[1]['value'].lower()
                             elif 'openinghour_facility_nospecific' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'facility' == slot['name']:
@@ -259,18 +259,18 @@ class Olami:
                                 slots = nli_obj['semantic'][0]['slots']
                                 if len(slots) == 2:
                                     if 'facility' == slots[0]['name']:
-                                        tmp_str = slot[0]['value'].lower()
+                                        tmp_str = slots[0]['value'].lower()
                                     if 'campus' == slots[1]['name']:
-                                        tmp_str = slot[1]['value'].lower()
+                                        tmp_str = slots[1]['value'].lower()
                             elif 'yn_facility_open_nospecific' in modifier:
                                 pass
                             elif 'yn_facility_open' in modifier:
                                 slots = nli_obj['semantic'][0]['slots']
                                 if len(slots) == 2:
                                     if 'facility' == slots[0]['name']:
-                                        tmp_str = slot[0]['value'].lower()
+                                        tmp_str = slots[0]['value'].lower()
                                     if 'campus' == slots[1]['name']:
-                                        tmp_str = slot[1]['value'].lower()
+                                        tmp_str = slots[1]['value'].lower()
                         elif intent_category == "online":
                             pass                  
             return 'Sorry. I cannot get your meaning. Can you ask in other manner?'
