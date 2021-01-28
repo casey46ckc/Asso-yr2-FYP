@@ -205,7 +205,7 @@ class Olami:
                             pass
                         elif intent_category == "admin":
                             pass
-                        elif intent_category == "facility":
+                        elif intent_category == "facilities":
                             if 'place' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'facilities' == slot['name']:
