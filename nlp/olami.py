@@ -126,37 +126,35 @@ class Olami:
                             pass
                         elif intent_category == "facility":
                             elif 'place' in modifier:
-                            slot = nli_obj['semantic'][0]['slots'][0]
-
-                            if 'facilities' == slot['name']:
-                                tmp_str = slot['value'].lower()
-                                if tmp_str in dis_rm_str:
-                                    return f'There are {len(disrm)} discussion rooms in KEC. They are ' + ','.join(disrm)
-                                elif tmp_str in cm_rm_str or tmp_str in lounge_str or tmp_str in comp_lab_str:
-                                    return f"{slot['value'].lower()} is on the 3/F"
-                                elif tmp_str in lib_str:
-                                    return f"{slot['value'].lower()} is on the 4/F"
-                                elif tmp_str in sty_rm_str:
-                                    return f'There are {len(study_rm)} study rooms in KEC. They are ' + ','.join(study_rm)
-                                else:
-                                    return 'Sorry. The facilities cannot be found in KEC. Please try again.'
-
-                        elif 'contact' in modifier:
-                            slot = nli_obj['semantic'][0]['slots'][0]
-                            if 'office' == slot['name']:
-                                tmp_str = slot['value'].lower()
-                                if tmp_str in kec_str:
-                                    return f'The office hotline is {"3762 2000"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)", "0830 – 1630 (Sunday)"])
-                                elif tmp_str in cita_str:
-                                    return f'The office hotline is {"3762 0110"}. Please contact them within their office hour:\n' + "\n".join(["0900 – 2000 (Weekdays)", "0900 – 1800 (Saturday)"])
-                                elif tmp_str in iec_str:
-                                    return f'The office hotline is {"3762 0033"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
-                                elif tmp_str in ftc_str:
-                                    return f'The office hotline is {"3762 0988"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)"])
-                                elif tmp_str in adc_unc_str:
-                                    return f'The office hotline is {"2910 7620"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
-                                else:
-                                    return 'Sorry. The contact of building office cannot be found. Please try again.'
+                                slot = nli_obj['semantic'][0]['slots'][0]
+                                if 'facilities' == slot['name']:
+                                    tmp_str = slot['value'].lower()
+                                    if tmp_str in dis_rm_str:
+                                        return f'There are {len(disrm)} discussion rooms in KEC. They are ' + ','.join(disrm)
+                                    elif tmp_str in cm_rm_str or tmp_str in lounge_str or tmp_str in comp_lab_str:
+                                        return f"{slot['value'].lower()} is on the 3/F"
+                                    elif tmp_str in lib_str:
+                                        return f"{slot['value'].lower()} is on the 4/F"
+                                    elif tmp_str in sty_rm_str:
+                                        return f'There are {len(study_rm)} study rooms in KEC. They are ' + ','.join(study_rm)
+                                    else:
+                                        return 'Sorry. The facilities cannot be found in KEC. Please try again.'
+                            elif 'contact' in modifier:
+                                slot = nli_obj['semantic'][0]['slots'][0]
+                                if 'office' == slot['name']:
+                                    tmp_str = slot['value'].lower()
+                                    if tmp_str in kec_str:
+                                        return f'The office hotline is {"3762 2000"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)", "0830 – 1630 (Sunday)"])
+                                    elif tmp_str in cita_str:
+                                        return f'The office hotline is {"3762 0110"}. Please contact them within their office hour:\n' + "\n".join(["0900 – 2000 (Weekdays)", "0900 – 1800 (Saturday)"])
+                                    elif tmp_str in iec_str:
+                                        return f'The office hotline is {"3762 0033"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
+                                    elif tmp_str in ftc_str:
+                                        return f'The office hotline is {"3762 0988"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)"])
+                                    elif tmp_str in adc_unc_str:
+                                        return f'The office hotline is {"2910 7620"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
+                                    else:
+                                        return 'Sorry. The contact of building office cannot be found. Please try again.'
                         elif intent_category == "online":
                             
             
