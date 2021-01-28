@@ -12,29 +12,6 @@ config.read('config.ini')
 logger = logging.getLogger(__name__)
 
 # String for comparison
-# for granted UNIVERSITY, source from wikipedia
-li_u_str = ['1. City University of Hong Kong',
-            '2. Hong Kong Baptist University',
-            '3. Lingnan University',
-            '4. The Chinese University of Hong Kong',
-            '5. The Education University of Hong Kong',
-            '6. The Hong Kong Polytechnic University', 
-            '7. The Hong Kong University of Science and Technology',
-            '8. The University of Hong Kong',
-            '9. Hang Seng University of Hong Kong',
-            '10. Hong Kong Shue Yan University',
-            '11. The Open University of Hong Kong']
-li_uandlink_str = ['City University of Hong Kong:', '[HTTP]', 
-                    'Hong Kong Baptist University:', '[HTTP]', 
-                    'Lingnan University:', '[HTTP]',
-                    'The Chinese University of Hong Kong:', '[HTTP]',
-                    'The Education University of Hong Kong:', '[HTTP]', 
-                    'The Hong Kong Polytechnic University:', '[HTTP]', 
-                    'The Hong Kong University of Science and Technology:', '[HTTP]', 
-                    'The University of Hong Kong:', '[HTTP]', 
-                    'Hang Seng University of Hong Kong:', '[HTTP]', 
-                    'Hong Kong Shue Yan University:', '[HTTP]', 
-                    'The Open University of Hong Kong:', '[HTTP]']
 # UGC-funded
 cityu_str = ['city university of hong kong', 'city u', 'cityu']
 hkbu_str = ['hong kong baptist university', 'hkbu']
@@ -50,6 +27,59 @@ syu_str = ['hong kong shue yan university', 'shue yan', 'syu']
 hkou_str = ['the open university of hong kong', 'hkou', 'open u', 'hong kong metropolitan university', 'hkmu']
 # public exam
 publicexam_str = ['ielts', 'igcse', 'igcse english', 'igcse chinese', 'toefl']
+# nonjupas deadline
+cityu_deadline = ['Early round: 2020.11.15',
+                    'Main round: 2021.01.04']
+hkbu_deadline = ['Early round: 2020.11.30',
+                    'Main round: 2021.01.04',
+                    'Extended round: 2021.05.31']
+lu_deadline = ['Early round: 2020.12.07',
+                'Main round: 2021.05.17',
+                'Late round: 2021.07.30']
+cuhk_deadline = ['Early round: 2020.11.18',
+                    'Main round: 2021.02.18']
+edu_deadline = ['Main round: 2021.01.12',
+                    'Late round: 2021.05.12']
+polyu_deadline = ['Main round: 2021.02.08']
+hkust_deadline = ['Early round: 2020.11.20',
+                    'Main round: 2021.01.14']
+hku_deadline = ['Early round: 2020.11.15',
+                'Main round: 2021.01.04']
+# nonjupas admission link
+cityu_adm_link = 'https://www.admo.cityu.edu.hk/direct/'
+hkbu_adm_link = 'https://admissions.hkbu.edu.hk/en/'
+lu_adm_link = 'https://www.ln.edu.hk/admissions/ug/non-jupas/general-notes-to-applicants'
+cuhk_adm_link = 'http://admission.cuhk.edu.hk/non-jupas-senior/application-details.html'
+edu_adm_link = 'https://www.eduhk.hk/onlineappl/'
+polyu_adm_link = 'https://www38.polyu.edu.hk/eAdmission/index.do'
+hkust_adm_link = 'https://join.ust.hk/apply'
+hku_adm_link = 'https://aal.hku.hk/admissions/international/admissions-information'
+
+# for granted UNIVERSITY, source from wikipedia
+li_u_str = ['1. City University of Hong Kong',
+            '2. Hong Kong Baptist University',
+            '3. Lingnan University',
+            '4. The Chinese University of Hong Kong',
+            '5. The Education University of Hong Kong',
+            '6. The Hong Kong Polytechnic University', 
+            '7. The Hong Kong University of Science and Technology',
+            '8. The University of Hong Kong',
+            '9. Hang Seng University of Hong Kong',
+            '10. Hong Kong Shue Yan University',
+            '11. The Open University of Hong Kong']
+li_uandlink_str = ['City University of Hong Kong:', cityu_adm_link, 
+                    'Hong Kong Baptist University:', hkbu_adm_link, 
+                    'Lingnan University:', lu_adm_link,
+                    'The Chinese University of Hong Kong:', cuhk_adm_link,
+                    'The Education University of Hong Kong:', edu_adm_link, 
+                    'The Hong Kong Polytechnic University:', polyu_adm_link, 
+                    'The Hong Kong University of Science and Technology:', hkust_adm_link, 
+                    'The University of Hong Kong:', hku_adm_link, 
+                    'Hang Seng University of Hong Kong:', '[HTTP]', 
+                    'Hong Kong Shue Yan University:', '[HTTP]', 
+                    'The Open University of Hong Kong:', '[HTTP]']
+
+
 # for KEC
 dis_rm_str = ['discussion room', 'discussion rm', 'discuss rm']
 sty_rm_str = ['study room', 'study rm']
@@ -215,21 +245,21 @@ class Olami:
                                 if 'university' == slot['name']:
                                     tmp_str = slot['value'].lower()
                                     if tmp_str in cityu_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + cityu_adm_link
                                     elif tmp_str in hkbu_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + hkbu_adm_link
                                     elif tmp_str in lu_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + lu_adm_link
                                     elif tmp_str in cuhk_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + cuhk_adm_link
                                     elif tmp_str in edu_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + edu_adm_link
                                     elif tmp_str in polyu_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + polyu_adm_link
                                     elif tmp_str in hkust_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + hkust_adm_link
                                     elif tmp_str in hku_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + hku_adm_link
                                     elif tmp_str in hsu_str:
                                         return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
                                     elif tmp_str in syu_str:
@@ -248,21 +278,21 @@ class Olami:
                                     if 'university' == slot['name']:
                                         tmp_str = slot['value'].lower()
                                         if tmp_str in cityu_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + cityu_adm_link
                                         elif tmp_str in hkbu_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + hkbu_adm_link
                                         elif tmp_str in lu_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + lu_adm_link
                                         elif tmp_str in cuhk_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + cuhk_adm_link
                                         elif tmp_str in edu_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + edu_adm_link
                                         elif tmp_str in polyu_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + polyu_adm_link
                                         elif tmp_str in hkust_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + hkust_adm_link
                                         elif tmp_str in hku_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + hku_adm_link
                                         elif tmp_str in hsu_str:
                                             return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
                                         elif tmp_str in syu_str:
@@ -278,27 +308,27 @@ class Olami:
                                 if 'university' == slot['name']:
                                     tmp_str = slot['value'].lower()
                                     if tmp_str in cityu_str:
-                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\n'.join(cityu_deadline) + '\nYou may refer to the following link for more details:\n' + cityu_adm_link
                                     elif tmp_str in hkbu_str:
-                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\n'.join(hkbu_deadline) + '\nYou may refer to the following link for more details:\n' + hkbu_adm_link
                                     elif tmp_str in lu_str:
-                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\n'.join(lu_deadline) + '\nYou may refer to the following link for more details:\n' + lu_adm_link
                                     elif tmp_str in cuhk_str:
-                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\n'.join(cuhk_deadline) + '\nYou may refer to the following link for more details:\n' + cuhk_adm_link
                                     elif tmp_str in edu_str:
-                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\n'.join(edu_deadline) + '\nYou may refer to the following link for more details:\n' + edu_adm_link
                                     elif tmp_str in polyu_str:
-                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\n'.join(polyu_deadline) + '\nYou may refer to the following link for more details:\n' + polyu_adm_link
                                     elif tmp_str in hkust_str:
-                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\n'.join(hkust_deadline) + '\nYou may refer to the following link for more details:\n' + hkust_adm_link
                                     elif tmp_str in hku_str:
-                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\n'.join(hku_deadline) + '\nYou may refer to the following link for more details:\n' + hku_adm_link
                                     elif tmp_str in hsu_str:
-                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\nYou may refer to the following link for more details:\n[HTTP]'
                                     elif tmp_str in syu_str:
-                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\nYou may refer to the following link for more details:\n[HTTP]'
                                     elif tmp_str in hkou_str:
-                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is on [DEADLINE]. You may refer to the following link for more details:\n[HTTP]'
+                                        return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\nYou may refer to the following link for more details:\n[HTTP]'
                             elif 'yn_num_referenceletter_matter' in modifier:
                                 return 'Each university and programme may vary. Which programe and university you want to apply/ have applied?'
                             elif 'whenis_start_publicexam' in modifier:
