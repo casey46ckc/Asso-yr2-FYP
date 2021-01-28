@@ -212,8 +212,12 @@ class Olami:
                         if intent_category == "greet":
                             if 'greeting' in modifier:
                                 return desc['result']
+                            elif 'help' in modifier:
+                                return desc['result']
+                            elif 'guideline' in modifier:
+                                return desc['result']    
                             elif 'closing' in modifier:
-                                return "See you again!"
+                                return "See you again!Thank you for using spacebot"    
                         elif intent_category == "nonjupas":
                             if 'whatis' in modifier:
                                 return 'Apart from getting a place into universities through JUPAS, students may consider applying post-secondary programmes not covered by JUPAS. There is a lot of information regarding non-JUPAS admissions. Gather your information in advance and plan ahead.'
