@@ -137,6 +137,7 @@ class Olami:
                 elif modifier == 'openinghour_facility_nospecific':
                     pass
                 elif  modifier == 'yn_facility_open_nospecific':
+                    pass
 
         intent_category = nli_obj['type']
         desc = nli_obj['desc_obj']
