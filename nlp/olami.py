@@ -12,6 +12,20 @@ config.read('config.ini')
 logger = logging.getLogger(__name__)
 
 # String for comparison
+# for granted UNIVERSITY, source from wikipedia
+# UGC-funded
+cityu_str = ['City University of Hong Kong', 'City U', 'CityU']
+hkbu_str = ['Hong Kong Baptist University', 'HKBU']
+lu_str = ['Lingnan University', 'LU', 'LingU', 'Ling U']
+cuhk_str = [ 'The Chinese University of Hong Kong', 'CUHK']
+edu_str = [ 'The Education University of Hong Kong', 'EdU', 'Ed U']
+polyu_str = [ 'The Hong Kong Polytechnic University', 'PolyU', 'Poly U']
+hkust_str = [ 'The Hong Kong University of Science and Technology', 'HKUST', 'UST']
+hku_str = [ 'The University of Hong Kong', 'HKU']
+# Self-funded
+hsu_str = [ 'Hang Seng University of Hong Kong', 'Hang Seng U', 'HSU']
+syu_str = [ 'Hong Kong Shue Yan University', 'Shue Yan', 'SYU']
+hkou = [ 'The Open University of Hong Kong', 'HKOU', 'Open U']
 # for KEC
 dis_rm_str = ['discussion room','discussion rm','discuss rm']
 sty_rm_str = ['study room', 'study rm']
@@ -91,48 +105,62 @@ class Olami:
 
 
     def intent_detection(self, nli_obj):
-        type = nli_obj['type']
+        intent_category = nli_obj['type']
         desc = nli_obj['desc_obj']
         print(nli_obj)
-        if 'semantic' in nli_obj:
-            if 'modifier' in nli_obj['semantic'][0]:
-                modifier = nli_obj['semantic'][0]['modifier']
-                if len(modifier) > 0:
-                    if 'greeting' in modifier:
-                        return desc['result']
-                    elif 'closing' in modifier:
-                        return "See you again!"
-                    elif 'place' in modifier:
-                        slot = nli_obj['semantic'][0]['slots'][0]
+        if len(intent_category) > 0:
+            if 'semantic' in nli_obj:
+                if 'modifier' in nli_obj['semantic'][0]:
+                    modifier = nli_obj['semantic'][0]['modifier']
+                    if len(modifier) > 0:
+                        if intent_category == "greet":
+                            if 'greeting' in modifier:
+                                return desc['result']
+                            elif 'closing' in modifier:
+                                return "See you again!"
+                        elif intent_category == "nonjupas":
+                            pass
+                        elif intent_category == "finance":
+                            pass
+                        elif intent_category == "admin":
+                            pass
+                        elif intent_category == "facility":
+                            elif 'place' in modifier:
+                            slot = nli_obj['semantic'][0]['slots'][0]
 
-                        if 'facilities' == slot['name']:
-                            tmp_str = slot['value'].lower()
-                            if tmp_str in dis_rm_str:
-                                return f'There are {len(disrm)} discussion rooms in KEC. They are ' + ','.join(disrm)
-                            elif tmp_str in cm_rm_str or tmp_str in lounge_str or tmp_str in comp_lab_str:
-                                return f"{slot['value'].lower()} is on the 3/F"
-                            elif tmp_str in lib_str:
-                                return f"{slot['value'].lower()} is on the 4/F"
-                            elif tmp_str in sty_rm_str:
-                                return f'There are {len(study_rm)} study rooms in KEC. They are ' + ','.join(study_rm)
-                            else:
-                                return 'Sorry. The facilities cannot be found in KEC. Please try again.'
+                            if 'facilities' == slot['name']:
+                                tmp_str = slot['value'].lower()
+                                if tmp_str in dis_rm_str:
+                                    return f'There are {len(disrm)} discussion rooms in KEC. They are ' + ','.join(disrm)
+                                elif tmp_str in cm_rm_str or tmp_str in lounge_str or tmp_str in comp_lab_str:
+                                    return f"{slot['value'].lower()} is on the 3/F"
+                                elif tmp_str in lib_str:
+                                    return f"{slot['value'].lower()} is on the 4/F"
+                                elif tmp_str in sty_rm_str:
+                                    return f'There are {len(study_rm)} study rooms in KEC. They are ' + ','.join(study_rm)
+                                else:
+                                    return 'Sorry. The facilities cannot be found in KEC. Please try again.'
 
-                    elif 'contact' in modifier:
-                        slot = nli_obj['semantic'][0]['slots'][0]
-                        if 'office' == slot['name']:
-                            tmp_str = slot['value'].lower()
-                            if tmp_str in kec_str:
-                                return f'The office hotline is {"3762 2000"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)", "0830 – 1630 (Sunday)"])
-                            elif tmp_str in cita_str:
-                                return f'The office hotline is {"3762 0110"}. Please contact them within their office hour:\n' + "\n".join(["0900 – 2000 (Weekdays)", "0900 – 1800 (Saturday)"])
-                            elif tmp_str in iec_str:
-                                return f'The office hotline is {"3762 0033"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
-                            elif tmp_str in ftc_str:
-                                return f'The office hotline is {"3762 0988"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)"])
-                            elif tmp_str in adc_unc_str:
-                                return f'The office hotline is {"2910 7620"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
-                            else:
-                                return 'Sorry. The contact of building office cannot be found. Please try again.'
-        return 'Sorry. I cannot get your meaning. Can you ask in other manner?'
+                        elif 'contact' in modifier:
+                            slot = nli_obj['semantic'][0]['slots'][0]
+                            if 'office' == slot['name']:
+                                tmp_str = slot['value'].lower()
+                                if tmp_str in kec_str:
+                                    return f'The office hotline is {"3762 2000"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)", "0830 – 1630 (Sunday)"])
+                                elif tmp_str in cita_str:
+                                    return f'The office hotline is {"3762 0110"}. Please contact them within their office hour:\n' + "\n".join(["0900 – 2000 (Weekdays)", "0900 – 1800 (Saturday)"])
+                                elif tmp_str in iec_str:
+                                    return f'The office hotline is {"3762 0033"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
+                                elif tmp_str in ftc_str:
+                                    return f'The office hotline is {"3762 0988"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)"])
+                                elif tmp_str in adc_unc_str:
+                                    return f'The office hotline is {"2910 7620"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
+                                else:
+                                    return 'Sorry. The contact of building office cannot be found. Please try again.'
+                        elif intent_category == "online":
+                            
+            
+                        
+                        
+            return 'Sorry. I cannot get your meaning. Can you ask in other manner?'
         
