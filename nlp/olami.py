@@ -105,6 +105,39 @@ class Olami:
 
 
     def intent_detection(self, nli_obj):
+        def handle_selection_category(category, modifier):
+            if category == 'nonjupas':
+                if modifier == 'whenis_open_nospecific':
+                    pass
+                elif modifier == 'whenis_deadline_nospecific':
+                    pass
+                elif modifier == 'what_toprepare_general':
+                    pass
+                elif modifier == 'yn_apply_year1':
+                    pass
+                elif modifier == 'whatis_requirement_nospecific':
+                    pass
+                elif modifier == 'action_latetosubmit':
+                    pass
+                elif modifier == 'yn_essential_referenceletter':
+                    pass
+                elif modifier == 'howto_webpage_university':
+                    pass
+                elif modifier == 'nonjupas_nospecific':
+                    pass
+                elif modifier == 'whenis_deadline_nospecific':
+                    pass
+                elif modifier == 'yn_num_referenceletter_matter':
+                    pass
+                elif modifier == 'yn_igcse_replace_ielts':
+                    pass
+            elif category == 'facility':
+                if modifier == 'location_nospecific': 
+                    pass
+                elif modifier == 'openinghour_facility_nospecific':
+                    pass
+                elif  modifier == 'yn_facility_open_nospecific':
+
         intent_category = nli_obj['type']
         desc = nli_obj['desc_obj']
         print(nli_obj)
@@ -202,6 +235,41 @@ class Olami:
                                         return f'The office hotline is {"2910 7620"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
                                     else:
                                         return 'Sorry. The contact of building office cannot be found. Please try again.'
+                            elif 'location_nospecific' in modifier:
+                                slot = nli_obj['semantic'][0]['slots'][0]
+                                if 'facility' == slot['name']:
+                                    tmp_str = slot['value'].lower()
+                            elif 'campus_have_nospecific' in modifier:
+                                slot = nli_obj['semantic'][0]['slots'][0]
+                                if 'campus' == slot['name']:
+                                    tmp_str = slot['value'].lower()
+                            elif 'campus_have' in modifier:
+                                slots = nli_obj['semantic'][0]['slots']
+                                if len(slots) == 2:
+                                    if 'facility' == slots[0]['name']:
+                                        tmp_str = slot[0]['value'].lower()
+                                    if 'campus' == slots[1]['name']:
+                                        tmp_str = slot[1]['value'].lower()
+                            elif 'openinghour_facility_nospecific' in modifier:
+                                slot = nli_obj['semantic'][0]['slots'][0]
+                                if 'facility' == slot['name']:
+                                    tmp_str = slot['value'].lower()
+                            elif 'openinghour_facility' in modifier:
+                                slots = nli_obj['semantic'][0]['slots']
+                                if len(slots) == 2:
+                                    if 'facility' == slots[0]['name']:
+                                        tmp_str = slot[0]['value'].lower()
+                                    if 'campus' == slots[1]['name']:
+                                        tmp_str = slot[1]['value'].lower()
+                            elif 'yn_facility_open_nospecific' in modifier:
+                                pass
+                            elif 'yn_facility_open' in modifier:
+                                slots = nli_obj['semantic'][0]['slots']
+                                if len(slots) == 2:
+                                    if 'facility' == slots[0]['name']:
+                                        tmp_str = slot[0]['value'].lower()
+                                    if 'campus' == slots[1]['name']:
+                                        tmp_str = slot[1]['value'].lower()
                         elif intent_category == "online":
                             pass                  
             return 'Sorry. I cannot get your meaning. Can you ask in other manner?'
