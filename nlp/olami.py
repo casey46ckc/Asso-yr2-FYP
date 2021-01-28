@@ -119,7 +119,54 @@ class Olami:
                             elif 'closing' in modifier:
                                 return "See you again!"
                         elif intent_category == "nonjupas":
-                            pass
+                            if 'whatis' in modifier:
+                                return 'Apart from getting a place into universities through JUPAS, students may consider applying post-secondary programmes not covered by JUPAS. There is a lot of information regarding non-JUPAS admissions. Gather your information in advance and plan ahead.'
+                            elif 'whenis_open_nospecific' in modifier:
+                                return 'You can apply non-jupas application once it is open. Each university may vary.'
+                            elif 'whenis_deadline_nospecific' in modifier:
+                                slot = nli_obj['semantic'][0]['slots'][0]
+                                if 'university' == slot['name']:
+                                    tmp_str = slot['value'].lower()
+                            elif 'what_toprepare_general' in modifier:
+                                pass
+                            elif 'yn_apply_year1' in modifier:
+                                pass
+                            elif 'schoolsupport_nospecific' in modifier:
+                                pass
+                            elif 'whatis_requirement_nospecific' in modifier:
+                                pass
+                            elif 'yn_apply_morethan1' in modifier:
+                                pass
+                            elif 'action_latetosubmit' in modifier:
+                                pass
+                            elif 'yn_essential_referenceletter' in modifier:
+                                pass
+                            elif 'yn_essential_apply_year2' in modifier:
+                                pass
+                            elif 'howto_webpage_university' in modifier:
+                                slot = nli_obj['semantic'][0]['slots'][0]
+                                if 'university' == slot['name']:
+                                    tmp_str = slot['value'].lower()
+                            elif 'howto_apply_university' in modifier:
+                                pass
+                            elif 'nonjupas_nospecific' in modifier:
+                                pass
+                            elif 'howto_webpage_university' in modifier:
+                                pass
+                            elif 'whenis_deadline' in modifier:
+                                pass
+                            elif 'howto_webpage_university' in modifier:
+                                pass
+                            elif 'whenis_deadline' in modifier:
+                                pass
+                            elif 'yn_num_referenceletter_matter' in modifier:
+                                pass
+                            elif 'whenis_start_publicexam' in modifier:
+                                pass
+                            elif 'whencan_apply_publicexam' in modifier:
+                                pass
+                            elif 'yn_igcse_replace_ielts' in modifier:
+                                pass
                         elif intent_category == "finance":
                             pass
                         elif intent_category == "admin":
@@ -156,9 +203,6 @@ class Olami:
                                     else:
                                         return 'Sorry. The contact of building office cannot be found. Please try again.'
                         elif intent_category == "online":
-                            
-            
-                        
-                        
+                            pass                  
             return 'Sorry. I cannot get your meaning. Can you ask in other manner?'
         
