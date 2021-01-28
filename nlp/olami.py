@@ -17,36 +17,42 @@ logger = logging.getLogger(__name__)
 cityu_str = ['City University of Hong Kong', 'City U', 'CityU']
 hkbu_str = ['Hong Kong Baptist University', 'HKBU']
 lu_str = ['Lingnan University', 'LU', 'LingU', 'Ling U']
-cuhk_str = [ 'The Chinese University of Hong Kong', 'CUHK']
-edu_str = [ 'The Education University of Hong Kong', 'EdU', 'Ed U']
-polyu_str = [ 'The Hong Kong Polytechnic University', 'PolyU', 'Poly U']
-hkust_str = [ 'The Hong Kong University of Science and Technology', 'HKUST', 'UST']
-hku_str = [ 'The University of Hong Kong', 'HKU']
+cuhk_str = ['The Chinese University of Hong Kong', 'CUHK']
+edu_str = ['The Education University of Hong Kong', 'EdU', 'Ed U']
+polyu_str = ['The Hong Kong Polytechnic University', 'PolyU', 'Poly U']
+hkust_str = [
+    'The Hong Kong University of Science and Technology', 'HKUST', 'UST']
+hku_str = ['The University of Hong Kong', 'HKU']
 # Self-funded
-hsu_str = [ 'Hang Seng University of Hong Kong', 'Hang Seng U', 'HSU']
-syu_str = [ 'Hong Kong Shue Yan University', 'Shue Yan', 'SYU']
-hkou = [ 'The Open University of Hong Kong', 'HKOU', 'Open U']
+hsu_str = ['Hang Seng University of Hong Kong', 'Hang Seng U', 'HSU']
+syu_str = ['Hong Kong Shue Yan University', 'Shue Yan', 'SYU']
+hkou = ['The Open University of Hong Kong', 'HKOU', 'Open U']
 # for KEC
-dis_rm_str = ['discussion room','discussion rm','discuss rm']
+dis_rm_str = ['discussion room', 'discussion rm', 'discuss rm']
 sty_rm_str = ['study room', 'study rm']
-cm_rm_str = ['student common room', 'common room', 'cm room', 'cm rm', 'student common rm', 'common rm','大com','大common', 'com room', 'com rm']
+cm_rm_str = ['student common room', 'common room', 'cm room', 'cm rm',
+             'student common rm', 'common rm', '大com', '大common', 'com room', 'com rm']
 lounge_str = ['student lounge', 'lounge', '細com', '細common']
 comp_lab_str = ['computer lab', 'comp lab']
 lib_str = ['library', 'libra', 'lib']
 # for the buildings
-kec_str=['kowloon east campus','kec']
-cita_str=['clothing industry training authority', 'cita']
-iec_str=['island east campus', 'iec']
-ftc_str=['fortress tower centre','fortress tower center','ftc']
-adc_unc_str=['admiralty centre & united centre', 'admiralty centre and united centre', 'adc and unc', 'adc & unc', 'adc&unc']
+kec_str = ['kowloon east campus', 'kec']
+cita_str = ['clothing industry training authority', 'cita']
+iec_str = ['island east campus', 'iec']
+ftc_str = ['fortress tower centre', 'fortress tower center', 'ftc']
+adc_unc_str = ['admiralty centre & united centre',
+               'admiralty centre and united centre', 'adc and unc', 'adc & unc', 'adc&unc']
 
 # TODO: built objects by import .json instead of hard coding
+
+
 class Building:
     def __init__(self, str_list: list, open_hour: list, close_hour: list, rooms_list: 'Room'):
         self.str_list = str_list
         self.open_hour = open_hour
         self.close_hour = close_hour
         self.contacts = contacts
+
 
 class Room:
     def __init__(self, str_list: list, open_hour: list, close_hour: list, purpose: 'String'):
@@ -55,11 +61,13 @@ class Room:
         self.close_hour = close_hour
         self.purpose = purpose
 
+
 # Discussion room
-disrm = ['KEC201','KEC202','KEC203','KEC204']
+disrm = ['KEC201', 'KEC202', 'KEC203', 'KEC204']
 
 # Study room
 study_rm = ['KEC403', 'KEC603', 'KEC610', 'KEC708']
+
 
 class NliStatusError(Exception):
     """The NLI result status is not 'ok'"""
@@ -74,11 +82,13 @@ class Olami:
         self.input_type = input_type
 
     def nli(self, text, cusid=None):
-        response = requests.post(self.URL, params=self._gen_parameters('nli', text, cusid))
+        response = requests.post(
+            self.URL, params=self._gen_parameters('nli', text, cusid))
         response.raise_for_status()
         response_json = response.json()
         if response_json['status'] != 'ok':
-            raise NliStatusError("NLI responded status != 'ok': {}".format(response_json['status']))
+            raise NliStatusError(
+                "NLI responded status != 'ok': {}".format(response_json['status']))
         else:
             nli_obj = response_json['data']['nli'][0]
             return self.intent_detection(nli_obj)
@@ -96,13 +106,13 @@ class Olami:
 
     def _gen_sign(self, api, timestamp_ms):
         data = self.app_secret + 'api=' + api + 'appkey=' + self.app_key + 'timestamp=' + \
-               str(timestamp_ms) + self.app_secret
+            str(timestamp_ms) + self.app_secret
         return md5(data.encode('ascii')).hexdigest()
 
     def _gen_rq(self, text):
-        obj = {'data_type': 'stt', 'data': {'input_type': self.input_type, 'text': text}}
+        obj = {'data_type': 'stt', 'data': {
+            'input_type': self.input_type, 'text': text}}
         return json.dumps(obj)
-
 
     def intent_detection(self, nli_obj):
         def handle_selection_category(category, modifier):
@@ -132,11 +142,11 @@ class Olami:
                 elif modifier == 'yn_igcse_replace_ielts':
                     pass
             elif category == 'facility':
-                if modifier == 'location_nospecific': 
+                if modifier == 'location_nospecific':
                     pass
                 elif modifier == 'openinghour_facility_nospecific':
                     pass
-                elif  modifier == 'yn_facility_open_nospecific':
+                elif modifier == 'yn_facility_open_nospecific':
                     pass
 
         intent_category = nli_obj['type']
@@ -205,7 +215,7 @@ class Olami:
                             pass
                         elif intent_category == "admin":
                             pass
-                        elif intent_category == "facilities":
+                        elif intent_category == "facility":
                             if 'place' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'facilities' == slot['name']:
@@ -248,9 +258,9 @@ class Olami:
                                 slots = nli_obj['semantic'][0]['slots']
                                 if len(slots) == 2:
                                     if 'facility' == slots[0]['name']:
-                                        tmp_str = slots[0]['value'].lower()
+                                        tmp_str = slot[0]['value'].lower()
                                     if 'campus' == slots[1]['name']:
-                                        tmp_str = slots[1]['value'].lower()
+                                        tmp_str = slot[1]['value'].lower()
                             elif 'openinghour_facility_nospecific' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'facility' == slot['name']:
@@ -259,19 +269,18 @@ class Olami:
                                 slots = nli_obj['semantic'][0]['slots']
                                 if len(slots) == 2:
                                     if 'facility' == slots[0]['name']:
-                                        tmp_str = slots[0]['value'].lower()
+                                        tmp_str = slot[0]['value'].lower()
                                     if 'campus' == slots[1]['name']:
-                                        tmp_str = slots[1]['value'].lower()
+                                        tmp_str = slot[1]['value'].lower()
                             elif 'yn_facility_open_nospecific' in modifier:
                                 pass
                             elif 'yn_facility_open' in modifier:
                                 slots = nli_obj['semantic'][0]['slots']
                                 if len(slots) == 2:
                                     if 'facility' == slots[0]['name']:
-                                        tmp_str = slots[0]['value'].lower()
+                                        tmp_str = slot[0]['value'].lower()
                                     if 'campus' == slots[1]['name']:
-                                        tmp_str = slots[1]['value'].lower()
+                                        tmp_str = slot[1]['value'].lower()
                         elif intent_category == "online":
-                            pass                  
+                            pass
             return 'Sorry. I cannot get your meaning. Can you ask in other manner?'
-        
