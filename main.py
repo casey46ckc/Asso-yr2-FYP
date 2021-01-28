@@ -32,6 +32,8 @@ help_message = ['Where is <facility name in KEC>?', 'Which floor <facility name 
 # initial the reply keyboard from start
 reply_kb_start = ReplyKeyboardMarkup([['Where is the library?'],['Tell me the contact of KEC']], one_time_keyboard=True)
 
+# dict of information for enquiry
+# enquiryInfo = {'status':'clr', 'nli_obj':}
 
 @app.route('/hook', methods=['POST'])
 def webhook_handler():
