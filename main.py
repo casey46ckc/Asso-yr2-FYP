@@ -30,7 +30,8 @@ start_message = []
 help_message = ['Where is <facility name in KEC>?', 'Which floor <facility name in KEC> is?', 'Tell me the contact of <block name of HKUSpace>?']
 
 # initial the reply keyboard from start
-reply_kb_start = ReplyKeyboardMarkup([['Where is the library?'],['Tell me the contact of KEC']], one_time_keyboard=True)
+reply_kb_start = ReplyKeyboardMarkup([['Help'],['Guideline']], one_time_keyboard=True)
+# reply_kb_example = ReplyKeyboardMarkup([['Where is the library?'],['Tell me the contact of KEC']], one_time_keyboard=True)
 
 # dict of information for enquiry
 # enquiryInfo = {'status':'clr', 'nli_obj':}
