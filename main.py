@@ -45,7 +45,7 @@ def webhook_handler():
         dispatcher.process_update(update)
     return 'ok'
 
-
+# TODO: handle enquiryinfo for further questions by adding one more parameter pass the .nli() function
 def reply_handler(bot, update):
     """Reply message."""
     text = update.message.text
