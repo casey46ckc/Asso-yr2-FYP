@@ -54,7 +54,7 @@ def reply_handler(bot, update):
     print(text)
     nameTxt, abbrTxt = replace_AbbrName(text)
     if nameTxt != "":
-        text.replace(nameTxt, abbrTxt)
+        text = text.replace(nameTxt, abbrTxt)
     user_id = update.message.from_user.id
     reply = Olami().nli(text, user_id)
     update.message.reply_text(reply)

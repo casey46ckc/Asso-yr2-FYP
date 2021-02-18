@@ -23,7 +23,6 @@ def replace_AbbrName(inStr):
     obj = json.loads(jsondata)
     for i in range(len(obj)):
         for j in range(len(obj[i]['term'])):
-            print(obj[i]['term'][j])
             if inStr.find(obj[i]['term'][j]) != -1:
                 return obj[i]['term'][j], obj[i]['abbr']
     return "", ""
