@@ -80,6 +80,10 @@ lib_str = ['library', 'libra', 'lib']
 # adc_unc_str = ['admiralty centre & united centre',
 #                'admiralty centre and united centre', 'adc and unc', 'adc & unc', 'adc&unc']
 
+# financial suport link
+fasp_link = 'https://www.wfsfaa.gov.hk/sfo/en/postsecondary/fasp/overview.htm'
+nlsps_link = 'https://www.wfsfaa.gov.hk/sfo/en/postsecondary/nlsps/overview.htm'
+
 # TODO: built objects by import .json instead of hard coding
 
 class Building:
@@ -335,14 +339,18 @@ class Olami:
                         elif intent_category == "finance":
                             if 'fs_ask' in modifier:
                                 return desc['result']
-                            # casey modifying
-                            # elif 'fs_link' in modifier:
-                            #     slot = nli_obj['semantic'][0]['slots'][0]
-                            #     if 'financial_support' == slot['name']:
-                            #         tmp_str = slot['value'].lower()
-                            #         x, y = getjson()
-                            #         if ready:
-                            #             return 'xxxxx' + x + 'xxxxxx' + y 
+                            elif 'fs_link' in modifier:
+                                
+                                # future dynamic way******************************
+                                # slot = nli_obj['semantic'][0]['slots'][0]
+                                # if 'financial_support' == slot['name']:
+                                #     tmp_str = slot['value'].lower()
+                                #     x, y = getjson()
+                                #     if ready:
+                                #         return 'xxxxx' + x + 'xxxxxx' + y 
+                                #***********************************
+
+                                return 'You can get more information from:\n' + '1.FASP: ' + fasp_link + '\n2.NLSPS: ' + nlsps_link
                         elif intent_category == "admin":
                             pass
                         elif intent_category == "facilities":
