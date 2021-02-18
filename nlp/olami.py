@@ -20,12 +20,14 @@ lu_str = ['lingnan university', 'lu', 'lingu', 'ling u']
 cuhk_str = ['the chinese university of hong kong', 'cuhk']
 edu_str = ['the education university of hong kong', 'edu', 'ed u']
 polyu_str = ['the hong kong polytechnic university', 'polyu', 'poly u']
-hkust_str = ['the hong kong university of science and technology', 'hkust', 'ust']
+hkust_str = [
+    'the hong kong university of science and technology', 'hkust', 'ust']
 hku_str = ['the university of hong kong', 'hku']
 # Self-funded
 hsu_str = ['hang seng university of hong kong', 'hang seng u', 'hsu']
 syu_str = ['hong kong shue yan university', 'shue yan', 'syu']
-hkou_str = ['the open university of hong kong', 'hkou', 'open u', 'hong kong metropolitan university', 'hkmu']
+hkou_str = ['the open university of hong kong', 'hkou',
+            'open u', 'hong kong metropolitan university', 'hkmu']
 # public exam
 publicexam_str = ['ielts', 'igcse', 'igcse english', 'igcse chinese', 'toefl']
 
@@ -45,23 +47,23 @@ li_u_str = ['1. City University of Hong Kong',
             '3. Lingnan University',
             '4. The Chinese University of Hong Kong',
             '5. The Education University of Hong Kong',
-            '6. The Hong Kong Polytechnic University', 
+            '6. The Hong Kong Polytechnic University',
             '7. The Hong Kong University of Science and Technology',
             '8. The University of Hong Kong',
             '9. Hang Seng University of Hong Kong',
             '10. Hong Kong Shue Yan University',
             '11. The Open University of Hong Kong']
-li_uandlink_str = ['City University of Hong Kong:', cityu_adm_link, 
-                    'Hong Kong Baptist University:', hkbu_adm_link, 
-                    'Lingnan University:', lu_adm_link,
-                    'The Chinese University of Hong Kong:', cuhk_adm_link,
-                    'The Education University of Hong Kong:', edu_adm_link, 
-                    'The Hong Kong Polytechnic University:', polyu_adm_link, 
-                    'The Hong Kong University of Science and Technology:', hkust_adm_link, 
-                    'The University of Hong Kong:', hku_adm_link, 
-                    'Hang Seng University of Hong Kong:', '[HTTP]', 
-                    'Hong Kong Shue Yan University:', '[HTTP]', 
-                    'The Open University of Hong Kong:', '[HTTP]']
+li_uandlink_str = ['City University of Hong Kong:', cityu_adm_link,
+                   'Hong Kong Baptist University:', hkbu_adm_link,
+                   'Lingnan University:', lu_adm_link,
+                   'The Chinese University of Hong Kong:', cuhk_adm_link,
+                   'The Education University of Hong Kong:', edu_adm_link,
+                   'The Hong Kong Polytechnic University:', polyu_adm_link,
+                   'The Hong Kong University of Science and Technology:', hkust_adm_link,
+                   'The University of Hong Kong:', hku_adm_link,
+                   'Hang Seng University of Hong Kong:', '[HTTP]',
+                   'Hong Kong Shue Yan University:', '[HTTP]',
+                   'The Open University of Hong Kong:', '[HTTP]']
 
 
 # for KEC
@@ -86,6 +88,7 @@ nlsps_link = 'https://www.wfsfaa.gov.hk/sfo/en/postsecondary/nlsps/overview.htm'
 fs_apply_link = 'https://ess.wfsfaa.gov.hk/essprd/jsp/app/apps0101.jsp?language=en'
 
 # TODO: built objects by import .json instead of hard coding
+
 
 class Building:
     def __init__(self, str_list: list, open_hour: list, close_hour: list, rooms_list: 'Room'):
@@ -204,13 +207,15 @@ class Olami:
                             elif 'help' in modifier:
                                 return desc['result']
                             elif 'guideline' in modifier:
-                                return desc['result']    
+                                return desc['result']
                             elif 'closing' in modifier:
-                                return "See you again!Thank you for using spacebot"    
+                                return "See you again!Thank you for using spacebot"
                         elif intent_category == "nonjupas":
                             if 'whatis' in modifier:
+                                # done
                                 return 'Apart from getting a place into universities through JUPAS, students may consider applying post-secondary programmes not covered by JUPAS. There is a lot of information regarding non-JUPAS admissions. Gather your information in advance and plan ahead.'
                             elif 'whenis_open_nospecific' in modifier:
+                                #done
                                 return 'You can apply non-jupas application once it is open. Each university may vary.'
                             elif 'whenis_deadline_nospecific' in modifier:
                                 if len(nli_obj['semantic'][0]['slots']) > 0:
@@ -218,95 +223,62 @@ class Olami:
                                 else:
                                     return 'Each university may vary. Which university you want to apply / have applied?\n' + '\n'.join(li_u_str)
                             elif 'what_toprepare_general' in modifier:
+                                #done
                                 return 'Each university may vary. But Generally, you should better prepare your personal identify information(e.g. HKID / Passport / etc), public examination results(e.g. HKDSE / HKCEE /HKALE / IGCSE / IELTS / TOFEL / etc), official transcript, personal statement, other appropriate qualification documents (e.g. public non-academic awards / etc),  etc. Which university you want to apply / have applied?\n' + '\n'.join(li_u_str)
                             elif 'yn_apply_year1' in modifier:
+                                #done
                                 return 'You can apply non-jupas application when you are year 1 student,  but bare in mind that some universities may only consider senior level student and some might only consider junior level student.Which university you want to apply / have applied?\n' + '\n'.join(li_u_str)
                             elif 'schoolsupport_nospecific' in modifier:
+                                #done ****but if the question is asked too long, and the bot may not be able to handle
                                 return "HKUSPACE have setup an online platform in learner portal for student to apply for the reference letter from the professor.\nMake sure you have get the professor's approval before apply for the letter through the online platform.\nYou may refer to [HTTP] for further information."
                             elif 'whatis_requirement_nospecific' in modifier:
+                                #done
                                 return "It depends on the university you want to apply and the programme you want to apply. For general requirement in applying the universities in Hong Kong, you should as least have GRADE 3 for both Chinese and English language subject and 5 subjects in GRADE 2 for HKDSE result. For the language subject, you can use the result of IELTS and IGCSE instead but the requirement for each univerisity and programme may vary. Which programe and university you want to apply/ have applied?\n" + '\n'.join(li_u_str)
                             elif 'yn_apply_morethan1' in modifier:
+                                #done
                                 return 'Each university may vary. Which university you want to apply / have applied?\n' + '\n'.join(li_u_str)
                             elif 'action_latetosubmit' in modifier:
+                                #done
                                 return 'Indeed, late submission would not be allowed. Although the univerisities usually have many rounds of non-JUPAS application, it is recommended to submit the application as soon as possible. You may contact to their admission office directly if you want some help. Which programe and university you want to apply/ have applied?\n' + '\n'.join(li_u_str)
                             elif 'yn_essential_referenceletter' in modifier:
+                                # done
                                 return 'Each university may vary. Which programe and university you want to apply/ have applied?\n' + '\n'.join(li_u_str)
                             elif 'yn_essential_apply_year2' in modifier:
                                 return 'Indeed. the associate programme is aimed to assist the students to promote their academic position to undergraduate level but not for profession purpose. Students are supposed to apply NON-JUPAS before they are graduated'
-                            elif 'howto_webpage_university' in modifier:
-                                slot = nli_obj['semantic'][0]['slots'][0]                                
-                                if 'university' == slot['name']:
-                                    tmp_str = slot['value'].lower()
-                                    if tmp_str in cityu_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + cityu_adm_link
-                                    elif tmp_str in hkbu_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + hkbu_adm_link
-                                    elif tmp_str in lu_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + lu_adm_link
-                                    elif tmp_str in cuhk_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + cuhk_adm_link
-                                    elif tmp_str in edu_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + edu_adm_link
-                                    elif tmp_str in polyu_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + polyu_adm_link
-                                    elif tmp_str in hkust_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + hkust_adm_link
-                                    elif tmp_str in hku_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + hku_adm_link
-                                    elif tmp_str in hsu_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                    elif tmp_str in syu_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                    elif tmp_str in hkou_str:
-                                        return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                    else:
-                                        return 'Sorry. I do not have the non-JUPAS information of ' + slot['value'] + '. You may refer to the non-JUPAS information of universities as followed:\n' + '\n'.join(li_uandlink_str)
-                            elif 'howto_apply_university' in modifier:
+                            elif 'howto_apply_university_general' in modifier:
+                                #can modify with json dynamically later********
                                 return "You can apply the non-jupas from any University's non-jupas page. The links are as followed:\n" + '\n'.join(li_uandlink_str)
                             elif 'nonjupas_nospecific' in modifier:
                                 return 'Which university are you refering to?' + '\n'.join(li_u_str)
                             elif 'howto_webpage_university' in modifier:
+                                # done
                                 if len(nli_obj['semantic'][0]['slots']) > 0:
-                                    slot = nli_obj['semantic'][0]['slots'][0]                                
+                                    slot = nli_obj['semantic'][0]['slots'][0]
                                     if 'university' == slot['name']:
                                         tmp_str = slot['value'].lower()
-                                        if tmp_str in cityu_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + cityu_adm_link
-                                        elif tmp_str in hkbu_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + hkbu_adm_link
-                                        elif tmp_str in lu_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + lu_adm_link
-                                        elif tmp_str in cuhk_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + cuhk_adm_link
-                                        elif tmp_str in edu_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + edu_adm_link
-                                        elif tmp_str in polyu_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + polyu_adm_link
-                                        elif tmp_str in hkust_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + hkust_adm_link
-                                        elif tmp_str in hku_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + hku_adm_link
-                                        elif tmp_str in hsu_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                        elif tmp_str in syu_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
-                                        elif tmp_str in hkou_str:
-                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n[HTTP]'
+                                        # need to update new link and new function call******************
+                                        deadline, link, ready = response_nonjupas_deadline(
+                                            tmp_str)
+                                        if ready:
+                                            return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + link
                                         else:
                                             return 'Sorry. I do not have the non-JUPAS information of ' + slot['value'] + '. You may refer to the non-JUPAS information of universities as followed:\n' + '\n'.join(li_uandlink_str)
                                 else:
                                     return 'Which programe and university you want to apply/ have applied?'
                             elif 'whenis_deadline' in modifier:
-                                slot = nli_obj['semantic'][0]['slots'][0]                                
+                                # done
+                                slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'university' == slot['name']:
                                     tmp_str = slot['value'].lower()
-                                    deadline, link, ready = response_nonjupas_deadline(tmp_str)
+                                    deadline, link, ready = response_nonjupas_deadline(
+                                        tmp_str)
                                     if ready:
                                         return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\n'.join(deadline) + '\nYou may refer to the following link for more details:\n' + link
                             elif 'yn_num_referenceletter_matter' in modifier:
+                                #done
                                 return 'Each university and programme may vary. Which programe and university you want to apply/ have applied?'
                             elif 'whenis_start_publicexam' in modifier:
-                                slot = nli_obj['semantic'][0]['slots'][0]                                
+                                slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'publicexam' == slot['name']:
                                     tmp_str = slot['value'].lower()
                                     if tmp_str in publicexam_str:
@@ -321,7 +293,7 @@ class Olami:
                                         elif tmp_str == publicexam_str[4]:
                                             return 'You may refer to [HTTP] for more information.'
                             elif 'whencan_apply_publicexam' in modifier:
-                                slot = nli_obj['semantic'][0]['slots'][0]                                
+                                slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'publicexam' == slot['name']:
                                     tmp_str = slot['value'].lower()
                                     if tmp_str in publicexam_str:
@@ -341,15 +313,15 @@ class Olami:
                             if 'fs_ask' in modifier:
                                 return desc['result']
                             elif 'fs_link' in modifier:
-                                
+
                                 # future dynamic way******************************
                                 # slot = nli_obj['semantic'][0]['slots'][0]
                                 # if 'financial_support' == slot['name']:
                                 #     tmp_str = slot['value'].lower()
                                 #     x, y = getjson()
                                 #     if ready:
-                                #         return 'xxxxx' + x + 'xxxxxx' + y 
-                                #***********************************
+                                #         return 'xxxxx' + x + 'xxxxxx' + y
+                                # ***********************************
 
                                 return 'You can get more information from:\n' + '1. FASP: ' + fasp_link + '\n2. NLSPS: ' + nlsps_link
                             elif 'fs_method' in modifier:
@@ -375,17 +347,10 @@ class Olami:
                                 slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'office' == slot['name']:
                                     tmp_str = slot['value'].lower()
-                                    contact, hr, ready = response_OfficeHr(tmp_str)
+                                    contact, hr, ready = response_OfficeHr(
+                                        tmp_str)
                                     if ready:
-                                        return f'The office hotline is ' + contact +'. Please contact them within their office hour:\n' + "\n".join(hr)
-                                    # elif tmp_str in cita_str:
-                                    #     return f'The office hotline is {"3762 0110"}. Please contact them within their office hour:\n' + "\n".join(["0900 – 2000 (Weekdays)", "0900 – 1800 (Saturday)"])
-                                    # elif tmp_str in iec_str:
-                                    #     return f'The office hotline is {"3762 0033"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
-                                    # elif tmp_str in ftc_str:
-                                    #     return f'The office hotline is {"3762 0988"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)"])
-                                    # elif tmp_str in adc_unc_str:
-                                    #     return f'The office hotline is {"2910 7620"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
+                                        return f'The office hotline is ' + contact + '. Please contact them within their office hour:\n' + "\n".join(hr)
                                     else:
                                         return 'Sorry. The contact of building office cannot be found. Please try again.'
                             elif 'location_nospecific' in modifier:
