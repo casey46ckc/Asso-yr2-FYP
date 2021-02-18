@@ -371,7 +371,16 @@ class Olami:
                             elif 'yn_igcse_replace_ielts' in modifier:
                                 return 'Each university and programme may vary. Which programe and university you want to apply/ have applied?'
                         elif intent_category == "finance":
-                            pass
+                            if 'fs_ask' in modifier:
+                                return desc['result']
+                            # casey modifying
+                            # elif 'fs_link' in modifier:
+                            #     slot = nli_obj['semantic'][0]['slots'][0]
+                            #     if 'financial_support' == slot['name']:
+                            #         tmp_str = slot['value'].lower()
+                            #         x, y = getjson()
+                            #         if ready:
+                            #             return 'xxxxx' + x + 'xxxxxx' + y 
                         elif intent_category == "admin":
                             pass
                         elif intent_category == "facilities":
