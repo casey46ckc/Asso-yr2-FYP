@@ -83,6 +83,7 @@ lib_str = ['library', 'libra', 'lib']
 # financial suport link
 fasp_link = 'https://www.wfsfaa.gov.hk/sfo/en/postsecondary/fasp/overview.htm'
 nlsps_link = 'https://www.wfsfaa.gov.hk/sfo/en/postsecondary/nlsps/overview.htm'
+fs_apply_link = 'https://ess.wfsfaa.gov.hk/essprd/jsp/app/apps0101.jsp?language=en'
 
 # TODO: built objects by import .json instead of hard coding
 
@@ -350,7 +351,9 @@ class Olami:
                                 #         return 'xxxxx' + x + 'xxxxxx' + y 
                                 #***********************************
 
-                                return 'You can get more information from:\n' + '1.FASP: ' + fasp_link + '\n2.NLSPS: ' + nlsps_link
+                                return 'You can get more information from:\n' + '1. FASP: ' + fasp_link + '\n2. NLSPS: ' + nlsps_link
+                            elif 'fs_method' in modifier:
+                                return 'You need to make the online application on ' + fs_apply_link + 'for both FASP and NLSPS.'
                         elif intent_category == "admin":
                             pass
                         elif intent_category == "facilities":
