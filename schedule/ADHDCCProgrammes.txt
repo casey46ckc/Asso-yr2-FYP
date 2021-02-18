@@ -1,0 +1,57 @@
+AD 105, Associate of Arts in Languages and Humanities|Bilingual Communication
+AD 105, Associate of Arts in Languages and Humanities|Chinese Language, Literature & Culture
+AD 105, Associate of Arts in Languages and Humanities|English Studies
+AD 105, Associate of Arts in Languages and Humanities|Humanities
+AD 106, Associate of Arts in Languages and Humanities|Japanese Studies
+AD 107, Associate of Arts in Languages and Humanities|Korean Studies
+AD 124, Associate of Arts in English Language and Literature
+AD 111, Associate of Business Administration
+AD 112, Associate of Chinese Medicine
+AD 123, Associate of Nursing Studies
+AD 122, Associate of Biomedical Sciences
+AD 118, Associate of Science|Biological Science
+AD 118, Associate of Science|Chemistry
+AD 118, Associate of Science|Earth and Environmental Sciences
+AD 118, Associate of Science|Environmental Management
+AD 118, Associate of Science|Physics
+AD 118, Associate of Science|Statistics
+AD 113, Associate of Engineering|Computer Engineering
+AD 113, Associate of Engineering|Computer Science
+AD 113, Associate of Engineering|Electronic Engineering
+AD 108, Associate of Arts in Legal Studies
+AD 125, Associate of Geography
+AD 109, Associate of Arts in Media, Cultural and Creative Studies|Advertising and Communications
+AD 109, Associate of Arts in Media, Cultural and Creative Studies|Creative Media and Industries
+AD 109, Associate of Arts in Media, Cultural and Creative Studies|Media and Cultural Studies
+AD 110, Associate of Arts in Media, Cultural and Creative Studies|Music
+AD 119, Associate of Social Sciences|Ageing Studies Theme
+AD 119, Associate of Social Sciences|Politics and International Studies
+AD 119, Associate of Social Sciences|Psychology and Wellness
+AD 119, Associate of Social Sciences|Social Welfare and Social Administration
+AD 119, Associate of Social Sciences|Sociology
+HD 102, Higher Diploma in Architectural Studies
+HD 137, Higher Diploma in Chinese for Professional Communication
+HD 115, Higher Diploma in Interior Design
+HD 125, Higher Diploma in Visual Communication
+HD 124, Higher Diploma in Translation and Interpretation
+HD 136, Higher Diploma in Global Supply Chain Management
+HD 131, Higher Diploma in Business|Financial Services
+HD 131, Higher Diploma in Business|Economics
+HD 131, Higher Diploma in Business|Financial Technology
+HD 132, Higher Diploma in Marketing|Marketing and Advertising
+HD 132, Higher Diploma in Marketing|Marketing and Management
+HD 108, Higher Diploma in Dental Hygiene
+HD 133, Higher Diploma in Healthcare and Health Plan Administration
+HD 139, Higher Diploma in Data Science
+HD 134, Higher Diploma in Airline and Airport Services
+HD 140, Higher Diploma in Aviation and Piloting
+HD 103, Higher Diploma in Aviation Studies
+HD 110, Higher Diploma in Engineering
+HD 141, Higher Diploma in eSports
+HD 138, Higher Diploma in Geotechnical Engineering
+HD 135, Higher Diploma in Information Security
+HD 116, Higher Diploma in Information Technology
+HD 122, Higher Diploma in New Media and Communication
+HD 117, Higher Diploma in Library and Information Management
+HD 129, Higher Diploma in Public Relations and Corporate Communications
+CC 001, Diploma in Foundation Studies
