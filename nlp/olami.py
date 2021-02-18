@@ -3,6 +3,7 @@ import json
 import logging
 import time
 from hashlib import md5
+from readjson import *
 
 import requests
 
@@ -89,12 +90,12 @@ lounge_str = ['student lounge', 'lounge', '細com', '細common']
 comp_lab_str = ['computer lab', 'comp lab']
 lib_str = ['library', 'libra', 'lib']
 # for the buildings
-kec_str = ['kowloon east campus', 'kec']
-cita_str = ['clothing industry training authority', 'cita']
-iec_str = ['island east campus', 'iec']
-ftc_str = ['fortress tower centre', 'fortress tower center', 'ftc']
-adc_unc_str = ['admiralty centre & united centre',
-               'admiralty centre and united centre', 'adc and unc', 'adc & unc', 'adc&unc']
+# kec_str = ['kowloon east campus', 'kec']
+# cita_str = ['clothing industry training authority', 'cita']
+# iec_str = ['island east campus', 'iec']
+# ftc_str = ['fortress tower centre', 'fortress tower center', 'ftc']
+# adc_unc_str = ['admiralty centre & united centre',
+#                'admiralty centre and united centre', 'adc and unc', 'adc & unc', 'adc&unc']
 
 # TODO: built objects by import .json instead of hard coding
 
@@ -390,16 +391,17 @@ class Olami:
                                 slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'office' == slot['name']:
                                     tmp_str = slot['value'].lower()
-                                    if tmp_str in kec_str:
-                                        return f'The office hotline is {"3762 2000"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)", "0830 – 1630 (Sunday)"])
-                                    elif tmp_str in cita_str:
-                                        return f'The office hotline is {"3762 0110"}. Please contact them within their office hour:\n' + "\n".join(["0900 – 2000 (Weekdays)", "0900 – 1800 (Saturday)"])
-                                    elif tmp_str in iec_str:
-                                        return f'The office hotline is {"3762 0033"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
-                                    elif tmp_str in ftc_str:
-                                        return f'The office hotline is {"3762 0988"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)"])
-                                    elif tmp_str in adc_unc_str:
-                                        return f'The office hotline is {"2910 7620"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
+                                    contact, hr, ready = read_json(tmp_str)
+                                    if ready:
+                                        return f'The office hotline is ' + contact +'. Please contact them within their office hour:\n' + "\n".join(hr)
+                                    # elif tmp_str in cita_str:
+                                    #     return f'The office hotline is {"3762 0110"}. Please contact them within their office hour:\n' + "\n".join(["0900 – 2000 (Weekdays)", "0900 – 1800 (Saturday)"])
+                                    # elif tmp_str in iec_str:
+                                    #     return f'The office hotline is {"3762 0033"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
+                                    # elif tmp_str in ftc_str:
+                                    #     return f'The office hotline is {"3762 0988"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)"])
+                                    # elif tmp_str in adc_unc_str:
+                                    #     return f'The office hotline is {"2910 7620"}. Please contact them within their office hour:\n' + "\n".join(["0830 – 1930 (Weekdays)", "0830 – 1730 (Saturday)"])
                                     else:
                                         return 'Sorry. The contact of building office cannot be found. Please try again.'
                             elif 'location_nospecific' in modifier:
