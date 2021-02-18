@@ -9,15 +9,11 @@ def read_json(compare_str):
     # Parse
     obj = json.loads(jsondata)
 
-    # print(obj[0]['name'])
-    n = 0
-    for data in obj:
-        if compare_str in obj[n]['name']:
-            x = obj[n]['contact']
-            y = obj[n]['officehr']
-            z = True
-        n = n+1
-    return x, y, z
+    # print(obj[i]['name'])
+    for i in range(len(obj)):
+        if compare_str in obj[i]['name']:
+            return obj[i]['contact'], obj[i]['officehr'], True
+    return None, None, False
 
 
 # read_json()
