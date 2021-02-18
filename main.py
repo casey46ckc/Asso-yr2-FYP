@@ -4,7 +4,7 @@ import logging
 import telegram
 from flask import Flask, request
 from telegram import ReplyKeyboardMarkup
-from telegram.ext import Dispatcher, CommandHandler, MessageHandler, Filters
+from telegram.ext import Dispatcher, CommandHandler, MessageHandler, Filters, CallbackContext
 from nlp.olami import Olami
 from readjson import replace_AbbrName
 
@@ -51,10 +51,9 @@ def webhook_handler():
 def reply_handler(bot, update):
     """Reply message."""
     text = update.message.text
-    print(text)
-    nameTxt, abbrTxt = replace_AbbrName(text)
-    if nameTxt != "":
-        text = text.replace(nameTxt, abbrTxt)
+    print("\nbefore:" + text + "\n")
+    text = replace_AbbrName(text)
+    print("\nafter:" + text + "\n")
     user_id = update.message.from_user.id
     reply = Olami().nli(text, user_id)
     update.message.reply_text(reply)
@@ -65,7 +64,11 @@ def start_handler(bot, update):
 
 def help_handler(bot, update):
     """Send a message when the command /help is issued."""
-    update.message.reply_text("Commands now supported:\n" + "\n".join(help_message),reply_markup=reply_kb_start)
+    update.message.reply_text("Commands now supported:\n" + "\n".join(help_message), reply_markup=reply_kb_start)
+
+def clSchedule_handler(bot, update):
+    """Send a message when the command /spacedule is issued."""
+    update.message.reply_text("Usage:\n" + "\t/spacedule <Class Code>(-<Class No>) * N\n" + "\te.g. /spacedule CCCH4003 CCCU4041 CCEN4005 CCIT4033 CCIT4059 CCIT4080")
 
 def error_handler(bot, update, error):
     """Log Errors caused by Updates."""
@@ -81,6 +84,7 @@ dispatcher = Dispatcher(bot, None)
 
 dispatcher.add_handler(CommandHandler('start', start_handler))
 dispatcher.add_handler(CommandHandler('help', help_handler))
+dispatcher.add_handler(CommandHandler('spacedule', clSchedule_handler))
 dispatcher.add_error_handler(error_handler)
 dispatcher.add_handler(MessageHandler(Filters.text, reply_handler))
 

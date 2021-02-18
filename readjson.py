@@ -29,6 +29,9 @@ def response_nonjupas_deadline(compare_str):
     return None, None, False
 
 def replace_AbbrName(inStr):
+    # return text initiatation
+    resultTxt = inStr
+
     # read file
     myjsfile = open('json\\abbr.json', 'r')
     jsondata = myjsfile.read()
@@ -38,5 +41,5 @@ def replace_AbbrName(inStr):
     for i in range(len(obj)):
         for j in range(len(obj[i]['term'])):
             if inStr.find(obj[i]['term'][j]) != -1:
-                return obj[i]['term'][j], obj[i]['abbr']
-    return "", ""
+                resultTxt = resultTxt.replace(obj[i]['term'][j], obj[i]['abbr'])                
+    return resultTxt
