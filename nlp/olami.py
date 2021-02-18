@@ -391,7 +391,7 @@ class Olami:
                                 slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'office' == slot['name']:
                                     tmp_str = slot['value'].lower()
-                                    contact, hr, ready = read_json(tmp_str)
+                                    contact, hr, ready = response_OfficeHr(tmp_str)
                                     if ready:
                                         return f'The office hotline is ' + contact +'. Please contact them within their office hour:\n' + "\n".join(hr)
                                     # elif tmp_str in cita_str:

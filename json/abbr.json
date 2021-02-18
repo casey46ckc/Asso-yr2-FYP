@@ -1,0 +1,82 @@
+[
+    {
+        "term": [
+            "hku space kowloon east campus",
+            "kowloon east campus",
+            "kec"
+        ],
+        "abbr": "kec"
+    },
+    {
+        "term": [
+            "clothing industry training authority",
+            "clothing industry training authority learning centre",
+            "clothing industry training authority learning center",
+            "cita learning centre",
+            "cita learning center",
+            "cita"
+        ],
+        "abbr": "cit"
+    },
+    {
+        "term": [
+            "hku space island east campus",
+            "island east campus",
+            "iec"
+        ],
+        "abbr": "iec"
+    },
+    {
+        "term": [
+            "hku space fortress tower centre",
+            "hku space fortress tower center",
+            "fortress tower centre",
+            "fortress tower center",
+            "ftc"
+        ],
+        "abbr": "ftc"
+    },
+    {
+        "term": [
+            "hku space po leung kuk stanley ho comunity college (hpshcc) campus",
+            "hpshcc"
+        ],
+        "abbr": "hpc"
+    },
+    {
+        "term": [
+            "admiralty centre & united centre",
+            "admiralty centre and united centre",
+            "admiralty centre & united center",
+            "admiralty centre and united center",
+            "adc and unc",
+            "adc & unc",
+            "adc&unc"
+        ],
+        "abbr": "adc&unc"
+    },
+    {
+        "term": [
+            "admiralty learning centre",
+            "admiralty learning center",
+            "adc"
+        ],
+        "abbr": "adc"
+    },
+    {
+        "term": [
+            "united learning centre",
+            "united learning center",
+            "unc"
+        ],
+        "abbr": "unc"
+    },
+    {
+        "term": [
+            "united learning centre",
+            "united learning center",
+            "unc"
+        ],
+        "abbr": "unc"
+    }
+]

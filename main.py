@@ -6,6 +6,7 @@ from flask import Flask, request
 from telegram import ReplyKeyboardMarkup
 from telegram.ext import Dispatcher, CommandHandler, MessageHandler, Filters
 from nlp.olami import Olami
+from readjson import replace_AbbrName
 
 # Load data from config.ini file
 config = configparser.ConfigParser()
@@ -50,6 +51,10 @@ def webhook_handler():
 def reply_handler(bot, update):
     """Reply message."""
     text = update.message.text
+    print(text)
+    nameTxt, abbrTxt = replace_AbbrName(text)
+    if nameTxt != "":
+        text.replace(nameTxt, abbrTxt)
     user_id = update.message.from_user.id
     reply = Olami().nli(text, user_id)
     update.message.reply_text(reply)
