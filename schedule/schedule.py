@@ -85,12 +85,42 @@ if __name__ == "__main__":
     tmpTable = None
 
     clS = ['CCCH4003CL54', 'CCCU4041', 'CCEN4005', 'CCIT4033CL03', 'CCIT4059CL03', 'CCIT4080']
+    clK = ['CCIT4033CL03', 'CCIT4059CL03']
     clSList = []
-    for i in range(len(clS)):
+    clKList = []
+    loopDepth = len(clS)
+    for i in range(loopDepth):
         if len(clS[i]) > 8:
             clSList.append([cl for cl in clList if cl.clCode == clS[i][:8] and cl.clNo == clS[i][8:]])
         else:
             clSList.append([cl for cl in clList if cl.clCode == clS[i]])
+
+    loopDepthK = len(clK)
+    for i in range(loopDepthK):
+        if len(clK[i]) > 8:
+            clKList.append([cl for cl in clList if cl.clCode == clK[i][:8] and cl.clNo == clK[i][8:]])
+        else:
+            clKList.append([cl for cl in clList if cl.clCode == clK[i]])
+
+    # args[0]:start depth, args[1]:current depth, arg[2]...arg[n + 2]:clsList, replaced by clsList[0][i], clsList[1][j], ... one by one recursively
+    def collect_result(*args):
+        if args[1] != 0:
+            for i in range(len(args[args[1]]) + 1):
+                paras_next = []
+                paras_next.append(args[0])
+                paras_next.append(args[1] - 1)
+                for k in range(args[0]):
+                    print(f"start depth:{args[0]} current depth:{args[1]} i: {i} next depth: {args[1] - 1} k: {k} Code:{args[k + 2][i].clCode}")
+                    if k == args[1]:
+                        paras_next.append(args[k + 2][i])
+                    else:
+                        paras_next.append(args[k + 2])
+                collect_result(paras_next)
+        else:
+            tmpTable = combinationCheck(args[2:])
+            if(tmpTable is not None):
+                clCodeList = [cl.clCode + cl.clNo for cl in args[2:]]
+                print(f"{'+'.join(clCodeList)}|Early Lesson: {earlyLesson(tmpTable)} No. of day-off: {countDayoff(tmpTable)}\n{tmpTable}")
 
     for i in range(len(clSList[0])):
         for j in range(len(clSList[1])):
@@ -101,4 +131,6 @@ if __name__ == "__main__":
                             tmpTable = combinationCheck(clSList[0][i], clSList[1][j], clSList[2][k], clSList[3][l], clSList[4][m], clSList[5][n])
                             if(tmpTable is not None):
                                 print(f'{clSList[0][i].clCode}{clSList[0][i].clNo}+{clSList[1][j].clCode}{clSList[1][j].clNo}+{clSList[2][k].clCode}{clSList[2][k].clNo}+{clSList[3][l].clCode}{clSList[3][l].clNo}+{clSList[4][m].clCode}{clSList[4][m].clNo}+{clSList[5][n].clCode}{clSList[5][n].clNo}|Early Lesson: {earlyLesson(tmpTable)} No. of day-off: {countDayoff(tmpTable)}\n{tmpTable}')
+
+    # collect_result(loopDepthK, loopDepthK, clKList)
 

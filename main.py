@@ -68,7 +68,7 @@ def help_handler(bot, update):
 
 def clSchedule_handler(bot, update):
     """Send a message when the command /spacedule is issued."""
-    update.message.reply_text("Usage:\n" + "\t/spacedule <Class Code>(-<Class No>) * N\n" + "\te.g. /spacedule CCCH4003 CCCU4041 CCEN4005 CCIT4033 CCIT4059 CCIT4080")
+    update.message.reply_text("Usage:\n" + "\t/spacedule <Class Code>(<Class No>) * N\n" + "\te.g. /spacedule CCCH4003 CCCU4041 CCEN4005 CCIT4033CL03 CCIT4059 CCIT4080CL07")
 
 def error_handler(bot, update, error):
     """Log Errors caused by Updates."""
