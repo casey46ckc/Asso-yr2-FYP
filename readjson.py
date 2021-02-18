@@ -14,6 +14,20 @@ def response_OfficeHr(compare_str):
             return obj[i]['contact'], obj[i]['officehr'], True
     return None, None, False
 
+def response_nonjupas_deadline(compare_str):
+    # read file
+    myjsfile = open('json\_nonjupas.json', 'r')
+    jsondata = myjsfile.read()
+
+    # Parse
+    obj = json.loads(jsondata)
+
+    # print(obj[i]['name'])
+    for i in range(len(obj)):
+        if compare_str in obj[i]['name']:
+            return obj[i]['deadline'], obj[i]['link'], True
+    return None, None, False
+
 def replace_AbbrName(inStr):
     # read file
     myjsfile = open('json\\abbr.json', 'r')

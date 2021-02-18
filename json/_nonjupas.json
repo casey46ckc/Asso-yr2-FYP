@@ -1,0 +1,99 @@
+[
+    {
+        "name": [
+            "city university of hong kong",
+            "city u",
+            "cityu"
+        ],
+        "deadline": [
+            "Early round: 2020.11.15",
+            "Main round: 2021.01.04"
+        ],
+        "link": "https://www.admo.cityu.edu.hk/direct/"
+    },
+    {
+        "name": [
+            "hong kong baptist university",
+            "hkbu",
+            "bu"
+        ],
+        "deadline": [
+            "Early round: 2020.11.30",
+            "Main round: 2021.01.04",
+            "Extended round: 2021.05.31"
+        ],
+        "link": "https://admissions.hkbu.edu.hk/en/"
+    },
+    {
+        "name": [
+            "lingnan university",
+            "lu",
+            "lingu",
+            "ling u"
+        ],
+        "deadline": [
+            "Early round: 2020.12.07",
+            "Main round: 2021.05.17",
+            "Late round: 2021.07.30"
+        ],
+        "link": "https://www.ln.edu.hk/admissions/ug/non-jupas/general-notes-to-applicants"
+    },
+    {
+        "name": [
+            "the chinese university of hong kong",
+            "cuhk",
+            "cu"
+        ],
+        "deadline": [
+            "Early round: 2020.11.18",
+            "Main round: 2021.02.18"
+        ],
+        "link": "http://admission.cuhk.edu.hk/non-jupas-senior/application-details.html"
+    },
+    {
+        "name": [
+            "the education university of hong kong",
+            "edu",
+            "ed u"
+        ],
+        "deadline": [
+            "Main round: 2021.01.12",
+            "Late round: 2021.05.12"
+        ],
+        "link": "https://www.eduhk.hk/onlineappl/"
+    },
+    {
+        "name": [
+            "the hong kong polytechnic university",
+            "polyu",
+            "poly u"
+        ],
+        "deadline": [
+            "Main round: 2021.02.08"
+        ],
+        "link": "https://www38.polyu.edu.hk/eAdmission/index.do"
+    },
+    {
+        "name": [
+            "the hong kong university of science and technology",
+            "hkust",
+            "ust"
+        ],
+        "deadline": [
+            "Early round: 2020.11.20",
+            "Main round: 2021.01.14"
+        ],
+        "link": "https://join.ust.hk/apply"
+    },
+    {
+        "name": [
+            "the university of hong kong",
+            "hku"
+        ],
+        "deadline": [
+            "Early round: 2020.11.15",
+            "Main round: 2021.01.04"
+        ],
+        "link": "https://aal.hku.hk/admissions/international/admissions-information"
+    }
+]

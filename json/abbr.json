@@ -78,5 +78,69 @@
             "unc"
         ],
         "abbr": "unc"
+    },
+    {
+        "term": [
+            "city university of hong kong",
+            "city u",
+            "cityu"
+        ],
+        "abbr": "cityu"
+    },
+    {
+        "term": [
+            "hong kong baptist university",
+            "hkbu",
+            "bu"
+        ],
+        "abbr": "hkbu"
+    },
+    {
+        "term": [
+            "lingnan university",
+            "lu",
+            "lingu",
+            "ling u"
+        ],
+        "abbr": "lingu"
+    },
+    {
+        "term": [
+            "the chinese university of hong kong",
+            "cuhk",
+            "cu"
+        ],
+        "abbr": "cuhk"
+    },
+    {
+        "term": [
+            "the education university of hong kong",
+            "edu",
+            "ed u"
+        ],
+        "abbr": "edu"
+    },
+    {
+        "term": [
+            "the hong kong polytechnic university",
+            "polyu",
+            "poly u"
+        ],
+        "abbr": "polyu"
+    },
+    {
+        "term": [
+            "the hong kong university of science and technology",
+            "hkust",
+            "ust"
+        ],
+        "abbr": "hkust"
+    },
+    {
+        "term": [
+            "the university of hong kong",
+            "hku"
+        ],
+        "abbr": "hku"
     }
 ]
