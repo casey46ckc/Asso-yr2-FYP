@@ -21,7 +21,7 @@ reply_kb_start = ReplyKeyboardMarkup([['Guideline'],['Help']], one_time_keyboard
 # reply_kb_example = ReplyKeyboardMarkup([['Where is the library?'],['Tell me the contact of KEC']], one_time_keyboard=True)
 
 # initialize the list of information for class schedule
-clList = readClSchedule('schedule\MTT_2021S2_Custom.xls')
+clList = readClSchedule('schedule/MTT_2021S2_Custom.xls')
 
 def reply_handler(update: Update, context: CallbackContext):
     # shorten the message
