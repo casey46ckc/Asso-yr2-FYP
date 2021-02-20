@@ -11,7 +11,7 @@ if [ -f "$FILE" ]; then
 else
     echo "$FILE not exists."
 fi
-pipenv install --three python-telegram-bot flask gunicorn requests
+pipenv install --three python-telegram-bot flask gunicorn requests numpy pandas xlrd
 osascript -e "tell app \"Terminal\" to do script \"$CMD1\""
 osascript -e "tell app \"Terminal\" to do script \"$CMD2\""
 pause "Press [Enter] key to continue..."

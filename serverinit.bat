@@ -1,5 +1,5 @@
 pipenv --rm
-pipenv install --three python-telegram-bot flask gunicorn requests
+pipenv install --three python-telegram-bot flask gunicorn requests numpy pandas xlrd
 start cmd /k pipenv run python main.py
 start cmd /k ngrok http 5000
 PAUSE
