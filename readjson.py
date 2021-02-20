@@ -2,7 +2,7 @@ import json
 
 def response_OfficeHr(compare_str):
     # read file
-    myjsfile = open('json\campusoffice.json', 'r')
+    myjsfile = open('json/campusoffice.json', 'r')
     jsondata = myjsfile.read()
 
     # Parse
@@ -16,7 +16,7 @@ def response_OfficeHr(compare_str):
 
 def response_nonjupas_deadline(compare_str):
     # read file
-    myjsfile = open('json\_nonjupas.json', 'r')
+    myjsfile = open('json/_nonjupas.json', 'r')
     jsondata = myjsfile.read()
 
     # Parse
@@ -33,7 +33,7 @@ def replace_AbbrName(inStr):
     resultTxt = inStr
 
     # read file
-    myjsfile = open('json\\abbr.json', 'r')
+    myjsfile = open('json/abbr.json', 'r')
     jsondata = myjsfile.read()
 
     # Parse
