@@ -2,9 +2,29 @@ import pandas
 import time
 from numpy import max, sum, zeros
 
+
+# Object: represent the fundanmental semester time schedule information for add/drop/swap
+class TheSemesterTimeSchedule:
+    def __init__(self, progCode: str, clList: list, timeTable):
+        self.progCode = progCode
+        self.clList = clList
+        self.rank = rank_timeTable(timeTable)
+        self.earlyMorningLesson = countEarlyMorningLesson(timeTable)
+        self.lateEveningLesson = countLateEveningLesson(timeTable)
+        self.skyGroundLessons = countSkyGroundLesson(timeTable)
+        self.dayoff = countDayoff(timeTable)
+        self.timeTable = timeTable
+        
+    # functionality: display information
+    def displayInfo(self):
+        clCodeList = [cl.clCode + cl.clNo for cl in self.clList]
+        return '\n'.join(clCodeList) + f"\nRank: {self.rank:2d} EML: {self.earlyMorningLesson:1d} LEL: {self.lateEveningLesson:1d} SGL: {self.skyGroundLessons:1d} Day off(s): {self.dayoff:1d}"
+
+
+
 # Object: represent the fundanmental class schedule information for add/drop/swap
 class TheClassSchedule:
-    def __init__(self, clCode, clNo, clName, sem, clRoom, weekday, timeSlot):
+    def __init__(self, clCode: str, clNo: str, clName: str, sem: int, clRoom: str, weekday: int, timeSlot: int):
         self.clCode = clCode
         self.clNo = clNo
         self.clName = clName
@@ -77,7 +97,7 @@ def readClSchedule(fileName):
 
 
 # functionality: check the number of dayoff for the time table in 7 x 6 matrix format, return in integer primitive type
-def countDayoff(timeTable):
+def countDayoff(timeTable) -> int:
     dayOffCounter = 0
     for i in range(6):
         if max(timeTable[:,i]) == 0:
@@ -85,40 +105,49 @@ def countDayoff(timeTable):
     return dayOffCounter
 
 
-# functionality: check the existency of early morning lesson (start at 8:30 a.m.) for the time table in 7 x 6 matrix format, return True when exists
-def earlyLesson(timeTable):
-    if max(timeTable[0,:]) == 0:
-        return True
-    else:
-        return False
+# functionality: check the existency of early morning lesson (start at 8:30 a.m.) for the time table in 7 x 6 matrix format, return in integer primitive type
+def countEarlyMorningLesson(timeTable) -> int:
+    return sum(timeTable[0,:])
 
 
-# functionality: check the existency of early morning lesson (start at 8:30 a.m.) for the time table in 7 x 6 matrix format, return True when exists
-def earlyLesson(timeTable):
-    if max(timeTable[0,:]) == 0:
-        return True
-    else:
-        return False
-        
+# functionality: check the existency of early morning lesson (start at 8:30 a.m.) for the time table in 7 x 6 matrix format, return in integer primitive type
+def countLateEveningLesson(timeTable) -> int:
+    return sum(timeTable[6,:])
+
+# functionality: check the existency of sky-ground time gap between lessons (> 3 hours) for the time table in 7 x 6 matrix format, return in integer primitive type
+def countSkyGroundLesson(timeTable) -> int:
+    skyGroundCounter = 0
+    for i in range(6):
+        # for the day is not day-off
+        if max(timeTable[:,i]) != 0:
+            for k in range(3):
+                start = sum(timeTable[k + 1: k + 4, i])
+                end = sum(timeTable[k + 4:, i])
+                # print(f"curr: {timeTable[k, i]}\t start: {start}\t end: {end}")
+                if timeTable[k, i] > 0 and start == 0 and end == 0:
+                    skyGroundCounter += 1
+    return skyGroundCounter
+
 
 # functionality: recursive function for product of N class in object approach
 # args[0]:start depth, args[1]:current depth, arg[0]...arg[n]:clsList, replaced by clsList[0][i], clsList[1][j], ... one by one recursively
 # original version for debugging, version 1 for performance and readibility
 def collect_result(*args):
     if args[1] < args[0]:
-        for i in range(len(args[args[1] + 2])):
+        for i in range(len(args[args[1] + 3])):
             paras_next = []
             paras_next.append(args[0])
             paras_next.append(args[1] + 1)
+            paras_next.append(args[2])
             for k in range(args[0]):
                 print(f"i: {i}\tk: {k}")
                 if k != args[1]:
-                    if isinstance(args[k + 2], TheClassSchedule):
-                        print(f"i: {i}\tk: {k}\tCl Code:{args[k + 2].clCode}{args[k + 2].clNo}")
-                    paras_next.append(args[k + 2])
+                    if isinstance(args[k + 3], TheClassSchedule):
+                        print(f"i: {i}\tk: {k}\tCl Code:{args[k + 3].clCode}{args[k + 3].clNo}")
+                    paras_next.append(args[k + 3])
                 else:
-                    paras_next.append(args[k + 2][i])
-                    print(f"i: {i}\tk: {k}\tCl Code:{args[k + 2][i].clCode}{args[k + 2][i].clNo}")
+                    paras_next.append(args[k + 3][i])
+                    print(f"i: {i}\tk: {k}\tCl Code:{args[k + 3][i].clCode}{args[k + 3][i].clNo}")
     
             for l in range(len(paras_next)):
                 if isinstance(paras_next[l], list):
@@ -132,13 +161,29 @@ def collect_result(*args):
             collect_result(*paras_next)
 
     else:
-        tmpTable = combinationCheck(*args[2:])
+        tmpTable = combinationCheck(*args[3:])
         if(tmpTable is not None):
-            clCodeList = [cl.clCode + cl.clNo for cl in args[2:]]
-            print(f"{'+'.join(clCodeList)}|Early Lesson: {earlyLesson(tmpTable)} No. of day-off: {countDayoff(tmpTable)}\n{tmpTable}")
+            args[2].append(TheSemesterTimeSchedule(progCode="xx xxx", clList=args, timeTable=tmpTable))
 
 
-def collect_result_V1(depth, curr_depth, *args):
+# function calls for sorting Objects with specific fields
+def getRank(sTM: TheSemesterTimeSchedule) -> int:
+    return sTM.rank
+
+def getDayOff(sTM: TheSemesterTimeSchedule) -> int:
+    return sTM.dayoff
+
+def getEarlyMorningLesson(sTM: TheSemesterTimeSchedule) -> int:
+    return sTM.earlyMorningLesson
+
+def getLateEveningLesson(sTM: TheSemesterTimeSchedule) -> int:
+    return sTM.lateEveningLesson
+
+def getSkyGroundLessons(sTM: TheSemesterTimeSchedule) -> int:
+    return sTM.skyGroundLessons
+
+
+def collect_result_V1(outList: list, depth: int, curr_depth: int, *args):
     if curr_depth < depth:
         for i in range(len(args[curr_depth])):
             paras_next = []
@@ -147,16 +192,15 @@ def collect_result_V1(depth, curr_depth, *args):
                     paras_next.append(args[k])
                 else:
                     paras_next.append(args[k][i])
-            collect_result_V1(depth, curr_depth + 1, *paras_next)
+            collect_result_V1(outList, depth, curr_depth + 1, *paras_next)
     else:
         tmpTable = combinationCheck(*args)
         if(tmpTable is not None):
-            clCodeList = [cl.clCode + cl.clNo for cl in args]
-            print(f"{'+'.join(clCodeList)}|Early Lesson: {earlyLesson(tmpTable)} No. of day-off: {countDayoff(tmpTable)}\n{tmpTable}")
+            outList.append(TheSemesterTimeSchedule(progCode="xx xxx", clList=args, timeTable=tmpTable))
     
 
 # once thought it should be faster, but it isn't
-def collect_result_V2(depth: int, curr_depth: int, *args):
+def collect_result_V2(outList: list, depth: int, curr_depth: int, *args):
     if curr_depth < depth:
         for i in range(len(args[curr_depth])):
             paras_next = []
@@ -169,32 +213,28 @@ def collect_result_V2(depth: int, curr_depth: int, *args):
             if curr_depth + 1 > 1:
                 tmpTable = combinationCheck(*paras_next[:curr_depth + 1])
                 if tmpTable is not None:
-                    collect_result_V2(depth, curr_depth + 1, *paras_next)
+                    collect_result_V2(outList, depth, curr_depth + 1, *paras_next)
             else:
-                collect_result_V2(depth, curr_depth + 1, *paras_next)
+                collect_result_V2(outList, depth, curr_depth + 1, *paras_next)
     else:
         tmpTable = combinationCheck(*args)
         if(tmpTable is not None):
-            clCodeList = [cl.clCode + cl.clNo for cl in args]
-            print(f"{'+'.join(clCodeList)}|Early Lesson: {earlyLesson(tmpTable)} No. of day-off: {countDayoff(tmpTable)}\n{tmpTable}")
+            outList.append(TheSemesterTimeSchedule(progCode="xx xxx", clList=args, timeTable=tmpTable))
 
 
 # functionality: check the existency of Class by the input Code with specific class Schedule list, will turn an empty list if incorrect code input
 def codeValidity(clList: list, inCode: str) -> list:
-    resultList = []
     if len(inCode) > 8:
-        resultList.append([cl for cl in clList if cl.clCode == inCode[:8] and cl.clNo == inCode[8:]])
+        return [cl for cl in clList if cl.clCode == inCode[:8] and cl.clNo == inCode[8:]]
     else:
-        resultList.append([cl for cl in clList if cl.clCode == inCode])
-    return resultList
+        return [cl for cl in clList if cl.clCode == inCode]
 
 # functionality: rank the time table with certain constraints:
-# + 20 marks for each day of day-off, including saturday
+# + 10 marks for each day of day-off, including saturday
 # -  3 marks for each day of early morning lessons or late evening lessons
 # -  2 marks for the time gap between two lessons within one day is greater than 3 hours
 def rank_timeTable(tmpTable):
-    # work in progress
-    pass
+    return 10 * countDayoff(tmpTable) - 3 * (countEarlyMorningLesson(tmpTable) + countLateEveningLesson(tmpTable) - 2 * countSkyGroundLesson(tmpTable))
 
 if __name__ == "__main__":
 
@@ -204,20 +244,31 @@ if __name__ == "__main__":
 
     clS = ['CCCH4003CL54', 'CCCU4041', 'CCEN4005', 'CCIT4033CL03', 'CCIT4059CL03', 'CCIT4080']
     clSList = []
+    resultList1 = []
+    resultList2 = []
     loopDepth = len(clS)
     for i in range(loopDepth):
-        if len(clS[i]) > 8:
-            clSList.append([cl for cl in clList if cl.clCode == clS[i][:8] and cl.clNo == clS[i][8:]])
+        tmpList = codeValidity(clList, clS[i])
+        if(len(tmpList) != 0):
+            clSList.append(tmpList)
         else:
-            clSList.append([cl for cl in clList if cl.clCode == clS[i]])
-
+            print("Error: incorrect course code input. Please try again")
+            break
     t1_start = time.time()
-    collect_result_V1(loopDepth, 0, *clSList)
+    collect_result_V1(resultList1, loopDepth, 0, *clSList)
+    result_sorted = sorted(resultList1, key=getRank, reverse=True)
+    for i in range(len(result_sorted)):
+        if(i < 10):
+            print(result_sorted[i].displayInfo())
     t1_stop = time.time()
     print("Elapsed time during the V1 in seconds:", t1_stop - t1_start)  
 
     t2_start = time.time()
-    collect_result_V2(loopDepth, 0, *clSList)
+    collect_result_V2(resultList2, loopDepth, 0, *clSList)
+    result_sorted = sorted(resultList2, key=getRank, reverse=True)
+    for i in range(len(result_sorted)):
+        if(i < 10):
+            print(result_sorted[i].displayInfo())
     t2_stop = time.time()
     print("Elapsed time during the V2 in seconds:", t2_stop - t2_start)  
     

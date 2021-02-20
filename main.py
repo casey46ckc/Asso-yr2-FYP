@@ -8,7 +8,7 @@ from telegram import ReplyKeyboardMarkup, Update
 from telegram.ext import Dispatcher, CommandHandler, MessageHandler, Filters, CallbackContext
 from nlp.olami import Olami
 from readjson import replace_AbbrName
-from schedule.schedule import collect_result_V1, readClSchedule
+from schedule.schedule import TheSemesterTimeSchedule, collect_result_V1, readClSchedule, codeValidity, getRank
 
 # Load data from config.ini file
 config = configparser.ConfigParser()
@@ -71,10 +71,33 @@ def help_handler(update: Update, context: CallbackContext):
 def clSchedule_handler(update: Update, context: CallbackContext):
     """Send a message when the command /spacedule is issued."""
     if len(context.args) > 0:
-        # operation code will insert here
-        update.message.reply_text("\n".join(context.args))
+        clSList = []
+        resultList = []
+        depth = len(context.args)
+        errFlag = False
+        for i in range(depth):
+            tmpList = codeValidity(clList, context.args[i])
+            if(len(tmpList) != 0):
+                clSList.append(tmpList)
+            else:
+                update.message.reply_text("Error: incorrect course code input. Please try again")
+                errFlag = True
+                break
+        if errFlag != True:
+            collect_result_V1(resultList, depth, 0, *clSList)
+            result_sorted = sorted(resultList, key=getRank, reverse=True)
+            for i in range(len(result_sorted)):
+                if(i < 10):
+                    update.message.reply_text(result_sorted[i].displayInfo())
     else:
-        update.message.reply_text("Usage:\n" + "\t/spacedule <Class Code>(<Class No>) * N\n" + "\te.g. /spacedule CCCH4003 CCCU4041 CCEN4005 CCIT4033CL03 CCIT4059 CCIT4080CL07")
+        update.message.reply_text("Usage:\n" + "\t/spacedule <Class Code>(<Class No>) * N\n" +
+        "To find the most optimized time table for add/drop/swap")
+        update.message.reply_text("e.g. /spacedule CCCH4003 CCCU4041 CCEN4005 CCIT4033CL03 CCIT4059 CCIT4080CL07")
+        update.message.reply_text("Result will be ordered by ranking and the constraints of ranking are as follow:\n"+
+        "+ 10 marks for each day of day-off, including saturday\n"+
+        "-  3 marks for each day of early morning lessons or late evening lessons\n"+
+        "-  2 marks for the time gap between two lessons within one day is greater than 3 hours\n"
+        "\n **Only top 10 results will be display through the message\n")
 
 def error_handler(update: Update, context: CallbackContext):
     """Log Errors caused by Updates."""
