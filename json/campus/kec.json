@@ -1,0 +1,22 @@
+{
+	"identifier":"",
+	"displayname":"KEC",
+	"office":{
+		"hotline":"",
+		"openhour":[]
+	},
+	
+	"facilities":{
+		"library":{
+			"location":[],
+			"openhour":[]
+		},
+		"commonroom":{
+			"location":[],
+			"openhour":[]
+		}
+	}
+}
+	
+	
+			
