@@ -1,9 +1,10 @@
 import configparser
 import json
 import logging
+import readjson
 import time
 from hashlib import md5
-from readjson import *
+
 
 import requests
 
@@ -13,7 +14,7 @@ config.read('config.ini')
 logger = logging.getLogger(__name__)
 
 # Load data from /json/*.json files
-li_jsonFiles = read_path_jsons('json/responses/')
+li_jsonFiles = readjson.read_path_jsons('json/responses/')
 
 # String for comparison
 # UGC-funded
@@ -195,9 +196,6 @@ class Olami:
 
         if len(intent_category) > 0:
             # debug
-            place = read_json('json/place.json')
-            print("place: ", place['tag'])  
-
             intentTag = {'category':None,'modifier':None, 'slots':{}}
             intentTag['category'] = intent_category
 
@@ -274,7 +272,7 @@ class Olami:
                                     if 'university' == slot['name']:
                                         tmp_str = slot['value'].lower()
                                         # need to update new link and new function call******************
-                                        deadline, link, ready = response_nonjupas_deadline(
+                                        deadline, link, ready = readjson.response_nonjupas_deadline(
                                             tmp_str)
                                         if ready:
                                             return 'You can apply from ' + slot['value'] + ' non-jupas page. The link is as followed:\n' + link
@@ -287,7 +285,7 @@ class Olami:
                                 slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'university' == slot['name']:
                                     tmp_str = slot['value'].lower()
-                                    deadline, link, ready = response_nonjupas_deadline(
+                                    deadline, link, ready = readjson.response_nonjupas_deadline(
                                         tmp_str)
                                     if ready:
                                         return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\n'.join(deadline) + '\nYou may refer to the following link for more details:\n' + link
@@ -364,7 +362,7 @@ class Olami:
                                 slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'office' == slot['name']:
                                     tmp_str = slot['value'].lower()
-                                    contact, hr, ready = response_OfficeHr(
+                                    contact, hr, ready = readjson.response_OfficeHr(
                                         tmp_str)
                                     if ready:
                                         return f'The office hotline is ' + contact + '. Please contact them within their office hour:\n' + "\n".join(hr)
