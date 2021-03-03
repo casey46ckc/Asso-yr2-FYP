@@ -4,7 +4,7 @@
 		"modifier":"greeting",
 		"slots":{}
 	},
-	"response":"*Hello! How can I help you?",
+	"response":["*Hello! How can I help you?"],
 	"status":"True",
 	"return tag":[]
 }

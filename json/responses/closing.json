@@ -4,7 +4,7 @@
 		"modifier":"closing",
 		"slots":{}
 	},
-	"response":"*See you again!Thank you for using spacebot",
+	"response":["*See you again!Thank you for using spacebot"],
 	"status":"True",
 	"return tag":[]
 }
