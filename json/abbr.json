@@ -146,16 +146,26 @@
 	{
         "term": [
             "library",
-			" libra ",
-			" lib "
+			" libra",
+			" lib"
         ],
         "abbr": " library "
     },
 	{
         "term": [
             "student lounge",
-			" lounge "
+			"lounge",
+            "細com",
+            "細common",
+            "細 com",
+            "細 common"
         ],
-        "abbr": " lounge "
+        "abbr": "lounge"
+    }
+	{
+        "term": [
+            "non-jupas"
+        ],
+        "abbr": "non jupas"
     }
 ]
