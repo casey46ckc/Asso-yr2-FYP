@@ -1,7 +1,7 @@
 import configparser
 import logging
 import os
-import readjson
+from readjson import replace_AbbrName
 
 import telegram
 
