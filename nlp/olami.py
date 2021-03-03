@@ -186,9 +186,10 @@ class Olami:
 
         intent_category = nli_obj['type']
         desc = nli_obj['desc_obj']
-        # print(nli_obj)
+
 # TODO: same codes have many copies across the same method
 #       recommend to divide them into small function
+
         if len(intent_category) > 0:
             # debug
             place = read_json('json/place.json')
@@ -202,7 +203,7 @@ class Olami:
                     modifier = nli_obj['semantic'][0]['modifier']
                     if len(modifier) > 0:
 
-                        intentTag['modifier'] = modifier
+                        intentTag['modifier'] = modifier[0]
 
                         slots_ptr = nli_obj['semantic'][0]['slots']
 
@@ -212,7 +213,7 @@ class Olami:
                         print("Result (T/F): ", place['tag'] == intentTag)
                         if place['tag'] == intentTag:
                             return place['response'][0]
-                            
+
                         if intent_category == "greet":
                             if 'greeting' in modifier:
                                 return desc['result']

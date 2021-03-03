@@ -1,7 +1,7 @@
 {
 	"tag":{
 		"category":"facilities",
-		"modifier":["place"],
+		"modifier":"place",
 		"slots":{
 			"facilities":"library"
 			}

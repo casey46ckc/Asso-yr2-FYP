@@ -1,13 +1,14 @@
 import configparser
 import logging
 import os
+import readjson
 
 import telegram
 
 from telegram import ReplyKeyboardMarkup, Update
 from telegram.ext import Updater, Dispatcher, CommandHandler, MessageHandler, Filters, CallbackContext
 from nlp.olami import Olami
-from readjson import replace_AbbrName
+
 from schedule.schedule import TheSemesterTimeSchedule, collect_result_V1, readClSchedule, codeValidity, getRank
 
 # initialize the greeting message for /start command
@@ -82,6 +83,11 @@ if __name__ == "__main__":
     # Load data from config.ini file
     config = configparser.ConfigParser()
     config.read('config.ini')
+
+
+    # Load data from /json/*.json files
+    li_jsonFiles = readjson.read_path_jsons('json/')
+    
 
     # Set these variable to the appropriate values
     TOKEN = config['TELEGRAM']['ACCESS_TOKEN']
