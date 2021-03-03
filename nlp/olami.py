@@ -208,7 +208,7 @@ class Olami:
 
                         for x in range(len(slots_ptr)):
                             intentTag["slots"][slots_ptr[x]['name']] = slots_ptr[x]['value']
-                        print(intentTag)
+                        print("Result (T/F): ", place['tag'] == intentTag)
 
                         if intent_category == "greet":
                             if 'greeting' in modifier:
