@@ -349,7 +349,11 @@ class Olami:
                                     tmp_str = slot['value'].lower()
                                     if tmp_str in dis_rm_str:
                                         return f'There are {len(disrm)} discussion rooms in KEC. They are ' + ','.join(disrm)
-                                    elif tmp_str in cm_rm_str or tmp_str in lounge_str or tmp_str in comp_lab_str:
+                                    elif tmp_str in cm_rm_str:
+                                        return f"{slot['value'].lower()} is on the 3/F"
+                                    elif tmp_str in lounge_str:
+                                        return f"{slot['value'].lower()} is on the 3/F"
+                                    elif tmp_str in comp_lab_str:
                                         return f"{slot['value'].lower()} is on the 3/F"
                                     elif tmp_str in lib_str:
                                         return f"{slot['value'].lower()} is on the 4/F"

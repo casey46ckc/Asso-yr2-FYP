@@ -62,7 +62,8 @@ def replace_AbbrName(inStr):
     for i in range(len(obj)):
         for j in range(len(obj[i]['term'])):
             if inStr.find(obj[i]['term'][j]) != -1:
-                resultTxt = resultTxt.replace(obj[i]['term'][j], obj[i]['abbr'])                
+                resultTxt = resultTxt.replace(obj[i]['term'][j], obj[i]['abbr'])
+                break             
     return resultTxt
 
 def display_json(obj):
