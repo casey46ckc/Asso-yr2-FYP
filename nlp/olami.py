@@ -191,8 +191,8 @@ class Olami:
 #       recommend to divide them into small function
         if len(intent_category) > 0:
             # debug
-            #place = read_json('json/place.json')
-            #print(place)
+            place = read_json('json/place.json')
+            print(place)
 
             intentTag = {"category":None,"modifier":None, "slots":{}}
             intentTag["category"] = intent_category

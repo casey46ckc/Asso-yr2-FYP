@@ -1,10 +1,11 @@
 {
-	"tag":
+	"tag":{
 		"category":"facilities",
 		"modifier":["place"],
 		"slots":{
 			"facility":"library",
 			}
+	},
 	"response":["Yes, [FACILITY] is/are in [FLOOR ROOM].",
 				"No, [CAMPUS] does not have [FACILITY]."],
 	"status":"True",
