@@ -62,12 +62,12 @@ def clSchedule_handler(update: Update, context: CallbackContext):
             result_sorted = sorted(resultList, key=getRank, reverse=True)
             for i in range(len(result_sorted)):
                 if(i < 10):
-                    update.message.reply_text(result_sorted[i].displayInfo())
+                    update.message.reply_text(f"Rank #{i + 1}:\n" + result_sorted[i].displayInfo())
     else:
         update.message.reply_text("Usage:\n" + "\t/spacedule <Class Code>(<Class No>) * N\n" +
         "To find the most optimized time table for add/drop/swap")
         update.message.reply_text("e.g. /spacedule CCCH4003 CCCU4041 CCEN4005 CCIT4033CL03 CCIT4059 CCIT4080CL07")
-        update.message.reply_text("Result will be ordered by ranking and the constraints of ranking are as follow:\n"+
+        update.message.reply_text("Result will be ordered by total marks and the marking scheme is as followed:\n"+
         "+ 10 marks for each day of day-off, including saturday\n"+
         "-  3 marks for each day of early morning lessons or late evening lessons\n"+
         "-  2 marks for the time gap between two lessons within one day is greater than 3 hours\n"

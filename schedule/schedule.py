@@ -18,7 +18,7 @@ class TheSemesterTimeSchedule:
     # functionality: display information
     def displayInfo(self):
         clCodeList = [cl.clCode + cl.clNo for cl in self.clList]
-        return '\n'.join(clCodeList) + f"\nRank: {self.rank:2d} EML: {self.earlyMorningLesson:1d} LEL: {self.lateEveningLesson:1d} SGL: {self.skyGroundLessons:1d} Day off(s): {self.dayoff:1d}"
+        return '\n'.join(clCodeList) + f"\nEML: {self.earlyMorningLesson:1d} LEL: {self.lateEveningLesson:1d} SGL: {self.skyGroundLessons:1d} Day off(s): {self.dayoff:1d}"
 
 
 
