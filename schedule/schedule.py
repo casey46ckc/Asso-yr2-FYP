@@ -2,6 +2,8 @@ import pandas
 import time
 from numpy import max, sum, zeros
 
+# List: commonly used constant
+period_strs = ('08:30 - 09:50', '10:00 - 11:20', '11:30 - 12:50', '13:00 - 14:20', '14:30 - 15:50', '16:00 - 17:20', '17:30 - 18:50')
 
 # Object: represent the fundanmental semester time schedule information for add/drop/swap
 class TheSemesterTimeSchedule:
@@ -18,7 +20,14 @@ class TheSemesterTimeSchedule:
     # functionality: display information
     def displayInfo(self):
         clCodeList = [cl.clCode + cl.clNo for cl in self.clList]
-        return '\n'.join(clCodeList) + f"\nEML: {self.earlyMorningLesson:1d} LEL: {self.lateEveningLesson:1d} SGL: {self.skyGroundLessons:1d} Day off(s): {self.dayoff:1d}"
+        
+        display_str = f"{'Period':^13}|Mon|Tue|Wed|Thu|Fri|Sat|\n"
+        for i in self.timeTable:
+            display_str += f"{period_strs[i]:^13}|"
+            for j in self.timeTable:
+                display_str += f"{((self.timeTable[i][j]==1)?'x':' '):^3}|"
+            display_str += "\n"
+        return display_str + '+'.join(clCodeList) + f"\nEML: {self.earlyMorningLesson:1d} LEL: {self.lateEveningLesson:1d} SGL: {self.skyGroundLessons:1d} Day off(s): {self.dayoff:1d}"
 
 
 
