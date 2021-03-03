@@ -1,5 +1,15 @@
 import json
 
+def read_json(file):
+    # read file
+    myjsfile = open(file, 'r')
+    jsondata = myjsfile.read()
+
+    # Parse
+    return json.loads(jsondata)
+
+
+
 def response_OfficeHr(compare_str):
     # read file
     myjsfile = open('json/campusoffice.json', 'r')

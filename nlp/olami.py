@@ -191,17 +191,26 @@ class Olami:
 # TODO: same codes have many copies across the same method
 #       recommend to divide them into small function
         if len(intent_category) > 0:
+            # debug
+            place = read_json('json/place.json')
+            print(place)
+
             intentTag = {"category":None,"modifier":None, "slots":{}}
             intentTag["category"] = intent_category
+
             if 'semantic' in nli_obj:
                 if 'modifier' in nli_obj['semantic'][0]:
                     modifier = nli_obj['semantic'][0]['modifier']
                     if len(modifier) > 0:
+
                         intentTag["modifier"] = modifier
+
                         slots_ptr = nli_obj['semantic'][0]['slots']
+
                         for x in range(len(slots_ptr)):
                             intentTag["slots"][slots_ptr[x]['name']] = slots_ptr[x]['value']
                         print(intentTag)
+
                         if intent_category == "greet":
                             if 'greeting' in modifier:
                                 return desc['result']
