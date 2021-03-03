@@ -13,7 +13,7 @@ config.read('config.ini')
 logger = logging.getLogger(__name__)
 
 # Load data from /json/*.json files
-li_jsonFiles = readjson.read_path_jsons('json/responses/')
+li_jsonFiles = read_path_jsons('json/responses/')
 
 # String for comparison
 # UGC-funded
