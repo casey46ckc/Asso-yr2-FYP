@@ -159,6 +159,7 @@ class Olami:
         return json.dumps(obj)
 
     def intent_detection(self, nli_obj):
+        tag = []
         def handle_selection_category(modifier, slots):
             if modifier == 'whenis_open_nospecific':
                 pass
@@ -197,10 +198,17 @@ class Olami:
 # TODO: same codes have many copies across the same method
 #       recommend to divide them into small function
         if len(intent_category) > 0:
+            tag.append(intent_category)
             if 'semantic' in nli_obj:
                 if 'modifier' in nli_obj['semantic'][0]:
                     modifier = nli_obj['semantic'][0]['modifier']
                     if len(modifier) > 0:
+                        tag.append(modifier)
+                        slots_ptr = nli_obj['semantic'][0]['slots']
+                        for x in range(len(slots_ptr)):
+                            tag.append(slots_ptr[x]['name'])
+                            tag.append(slots_ptr[x]['value'])
+                        print(tag)
                         if intent_category == "greet":
                             if 'greeting' in modifier:
                                 return desc['result']
