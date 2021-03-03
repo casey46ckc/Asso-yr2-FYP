@@ -1,13 +1,10 @@
 {
 	"tag":{
-		"category":"facilities",
-		"modifier":"place",
-		"slots":{
-			"facilities":"library"
-			}
+		"category":"greet",
+		"modifier":"help",
+		"slots":{}
 	},
-	"response":["Yes, [FACILITY] is/are in [FLOOR ROOM].",
-				"No, [CAMPUS] does not have [FACILITY]."],
+	"response":["You may call XXXX-XXXX or email to XXXX@gmail.com for further enquiries."],
 	"status":"True",
 	"return tag":[]
 }

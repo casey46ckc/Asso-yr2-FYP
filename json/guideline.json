@@ -1,13 +1,10 @@
 {
 	"tag":{
-		"category":"facilities",
-		"modifier":"place",
-		"slots":{
-			"facilities":"library"
-			}
+		"category":"greet",
+		"modifier":"guideline",
+		"slots":{}
 	},
-	"response":["Yes, [FACILITY] is/are in [FLOOR ROOM].",
-				"No, [CAMPUS] does not have [FACILITY]."],
+	"response":["Spacebot can provide you the answers with the aspects of “SCHOOL FACILITIES AND SERVICES”, “NON-JUPAS APPLICATION”, “FINANCIAL SUPPORT”, “ONLINE PLATFORM ISSUES”, and “SCHOOL ADMINISTRATION AFFAIRS”. You can bring up questions related to these areas."],
 	"status":"True",
 	"return tag":[]
 }

@@ -1,13 +1,10 @@
 {
 	"tag":{
-		"category":"facilities",
-		"modifier":"place",
-		"slots":{
-			"facilities":"library"
-			}
+		"category":"greet",
+		"modifier":"closing",
+		"slots":{}
 	},
-	"response":["Yes, [FACILITY] is/are in [FLOOR ROOM].",
-				"No, [CAMPUS] does not have [FACILITY]."],
+	"response":["See you again!Thank you for using spacebot"],
 	"status":"True",
 	"return tag":[]
 }
