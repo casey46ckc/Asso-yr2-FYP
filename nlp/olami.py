@@ -152,7 +152,6 @@ class Olami:
         return json.dumps(obj)
 
     def intent_detection(self, nli_obj):
-        tag = []
         def handle_selection_category(modifier, slots):
             if modifier == 'whenis_open_nospecific':
                 pass
@@ -187,13 +186,13 @@ class Olami:
 
         intent_category = nli_obj['type']
         desc = nli_obj['desc_obj']
-        print(nli_obj)
+        # print(nli_obj)
 # TODO: same codes have many copies across the same method
 #       recommend to divide them into small function
         if len(intent_category) > 0:
             # debug
-            place = read_json('json/place.json')
-            print(place)
+            #place = read_json('json/place.json')
+            #print(place)
 
             intentTag = {"category":None,"modifier":None, "slots":{}}
             intentTag["category"] = intent_category
