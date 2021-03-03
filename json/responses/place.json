@@ -6,8 +6,8 @@
 			"facilities":"library"
 			}
 	},
-	"response":["Yes, [FACILITY] is/are in [FLOOR ROOM].",
-				"No, [CAMPUS] does not have [FACILITY]."],
+	"response":["*Yes, [FACILITY] is/are in [FLOOR ROOM].",
+				"*No, [CAMPUS] does not have [FACILITY]."],
 	"status":"True",
 	"return tag":[]
 }
