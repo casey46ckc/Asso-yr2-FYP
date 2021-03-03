@@ -213,7 +213,7 @@ class Olami:
                         
                         for jsonObj in li_jsonFiles:
                             if intentTag == jsonObj['tag']:
-                                return jsonObj['response']
+                                return jsonObj['response'].replace("\\n", "\n")
 
                         if intent_category == "greet":
                             if 'greeting' in modifier:
