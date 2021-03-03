@@ -1,4 +1,5 @@
 import json
+from os import listdir
 
 def read_json(file):
     # read file
@@ -8,6 +9,16 @@ def read_json(file):
     # Parse
     return json.loads(jsondata)
 
+
+def read_path_jsons(path):
+    li_json = []
+    fileNames = [pos_json for pos_json in os.listdir(path) if pos_json.endswith('.json')]
+    # read files
+    for fileName in fileNames:
+        myjsfile = open(path + fileName, 'r')
+        jsondata = myjsfile.read()
+        li_json.append(json.loads(jsondata))
+    return li_json
 
 
 def response_OfficeHr(compare_str):
