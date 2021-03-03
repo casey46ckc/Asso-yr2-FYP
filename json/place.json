@@ -3,7 +3,7 @@
 		"category":"facilities",
 		"modifier":["place"],
 		"slots":{
-			"facility":"library",
+			"facility":"library"
 			}
 	},
 	"response":["Yes, [FACILITY] is/are in [FLOOR ROOM].",
