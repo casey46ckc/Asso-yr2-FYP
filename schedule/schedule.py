@@ -21,13 +21,13 @@ class TheSemesterTimeSchedule:
     def displayInfo(self):
         clCodeList = [cl.clCode + cl.clNo for cl in self.clList]
         
-        display_str = f"{'Period':^13}|Mon|Tue|Wed|Thu|Fri|Sat|\n"
+        display_str = f"<code>{'Period':^13}|Mon|Tue|Wed|Thu|Fri|Sat|\n"
         for i in range(len(self.timeTable)):
             display_str += f"{period_strs[i]:^13}|"
             for j in range(len(self.timeTable[i])):
                 display_str += f"{'x' if self.timeTable[i][j] == 1 else ' ':^3}|"
             display_str += "\n"
-        return display_str + '+'.join(clCodeList) + f"\nEML: {self.earlyMorningLesson:1d} LEL: {self.lateEveningLesson:1d} SGL: {self.skyGroundLessons:1d} Day off(s): {self.dayoff:1d}"
+        return display_str + "</code>" + '+'.join(clCodeList) + f"\nEML: {self.earlyMorningLesson:1d} LEL: {self.lateEveningLesson:1d} SGL: {self.skyGroundLessons:1d} Day off(s): {self.dayoff:1d}"
 
 
 
