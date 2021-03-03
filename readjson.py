@@ -12,7 +12,7 @@ def read_json(file):
 
 def read_path_jsons(path):
     li_json = []
-    fileNames = [pos_json for pos_json in os.listdir(path) if pos_json.endswith('.json')]
+    fileNames = [pos_json for pos_json in listdir(path) if pos_json.endswith('.json')]
     # read files
     for fileName in fileNames:
         myjsfile = open(path + fileName, 'r')
