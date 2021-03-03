@@ -1,0 +1,15 @@
+{
+	"tag":{
+		"category":"facilities",
+		"modifier":"place",
+		"slots":{
+			"facilities":"library"
+			}
+	},
+	"response":["*Yes, library is in 4/F."],
+	"status":"True",
+	"return tag":[]
+}
+	
+	
+			

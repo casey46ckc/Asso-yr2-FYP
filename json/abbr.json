@@ -3,9 +3,9 @@
         "term": [
             "hku space kowloon east campus",
             "kowloon east campus",
-            "kec"
+            " kec "
         ],
-        "abbr": "kec"
+        "abbr": " kec "
     },
     {
         "term": [
@@ -14,17 +14,17 @@
             "clothing industry training authority learning center",
             "cita learning centre",
             "cita learning center",
-            "cita"
+            " cita "
         ],
-        "abbr": "cit"
+        "abbr": " cit "
     },
     {
         "term": [
             "hku space island east campus",
             "island east campus",
-            "iec"
+            " iec "
         ],
-        "abbr": "iec"
+        "abbr": " iec "
     },
     {
         "term": [
@@ -32,16 +32,16 @@
             "hku space fortress tower center",
             "fortress tower centre",
             "fortress tower center",
-            "ftc"
+            " ftc "
         ],
-        "abbr": "ftc"
+        "abbr": " ftc "
     },
     {
         "term": [
             "hku space po leung kuk stanley ho comunity college (hpshcc) campus",
             "hpshcc"
         ],
-        "abbr": "hpc"
+        "abbr": " hpc "
     },
     {
         "term": [
@@ -53,94 +53,111 @@
             "adc & unc",
             "adc&unc"
         ],
-        "abbr": "adc&unc"
+        "abbr": " adc&unc "
     },
     {
         "term": [
             "admiralty learning centre",
             "admiralty learning center",
-            "adc"
+            " adc "
         ],
-        "abbr": "adc"
+        "abbr": " adc "
     },
     {
         "term": [
             "united learning centre",
             "united learning center",
-            "unc"
+            " unc "
         ],
-        "abbr": "unc"
-    },
-    {
-        "term": [
-            "united learning centre",
-            "united learning center",
-            "unc"
-        ],
-        "abbr": "unc"
+        "abbr": " unc "
     },
     {
         "term": [
             "city university of hong kong",
             "city u",
-            "cityu"
+            " cityu "
         ],
-        "abbr": "cityu"
+        "abbr": " cityu "
     },
     {
         "term": [
             "hong kong baptist university",
-            "hkbu",
+            " hkbu ",
             " bu "
         ],
-        "abbr": "hkbu"
+        "abbr": " hkbu "
     },
     {
         "term": [
             "lingnan university",
-            "lu",
-            "lingu",
-            "ling u"
+            " lu ",
+            " lingu ",
+            " ling u "
         ],
         "abbr": "lingu"
     },
     {
         "term": [
             "the chinese university of hong kong",
-            "cuhk",
-            "cu"
+            " cuhk ",
+            " cu "
         ],
-        "abbr": "cuhk"
+        "abbr": " cuhk "
     },
     {
         "term": [
             "the education university of hong kong",
-            "edu",
-            "ed u"
+            " edu ",
+            " ed u "
         ],
-        "abbr": "edu"
+        "abbr": " edu "
     },
     {
         "term": [
             "the hong kong polytechnic university",
-            "polyu",
-            "poly u"
+            " polyu ",
+            " poly u "
         ],
-        "abbr": "polyu"
+        "abbr": " polyu "
     },
     {
         "term": [
             "the hong kong university of science and technology",
-            "hkust",
+            " hkust ",
             " ust "
         ],
-        "abbr": "hkust"
+        "abbr": " hkust "
     },
     {
         "term": [
             "the university of hong kong",
-            "hku"
+            " hku "
         ],
-        "abbr": "hku"
+        "abbr": " hku "
+    },
+	{
+        "term": [
+            "discussion room",
+			"discussion rm",
+			"discuss rm"
+        ],
+        "abbr": " discuss rm "
+    },
+	{
+        "term": [
+            "library",
+			" libra ",
+			" lib "
+        ],
+        "abbr": " library "
+    },
+	{
+        "term": [
+            "student lounge",
+			" lounge ",
+			"細com",
+			"細common"
+        ],
+        "abbr": " lounge "
     }
 ]
