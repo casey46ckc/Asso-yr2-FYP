@@ -1,12 +1,11 @@
 {
-	"tag":{
+	"tag":
 		"category":"FACILITY",
 		"modifier":"campus_have",
 		"slots":{
 			"facility":"[FACILITY]",
 			"campus":"[CAMPUS]"
-		}
-	},
+			}
 	"response":["Yes, [FACILITY] is/are in [FLOOR ROOM].",
 				"No, [CAMPUS] does not have [FACILITY]."],
 	"status":"True",

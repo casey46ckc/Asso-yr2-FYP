@@ -74,13 +74,6 @@ cm_rm_str = ['student common room', 'common room', 'cm room', 'cm rm',
 lounge_str = ['student lounge', 'lounge', '細com', '細common']
 comp_lab_str = ['computer lab', 'comp lab']
 lib_str = ['library', 'libra', 'lib']
-# for the buildings
-# kec_str = ['kowloon east campus', 'kec']
-# cita_str = ['clothing industry training authority', 'cita']
-# iec_str = ['island east campus', 'iec']
-# ftc_str = ['fortress tower centre', 'fortress tower center', 'ftc']
-# adc_unc_str = ['admiralty centre & united centre',
-#                'admiralty centre and united centre', 'adc and unc', 'adc & unc', 'adc&unc']
 
 # financial suport link
 fasp_link = 'https://www.wfsfaa.gov.hk/sfo/en/postsecondary/fasp/overview.htm'
@@ -198,17 +191,17 @@ class Olami:
 # TODO: same codes have many copies across the same method
 #       recommend to divide them into small function
         if len(intent_category) > 0:
-            tag.append(intent_category)
+            intentTag = {"category":None,"modifier":None, "slots":{}}
+            intentTag["category"] = intent_category
             if 'semantic' in nli_obj:
                 if 'modifier' in nli_obj['semantic'][0]:
                     modifier = nli_obj['semantic'][0]['modifier']
                     if len(modifier) > 0:
-                        tag.append(modifier)
+                        intentTag["modifier"] = modifier
                         slots_ptr = nli_obj['semantic'][0]['slots']
                         for x in range(len(slots_ptr)):
-                            tag.append(slots_ptr[x]['name'])
-                            tag.append(slots_ptr[x]['value'])
-                        print(tag)
+                            intentTag["slots"][slots_ptr[x]['name']] = slots_ptr[x]['value']
+                        print(intentTag)
                         if intent_category == "greet":
                             if 'greeting' in modifier:
                                 return desc['result']
