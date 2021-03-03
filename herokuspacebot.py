@@ -82,12 +82,7 @@ def error_handler(update: Update, context: CallbackContext):
 if __name__ == "__main__":
     # Load data from config.ini file
     config = configparser.ConfigParser()
-    config.read('config.ini')
-
-
-    # Load data from /json/*.json files
-    li_jsonFiles = readjson.read_path_jsons('json/')
-    
+    config.read('config.ini')    
 
     # Set these variable to the appropriate values
     TOKEN = config['TELEGRAM']['ACCESS_TOKEN']

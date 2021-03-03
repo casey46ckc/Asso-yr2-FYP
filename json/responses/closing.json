@@ -1,10 +1,10 @@
 {
 	"tag":{
 		"category":"greet",
-		"modifier":"greeting",
+		"modifier":"closing",
 		"slots":{}
 	},
-	"response":["Hello! How can I help you?"],
+	"response":"*See you again!Thank you for using spacebot",
 	"status":"True",
 	"return tag":[]
 }

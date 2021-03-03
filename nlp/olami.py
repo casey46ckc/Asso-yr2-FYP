@@ -12,6 +12,9 @@ config.read('config.ini')
 
 logger = logging.getLogger(__name__)
 
+# Load data from /json/*.json files
+li_jsonFiles = readjson.read_path_jsons('json/responses/')
+
 # String for comparison
 # UGC-funded
 cityu_str = ['city university of hong kong', 'city u', 'cityu']
@@ -193,7 +196,7 @@ class Olami:
         if len(intent_category) > 0:
             # debug
             place = read_json('json/place.json')
-            print("place: ", place['tag'])
+            print("place: ", place['tag'])  
 
             intentTag = {'category':None,'modifier':None, 'slots':{}}
             intentTag['category'] = intent_category
@@ -210,9 +213,10 @@ class Olami:
                         for x in range(len(slots_ptr)):
                             intentTag['slots'][slots_ptr[x]['name']] = slots_ptr[x]['value']
                         print("intentTag: ", intentTag)
-                        print("Result (T/F): ", place['tag'] == intentTag)
-                        if place['tag'] == intentTag:
-                            return place['response'][0]
+                        
+                        for jsonObj in li_jsonFiles:
+                            if intentTag == jsonObj['tag']:
+                                return jsonObj['response']
 
                         if intent_category == "greet":
                             if 'greeting' in modifier:
