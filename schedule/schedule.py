@@ -27,7 +27,7 @@ class TheSemesterTimeSchedule:
             for j in range(len(self.timeTable[i])):
                 display_str += f"{'x' if self.timeTable[i][j] == 1 else ' ':^3}|"
             display_str += "\n"
-        return display_str + '+'.join(clCodeList) + f"\nEML: {self.earlyMorningLesson:1d} LEL: {self.lateEveningLesson:1d} SGL: {self.skyGroundLessons:1d} Day off(s): {self.dayoff:1d}</code>"
+        return display_str + "</code>" + '+'.join(clCodeList) + f"\nEML: {self.earlyMorningLesson:1d} LEL: {self.lateEveningLesson:1d} SGL: {self.skyGroundLessons:1d} Day off(s): {self.dayoff:1d}"
 
 
 
