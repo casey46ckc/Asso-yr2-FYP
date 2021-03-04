@@ -6,7 +6,7 @@
 			"facilities":"library"
 			}
 	},
-	"response":["*Yes, library is in 4/F."],
+	"response":["*Yes, library is on 4/F."],
 	"status":"True",
 	"return tag":[]
 }

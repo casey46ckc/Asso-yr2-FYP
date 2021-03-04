@@ -80,9 +80,9 @@ comp_lab_str = ['computer lab', 'comp lab']
 lib_str = ['library', 'libra', 'lib']
 
 # financial suport link
-fasp_link = 'https://www.wfsfaa.gov.hk/sfo/en/postsecondary/fasp/overview.htm'
-nlsps_link = 'https://www.wfsfaa.gov.hk/sfo/en/postsecondary/nlsps/overview.htm'
-fs_apply_link = 'https://ess.wfsfaa.gov.hk/essprd/jsp/app/apps0101.jsp?language=en'
+# fasp_link = 'https://www.wfsfaa.gov.hk/sfo/en/postsecondary/fasp/overview.htm'
+# nlsps_link = 'https://www.wfsfaa.gov.hk/sfo/en/postsecondary/nlsps/overview.htm'
+# fs_apply_link = 'https://ess.wfsfaa.gov.hk/essprd/jsp/app/apps0101.jsp?language=en'
 
 # TODO: built objects by import .json instead of hard coding
 
@@ -215,7 +215,7 @@ class Olami:
                             if intentTag == jsonObj['tag']:
                                 return '\n'.join(jsonObj['response'])
 
-                        if intent_category == "greet":
+                        if intent_category == "greet": #moved greet module to json
                             if 'greeting' in modifier:
                                 return desc['result']
                             elif 'help' in modifier:
@@ -323,7 +323,7 @@ class Olami:
                                             return 'You can apply it before [DEADLINE] / at anytime. Please refer to [HTTP] for more information.'
                             elif 'yn_igcse_replace_ielts' in modifier:
                                 return 'Each university and programme may vary. Which programe and university you want to apply/ have applied?'
-                        elif intent_category == "finance":
+                        elif intent_category == "finance":  #moved finance module to json
                             if 'fs_ask' in modifier:
                                 return desc['result']
                             elif 'fs_link' in modifier:
