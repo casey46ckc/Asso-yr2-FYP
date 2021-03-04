@@ -4,7 +4,6 @@
 		"modifier":"place",
 		"slots":{
 			"facilities":"study room"
-            // not yet handle plural form
 			}
 	},
 	"response":["*There are 4 study rooms in KEC. They are KEC403, KEC603, KEC610, KEC708"],
