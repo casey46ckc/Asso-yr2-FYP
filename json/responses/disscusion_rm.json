@@ -1,0 +1,13 @@
+{
+	"tag":{
+		"category":"facilities",
+		"modifier":"place",
+		"slots":{
+			"facilities":"discussion room"
+			}
+	},
+	"response":["*There are 4 discussion rooms in KEC. They are KEC201, KEC202, KEC203, KEC204"],
+	"status":"True",
+	"return tag":[]
+}
+	
