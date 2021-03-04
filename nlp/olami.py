@@ -211,6 +211,7 @@ class Olami:
                             intentTag['slots'][slots_ptr[x]['name']] = slots_ptr[x]['value']
                         print("intentTag: ", intentTag)
                         
+                        ##return response through Json*********
                         for jsonObj in li_jsonFiles:
                             if intentTag == jsonObj['tag']:
                                 return '\n'.join(jsonObj['response'])
@@ -345,7 +346,7 @@ class Olami:
                         elif intent_category == "facilities":
                             if 'place' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]
-                                if 'facilities' == slot['name']:
+                                if 'facilities' == slot['name']:    #facil.. moved to json
                                     tmp_str = slot['value'].lower()
                                     if tmp_str in dis_rm_str:
                                         return f'There are {len(disrm)} discussion rooms in KEC. They are ' + ','.join(disrm)
