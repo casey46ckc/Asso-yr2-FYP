@@ -72,7 +72,7 @@ li_uandlink_str = ['City University of Hong Kong:', cityu_adm_link,
 
 # for KEC
 dis_rm_str = ['discussion room', 'discussion rm', 'discuss rm']
-sty_rm_str = ['study room', 'study rm']
+sty_rm_str = ['study room', 'study rm', 'study rooms', 'study rms']
 cm_rm_str = ['student common room', 'common room', 'cm room', 'cm rm',
              'student common rm', 'common rm', '大com', '大common', 'com room', 'com rm']
 lounge_str = ['student lounge', 'lounge', '細com', '細common']

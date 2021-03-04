@@ -135,26 +135,26 @@
         ],
         "abbr": " hku "
     },
-	{
+    {
         "term": [
             "discussion room",
-			"discussion rm",
-			"discuss rm"
+            "discussion rm",
+            "discuss rm"
         ],
         "abbr": " discuss rm "
     },
-	{
+    {
         "term": [
             "library",
-			" libra",
-			" lib"
+            " libra",
+            " lib"
         ],
         "abbr": " library "
     },
-	{
+    {
         "term": [
             "student lounge",
-			"lounge",
+            "lounge",
             "細com",
             "細common",
             "細 com",
@@ -162,7 +162,16 @@
         ],
         "abbr": "lounge"
     },
-	{
+    {
+        "term": [
+            "study room",
+            "study rm",
+            "study rooms",
+            "study rms"
+        ],
+        "abbr": "study room"
+    },
+    {
         "term": [
             "non-jupas"
         ],
