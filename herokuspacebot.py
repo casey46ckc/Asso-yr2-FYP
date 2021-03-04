@@ -62,7 +62,7 @@ def clSchedule_handler(update: Update, context: CallbackContext):
             result_sorted = sorted(resultList, key=getRank, reverse=True)
             for i in range(len(result_sorted)):
                 if(i < 10):
-                    update.message.reply_text('<p style="font-family: Courier New">' + f"Rank #{i + 1}:\n" + result_sorted[i].displayInfo() + '</p>', parse_mode=telegram.ParseMode.HTML)
+                    update.message.reply_text(f"Rank #{i + 1}:\n" + result_sorted[i].displayInfo(), parse_mode=telegram.ParseMode.HTML)
     else:
         update.message.reply_text("Usage:\n" + "\t/spacedule <Class Code><Class No>(<Class No> can be omitted) * N\n" +
         "To find the most optimized classes for add/drop/swap")
