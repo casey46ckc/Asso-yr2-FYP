@@ -29,7 +29,7 @@ reply_kb_start = ReplyKeyboardMarkup([['Guideline'],['Help']], one_time_keyboard
 # reply_kb_example = ReplyKeyboardMarkup([['Where is the library?'],['Tell me the contact of KEC']], one_time_keyboard=True)
 
 # initial the nltk parts
-default_tagger = DefaultTagger('NN')
+default_tagger = nltk.tag.DefaultTagger('NN')
 # hardcode part, will move to .json
 model = {'discusssion_room': 'facilities',
             'study_lounge': 'facilities',
