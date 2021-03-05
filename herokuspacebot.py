@@ -27,18 +27,31 @@ help_message = ['Where is <facility name in KEC>?', 'Which floor <facility name 
 reply_kb_start = ReplyKeyboardMarkup([['Guideline'],['Help']], one_time_keyboard=True)
 # reply_kb_example = ReplyKeyboardMarkup([['Where is the library?'],['Tell me the contact of KEC']], one_time_keyboard=True)
 
-# initial the stop words data and the tweet tokenizer
+# initial the nltk parts
+default_tagger = nltk.data.load(nltk.tag._POS_TAGGER)
+# hardcode part, will move to .json
+model = {'discusssion_room': 'facilities',
+            'study_lounge': 'facilities',
+            'computer_lab': 'facilities',
+            'common_room': 'facilities',}
+tagger = nltk.tag.UnigramTagger(model=model, backoff=default_tagger)
+tknzr = TweetTokenizer(strip_handles=True, reduce_len=True)
+mwtknzr = MWETokenizer([('discusssion', 'room'),('study', 'lounge'),('computer', 'lab'),('common', 'room')])
 stop_words = set(stopwords.words('english'))
-tknzr = TweetTokenizer()
+
 
 # initialize the list of information for class schedule
 clList = readClSchedule('schedule/MTT_2021S2_Custom.xls')
 
 def reply_handler(update: Update, context: CallbackContext):
-    # shorten the message
     text = update.message.text
+    # nltk part, lowercase for convienence
+    textToken = text.lower()
+    token0 = [w for w in mwtknzr.tokenize(tknzr.tokenize(textToken)) if not w in stop_words]
+    print(f'token0: ' + token0)
+    print(f'token0 tagger:' + tagger.tag(token0))
 
-    textToken = text
+    # shorten the message
     text = replace_AbbrName(text)
     print("Text after abbr: " + text)
     """Reply message."""

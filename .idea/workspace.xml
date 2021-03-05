@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2629ddf1-19bd-43dc-b6cb-fef6ef7d7b26" name="Default Changelist" comment="" />
+    <list default="true" id="2629ddf1-19bd-43dc-b6cb-fef6ef7d7b26" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/herokuspacebot.py" beforeDir="false" afterPath="$PROJECT_DIR$/herokuspacebot.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,5 +38,16 @@
       <updated>1614940554446</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
