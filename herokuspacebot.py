@@ -8,6 +8,8 @@ import telegram
 from telegram import ReplyKeyboardMarkup, Update
 from telegram.ext import Updater, Dispatcher, CommandHandler, MessageHandler, Filters, CallbackContext
 from nlp.olami import Olami
+from nltk.tokennize import MWETokenizer, TweetTokenizer, word_tokenize
+from nltk.corpus import stopwords
 
 from schedule.schedule import TheSemesterTimeSchedule, collect_result_V1, readClSchedule, codeValidity, getRank
 
@@ -21,14 +23,20 @@ help_message = ['Where is <facility name in KEC>?', 'Which floor <facility name 
 reply_kb_start = ReplyKeyboardMarkup([['Guideline'],['Help']], one_time_keyboard=True)
 # reply_kb_example = ReplyKeyboardMarkup([['Where is the library?'],['Tell me the contact of KEC']], one_time_keyboard=True)
 
+# initial the stop words data and the tweet tokenizer
+stop_words = set(stopwords.words('english'))
+tknzr = TweetTokenizer()
+
 # initialize the list of information for class schedule
 clList = readClSchedule('schedule/MTT_2021S2_Custom.xls')
 
 def reply_handler(update: Update, context: CallbackContext):
     # shorten the message
     text = update.message.text
-    text = replace_AbbrName(text)
 
+    textToken = text
+    text = replace_AbbrName(text)
+    print("Text after abbr: " + text)
     """Reply message."""
     user_id = update.message.from_user.id
     reply = Olami().nli(text, user_id)
