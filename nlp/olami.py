@@ -69,6 +69,18 @@ li_uandlink_str = ['City University of Hong Kong:', cityu_adm_link,
                    'Hong Kong Shue Yan University:', '[HTTP]',
                    'The Open University of Hong Kong:', '[HTTP]']
 
+li_uandlink_str_json = ['City University of Hong Kong: https://www.admo.cityu.edu.hk/direct/', 
+                   'Hong Kong Baptist University: https://admissions.hkbu.edu.hk/en/', 
+                   'Lingnan University: https://www.ln.edu.hk/admissions/ug/non-jupas/general-notes-to-applicants',
+                   'The Chinese University of Hong Kong: http://admission.cuhk.edu.hk/non-jupas-senior/application-details.html', 
+                   'The Education University of Hong Kong: https://www.eduhk.hk/onlineappl/',
+                   'The Hong Kong Polytechnic University: https://www38.polyu.edu.hk/eAdmission/index.do',
+                   'The Hong Kong University of Science and Technology: https://join.ust.hk/apply', 
+                   'The University of Hong Kong: https://aal.hku.hk/admissions/international/admissions-information', 
+                   'Hang Seng University of Hong Kong: [HTTP]', 
+                   'Hong Kong Shue Yan University: [HTTP]',
+                   'The Open University of Hong Kong: [HTTP]']
+
 
 # for KEC
 dis_rm_str = ['discussion room', 'discussion rm', 'discuss rm']
@@ -230,7 +242,7 @@ class Olami:
                                 # done jdone
                                 return 'Apart from getting a place into universities through JUPAS, students may consider applying post-secondary programmes not covered by JUPAS. There is a lot of information regarding non-JUPAS admissions. Gather your information in advance and plan ahead.'
                             elif 'whenis_open_nospecific' in modifier:
-                                #done
+                                #done jdone
                                 return 'You can apply non-jupas application once it is open. Each university may vary.'
                             elif 'whenis_deadline_nospecific' in modifier:
                                 if len(nli_obj['semantic'][0]['slots']) > 0:
@@ -238,32 +250,35 @@ class Olami:
                                 else:
                                     return 'Each university may vary. Which university you want to apply / have applied?\n' + '\n'.join(li_u_str)
                             elif 'what_toprepare_general' in modifier:
-                                #done
+                                #done jdone
                                 return 'Each university may vary. But Generally, you should better prepare your personal identify information(e.g. HKID / Passport / etc), public examination results(e.g. HKDSE / HKCEE /HKALE / IGCSE / IELTS / TOFEL / etc), official transcript, personal statement, other appropriate qualification documents (e.g. public non-academic awards / etc),  etc. Which university you want to apply / have applied?\n' + '\n'.join(li_u_str)
                             elif 'yn_apply_year1' in modifier:
-                                #done
+                                #done jdone
                                 return 'You can apply non-jupas application when you are year 1 student,  but bare in mind that some universities may only consider senior level student and some might only consider junior level student.Which university you want to apply / have applied?\n' + '\n'.join(li_u_str)
                             elif 'schoolsupport_nospecific' in modifier:
-                                #done ****but if the question is asked too long, and the bot may not be able to handle
+                                #done jdone ****but if the question is asked too long, and the bot may not be able to handle
                                 return "HKUSPACE have setup an online platform in learner portal for student to apply for the reference letter from the professor.\nMake sure you have get the professor's approval before apply for the letter through the online platform.\nYou may refer to [HTTP] for further information."
                             elif 'whatis_requirement_nospecific' in modifier:
-                                #done
+                                #done jdone
                                 return "It depends on the university you want to apply and the programme you want to apply. For general requirement in applying the universities in Hong Kong, you should as least have GRADE 3 for both Chinese and English language subject and 5 subjects in GRADE 2 for HKDSE result. For the language subject, you can use the result of IELTS and IGCSE instead but the requirement for each univerisity and programme may vary. Which programe and university you want to apply/ have applied?\n" + '\n'.join(li_u_str)
                             elif 'yn_apply_morethan1' in modifier:
-                                #done
+                                #done jdone
                                 return 'Each university may vary. Which university you want to apply / have applied?\n' + '\n'.join(li_u_str)
                             elif 'action_latetosubmit' in modifier:
-                                #done
+                                #done jdone
                                 return 'Indeed, late submission would not be allowed. Although the univerisities usually have many rounds of non-JUPAS application, it is recommended to submit the application as soon as possible. You may contact to their admission office directly if you want some help. Which programe and university you want to apply/ have applied?\n' + '\n'.join(li_u_str)
                             elif 'yn_essential_referenceletter' in modifier:
-                                # done
+                                # done jdone
                                 return 'Each university may vary. Which programe and university you want to apply/ have applied?\n' + '\n'.join(li_u_str)
                             elif 'yn_essential_apply_year2' in modifier:
+                                #done jdone
                                 return 'Indeed. the associate programme is aimed to assist the students to promote their academic position to undergraduate level but not for profession purpose. Students are supposed to apply NON-JUPAS before they are graduated'
                             elif 'howto_apply_university_general' in modifier:
                                 #can modify with json dynamically later********
+                                #****cannot find*****
                                 return "You can apply the non-jupas from any University's non-jupas page. The links are as followed:\n" + '\n'.join(li_uandlink_str)
                             elif 'nonjupas_nospecific' in modifier:
+                                #****cannot find*****
                                 return 'Which university are you refering to?' + '\n'.join(li_u_str)
                             elif 'howto_webpage_university' in modifier:
                                 # done
