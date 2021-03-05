@@ -5,6 +5,10 @@ from readjson import replace_AbbrName
 
 import telegram
 
+
+import nltk
+nltk.download('stopwords')
+
 from telegram import ReplyKeyboardMarkup, Update
 from telegram.ext import Updater, Dispatcher, CommandHandler, MessageHandler, Filters, CallbackContext
 from nlp.olami import Olami
