@@ -7,6 +7,7 @@ import telegram
 
 
 import nltk
+import nltk.tag, nltk.data
 nltk.download('stopwords')
 
 from telegram import ReplyKeyboardMarkup, Update
