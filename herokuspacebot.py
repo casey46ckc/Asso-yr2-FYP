@@ -8,7 +8,7 @@ import telegram
 from telegram import ReplyKeyboardMarkup, Update
 from telegram.ext import Updater, Dispatcher, CommandHandler, MessageHandler, Filters, CallbackContext
 from nlp.olami import Olami
-from nltk.tokennize import MWETokenizer, TweetTokenizer, word_tokenize
+from nltk.tokenize import MWETokenizer, TweetTokenizer, word_tokenize
 from nltk.corpus import stopwords
 
 from schedule.schedule import TheSemesterTimeSchedule, collect_result_V1, readClSchedule, codeValidity, getRank
