@@ -1,0 +1,23 @@
+{
+    "tag": {
+        "category": "nonjupas",
+        "modifier": "action_latetosubmit",
+        "slots": {}
+    },
+    "response": [
+        "*Indeed, late submission would not be allowed. Although the univerisities usually have many rounds of non-JUPAS application, it is recommended to submit the application as soon as possible. You may contact to their admission office directly if you want some help. Which programe and university you want to apply/ have applied?",
+        "1. City University of Hong Kong",
+        "2. Hong Kong Baptist University",
+        "3. Lingnan University",
+        "4. The Chinese University of Hong Kong",
+        "5. The Education University of Hong Kong",
+        "6. The Hong Kong Polytechnic University",
+        "7. The Hong Kong University of Science and Technology",
+        "8. The University of Hong Kong",
+        "9. Hang Seng University of Hong Kong",
+        "10. Hong Kong Shue Yan University",
+        "11. The Open University of Hong Kong"
+    ],
+    "status": "True",
+    "return tag": []
+}
