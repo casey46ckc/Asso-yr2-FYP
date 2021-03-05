@@ -227,7 +227,7 @@ class Olami:
                                 return "See you again!Thank you for using spacebot"
                         elif intent_category == "nonjupas":
                             if 'whatis' in modifier:
-                                # done
+                                # done jdone
                                 return 'Apart from getting a place into universities through JUPAS, students may consider applying post-secondary programmes not covered by JUPAS. There is a lot of information regarding non-JUPAS admissions. Gather your information in advance and plan ahead.'
                             elif 'whenis_open_nospecific' in modifier:
                                 #done

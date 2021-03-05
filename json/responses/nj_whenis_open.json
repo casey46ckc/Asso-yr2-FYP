@@ -1,0 +1,12 @@
+{
+    "tag": {
+        "category": "nonjupas",
+        "modifier": "whenis_open_nospecific",
+        "slots": {}
+    },
+    "response": [
+        "*You can apply non-jupas application once it is open. Each university may vary."
+    ],
+    "status": "True",
+    "return tag": []
+}
