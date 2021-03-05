@@ -305,7 +305,7 @@ class Olami:
                                     if ready:
                                         return 'The non-JUPAS application deadline of ' + slot['value'] + ' is/are as followed:\n' + '\n'.join(deadline) + '\nYou may refer to the following link for more details:\n' + link
                             elif 'yn_num_referenceletter_matter' in modifier:
-                                #done
+                                #done jdone
                                 return 'Each university and programme may vary. Which programe and university you want to apply/ have applied?'
                             elif 'whenis_start_publicexam' in modifier:
                                 slot = nli_obj['semantic'][0]['slots'][0]
