@@ -49,8 +49,8 @@ def reply_handler(update: Update, context: CallbackContext):
     # nltk part, lowercase for convienence
     textToken = text.lower()
     token0 = [w for w in mwtknzr.tokenize(tknzr.tokenize(textToken)) if not w in stop_words]
-    print(f'token0: ' + token0)
-    print(f'token0 tagger:' + tagger.tag(token0))
+    print(f'token0: ' + ','.join(token0))
+    print(f'token0 tagger:' + ','.join(tagger.tag(token0)))
 
     # shorten the message
     text = replace_AbbrName(text)
