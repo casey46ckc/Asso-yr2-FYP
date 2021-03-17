@@ -67,9 +67,9 @@ def reply_handler(update: Update, context: CallbackContext):
     else:
         reply = Olami().nli(text, user_id, tagStored)
     if reply['status'] == "True":
-        tagStored = {}
+        tagStored.clear()
     else:
-        tagStored = reply['tag']
+        tagStored = reply['tag'].copy()
     update.message.reply_text('\n'.join(reply['response']))
 
 def start_handler(update: Update, context: CallbackContext):
