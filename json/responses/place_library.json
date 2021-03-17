@@ -5,7 +5,7 @@
 		"slots": ["campus","facilities"]
 	},
 	"noslot":{
-		"response": ""
+		"response": [""]
 	},	
 	"keclibrary":{
 		"response": "***Yes, library is on 4/F.",
