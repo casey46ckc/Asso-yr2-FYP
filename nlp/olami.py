@@ -144,7 +144,7 @@ class Olami:
                 "NLI responded status != 'ok': {}".format(response_json['status']))
         else:
             nli_obj = response_json['data']['nli'][0]
-            if tagStored=None:
+            if tagStored is None:
                 return self.intent_detection(nli_obj)
             else:
                 return self.intent_detection(nli_obj, tagStored)
