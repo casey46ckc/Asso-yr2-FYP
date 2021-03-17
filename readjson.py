@@ -66,9 +66,12 @@ def replace_AbbrName(inStr):
                 break             
     return resultTxt
 
-def read_multiwords_json(obj) -> list:
+def read_multiwords_json(fileName: str) -> list:
+    inFile = open(fileName, 'r')
+    fileRead = inFile.read()
+    jsonIn = json.loads(fileRead)
     oList = []
-    for data in obj["data"]:
+    for data in jsonIn["data"]:
         if isinstance(data, list):
             oList.append(tuple(data))
     return oList

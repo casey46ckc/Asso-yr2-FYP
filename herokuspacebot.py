@@ -1,7 +1,7 @@
 import configparser
 import logging
 import os
-from readjson import replace_AbbrName
+from readjson import replace_AbbrName, read_multiwords_json
 
 import telegram
 
@@ -30,14 +30,15 @@ reply_kb_start = ReplyKeyboardMarkup([['Guideline'],['Help']], one_time_keyboard
 
 # initial the nltk parts
 default_tagger = nltk.tag.DefaultTagger('NN')
-# hardcode part, will move to .json
-model = {'discusssion_room': 'facilities',
-            'study_lounge': 'facilities',
-            'computer_lab': 'facilities',
-            'common_room': 'facilities'}
+inModeljs = open('json/models.json', 'r')
+ModelsjsFile = inModelsjs.read()
+model = json.loads(ModelsjsFile)
+
+tl_MWs = read_multiwords_json('json/multiwords.json')
+
 tagger = nltk.tag.UnigramTagger(model=model, backoff=default_tagger)
 tknzr = TweetTokenizer(strip_handles=True, reduce_len=True)
-mwtknzr = MWETokenizer([('discussion', 'room'),('study', 'lounge'),('computer', 'lab'),('common', 'room')])
+mwtknzr = MWETokenizer(tl_MWs)
 stop_words = set(stopwords.words('english'))
 
 
