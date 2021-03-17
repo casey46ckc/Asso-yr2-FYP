@@ -134,7 +134,7 @@ class Olami:
         self.app_secret = app_secret
         self.input_type = input_type
 
-    def nli(self, text, cusid=None):
+    def nli(self, text, cusid=None, tagStored=None):
         response = requests.post(
             self.URL, params=self._gen_parameters('nli', text, cusid))
         response.raise_for_status()
@@ -144,7 +144,10 @@ class Olami:
                 "NLI responded status != 'ok': {}".format(response_json['status']))
         else:
             nli_obj = response_json['data']['nli'][0]
-            return self.intent_detection(nli_obj)
+            if tagStored=None:
+                return self.intent_detection(nli_obj)
+            else:
+                return self.intent_detection(nli_obj, tagStored)
 
     def _gen_parameters(self, api, text, cusid):
         timestamp_ms = (int(time.time() * 1000))
@@ -167,7 +170,14 @@ class Olami:
             'input_type': self.input_type, 'text': text}}
         return json.dumps(obj)
 
-    def intent_detection(self, nli_obj):
+    def intent_detection(self, nli_obj, intentTag={'category':None,'modifier':None, 'slots':[]}) -> dict:
+        ret_dict = {
+            'tag': None,
+            'response':None, 
+            'status': "False",
+            'keyBoardLayout':None
+            }
+"""
         def handle_selection_category(modifier, slots):
             if modifier == 'whenis_open_nospecific':
                 pass
@@ -199,16 +209,12 @@ class Olami:
                 pass
             elif modifier == 'yn_facility_open_nospecific':
                 pass
-
+"""
         intent_category = nli_obj['type']
         desc = nli_obj['desc_obj']
 
-# TODO: same codes have many copies across the same method
-#       recommend to divide them into small function
-
         if len(intent_category) > 0:
             # debug
-            intentTag = {'category':None,'modifier':None, 'slots':[]}
             intentTag['category'] = intent_category
 
             if 'semantic' in nli_obj:
@@ -231,17 +237,24 @@ class Olami:
                                 print("Triggered success! Part A")
                                 if len(slots_ptr) > 0:
                                     # print("Triggered success! A.1")
-                                    if slots_value in jsonObj:		
-                                        return jsonObj[slots_value]['response']
+                                    if slots_value in jsonObj:
+                                        ret_dict['tag'] = jsonObj[slots_value]['return tag']
+                                        ret_dict['status'] = jsonObj[slots_value]['status']
+                                        ret_dict['response'] = jsonObj[slots_value]['response']
+                                        ret_dict['keyBoardLayout'] = ""
+                                        return ret_dict
                                     else:
                                         print("Error: no slot_value key can be found!")
                                 else:
                                     # print("Triggered success! A.2")
                                     if 'noslot' in jsonObj:
-                                        return jsonObj['noslot']['response']
+                                        ret_dict['tag'] = jsonObj['noslot']['return tag']
+                                        ret_dict['status'] = jsonObj['noslot']['response']
+                                        ret_dict['keyBoardLayout'] = ""
+                                        return ret_dict
                                     else:
                                         print("Error: no noslot key	 can be found!")	
-
+"""
                         if intent_category == "greet": #moved greet module to json
                             if 'greeting' in modifier:
                                 return desc['result']
@@ -442,3 +455,4 @@ class Olami:
                             slots = nli_obj['semantic'][0]['slots']
                             handle_selection_category(modifier, slots)
             return 'Sorry. I cannot get your meaning. Can you ask in other manner?'
+"""
