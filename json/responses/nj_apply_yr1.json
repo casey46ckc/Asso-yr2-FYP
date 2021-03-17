@@ -5,7 +5,20 @@
         "slots": []
     },
     "noslot": {
-        "response": "***You can apply non-jupas application when you are year 1 student,  but bare in mind that some universities may only consider senior level student and some might only consider junior level student. Which university you want to apply / have applied? \n1. City University of Hong Kong \n2. Hong Kong Baptist University \n3. Lingnan University \n4. The Chinese University of Hong Kong \n5. The Education University of Hong Kong \n6. The Hong Kong Polytechnic University \n7. The Hong Kong University of Science and Technology \n8. The University of Hong Kong  \n9. Hang Seng University of Hong Kong \n10. Hong Kong Shue Yan University \n11. The Open University of Hong Kong",
+        "response": [
+            "***You can apply non-jupas application when you are year 1 student,  but bare in mind that some universities may only consider senior level student and some might only consider junior level student.Which university you want to apply / have applied?",
+            "1. City University of Hong Kong",
+            "2. Hong Kong Baptist University",
+            "3. Lingnan University",
+            "4. The Chinese University of Hong Kong",
+            "5. The Education University of Hong Kong",
+            "6. The Hong Kong Polytechnic University",
+            "7. The Hong Kong University of Science and Technology",
+            "8. The University of Hong Kong",
+            "9. Hang Seng University of Hong Kong",
+            "10. Hong Kong Shue Yan University",
+            "11. The Open University of Hong Kong"
+        ],
         "status": "True",
         "return tag": []
     }

@@ -1,15 +1,14 @@
 {
-	"tag":{
-		"category":"greet",
-		"modifier":"help",
-		"slots":[]
+	"tag": {
+		"category": "greet",
+		"modifier": "help",
+		"slots": []
 	},
-	"noslot":{
-		"response": "***You may call XXXX-XXXX or email to XXXX@gmail.com for further enquiries.",
-		"status":"True",
-		"return tag":[]
-	}	
+	"noslot": {
+		"response": [
+			"***You may call XXXX-XXXX or email to XXXX@gmail.com for further enquiries."
+		],
+		"status": "True",
+		"return tag": []
+	}
 }
-	
-	
-			
