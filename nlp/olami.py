@@ -134,7 +134,7 @@ class Olami:
         self.app_secret = app_secret
         self.input_type = input_type
 
-    def nli(self, text, cusid=None, tagStored=None):
+    def nli(self, text, cusid=None, tagStored={}):
         response = requests.post(
             self.URL, params=self._gen_parameters('nli', text, cusid))
         response.raise_for_status()
@@ -144,7 +144,7 @@ class Olami:
                 "NLI responded status != 'ok': {}".format(response_json['status']))
         else:
             nli_obj = response_json['data']['nli'][0]
-            if tagStored is None:
+            if len(tagStored) == 0:
                 return self.intent_detection(nli_obj)
             else:
                 return self.intent_detection(nli_obj, tagStored)
