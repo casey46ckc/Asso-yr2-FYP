@@ -221,22 +221,22 @@ class Olami:
                         for x in range(len(slots_ptr)):
                             intentTag['slots'].append = slots_ptr[x]['name']
                             slots_value += slots_ptr[x]['value']
-                        print("intentTag: ", intentTag, "slots length: ", len(slots_ptr))
+                        print("intentTag: ", intentTag, "slots length: ", len(slots_ptr), "slots_value:", slots_value)
                         
                         # return response through Json
 
                         for jsonObj in li_jsonFiles:
-                            print("Tag json read:\n", jsonObj['tag'])
+                            #　print("Tag json read:\n", jsonObj['tag'])
                             if intentTag == jsonObj['tag']:
                                 print("Triggered success! Part A")
                                 if len(slots_ptr) > 0:
-                                    print("Triggered success! A.1")
+                                    # print("Triggered success! A.1")
                                     if slots_value in jsonObj:		
                                         return jsonObj[slots_value]['response']
                                     else:
                                         print("Error: no slot_value key can be found!")
                                 else:
-                                    print("Triggered success! A.2")
+                                    # print("Triggered success! A.2")
                                     if 'noslot' in jsonObj:
                                         return jsonObj['noslot']['response']
                                     else:
