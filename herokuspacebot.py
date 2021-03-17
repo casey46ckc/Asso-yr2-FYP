@@ -33,7 +33,7 @@ default_tagger = nltk.tag.DefaultTagger('NN')
 model = read_json('json/models.json')
 tl_MWs = read_multiwords_json('json/multiwords.json')
 
-tags_dict = {}
+global tags_dict = {}
 
 tagger = nltk.tag.UnigramTagger(model=model, backoff=default_tagger)
 tknzr = TweetTokenizer(strip_handles=True, reduce_len=True)
