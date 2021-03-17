@@ -1,7 +1,8 @@
 {
 	"tag":{
 		"categories": "greet",
-		"modifier":	"greeting"
+		"modifier":	"greeting",
+		"slot":[]
 	},
 	"noslot":{
 		"response": "**Hello! How can I help you?",
