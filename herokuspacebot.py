@@ -31,7 +31,7 @@ reply_kb_start = ReplyKeyboardMarkup([['Guideline'],['Help']], one_time_keyboard
 # initial the nltk parts
 default_tagger = nltk.tag.DefaultTagger('NN')
 inModeljs = open('json/models.json', 'r')
-ModelsjsFile = inModelsjs.read()
+ModelsjsFile = inModeljs.read()
 model = json.loads(ModelsjsFile)
 
 tl_MWs = read_multiwords_json('json/multiwords.json')
