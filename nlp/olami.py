@@ -177,39 +177,7 @@ class Olami:
             'status': "False",
             'keyBoardLayout':None
             }
-"""
-        def handle_selection_category(modifier, slots):
-            if modifier == 'whenis_open_nospecific':
-                pass
-            elif modifier == 'whenis_deadline_nospecific':
-                pass
-            elif modifier == 'what_toprepare_general':
-                pass
-            elif modifier == 'yn_apply_year1':
-                pass
-            elif modifier == 'whatis_requirement_nospecific':
-                pass
-            elif modifier == 'action_latetosubmit':
-                pass
-            elif modifier == 'yn_essential_referenceletter':
-                pass
-            elif modifier == 'howto_webpage_university':
-                pass
-            elif modifier == 'nonjupas_nospecific':
-                pass
-            elif modifier == 'whenis_deadline_nospecific':
-                pass
-            elif modifier == 'yn_num_referenceletter_matter':
-                pass
-            elif modifier == 'yn_igcse_replace_ielts':
-                pass
-            elif modifier == 'location_nospecific':
-                pass
-            elif modifier == 'openinghour_facility_nospecific':
-                pass
-            elif modifier == 'yn_facility_open_nospecific':
-                pass
-"""
+
         intent_category = nli_obj['type']
         desc = nli_obj['desc_obj']
 
