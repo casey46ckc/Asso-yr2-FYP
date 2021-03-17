@@ -219,7 +219,7 @@ class Olami:
                         slots_ptr = nli_obj['semantic'][0]['slots']
                         slots_value = ""
                         for x in range(len(slots_ptr)):
-                            intentTag['slots'].append = slots_ptr[x]['name']
+                            intentTag['slots'].append(slots_ptr[x]['name'])
                             slots_value += slots_ptr[x]['value']
                         print("intentTag: ", intentTag, "slots length: ", len(slots_ptr), "slots_value:", slots_value)
                         
