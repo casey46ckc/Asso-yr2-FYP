@@ -2,13 +2,16 @@
 	"tag":{
 		"category":"facilities",
 		"modifier":"place",
-		"slots":{
-			"facilities":"library"
-			}
+		"slots": ["campus","facilities"]
 	},
-	"response":["*Yes, library is on 4/F."],
-	"status":"True",
-	"return tag":[]
+	"noslot":{
+		"response": ""
+	},	
+	"keclibrary":{
+		"response": "***Yes, library is on 4/F.",
+		"status": "",
+		"return tag":[]
+	}	
 }
 	
 	
