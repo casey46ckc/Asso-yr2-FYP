@@ -218,16 +218,19 @@ class Olami:
 
                         intentTag['modifier'] = modifier[0]
 
-                        slots_ptr = nli_obj['semantic'][0]['slots']
-                        for x in range(len(slots_ptr)):
-                            intentTag['slots'][slots_ptr[x]['name']] = slots_ptr[x]['value']
-                        print("intentTag: ", intentTag)
-                        
-                        ##return response through Json*********
                         for jsonObj in li_jsonFiles:
-                            if intentTag == jsonObj['tag']:
-                                print("detection test")
-                                return '\n'.join(jsonObj['response'])
+                            if 'slots' in nli_obj['sementic'][0]:
+                                slots_value = nli_obj['semantic'][0]['slots']['value']
+                                if intentTag == jsonObj['tag']:		
+                                    if slots_value == jsonObj:		
+                                        return li_jsonFiles[slots_value]['response']
+                                    else:
+                                        print("Error: no slot_value key can be found!")
+                            else:
+                                if intentTag == jsonObj['tag']:		
+                                    return li_jsonFiles['noslot']['response']
+                                else:
+                                    print("Error: no noslot key	 can be found!")	
 
                         if intent_category == "greet": #moved greet module to json
                             if 'greeting' in modifier:
