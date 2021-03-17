@@ -33,6 +33,8 @@ default_tagger = nltk.tag.DefaultTagger('NN')
 model = read_json('json/models.json')
 tl_MWs = read_multiwords_json('json/multiwords.json')
 
+tagStored = None
+
 tagger = nltk.tag.UnigramTagger(model=model, backoff=default_tagger)
 tknzr = TweetTokenizer(strip_handles=True, reduce_len=True)
 mwtknzr = MWETokenizer(tl_MWs)
@@ -60,8 +62,15 @@ def reply_handler(update: Update, context: CallbackContext):
     print("Text after abbr: " + text)
     """Reply message."""
     user_id = update.message.from_user.id
-    reply = Olami().nli(text, user_id)
-    update.message.reply_text(reply)
+    if tagStored is None:
+        reply = Olami().nli(text, user_id)
+    else:
+        reply = Olami().nli(text, user_id, tagStored)
+    if reply['status'] == "True":
+        tagStored = None
+    else:
+        tagStored = reply['tag']
+    update.message.reply_text('\n'.join(reply['response']))
 
 def start_handler(update: Update, context: CallbackContext):
     """Send a message when the command /start is issued."""
