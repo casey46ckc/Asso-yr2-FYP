@@ -1,7 +1,7 @@
 import configparser
 import logging
 import os
-from readjson import replace_AbbrName, read_multiwords_json
+from readjson import replace_AbbrName, read_multiwords_json, read_json
 
 import telegram
 
@@ -30,10 +30,7 @@ reply_kb_start = ReplyKeyboardMarkup([['Guideline'],['Help']], one_time_keyboard
 
 # initial the nltk parts
 default_tagger = nltk.tag.DefaultTagger('NN')
-inModeljs = open('json/models.json', 'r')
-ModelsjsFile = inModeljs.read()
-model = json.loads(ModelsjsFile)
-
+model = read_json('json/models.json')
 tl_MWs = read_multiwords_json('json/multiwords.json')
 
 tagger = nltk.tag.UnigramTagger(model=model, backoff=default_tagger)
