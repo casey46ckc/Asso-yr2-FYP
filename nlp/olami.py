@@ -217,7 +217,8 @@ class Olami:
                                     # print("Triggered success! A.2")
                                     if 'noslot' in jsonObj:
                                         ret_dict['tag'] = jsonObj['noslot']['return tag']
-                                        ret_dict['status'] = jsonObj['noslot']['response']
+                                        ret_dict['status'] = jsonObj['noslot']['status']
+                                        ret_dict['response'] = jsonObj['noslot']['response']
                                         ret_dict['keyBoardLayout'] = ""
                                         return ret_dict
                                     else:

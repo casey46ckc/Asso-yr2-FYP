@@ -72,6 +72,7 @@ def reply_handler(update: Update, context: CallbackContext):
         tags_dict.clear()
     else:
         tags_dict = reply['tag'].copy()
+    print(reply['response'])
     update.message.reply_text('\n'.join(reply['response']))
 
 def start_handler(update: Update, context: CallbackContext):
