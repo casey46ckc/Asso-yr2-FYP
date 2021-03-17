@@ -1,12 +1,13 @@
 {
 	"tag":{
-		"category":"greet",
-		"modifier":"greeting",
-		"slots":{}
+		"categories": "greet",
+		"modifier":	"greeting",
 	},
-	"response":["*Hello! How can I help you?"],
-	"status":"True",
-	"return tag":[]
+	"noslot":{
+		"response": "**Hello! How can I help you?",
+		"status":"True",
+		"return tag":[]
+	}	
 }
 	
 	
