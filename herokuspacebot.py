@@ -34,7 +34,7 @@ default_tagger = nltk.tag.DefaultTagger('NN')
 model = {'discusssion_room': 'facilities',
             'study_lounge': 'facilities',
             'computer_lab': 'facilities',
-            'common_room': 'facilities',}
+            'common_room': 'facilities'}
 tagger = nltk.tag.UnigramTagger(model=model, backoff=default_tagger)
 tknzr = TweetTokenizer(strip_handles=True, reduce_len=True)
 mwtknzr = MWETokenizer([('discussion', 'room'),('study', 'lounge'),('computer', 'lab'),('common', 'room')])

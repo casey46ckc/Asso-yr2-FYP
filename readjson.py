@@ -66,6 +66,13 @@ def replace_AbbrName(inStr):
                 break             
     return resultTxt
 
+def read_multiwords_json(obj) -> list:
+    oList = []
+    for data in obj["data"]:
+        if isinstance(data, list):
+            oList.append(tuple(data))
+    return oList
+
 def display_json(obj):
     print(type(obj))
     if isinstance(obj, dict):

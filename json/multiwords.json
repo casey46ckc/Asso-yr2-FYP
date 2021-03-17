@@ -1,0 +1,8 @@
+{
+	"data":[
+		["discussion", "room"],
+		["study", "lounge"],
+		["computer", "lab"],
+		["common", "room"]
+	]
+}
