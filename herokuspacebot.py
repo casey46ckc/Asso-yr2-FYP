@@ -62,6 +62,7 @@ def reply_handler(update: Update, context: CallbackContext):
     print("Text after abbr: " + text)
     """Reply message."""
     user_id = update.message.from_user.id
+    print("tagStored:", tagStored, "length:", len(tagStored))
     if len(tagStored) == 0:
         reply = Olami().nli(text, user_id)
     else:
