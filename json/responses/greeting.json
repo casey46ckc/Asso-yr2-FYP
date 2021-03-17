@@ -1,6 +1,6 @@
 {
 	"tag":{
-		"categories": "greet",
+		"category": "greet",
 		"modifier":	"greeting",
 		"slots":[]
 	},

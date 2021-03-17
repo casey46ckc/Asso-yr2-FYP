@@ -226,7 +226,7 @@ class Olami:
                         # return response through Json
 
                         for jsonObj in li_jsonFiles:
-                            # print("Tag json read:\n", jsonObj['tag'])
+                            print("Tag json read:\n", jsonObj['tag'])
                             if intentTag == jsonObj['tag']:
                                 print("Triggered success! Part A")
                                 if len(slots_ptr) > 0:
