@@ -37,7 +37,7 @@ model = {'discusssion_room': 'facilities',
             'common_room': 'facilities',}
 tagger = nltk.tag.UnigramTagger(model=model, backoff=default_tagger)
 tknzr = TweetTokenizer(strip_handles=True, reduce_len=True)
-mwtknzr = MWETokenizer([('discusssion', 'room'),('study', 'lounge'),('computer', 'lab'),('common', 'room')])
+mwtknzr = MWETokenizer([('discussion', 'room'),('study', 'lounge'),('computer', 'lab'),('common', 'room')])
 stop_words = set(stopwords.words('english'))
 
 
