@@ -2,12 +2,14 @@
 	"tag":{
 		"category":"greet",
 		"modifier":"closing",
-		"slots":{}
+		"slots":[]
 	},
-	"response":["*See you again!Thank you for using spacebot"],
-	"status":"True",
-	"return tag":[]
+	"noslot":{
+		"response": "***Hello! How can I help you?",
+		"status":"True",
+		"return tag":[]
+	}	
 }
-	
+
 	
 			

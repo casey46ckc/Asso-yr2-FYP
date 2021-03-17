@@ -2,13 +2,11 @@
 	"tag": {
 		"category": "finance",
 		"modifier": "fs_link",
-		"slots": {}
+		"slots": []
 	},
-	"response": [
-		"*You can get more information from:",
-		"1. FASP: https://www.wfsfaa.gov.hk/sfo/en/postsecondary/fasp/overview.htm",
-		"2. NLSPS: https://www.wfsfaa.gov.hk/sfo/en/postsecondary/nlsps/overview.htm"
-	],
-	"status": "True",
-	"return tag": []
+	"noslot": {
+		"response": "***You can get more information from:\n1. FASP: https: //www.wfsfaa.gov.hk/sfo/en/postsecondary/fasp/overview.htm \n2. NLSPS: https: //www.wfsfaa.gov.hk/sfo/en/postsecondary/nlsps/overview.htm",
+		"status": "True",
+		"return tag": []
+	}
 }

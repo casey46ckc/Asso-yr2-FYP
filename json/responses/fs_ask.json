@@ -2,10 +2,12 @@
 	"tag":{
 		"category":"finance",
 		"modifier":"fs_ask",
-		"slots":{}
+		"slots":[]
 	},
-	"response":["*You can apply Financial Assistance Scheme for Post-secondary Students (FASP) or Non-means-tested Loan Scheme for Post-secondary Students (NLSPS)."],
-	"status":"True",
-	"return tag":[]
+	"noslot":{
+		"response": "***You can apply Financial Assistance Scheme for Post-secondary Students (FASP) or Non-means-tested Loan Scheme for Post-secondary Students (NLSPS).",
+		"status":"True",
+		"return tag":[]
+	}	
 }
 	

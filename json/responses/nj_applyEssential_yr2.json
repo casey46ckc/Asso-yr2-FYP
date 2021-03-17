@@ -2,11 +2,11 @@
     "tag": {
         "category": "nonjupas",
         "modifier": "yn_essential_apply_year2",
-        "slots": {}
+        "slots": []
     },
-    "response": [
-        "*Indeed. the associate programme is aimed to assist the students to promote their academic position to undergraduate level but not for profession purpose. Students are supposed to apply NON-JUPAS before they are graduated"
-    ],
-    "status": "True",
-    "return tag": []
+    "noslot": {
+        "response": "***Indeed. the associate programme is aimed to assist the students to promote their academic position to undergraduate level but not for profession purpose. Students are supposed to apply NON-JUPAS before they are graduated",
+        "status": "True",
+        "return tag": []
+    }
 }

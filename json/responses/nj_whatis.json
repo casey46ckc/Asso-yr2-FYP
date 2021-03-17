@@ -1,13 +1,12 @@
 {
-	"tag":{
-		"category":"nonjupas",
-		"modifier":"whatis",
-		"slots":{}
+	"tag": {
+		"category": "nonjupas",
+		"modifier": "whatis",
+		"slots": []
 	},
-	"response":["*Apart from getting a place into universities through JUPAS, students may consider applying post-secondary programmes not covered by JUPAS. There is a lot of information regarding non-JUPAS admissions. Gather your information in advance and plan ahead."],
-	"status":"True",
-	"return tag":[]
+	"noslot": {
+		"response": "***Apart from getting a place into universities through JUPAS, students may consider applying post-secondary programmes not covered by JUPAS. There is a lot of information regarding non-JUPAS admissions. Gather your information in advance and plan ahead.",
+		"status": "True",
+		"return tag": []
+	}
 }
-	
-	
-			
