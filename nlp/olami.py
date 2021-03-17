@@ -221,11 +221,12 @@ class Olami:
                         for x in range(len(slots_ptr)):
                             intentTag['slots'].append = slots_ptr[x]['name']
                             slots_value += slots_ptr[x]['value']
-                        print("intentTag: ", intentTag)
+                        print("intentTag: ", intentTag, "slots length: ", len(slots_ptr))
                         
                         # return response through Json
 
                         for jsonObj in li_jsonFiles:
+                            print("Tag json read:\n", jsonObj['tag'])
                             if intentTag == jsonObj['tag']:
                                 if len(slots_ptr) > 0:
                                     if slots_value in jsonObj:		
