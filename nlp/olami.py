@@ -226,7 +226,7 @@ class Olami:
                         # return response through Json
 
                         for jsonObj in li_jsonFiles:
-                            print("Tag json read:\n", jsonObj['tag'])
+                            # print("Tag json read:\n", jsonObj['tag'])
                             if intentTag == jsonObj['tag']:
                                 if len(slots_ptr) > 0:
                                     if slots_value in jsonObj:		
@@ -234,6 +234,7 @@ class Olami:
                                     else:
                                         print("Error: no slot_value key can be found!")
                                 else:
+                                    print("Triggered success!")
                                     if 'noslot' in jsonObj:
                                         return jsonObj['noslot']['response']
                                     else:
