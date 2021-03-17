@@ -226,6 +226,7 @@ class Olami:
                         ##return response through Json*********
                         for jsonObj in li_jsonFiles:
                             if intentTag == jsonObj['tag']:
+                                print("detection test")
                                 return '\n'.join(jsonObj['response'])
 
                         if intent_category == "greet": #moved greet module to json
