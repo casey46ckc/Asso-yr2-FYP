@@ -33,7 +33,7 @@ default_tagger = nltk.tag.DefaultTagger('NN')
 model = read_json('json/models.json')
 tl_MWs = read_multiwords_json('json/multiwords.json')
 
-tagStored = {}
+tags_dict = {}
 
 tagger = nltk.tag.UnigramTagger(model=model, backoff=default_tagger)
 tknzr = TweetTokenizer(strip_handles=True, reduce_len=True)
@@ -62,15 +62,15 @@ def reply_handler(update: Update, context: CallbackContext):
     print("Text after abbr: " + text)
     """Reply message."""
     user_id = update.message.from_user.id
-    print("tagStored:", tagStored, "length:", len(tagStored))
-    if len(tagStored) == 0:
+    print("tags_dict:", tags_dict, "length:", len(tags_dict))
+    if len(tags_dict) == 0:
         reply = Olami().nli(text, user_id)
     else:
-        reply = Olami().nli(text, user_id, tagStored)
+        reply = Olami().nli(text, user_id, tags_dict)
     if reply['status'] == "True":
-        tagStored.clear()
+        tags_dict.clear()
     else:
-        tagStored = reply['tag'].copy()
+        tags_dict = reply['tag'].copy()
     update.message.reply_text('\n'.join(reply['response']))
 
 def start_handler(update: Update, context: CallbackContext):
