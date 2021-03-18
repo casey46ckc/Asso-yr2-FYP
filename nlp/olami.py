@@ -201,8 +201,8 @@ class Olami:
                         intentTag['modifier'] = modifier[0]
                         slots_ptr = nli_obj['semantic'][0]['slots']
                         slots_value = ""
-                        intentTag['slots'] = slots_ptr[x]['name'])
                         for x in range(len(slots_ptr)):
+                            intentTag['slots'].append(slots_ptr[x]['name'])
                             slots_value += slots_ptr[x]['value']
                         print("intentTag: ", intentTag, "slots length: ", len(slots_ptr), "type of slot_value:", type(slots_value))
                         if len(slots_value) > 0:
