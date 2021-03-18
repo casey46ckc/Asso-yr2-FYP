@@ -198,7 +198,7 @@ class Olami:
                             intentTag['slots'].append(slots_ptr[x]['name'])
                             slots_value += slots_ptr[x]['value']
                         print("intentTag: ", intentTag, "slots length: ", len(slots_ptr), "type of slot_value:", type(slots_value))
-                        if len(slots_value > 0):
+                        if len(slots_value) > 0:
                             print("slots_value:", slots_value)
                         
                         # return response through Json
