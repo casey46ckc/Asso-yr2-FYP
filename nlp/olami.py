@@ -173,12 +173,14 @@ class Olami:
         return json.dumps(obj)
 
     def intent_detection(self, nli_obj, intentTag=None) -> dict:
+        # basic structure to return 
         ret_dict = {
             'tag': None,
             'response':None, 
             'status': "False",
             'keyBoardLayout':None
             }
+
         if intentTag is None:
             intentTag={
                 'category':None,
