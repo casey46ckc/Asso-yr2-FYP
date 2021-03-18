@@ -179,8 +179,8 @@ class Olami:
             'status': "False",
             'keyBoardLayout':None
             }
-        if intentTag['slot'] is None:
-            intentTag['slot'] = []
+        if intentTag['slots'] is None:
+            intentTag['slots'] = []
         print("Intent tag pass before intent_detection\nintentTag:", intentTag)
         intent_category = nli_obj['type']
         desc = nli_obj['desc_obj']
@@ -229,6 +229,9 @@ class Olami:
                                         return ret_dict
                                     else:
                                         print("Error: no noslot key	 can be found!")	
+        ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
+        ret_dict['statys'] = "True"
+        return ret_dict
 """
                         if intent_category == "greet": #moved greet module to json
                             if 'greeting' in modifier:
