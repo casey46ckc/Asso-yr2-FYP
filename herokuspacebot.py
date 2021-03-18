@@ -71,10 +71,11 @@ def reply_handler(update: Update, context: CallbackContext):
         reply = Olami().nli(text, user_id)
 
     if reply['status'] == "True":
-        tags_dict[str(user_id)].clear()
+        if str(user_id) in tags_dict:
+            tags_dict[str(user_id)].clear()
     else:
         tags_dict[str(user_id)] = reply['tag'].copy()
-        
+
     print(reply['response'])
     update.message.reply_text('\n'.join(reply['response']))
 
