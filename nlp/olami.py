@@ -145,8 +145,10 @@ class Olami:
         else:
             nli_obj = response_json['data']['nli'][0]
             if len(intentTag) == 0:
+                print("no Intent tag pass before intent_detection")
                 return self.intent_detection(nli_obj)
             else:
+                print("Intent tag pass before intent_detection\nintentTag:", intentTag)
                 return self.intent_detection(nli_obj, intentTag)
 
     def _gen_parameters(self, api, text, cusid):
@@ -195,7 +197,9 @@ class Olami:
                         for x in range(len(slots_ptr)):
                             intentTag['slots'].append(slots_ptr[x]['name'])
                             slots_value += slots_ptr[x]['value']
-                        print("intentTag: ", intentTag, "slots length: ", len(slots_ptr), "slots_value:", slots_value)
+                        print("intentTag: ", intentTag, "slots length: ", len(slots_ptr), "type of slot_value:", type(slot_value))
+                        if len(slots_value > 0):
+                            print("slots_value:", slots_value)
                         
                         # return response through Json
 

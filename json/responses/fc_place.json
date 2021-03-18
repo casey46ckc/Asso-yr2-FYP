@@ -1,0 +1,35 @@
+{
+	"tag":{
+		"category":"facilities",
+		"modifier":"place",
+		"slots": ["campus","facilities"]
+	},
+	"noslot":{
+		"response": ["***"],
+		"status": "True",
+		"return tag":["modifying!!"]
+	},	
+	"keclibrary":{
+		"response": ["***Yes, library is on 4/F."],
+		"status": "True",
+		"return tag":["modifying!!"]
+	},
+	"keclounge":{
+		"response":["***Yes, lounge is on 3/F."],
+		"status":"True",
+		"return tag":[]
+	},
+	"kecstudy room":{
+		"response":["***There are 4 study rooms in KEC. They are KEC403, KEC603, KEC610, KEC708"],
+		"status":"True",
+		"return tag":[]
+	},
+	"kecdiscussion room":{
+		"response":["*There are 4 discussion rooms in KEC. They are KEC201, KEC202, KEC203, KEC204"],
+		"status":"True",
+		"return tag":["!not yet"]
+	}
+}
+	
+	
+			
