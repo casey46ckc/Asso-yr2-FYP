@@ -134,7 +134,7 @@ class Olami:
         self.app_secret = app_secret
         self.input_type = input_type
 
-    def nli(self, text, cusid=None, intentTag={}):
+    def nli(self, text, cusid=None, intentTag=None):
         response = requests.post(
             self.URL, params=self._gen_parameters('nli', text, cusid))
         response.raise_for_status()
@@ -144,7 +144,7 @@ class Olami:
                 "NLI responded status != 'ok': {}".format(response_json['status']))
         else:
             nli_obj = response_json['data']['nli'][0]
-            if len(intentTag) == 0:
+            if intentTag is None:
                 print("no Intent tag pass before intent_detection")
                 return self.intent_detection(nli_obj)
             else:
@@ -172,16 +172,21 @@ class Olami:
             'input_type': self.input_type, 'text': text}}
         return json.dumps(obj)
 
-    def intent_detection(self, nli_obj, intentTag={'category':None,'modifier':None, 'slots':None}) -> dict:
+    def intent_detection(self, nli_obj, intentTag=None) -> dict:
         ret_dict = {
             'tag': None,
             'response':None, 
             'status': "False",
             'keyBoardLayout':None
             }
-        if intentTag['slots'] is None:
-            intentTag['slots'] = []
-        print("Intent tag pass before intent_detection\nintentTag:", intentTag)
+        if intentTag is None:
+            intentTag={
+                'category':None,
+                'modifier':None, 
+                'slots':[]
+                }
+        else:
+            print("Intent tag passed.\nintentTag:", intentTag, "\nBefore combining")
         intent_category = nli_obj['type']
         desc = nli_obj['desc_obj']
 
@@ -196,8 +201,8 @@ class Olami:
                         intentTag['modifier'] = modifier[0]
                         slots_ptr = nli_obj['semantic'][0]['slots']
                         slots_value = ""
+                        intentTag['slots'] = slots_ptr[x]['name'])
                         for x in range(len(slots_ptr)):
-                            intentTag['slots'].append(slots_ptr[x]['name'])
                             slots_value += slots_ptr[x]['value']
                         print("intentTag: ", intentTag, "slots length: ", len(slots_ptr), "type of slot_value:", type(slots_value))
                         if len(slots_value) > 0:
@@ -216,6 +221,7 @@ class Olami:
                                         ret_dict['status'] = jsonObj[slots_value]['status']
                                         ret_dict['response'] = jsonObj[slots_value]['response']
                                         ret_dict['keyBoardLayout'] = ""
+                                        intentTag = None
                                         return ret_dict
                                     else:
                                         print("Error: no slot_value key can be found!")
@@ -226,11 +232,13 @@ class Olami:
                                         ret_dict['status'] = jsonObj['noslot']['status']
                                         ret_dict['response'] = jsonObj['noslot']['response']
                                         ret_dict['keyBoardLayout'] = ""
+                                        intentTag = None
                                         return ret_dict
                                     else:
                                         print("Error: no noslot key	 can be found!")	
         ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
-        ret_dict['statys'] = "True"
+        ret_dict['status'] = "True"
+        intentTag = None
         return ret_dict
 """
                         if intent_category == "greet": #moved greet module to json
