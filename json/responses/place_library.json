@@ -5,11 +5,13 @@
 		"slots": ["campus","facilities"]
 	},
 	"noslot":{
-		"response": [""]
+		"response": ["***"],
+		"status": "True",
+		"return tag":["modifying!!"]
 	},	
 	"keclibrary":{
-		"response": "***Yes, library is on 4/F.",
-		"status": "",
+		"response": ["***Yes, library is on 4/F."],
+		"status": "True",
 		"return tag":["modifying!!"]
 	}	
 }
