@@ -172,14 +172,16 @@ class Olami:
             'input_type': self.input_type, 'text': text}}
         return json.dumps(obj)
 
-    def intent_detection(self, nli_obj, intentTag={'category':None,'modifier':None, 'slots':[]}) -> dict:
+    def intent_detection(self, nli_obj, intentTag={'category':None,'modifier':None, 'slots':None}) -> dict:
         ret_dict = {
             'tag': None,
             'response':None, 
             'status': "False",
             'keyBoardLayout':None
             }
-
+        if intentTag['slot'] is None:
+            intentTag['slot'] = []
+        print("Intent tag pass before intent_detection\nintentTag:", intentTag)
         intent_category = nli_obj['type']
         desc = nli_obj['desc_obj']
 
