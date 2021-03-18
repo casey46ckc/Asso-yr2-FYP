@@ -64,14 +64,17 @@ def reply_handler(update: Update, context: CallbackContext):
     user_id = update.message.from_user.id
     global tags_dict
     print("tags_dict:", tags_dict, "length:", len(tags_dict))
+
     if str(user_id) in tags_dict:
-        reply = Olami().nli(text, user_id)
-    else:
         reply = Olami().nli(text, user_id, tags_dict[str(user_id)])
+    else:
+        reply = Olami().nli(text, user_id)
+
     if reply['status'] == "True":
         tags_dict[str(user_id)].clear()
     else:
         tags_dict[str(user_id)] = reply['tag'].copy()
+        
     print(reply['response'])
     update.message.reply_text('\n'.join(reply['response']))
 
