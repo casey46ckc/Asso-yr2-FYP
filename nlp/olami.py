@@ -184,8 +184,7 @@ class Olami:
         if intentTag is None:
             intentTag={
                 'category':None,
-                'modifier':None, 
-                'slots':[]
+                'modifier':None
                 }
         else:
             print("Intent tag passed.\nintentTag:", intentTag, "\nBefore combining")
@@ -203,6 +202,8 @@ class Olami:
                         intentTag['modifier'] = modifier[0]
                         slots_ptr = nli_obj['semantic'][0]['slots']
                         slots_value = ""
+                        if 'slots' not in intentTag:
+                            intentTag['slots'] = []
                         for x in range(len(slots_ptr)):
                             intentTag['slots'].append(slots_ptr[x]['name'])
                             slots_value += slots_ptr[x]['value']
