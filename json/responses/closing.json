@@ -7,7 +7,7 @@
 	"noslot":{
 		"response":["***See you again!Thank you for using spacebot"],
 		"status":"True",
-		"return tag":[]
+		"return tag":{}
 	}	
 }
 
