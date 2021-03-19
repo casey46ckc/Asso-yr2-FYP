@@ -23,6 +23,8 @@
         "return tag": {
             "category": "nonjupas",
             "modifier": "action_latetosubmit",
-            "slots": []}
+            "slots": [],
+            "keyBoardLayout": "reply_kb_university"
+        }
     }
 }

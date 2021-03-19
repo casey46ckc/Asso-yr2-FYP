@@ -26,6 +26,22 @@ help_message = ['Where is <facility name in KEC>?', 'Which floor <facility name 
 
 # initial the reply keyboard from start
 reply_kb_start = ReplyKeyboardMarkup([['Guideline'],['Help']], one_time_keyboard=True)
+
+# initial the reply keyboard for university choice
+reply_kb_university = ReplyKeyboardMarkup([
+    ["City University of Hong Kong"],
+    ["Hong Kong Baptist University"],
+    ["Lingnan University"],
+    ["The Chinese University of Hong Kong"],
+    ["The Education University of Hong Kong"],
+    ["The Hong Kong Polytechnic University"],
+    ["The Hong Kong University of Science and Technology"],
+    ["The University of Hong Kong"],
+    ["Hang Seng University of Hong Kong"],
+    ["Hong Kong Shue Yan University"],
+    ["The Open University of Hong Kong"]],
+    one_time_keyboard=True)
+
 # reply_kb_example = ReplyKeyboardMarkup([['Where is the library?'],['Tell me the contact of KEC']], one_time_keyboard=True)
 
 # initial the nltk parts
@@ -77,7 +93,10 @@ def reply_handler(update: Update, context: CallbackContext):
         tags_dict[str(user_id)] = reply['tag'].copy()
 
     print(reply['response'])
-    update.message.reply_text('\n'.join(reply['response']))
+    if (len(reply['keyBoardLayout']) > 0):
+        update.message.reply_text('\n'.join(reply['response']), reply_markup=global()[reply['keyBoardLayout']])
+    else:
+        update.message.reply_text('\n'.join(reply['response']))
 
 def start_handler(update: Update, context: CallbackContext):
     """Send a message when the command /start is issued."""

@@ -224,7 +224,10 @@ class Olami:
                             ret_dict['tag'] = jsonObj[slots_value]['return tag']
                             ret_dict['status'] = jsonObj[slots_value]['status']
                             ret_dict['response'] = jsonObj[slots_value]['response']
-                            ret_dict['keyBoardLayout'] = ""
+                            if 'keyBoardLayout' in jsonObj[slots_value]:
+                                ret_dict['keyBoardLayout'] = jsonObj[slots_value]['keyBoardLayout']
+                            else:
+                                ret_dict['keyBoardLayout'] = ""
                             intentTag = None
                             return ret_dict
                         else:
@@ -235,7 +238,10 @@ class Olami:
                             ret_dict['tag'] = jsonObj['noslot']['return tag']
                             ret_dict['status'] = jsonObj['noslot']['status']
                             ret_dict['response'] = jsonObj['noslot']['response']
-                            ret_dict['keyBoardLayout'] = ""
+                            if 'keyBoardLayout' in jsonObj['noslot']:
+                                ret_dict['keyBoardLayout'] = jsonObj['noslot']['keyBoardLayout']
+                            else:
+                                ret_dict['keyBoardLayout'] = ""
                             intentTag = None
                             return ret_dict
                         else:
