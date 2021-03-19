@@ -1,0 +1,105 @@
+!slot <campus:internal.'{"ref":["地點"]}'>;
+!slot <office:internal.'{"ref":["地點"]}'>;
+!slot <facilities:internal.'{"ref":["地點"]}'>;
+!intention <facilities>;
+!modifier <facilities> : contact|place;
+!modifier <facilities> : contact|place;
+
+<facilities>:<fc_where_studyrm_kec>|
+    <fc_where_lib_kec>|
+    <fc_where_cmrm_default>|
+    <fc_whichfhas_lounge>|
+    <contact_place2>|
+    <fc_whichfhas_cmrm>|
+    <fc_where_lounge_kec>|
+    <fc_tellme_lounge>|
+    <fc_whichfhas_studyrm>|
+    <fc_tellme_cmrm>|
+    <fc_where_discussionrm_kec>|
+    <fc_tellme_discussionrm>|
+    <fc_tellme_studyrm>|
+    <fc_where_studyrm_default>|
+    <fc_where_discussionrm_default>|
+    <fc_where_lib_default>|
+    <campus_contact>|
+    <fc_whichfhas_discussionrm>|
+    <fc_whichfhas_lib>|
+    <fc_where_lounge_default>|
+    <fc_tellme_lib>|
+    <fc_where_cmrm_kec>;
+//All grammar-event
+
+//All context grammar-event
+
+//All rules
+<cmroom_細>:Lounge Room|細 com|細 common|Lounge rm|細common|細com|lounge|student lounge;
+<be>:be|is|am|are|was|were;
+<lib>:Library|Lib|Libra|圖書館;
+<iec>:Island East Campus|IEC;
+<kec>:KEC|Kowloon East Campus;
+<facilities_in_kec>:Discussion Room|Computer Lab|<CMRoom_大>|<CMRoom_細>|<Lib>|Study Room|study rooms;
+<adc_unc>:(Admiralty Centre ('&'|and) United Centre)|(ADC (and|'&') UNC);
+<have_has>:have|had|has;
+<cit>:Clothing Industry Training Authority|Clothing Industry Training Authority Learning Centre|Clothing Industry Training Authority Learning Center|CITA Learning Centre|CITA Learning Center|CITA;
+<what_is>:What is;
+<ftc>:Fortress Tower Centre|FTC|Fortress Tower Center;
+<discussionrm>:discussion room|discussion rm|discuss room|discuss rm;
+<contact>:contact' '[detail|details|number];
+<cmroom_大>:Common Room|大 com|大common|cm rm|cm room|cmrm|com room|com rm;
+<request_chi>:(我(想|[需]要)[知|知道|了解])|[話|講[畀|比|俾]]我知;
+<article>:the|a|an;
+<campus_list>:<KEC>|<CIT>|<FTC>|<IEC>|<ADC_UNC>;
+<studyrm>:study room|study rooms;
+<how_to_contact>:(How can I (get [<article>] <contact> of|[get [to]] <contact> to))|How to <contact>;
+<where_beginning>:Where is|Where are;
+<request_eng>:(I want to [ask|know])|Tell me [[more ]about];
+//All templates
+<ask_be:template>: [=ask,be=]$(ask) $(be);
+<verb_to_be:template>: [=verb,be=]$(verb) to $(be);
+//All grammars
+//*C:where is study room in kec
+<fc_where_studyrm_kec>:<?head()><where_beginning>[<article>]<studyrm{facilities=study room}> in <kec{campus=kec}><{@=place}>;
+//*C:where is lib in kec
+<fc_where_lib_kec>:<?head()><where_beginning>[<article>]<lib{facilities=library}> in <kec{campus=kec}><{@=place}>;
+//*C:where is common room
+<fc_where_cmrm_default>:<?head()><where_beginning>[<article>]<cmroom_大{facilities=common room}><{@=place}>;
+//*C:which floor has lounge
+<fc_whichfhas_lounge>:(Which floor)<have_has><cmroom_細{facilities=lounge}><{@=place}>;
+//*C:Tell me the contact of KEC
+<contact_place2>:<?head()><request_eng>[<article>]<contact>of<campus_list{office=$}><{@=contact}>[Office];
+//*C:which floor has common room
+<fc_whichfhas_cmrm>:(Which floor)<have_has><cmroom_大{facilities=common room}><{@=place}>;
+//*C:where is lounge in kec
+<fc_where_lounge_kec>:<?head()><where_beginning>[<article>]<cmroom_細{facilities=lounge}> in <kec{campus=kec}><{@=place}>;
+//*C:Tell me where lounge is
+<fc_tellme_lounge>:[<request_eng>] (where|which floor) [<article>] <cmroom_細{facilities=lounge}><be><{@=place}>;
+//*C:which floor has study room
+<fc_whichfhas_studyrm>:(Which floor)<have_has><studyrm{facilities=study room}><{@=place}>;
+//*C:Tell me where common room is
+<fc_tellme_cmrm>:[<request_eng>] (where|which floor) [<article>] <cmroom_大{facilities=common room}><be><{@=place}>;
+//*C:where is discuss rm in kec
+<fc_where_discussionrm_kec>:<?head()><where_beginning>[<article>]<discussionrm{facilities=discussion room}> in <kec{campus=kec}><{@=place}>;
+//*C:Tell me where discuss rm is
+<fc_tellme_discussionrm>:[<request_eng>] (where|which floor) [<article>] <discussionrm{facilities=discussion room}><be><{@=place}>;
+//*C:Tell me where study room is
+<fc_tellme_studyrm>:[<request_eng>] (where|which floor) [<article>] <studyrm{facilities=study room}><be><{@=place}>;
+//*C:where is study room
+<fc_where_studyrm_default>:<?head()><where_beginning>[<article>]<studyrm{facilities=study room}><{@=place}>;
+//*C:where is discuss rm
+<fc_where_discussionrm_default>:<?head()><where_beginning>[<article>]<discussionrm{facilities=discussion room}><{@=place}>;
+//*C:where is lib
+<fc_where_lib_default>:<?head()><where_beginning>[<article>]<lib{facilities=library}><{@=place}>;
+//*C:How can I get contact to the IEC
+//*C:How can I contact to KEC
+<campus_contact>:<?head()><How_to_contact>[<article>[Office of]]<campus_list{office=$}><{@=contact}>;
+//*C:which floor has discuss rm
+<fc_whichfhas_discussionrm>:(Which floor)<have_has><discussionrm{facilities=discussion room}><{@=place}>;
+//*C:which floor has lib
+<fc_whichfhas_lib>:(Which floor)<have_has><lib{facilities=library}><{@=place}>;
+//*C:where is lounge
+<fc_where_lounge_default>:<?head()><where_beginning>[<article>]<cmroom_細{facilities=lounge}><{@=place}>;
+//*C:Tell me where lib is
+<fc_tellme_lib>:[<request_eng>] (where|which floor) [<article>] <lib{facilities=library}><be><{@=place}>;
+//*C:where is common room in kec
+<fc_where_cmrm_kec>:<?head()><where_beginning>[<article>]<cmroom_大{facilities=common room}> in <kec{campus=kec}><{@=place}>;
+//All context grammars

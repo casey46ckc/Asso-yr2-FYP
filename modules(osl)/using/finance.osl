@@ -1,0 +1,22 @@
+!slot <financial_support:internal.'{"ref":["noun"]}'>;
+!intention <finance>;
+!modifier <finance> : fs_method|fs_ask|fs_link;
+
+<finance>:<fs_method>|
+    <fs_support_ask>|
+    <fs_link>;
+//All grammar-event
+
+//All context grammar-event
+
+//All rules
+//All templates
+//All grammars
+//*C:Where to apply financial support
+<fs_method>:Where to apply financial support  <{@=fs_method}>;
+//*C:how to apply financial support
+//*A:You can apply Financial Assistance Scheme for Post-secondary Students (FASP) or Non-means-tested Loan Scheme for Post-secondary Students (NLSPS).
+<fs_support_ask>:How to apply financial support [in hkuspace]<{@=fs_ask}>;
+//*C:is there link to the financial support page
+<fs_link>:[is there] link (of|to) [the] financial support [page] <{@=fs_link}>;
+//All context grammars
