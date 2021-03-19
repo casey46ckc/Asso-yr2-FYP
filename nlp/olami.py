@@ -188,57 +188,62 @@ class Olami:
                 }
         else:
             print("Intent tag passed.\nintentTag:", intentTag, "\nBefore combining")
+        
+        if 'slots' not in intentTag:
+            intentTag['slots'] = []
+
         intent_category = nli_obj['type']
         desc = nli_obj['desc_obj']
 
         if len(intent_category) > 0:
-            # debug
             intentTag['category'] = intent_category
 
-            if 'semantic' in nli_obj:
-                if 'modifier' in nli_obj['semantic'][0]:
-                    modifier = nli_obj['semantic'][0]['modifier']
-                    if len(modifier) > 0:
-                        intentTag['modifier'] = modifier[0]
-                        slots_ptr = nli_obj['semantic'][0]['slots']
-                        slots_value = ""
-                        if 'slots' not in intentTag:
-                            intentTag['slots'] = []
-                        for x in range(len(slots_ptr)):
-                            intentTag['slots'].append(slots_ptr[x]['name'])
-                            slots_value += slots_ptr[x]['value']
-                        print("intentTag: ", intentTag, "slots length: ", len(slots_ptr), "type of slot_value:", type(slots_value))
-                        if len(slots_value) > 0:
-                            print("slots_value:", slots_value)
-                        
-                        # return response through Json
+        if 'semantic' in nli_obj:
+            if 'modifier' in nli_obj['semantic'][0]:
+                modifier = nli_obj['semantic'][0]['modifier']
+                if len(modifier) > 0:
+                    intentTag['modifier'] = modifier[0]
+            
+            if 'slots' in nli_obj['semantic'][0]:
+                slots_ptr = nli_obj['semantic'][0]['slots']
+                slots_value = ""
+                for x in range(len(slots_ptr)):
+                    intentTag['slots'].append(slots_ptr[x]['name'])
+                    slots_value += slots_ptr[x]['value']
+                if len(slots_value) > 0:
+                    print("slots_value:", slots_value)
+                    
+            # return response through Json
 
-                        for jsonObj in li_jsonFiles:
-                            #　print("Tag json read:\n", jsonObj['tag'])
-                            if intentTag == jsonObj['tag']:
-                                print("Triggered success! Part A")
-                                if len(slots_ptr) > 0:
-                                    # print("Triggered success! A.1")
-                                    if slots_value in jsonObj:
-                                        ret_dict['tag'] = jsonObj[slots_value]['return tag']
-                                        ret_dict['status'] = jsonObj[slots_value]['status']
-                                        ret_dict['response'] = jsonObj[slots_value]['response']
-                                        ret_dict['keyBoardLayout'] = ""
-                                        intentTag = None
-                                        return ret_dict
-                                    else:
-                                        print("Error: no slot_value key can be found!")
-                                else:
-                                    # print("Triggered success! A.2")
-                                    if 'noslot' in jsonObj:
-                                        ret_dict['tag'] = jsonObj['noslot']['return tag']
-                                        ret_dict['status'] = jsonObj['noslot']['status']
-                                        ret_dict['response'] = jsonObj['noslot']['response']
-                                        ret_dict['keyBoardLayout'] = ""
-                                        intentTag = None
-                                        return ret_dict
-                                    else:
-                                        print("Error: no noslot key	 can be found!")	
+            for jsonObj in li_jsonFiles:
+                if intentTag == jsonObj['tag']:
+                    print("Tag found!\nintentTag: ", intentTag)
+                    if len(slots_ptr) > 0:
+                        # print("Triggered success! A.1")
+                        if slots_value in jsonObj:
+                            ret_dict['tag'] = jsonObj[slots_value]['return tag']
+                            ret_dict['status'] = jsonObj[slots_value]['status']
+                            ret_dict['response'] = jsonObj[slots_value]['response']
+                            ret_dict['keyBoardLayout'] = ""
+                            intentTag = None
+                            return ret_dict
+                        else:
+                            print("Error: no slot_value key can be found!")
+                    else:
+                        # print("noslot response return.")
+                        if 'noslot' in jsonObj:
+                            ret_dict['tag'] = jsonObj['noslot']['return tag']
+                            ret_dict['status'] = jsonObj['noslot']['status']
+                            ret_dict['response'] = jsonObj['noslot']['response']
+                            ret_dict['keyBoardLayout'] = ""
+                            intentTag = None
+                            return ret_dict
+                        else:
+                            print("Error: no noslot key can be found!")
+        
+        # Case: Tag cannot be handled
+
+        print("Tag not found!\nintentTag: ", intentTag)
         ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
         ret_dict['status'] = "True"
         intentTag = None
