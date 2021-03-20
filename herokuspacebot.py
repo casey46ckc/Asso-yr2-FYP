@@ -10,7 +10,7 @@ import nltk
 import nltk.tag, nltk.data
 nltk.download('stopwords')
 
-from telegram import ReplyKeyboardMarkup, Update
+from telegram import ReplyKeyboardMarkup,ReplyKeyboardRemove, Update
 from telegram.ext import Updater, Dispatcher, CommandHandler, MessageHandler, Filters, CallbackContext
 from nlp.olami import Olami
 from nltk.tokenize import MWETokenizer, TweetTokenizer, word_tokenize
@@ -39,7 +39,8 @@ reply_kb_university = ReplyKeyboardMarkup([
     ["The University of Hong Kong"],
     ["Hang Seng University of Hong Kong"],
     ["Hong Kong Shue Yan University"],
-    ["The Open University of Hong Kong"]],
+    ["The Open University of Hong Kong"],
+    ["Others"]],
     one_time_keyboard=True)
 
 # reply_kb_example = ReplyKeyboardMarkup([['Where is the library?'],['Tell me the contact of KEC']], one_time_keyboard=True)
@@ -97,7 +98,7 @@ def reply_handler(update: Update, context: CallbackContext):
         print("keyBoardLayout triggered")
         update.message.reply_text('\n'.join(reply['response']), reply_markup=globals()[reply['keyBoardLayout']])
     else:
-        update.message.reply_text('\n'.join(reply['response']))
+        update.message.reply_text('\n'.join(reply['response']), reply_markup=ReplyKeyboardRemove())
 
 def start_handler(update: Update, context: CallbackContext):
     """Send a message when the command /start is issued."""

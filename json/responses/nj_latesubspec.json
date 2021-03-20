@@ -1,0 +1,43 @@
+{
+    "tag": {
+        "category": "nonjupas",
+        "modifier": "action_latetosubmit_con",
+        "slots": ["university"]
+    },
+    "noslot": {
+        "response": [
+            "***ERROR:should not go here"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "hku": {
+        "response": [
+            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "WEEKDAY: XX:XX - XX:XX",
+            "SATURDAY: XX:XX - XX:XX",
+            "SUNDAY: XX:XX - XX:XX",
+            "You can refer to [HTTP] for more details."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "cuhk": {
+        "response": [
+            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "WEEKDAY: XX:XX - XX:XX",
+            "SATURDAY: XX:XX - XX:XX",
+            "SUNDAY: XX:XX - XX:XX",
+            "You can refer to [HTTP] for more details."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "others": {
+        "response": [
+            "***We don't have certain information. Please accept our apologies."
+        ],
+        "status": "True",
+        "return tag": {}
+    }
+}

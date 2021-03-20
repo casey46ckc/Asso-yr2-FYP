@@ -7,7 +7,9 @@
     <yn_essential_apply_year2>|
     <howto_applyu>|
     <reference_letter_ask>|
-    <nonjupas_test>|
+    <hku_ret>|
+    <cuhk_ret>|
+    <others_ret>|
     <preparationfor_nj>|
     <nonju>|
     <late_nj_ask>|
@@ -40,6 +42,7 @@
 <hkbu>:Hong Kong Baptist University|HKBU|hkbu|BU|bu;
 <polyu>:The Hong Kong Polytechnic University|POLYU|PolyU|polyu|Poly U|poly u;
 <edu>:The Education University of Hong Kong|EdU|edu|EDU|Ed U|ed u;
+<others>:Others|others|Other|other;
 <hd>:hd|higher diploma|high dip;
 //All templates
 //All grammars
@@ -53,7 +56,11 @@
 //*C:Is it a must to have a reference letter
 <reference_letter_ask>:Is it a must to have a reference letter [for non jupas application] <{@=yn_essential_referenceletter}>;
 //*C:HKU
-<nonjupas_test>:<university_list{university=$}><{@=test}>;
+<hku_ret>:<hku{university=hku}>;
+//*C:CUHK
+<cuhk_ret>:<cuhk{university=cuhk}>;
+//*C:Others
+<others_ret>:<others{university=others}>;
 //*C:what to prepare for non jupas
 <preparationfor_nj>:What [do I need] to prepare for non jupas [application] <{@=what_toprepare_general}>;
 //*C:what is non jupas?
