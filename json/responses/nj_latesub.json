@@ -20,11 +20,11 @@
             "11. The Open University of Hong Kong"
         ],
         "status": "False",
+        "keyBoardLayout": "reply_kb_university",
         "return tag": {
             "category": "nonjupas",
             "modifier": "action_latetosubmit",
-            "slots": [],
-            "keyBoardLayout": "reply_kb_university"
+            "slots": []
         }
     }
 }

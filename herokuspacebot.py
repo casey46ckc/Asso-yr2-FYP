@@ -94,6 +94,7 @@ def reply_handler(update: Update, context: CallbackContext):
 
     print(reply['response'])
     if (len(reply['keyBoardLayout']) > 0):
+        print("keyBoardLayout triggered")
         update.message.reply_text('\n'.join(reply['response']), reply_markup=globals()[reply['keyBoardLayout']])
     else:
         update.message.reply_text('\n'.join(reply['response']))
