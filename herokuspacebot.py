@@ -133,11 +133,12 @@ def clSchedule_handler(update: Update, context: CallbackContext):
         update.message.reply_text("Usage:\n" + "\t/spacedule <Class Code><Class No>(<Class No> can be omitted) * N\n" +
         "To find the most optimized classes for add/drop/swap")
         update.message.reply_text("e.g. /spacedule CCCH4003 CCCU4041 CCEN4005 CCIT4033CL03 CCIT4059 CCIT4080CL07")
-        update.message.reply_text("Result will be ordered by total marks and the marking scheme is as followed:\n"+
-        "+ 10 marks for each day of day-off, including saturday\n"+
-        "-  3 marks for each day of early morning lessons or late evening lessons\n"+
-        "-  2 marks for the time gap between two lessons within one day is greater than 3 hours\n"
-        "\n ***Only top 10 results will be display through the message***\n")
+        update.message.reply_text("\n".join([
+            "Result will be ordered by total marks and the marking scheme is as followed:",
+            "+ 10 marks for each day of day-off, including saturday",
+            "-  3 marks for each day of early morning lessons or late evening lessons",
+            "-  2 marks for the time gap between two lessons within one day is greater than 3 hours",
+            " ***Only top 10 results will be display through the message***"])
 
 def error_handler(update: Update, context: CallbackContext):
     """Log Errors caused by Updates."""

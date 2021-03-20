@@ -228,6 +228,7 @@ class Olami:
                                 ret_dict['keyBoardLayout'] = jsonObj[slots_value]['keyBoardLayout']
                             else:
                                 ret_dict['keyBoardLayout'] = ""
+                            intentTag['slots'].clear()
                             intentTag.clear()
                             return ret_dict
                         else:
@@ -242,6 +243,7 @@ class Olami:
                                 ret_dict['keyBoardLayout'] = jsonObj['noslot']['keyBoardLayout']
                             else:
                                 ret_dict['keyBoardLayout'] = ""
+                            intentTag['slots'].clear()
                             intentTag.clear()
                             return ret_dict
                         else:
@@ -252,7 +254,8 @@ class Olami:
         print("Tag not found!\nintentTag: ", intentTag)
         ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
         ret_dict['status'] = "True"
-        intentTag = None
+        intentTag['slots'].clear()
+        intentTag.clear()
         return ret_dict
 """
                         if intent_category == "greet": #moved greet module to json
