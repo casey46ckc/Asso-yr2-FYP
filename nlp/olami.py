@@ -228,7 +228,7 @@ class Olami:
                                 ret_dict['keyBoardLayout'] = jsonObj[slots_value]['keyBoardLayout']
                             else:
                                 ret_dict['keyBoardLayout'] = ""
-                            intentTag = None
+                            intentTag.clear()
                             return ret_dict
                         else:
                             print("Error: no slot_value key can be found!")
@@ -242,7 +242,7 @@ class Olami:
                                 ret_dict['keyBoardLayout'] = jsonObj['noslot']['keyBoardLayout']
                             else:
                                 ret_dict['keyBoardLayout'] = ""
-                            intentTag = None
+                            intentTag.clear()
                             return ret_dict
                         else:
                             print("Error: no noslot key can be found!")
