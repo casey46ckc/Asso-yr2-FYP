@@ -163,8 +163,7 @@ if __name__ == "__main__":
     NAME = config['HEROKU']['APP_NAME']
 
     # Port is given by Heroku
-    PORT = os.environ.get('PORT')
-    print("PORT:", PORT)
+    PORT = int(os.environ.get('PORT'), 3978)
 
     # Enable logging
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -182,8 +181,9 @@ if __name__ == "__main__":
     dp.add_handler(MessageHandler(Filters.text, reply_handler))
 
     # Start the webhook
+    print("PORT:", PORT)
     updater.start_webhook(listen="0.0.0.0",
-                          port=int(PORT),
+                          port=(PORT),
                           url_path=TOKEN)
     updater.bot.setWebhook("https://{}.herokuapp.com/{}".format(NAME, TOKEN))
     updater.idle()
