@@ -9,8 +9,8 @@ import telegram
 import nltk
 import nltk.tag, nltk.data
 nltk.download('stopwords')
-import en_core_web_sm
-sp = en_core_web_sm.load()
+import spacy
+sp = spacy.load('en_core_web_sm')
 
 
 from telegram import ReplyKeyboardMarkup,ReplyKeyboardRemove, Update
