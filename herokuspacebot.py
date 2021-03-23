@@ -9,9 +9,6 @@ import telegram
 import nltk
 import nltk.tag, nltk.data
 nltk.download('stopwords')
-import spacy
-sp = spacy.load('en_core_web_sm')
-
 
 from telegram import ReplyKeyboardMarkup,ReplyKeyboardRemove, Update
 from telegram.ext import Updater, Dispatcher, CommandHandler, MessageHandler, Filters, CallbackContext
@@ -77,10 +74,6 @@ def reply_handler(update: Update, context: CallbackContext):
     filtered_tkn0Tag = tagger.tag(filtered_tkn0)
     print(f'filtered_tkn0Tag[{type(filtered_tkn0Tag)}]: ', filtered_tkn0Tag)
 
-    sen = sp(text)
-    for word in sen:
-        print(f'{word.text:{12}} {word.pos_:{10}} {word.tag_:{8}} {spacy.explain(word.tag_)}')
-        
     # shorten the message
     text = replace_AbbrName(text)
     print("Text after abbr: " + text)
