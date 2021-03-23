@@ -182,7 +182,7 @@ if __name__ == "__main__":
 
     # Start the webhook
     updater.start_webhook(listen="0.0.0.0",
-                          port=int(443),
+                          port=int(PORT),
                           url_path=TOKEN)
     updater.bot.setWebhook("https://{}.herokuapp.com/{}".format(NAME, TOKEN))
     updater.idle()
