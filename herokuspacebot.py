@@ -9,8 +9,8 @@ import telegram
 import nltk
 import nltk.tag, nltk.data
 nltk.download('stopwords')
-import spacy
-sp = spacy.load('en_core_web_sm')
+#import spacy
+#sp = spacy.load('en_core_web_sm')
 
 
 from telegram import ReplyKeyboardMarkup,ReplyKeyboardRemove, Update
@@ -77,9 +77,9 @@ def reply_handler(update: Update, context: CallbackContext):
     filtered_tkn0Tag = tagger.tag(filtered_tkn0)
     print(f'filtered_tkn0Tag[{type(filtered_tkn0Tag)}]: ', filtered_tkn0Tag)
 
-    sen = sp(text)
-    for word in sen:
-        print(f'{word.text:{12}} {word.pos_:{10}} {word.tag_:{8}} {spacy.explain(word.tag_)}')
+    #sen = sp(text)
+    #for word in sen:
+    #   print(f'{word.text:{12}} {word.pos_:{10}} {word.tag_:{8}} {spacy.explain(word.tag_)}')
 
     # shorten the message
     text = replace_AbbrName(text)
@@ -182,7 +182,7 @@ if __name__ == "__main__":
 
     # Start the webhook
     updater.start_webhook(listen="0.0.0.0",
-                          port=int(443),
+                          port=int(PORT),
                           url_path=TOKEN)
     updater.bot.setWebhook("https://{}.herokuapp.com/{}".format(NAME, TOKEN))
     updater.idle()
