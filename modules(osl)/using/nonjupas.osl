@@ -3,7 +3,13 @@
 !intention <nonjupas>;
 !modifier <nonjupas> : whenis_open_nospecific|test|what_toprepare_general|yn_num_referenceletter_matter|whenis_deadline|yn_essential_apply_year2|action_latetosubmit|yn_apply_year1|howto_webpage_university|whatis_requirement_nospecific|yn_apply_morethan1|whatis|howto_apply_university_general|yn_essential_referenceletter|schoolsupport_nospecific;
 
-<nonjupas>:<howto_getu>|
+<nonjupas>:<howto_get_cityu>|
+    <howto_get_bu>|
+    <howto_get_lingu>|
+    <howto_get_edu>|
+    <howto_get_polyu>|
+    <howto_get_ust>|
+    <howto_get_hku>|
     <yn_essential_apply_year2>|
     <howto_applyu>|
     <reference_letter_ask>|
@@ -47,7 +53,19 @@
 //All templates
 //All grammars
 //*C:How to get into hku
-<howto_getu>:How to get into <university_list{university=$}><{@=howto_webpage_university}>;
+<howto_get_hku>:How to get into <hku{university=hku}><{@=howto_webpage_university}>;
+//*C:How to get into ust
+<howto_get_ust>:How to get into <hkust{university=ust}><{@=howto_webpage_university}>;
+//*C:How to get into polyu
+<howto_get_polyu>:How to get into <polyu{university=polyu}><{@=howto_webpage_university}>;
+//*C:How to get into edu
+<howto_get_edu>:How to get into <edu{university=edu}><{@=howto_webpage_university}>;
+//*C:How to get into lingu
+<howto_get_lingu>:How to get into <lingu{university=lingu}><{@=howto_webpage_university}>;
+//*C:How to get into bu
+<howto_get_bu>:How to get into <hkbu{university=bu}><{@=howto_webpage_university}>;
+//*C:How to get into cityu
+<howto_get_cityu>:How to get into <cityu{university=cityu}><{@=howto_webpage_university}>;
 //*C:Is it a must for year2 AD student to apply senior year Non JUPAS application
 <yn_essential_apply_year2>:Is it a must for year2 AD student to apply senior year non jupas application <{@=yn_essential_apply_year2}>;
 //*C:how to apply U

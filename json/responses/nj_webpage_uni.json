@@ -1,0 +1,72 @@
+{
+	"tag": {
+		"category": "nonjupas",
+		"modifier": "howto_webpage_university",
+		"slots": [
+			"university"
+		]
+	},
+	"noslot": {
+		"response": [
+			"***ERROR:should not go here"
+		],
+		"status": "True",
+		"return tag": {}
+	},
+	"cityu": {
+		"response": [
+			"***You can apply from CityU non-jupas page. The link is as followed:",
+			"https://www.admo.cityu.edu.hk/direct/"
+		],
+		"status": "True",
+		"return tag": {}
+	},
+	"bu": {
+		"response": [
+			"***You can apply from BU non-jupas page. The link is as followed:",
+			"https://admissions.hkbu.edu.hk/en/"
+		],
+		"status": "True",
+		"return tag": {}
+	},
+	"lingu": {
+		"response":  [
+			"***You can apply from LingU non-jupas page. The link is as followed:",
+			"https://www.ln.edu.hk/admissions/ug/non-jupas/general-notes-to-applicants"
+		],
+		"status": "True",
+		"return tag": {}
+	},
+	"edu": {
+		"response":  [
+			"***You can apply from EdU non-jupas page. The link is as followed:",
+			"https://www.eduhk.hk/onlineappl/"
+		],
+		"status": "True",
+		"return tag": {}
+	},
+	"polyu": {
+		"response":[
+			"***You can apply from PolyU non-jupas page. The link is as followed:",
+			"https://www38.polyu.edu.hk/eAdmission/index.do"
+		],
+		"status": "True",
+		"return tag": {}
+	},
+	"ust": {
+		"response":[
+			"***You can apply from UST non-jupas page. The link is as followed:",
+			"https://join.ust.hk/apply"
+		],
+		"status": "True",
+		"return tag": {}
+	},
+	"hku": {
+		"response":[
+			"***You can apply from HKU non-jupas page. The link is as followed:",
+			"https://aal.hku.hk/admissions/international/admissions-information"
+		],
+		"status": "True",
+		"return tag": {}
+	}
+}
