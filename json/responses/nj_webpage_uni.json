@@ -68,5 +68,13 @@
 		],
 		"status": "True",
 		"return tag": {}
+	},
+	"cu": {
+		"response":[
+			"***You can apply from CU non-jupas page. The link is as followed:",
+			"http://admission.cuhk.edu.hk/non-jupas-senior/application-details.html"
+		],
+		"status": "True",
+		"return tag": {}
 	}
 }

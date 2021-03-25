@@ -10,6 +10,7 @@
     <howto_get_polyu>|
     <howto_get_ust>|
     <howto_get_hku>|
+    <howto_get_cuhk>|
     <yn_essential_apply_year2>|
     <howto_applyu>|
     <reference_letter_ask>|
@@ -52,6 +53,8 @@
 <hd>:hd|higher diploma|high dip;
 //All templates
 //All grammars
+//*C:How to get into cuhk
+<howto_get_cuhk>:How to get into <cuhk{university=cu}><{@=howto_webpage_university}>;
 //*C:How to get into hku
 <howto_get_hku>:How to get into <hku{university=hku}><{@=howto_webpage_university}>;
 //*C:How to get into ust
