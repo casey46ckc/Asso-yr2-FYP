@@ -25,7 +25,14 @@
     <num_refletter_ask>|
     <when_can_applynj>|
     <applynj_yr1_ask>|
-    <whenis_deadline_grammer>|
+    <whenis_deadline_cityu>|
+    <whenis_deadline_bu>|
+    <whenis_deadline_lingu>|
+    <whenis_deadline_edu>|
+    <whenis_deadline_polyu>|
+    <whenis_deadline_ust>|
+    <whenis_deadline_hku>|
+    <whenis_deadline_cu>|
     <apply_multi_nj_ask>;
 //All grammar-event
 
@@ -100,9 +107,22 @@
 //*C:can i apply non jupas in asso yr1
 //*C:can i apply for non jupas in asso yr1
 <applynj_yr1_ask>:<modal_verbs> I apply [for] non jupas [application] in (<asso>|<hd>) (Year1|yr1|year 1|yr 1) <{@=yn_apply_year1}>;
-//*C:When is the deadline of SYU
-//*C:When is the deadline of HKUST
-<whenis_deadline_grammer>:<?head()><whenis_deadline> of <university_list{university=$}><{@=whenis_deadline}>;
+//*C:When is the deadline of cu
+<whenis_deadline_cu>:<?head()><whenis_deadline> of <cuhk{university=cu}><{@=whenis_deadline}>;
+//*C:When is the deadline of hku
+<whenis_deadline_hku>:<?head()><whenis_deadline> of <hku{university=hku}><{@=whenis_deadline}>;
+//*C:When is the deadline of ust
+<whenis_deadline_ust>:<?head()><whenis_deadline> of <hkust{university=ust}><{@=whenis_deadline}>;
+//*C:When is the deadline of polyu
+<whenis_deadline_ppolyu>:<?head()><whenis_deadline> of <polyu{university=polyu}><{@=whenis_deadline}>;
+//*C:When is the deadline of edu
+<whenis_deadline_edu>:<?head()><whenis_deadline> of <edu{university=edu}><{@=whenis_deadline}>;
+//*C:When is the deadline of lingu
+<whenis_deadline_lingu>:<?head()><whenis_deadline> of <lingu{university=lingu}><{@=whenis_deadline}>;
+//*C:When is the deadline of hkbu
+<whenis_deadline_hkbu>:<?head()><whenis_deadline> of <hkbu{university=bu}><{@=whenis_deadline}>;
+//*C:When is the deadline of cityu
+<whenis_deadline_cityu>:<?head()><whenis_deadline> of <cityu{university=cityu}><{@=whenis_deadline}>;
 //*C:can i apply multiple application at once
 <apply_multi_nj_ask>:can I apply [for] (more than one|multiple) (non jupas|non jupas application|application|applications) at (the same time|once) <{@=yn_apply_morethan1}>;
 //All context grammars

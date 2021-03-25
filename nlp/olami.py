@@ -311,7 +311,7 @@ class Olami:
                                 #****cannot find*****
                                 return 'Which university are you refering to?' + '\n'.join(li_u_str)
                             elif 'howto_webpage_university' in modifier:
-                                # done
+                                # done jdone
                                 if len(nli_obj['semantic'][0]['slots']) > 0:
                                     slot = nli_obj['semantic'][0]['slots'][0]
                                     if 'university' == slot['name']:
@@ -326,7 +326,7 @@ class Olami:
                                 else:
                                     return 'Which programe and university you want to apply/ have applied?'
                             elif 'whenis_deadline' in modifier:
-                                # done
+                                # done jdone
                                 slot = nli_obj['semantic'][0]['slots'][0]
                                 if 'university' == slot['name']:
                                     tmp_str = slot['value'].lower()
