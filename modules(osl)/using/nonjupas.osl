@@ -26,7 +26,7 @@
     <when_can_applynj>|
     <applynj_yr1_ask>|
     <whenis_deadline_cityu>|
-    <whenis_deadline_bu>|
+    <whenis_deadline_hkbu>|
     <whenis_deadline_lingu>|
     <whenis_deadline_edu>|
     <whenis_deadline_polyu>|
@@ -114,7 +114,7 @@
 //*C:When is the deadline of ust
 <whenis_deadline_ust>:<?head()><whenis_deadline> of <hkust{university=ust}><{@=whenis_deadline}>;
 //*C:When is the deadline of polyu
-<whenis_deadline_ppolyu>:<?head()><whenis_deadline> of <polyu{university=polyu}><{@=whenis_deadline}>;
+<whenis_deadline_polyu>:<?head()><whenis_deadline> of <polyu{university=polyu}><{@=whenis_deadline}>;
 //*C:When is the deadline of edu
 <whenis_deadline_edu>:<?head()><whenis_deadline> of <edu{university=edu}><{@=whenis_deadline}>;
 //*C:When is the deadline of lingu
