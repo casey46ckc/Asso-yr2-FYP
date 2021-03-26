@@ -75,7 +75,7 @@ def reply_handler(update: Update, context: CallbackContext):
     print(f'filtered_tkn0Tag[{type(filtered_tkn0Tag)}]: ', filtered_tkn0Tag)
 
     # shorten the message
-    text = replace_AbbrName(text)
+    text = replace_AbbrName(textToken)
     print("Text after abbr: " + text)
     """Reply message."""
     user_id = update.message.from_user.id
