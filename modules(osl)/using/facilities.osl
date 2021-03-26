@@ -14,6 +14,11 @@
     <contact_iec>|
     <contact_ftc>|
     <contact_adc_unc>|
+    <contact2_kec>|
+    <contact2_cita>|
+    <contact2_iec>|
+    <contact2_ftc>|
+    <contact2_adc_unc>|
     <fc_whichfhas_cmrm>|
     <fc_where_lounge_kec>|
     <fc_tellme_lounge>|
@@ -45,7 +50,7 @@
 <adc_unc>:(Admiralty Centre ('&'|and) United Centre)|(ADC (and|'&') UNC);
 <have_has>:have|had|has;
 <cita>:Clothing Industry Training Authority|Clothing Industry Training Authority Learning Centre|Clothing Industry Training Authority Learning Center|CITA Learning Centre|CITA Learning Center|CITA;
-<what_is>:What is;
+<what_be>:What (is|are|am|was|were);
 <ftc>:Fortress Tower Centre|FTC|Fortress Tower Center;
 <discussionrm>:discussion room|discussion rm|discuss room|discuss rm;
 <contact>:contact' '[detail|details|number];
@@ -69,6 +74,16 @@
 <fc_where_cmrm_default>:<?head()><where_beginning>[<article>]<cmroom_大{facilities=common room}><{@=place}>;
 //*C:which floor has lounge
 <fc_whichfhas_lounge>:(Which floor)<have_has><cmroom_細{facilities=lounge}><{@=place}>;
+//*C:what is the contact of adc & unc
+<contact2_adc_unc>:<?head()><what_be>[<article>]<contact>of<adc_unc{office=adc_unc}>[office]<{@=contact}>;
+//*C:what is the contact of ftc
+<contact2_ftc>:<?head()><what_be>[<article>]<contact>of<ftc{office=ftc}>[office]<{@=contact}>;
+//*C:what is the contact of iec
+<contact2_iec>:<?head()><what_be>[<article>]<contact>of<iec{office=iec}>[office]<{@=contact}>;
+//*C:what is the contact of cita
+<contact2_cita>:<?head()><what_be>[<article>]<contact>of<cita{office=cita}>[office]<{@=contact}>;
+//*C:what is the contact of kec
+<contact2_kec>:<?head()><what_be>[<article>]<contact>of<kec{office=kec}>[office]<{@=contact}>;
 //*C:Tell me the contact of adc & unc
 <contact_adc_unc>:<?head()><request_eng>[<article>]<contact>of<adc_unc{office=adc_unc}>[office]<{@=contact}>;
 //*C:Tell me the contact of ftc
