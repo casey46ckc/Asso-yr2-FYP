@@ -10,12 +10,12 @@
 		"return tag":{}
 	},	
 	"keclibrary":{
-		"response": ["***Yes, library is on 4/F."],
+		"response": ["***Yes, library & multi-media learning centre is on 4/F."],
 		"status": "True",
 		"return tag":{}
 	},
 	"keclounge":{
-		"response":["***Yes, lounge is on 3/F."],
+		"response":["***Yes, lounge & cyber station is on 3/F."],
 		"status":"True",
 		"return tag":{}
 	},
@@ -31,6 +31,76 @@
 	},
 	"kecdiscussionroom":{
 		"response":["***There are 4 discussion rooms in KEC. They are KEC201, KEC202, KEC203, KEC204"],
+		"status":"True",
+		"return tag":{}
+	},
+	"keccollegehall":{
+		"response":["***Yes, college hall is on G/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"keccolllegetheatre":{
+		"response":["***Yes, colllege theatre is on 1/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecenrolmentcentre":{
+		"response":["***Yes, enrolment centre is on 1/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecoffice":{
+		"response":["***Yes, campus office is on 2/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"keccomprm":{
+		"response":["***Yes, computer centre is on 3/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecphotocopyrm":{
+		"response":["***Yes, photocopying room is on 3/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecsu":{
+		"response":["***Yes, student union office is on 3/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecsocrm":{
+		"response":["***Yes, societies activities room is on 3/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecnurselab":{
+		"response":["***Yes, nursing skills laboratory is on 3/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecengvillage":{
+		"response":["***Yes, english village is on 4/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecnetworklab":{
+		"response":["***Yes, network laboratory is on 4/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecintscilab":{
+		"response":["***Yes, integrated science laboratories are on 8/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecscilab":{
+		"response":["***Yes, science laboratories are on 9/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"keccomplab":{
+		"response":["***Yes, computer laboratories are on 9/F."],
 		"status":"True",
 		"return tag":{}
 	}

@@ -10,12 +10,12 @@
 		"return tag":{}
 	},	
 	"library":{
-		"response": ["***Yes, library is on 4/F."],
+		"response": ["***Yes, library & multi-media learning centre is on 4/F."],
 		"status": "True",
 		"return tag":{}
 	},
 	"lounge":{
-		"response":["***Yes, lounge is on 3/F."],
+		"response":["***Yes, lounge & cyber station is on 3/F."],
 		"status":"True",
 		"return tag":{}
 	},
