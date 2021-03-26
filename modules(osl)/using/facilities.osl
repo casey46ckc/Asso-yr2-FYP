@@ -52,7 +52,7 @@
 <cmroom_大>:Common Room|大 com|大common|cm rm|cm room|cmrm|com room|com rm;
 <request_chi>:(我(想|[需]要)[知|知道|了解])|[話|講[畀|比|俾]]我知;
 <article>:the|a|an;
-<campus_list>:<KEC>|<CIT>|<FTC>|<IEC>|<ADC_UNC>;
+<campus_list>:<KEC>|<CITA>|<FTC>|<IEC>|<ADC_UNC>;
 <studyrm>:study room|study rooms;
 <how_to_contact>:(How can I (get [<article>] <contact> of|[get [to]] <contact> to))|How to <contact>;
 <where_beginning>:Where is|Where are;
@@ -70,7 +70,7 @@
 //*C:which floor has lounge
 <fc_whichfhas_lounge>:(Which floor)<have_has><cmroom_細{facilities=lounge}><{@=place}>;
 //*C:Tell me the contact of adc & unc
-<contact_adc_unc>:<?head()><request_eng>[<article>]<contact>of<adc_unc{office=adc&unc}>[office]<{@=contact}>;
+<contact_adc_unc>:<?head()><request_eng>[<article>]<contact>of<adc_unc{office=adc_unc}>[office]<{@=contact}>;
 //*C:Tell me the contact of ftc
 <contact_ftc>:<?head()><request_eng>[<article>]<contact>of<ftc{office=ftc}>[office]<{@=contact}>;
 //*C:Tell me the contact of iec

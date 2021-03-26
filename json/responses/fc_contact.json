@@ -53,7 +53,7 @@
         "status": "True",
         "return tag": {}
     },
-    "adc&unc": {
+    "adc_unc": {
         "response": [
             "***The ADC & UNC office hotline is 2910 7620.",
             "Please contact them within their office hour:",
