@@ -9,7 +9,11 @@
     <fc_where_lib_kec>|
     <fc_where_cmrm_default>|
     <fc_whichfhas_lounge>|
-    <contact_place2>|
+    <contact_kec>|
+    <contact_cita>|
+    <contact_iec>|
+    <contact_ftc>|
+    <contact_adc_unc>|
     <fc_whichfhas_cmrm>|
     <fc_where_lounge_kec>|
     <fc_tellme_lounge>|
@@ -40,7 +44,7 @@
 <facilities_in_kec>:Discussion Room|Computer Lab|<CMRoom_大>|<CMRoom_細>|<Lib>|Study Room|study rooms;
 <adc_unc>:(Admiralty Centre ('&'|and) United Centre)|(ADC (and|'&') UNC);
 <have_has>:have|had|has;
-<cit>:Clothing Industry Training Authority|Clothing Industry Training Authority Learning Centre|Clothing Industry Training Authority Learning Center|CITA Learning Centre|CITA Learning Center|CITA;
+<cita>:Clothing Industry Training Authority|Clothing Industry Training Authority Learning Centre|Clothing Industry Training Authority Learning Center|CITA Learning Centre|CITA Learning Center|CITA;
 <what_is>:What is;
 <ftc>:Fortress Tower Centre|FTC|Fortress Tower Center;
 <discussionrm>:discussion room|discussion rm|discuss room|discuss rm;
@@ -65,8 +69,16 @@
 <fc_where_cmrm_default>:<?head()><where_beginning>[<article>]<cmroom_大{facilities=common room}><{@=place}>;
 //*C:which floor has lounge
 <fc_whichfhas_lounge>:(Which floor)<have_has><cmroom_細{facilities=lounge}><{@=place}>;
-//*C:Tell me the contact of KEC
-<contact_place2>:<?head()><request_eng>[<article>]<contact>of<campus_list{office=$}><{@=contact}>[Office];
+//*C:Tell me the contact of adc & unc
+<contact_adc_unc>:<?head()><request_eng>[<article>]<contact>of<adc_unc{office=adc&unc}>[office]<{@=contact}>;
+//*C:Tell me the contact of ftc
+<contact_ftc>:<?head()><request_eng>[<article>]<contact>of<ftc{office=ftc}>[office]<{@=contact}>;
+//*C:Tell me the contact of iec
+<contact_iec>:<?head()><request_eng>[<article>]<contact>of<iec{office=iec}>[office]<{@=contact}>;
+//*C:Tell me the contact of cita
+<contact_cita>:<?head()><request_eng>[<article>]<contact>of<cita{office=cita}>[office]<{@=contact}>;
+//*C:Tell me the contact of kec
+<contact_kec>:<?head()><request_eng>[<article>]<contact>of<kec{office=kec}>[office]<{@=contact}>;
 //*C:which floor has common room
 <fc_whichfhas_cmrm>:(Which floor)<have_has><cmroom_大{facilities=common room}><{@=place}>;
 //*C:where is lounge in kec
