@@ -1,0 +1,61 @@
+{
+    "tag": {
+        "category": "facilities",
+        "modifier": "officehr",
+        "slots": [
+            "facilities"
+        ]
+    },
+    "noslot": {
+        "response": [
+            "***ERROR:should not go here"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "kec": {
+        "response": [
+            "The office hour of KEC is:",
+            "0830 - 1930 (Weekdays)",
+            "0830 - 1730 (Saturday)",
+            "0830 - 1630 (Sunday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "cita": {
+        "response": [
+            "The office hour of CITA is:",
+            "0900 - 2000 (Weekdays)",
+            "0900 - 1800 (Saturday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "iec": {
+        "response": [
+            "The office hour of IEC is:",
+            "0830 - 1930 (Weekdays)",
+            "0830 - 1730 (Saturday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "ftc": {
+        "response": [
+            "The office hour of FTC is:",
+            "0830 - 1930 (Weekdays)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "adc_unc": {
+        "response": [
+            "The office hour of ADC & UNC is:",
+            "0830 - 1930 (Weekdays)",
+            "0830 - 1730 (Saturday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    }
+}
