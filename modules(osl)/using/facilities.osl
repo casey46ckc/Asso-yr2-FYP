@@ -2,8 +2,7 @@
 !slot <office:internal.'{"ref":["地點"]}'>;
 !slot <facilities:internal.'{"ref":["地點"]}'>;
 !intention <facilities>;
-!modifier <facilities> : contact|place;
-!modifier <facilities> : contact|place;
+!modifier <facilities> : contact|place|officehr;
 
 <facilities>:<fc_where_studyrm_kec>|
     <fc_where_lib_kec>|
@@ -85,26 +84,26 @@
 <fc_where_cmrm_default>:<?head()><where_beginning>[<article>]<cmroom_大{facilities=common room}><{@=place}>;
 //*C:which floor has lounge
 <fc_whichfhas_lounge>:(Which floor)<have_has><cmroom_細{facilities=lounge}><{@=place}>;
+//*C:tell me the office hr of adc & unc
+<officehr2_adc_unc>:<?head()><request_eng>[<article>]<office_hr>of<adc_unc{office=adc_unc}>[office]<{@=officehr}>;
+//*C:tell me the office hr of ftc
+<officehr2_ftc>:<?head()><request_eng>[<article>]<office_hr>of<ftc{office=ftc}>[office]<{@=officehr}>;
+//*C:tell me the office hr of iec
+<officehr2_iec>:<?head()><request_eng>[<article>]<office_hr>of<iec{office=iec}>[office]<{@=officehr}>;
+//*C:tell me the office hr of cita
+<officehr2_cita>:<?head()><request_eng>[<article>]<office_hr>of<cita{office=cita}>[office]<{@=officehr}>;
+//*C:tell me the office hr of kec
+<officehr2_kec>:<?head()><request_eng>[<article>]<office_hr>of<kec{office=kec}>[office]<{@=officehr}>;
 //*C:what is the office hr of adc & unc
-<officehr2_adc_unc>:<?head()><request_eng>[<article>]<office_hr>of<adc_unc{office=adc_unc}>[office]<{@=offcehr}>;
+<officehr_adc_unc>:<?head()><what_be>[<article>]<office_hr>of<adc_unc{office=adc_unc}>[office]<{@=officehr}>;
 //*C:what is the office hr of ftc
-<officehr2_ftc>:<?head()><request_eng>[<article>]<office_hr>of<ftc{office=ftc}>[office]<{@=offcehr}>;
+<officehr_ftc>:<?head()><what_be>[<article>]<office_hr>of<ftc{office=ftc}>[office]<{@=officehr}>;
 //*C:what is the office hr of iec
-<officehr2_iec>:<?head()><request_eng>[<article>]<office_hr>of<iec{office=iec}>[office]<{@=offcehr}>;
+<officehr_iec>:<?head()><what_be>[<article>]<office_hr>of<iec{office=iec}>[office]<{@=officehr}>;
 //*C:what is the office hr of cita
-<officehr2_cita>:<?head()><request_eng>[<article>]<office_hr>of<cita{office=cita}>[office]<{@=offcehr}>;
+<officehr_cita>:<?head()><what_be>[<article>]<office_hr>of<cita{office=cita}>[office]<{@=officehr}>;
 //*C:what is the office hr of kec
-<officehr2_kec>:<?head()><request_eng>[<article>]<office_hr>of<kec{office=kec}>[office]<{@=offcehr}>;
-//*C:what is the office hr of adc & unc
-<officehr_adc_unc>:<?head()><what_be>[<article>]<office_hr>of<adc_unc{office=adc_unc}>[office]<{@=offcehr}>;
-//*C:what is the office hr of ftc
-<officehr_ftc>:<?head()><what_be>[<article>]<office_hr>of<ftc{office=ftc}>[office]<{@=offcehr}>;
-//*C:what is the office hr of iec
-<officehr_iec>:<?head()><what_be>[<article>]<office_hr>of<iec{office=iec}>[office]<{@=offcehr}>;
-//*C:what is the office hr of cita
-<officehr_cita>:<?head()><what_be>[<article>]<office_hr>of<cita{office=cita}>[office]<{@=offcehr}>;
-//*C:what is the office hr of kec
-<officehr_kec>:<?head()><what_be>[<article>]<office_hr>of<kec{office=kec}>[office]<{@=offcehr}>;
+<officehr_kec>:<?head()><what_be>[<article>]<office_hr>of<kec{office=kec}>[office]<{@=officehr}>;
 //*C:what is the contact of adc & unc
 <contact2_adc_unc>:<?head()><what_be>[<article>]<contact>of<adc_unc{office=adc_unc}>[office]<{@=contact}>;
 //*C:what is the contact of ftc
