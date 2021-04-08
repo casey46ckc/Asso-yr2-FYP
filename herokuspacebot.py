@@ -66,13 +66,13 @@ def reply_handler(update: Update, context: CallbackContext):
     # nltk part, lowercase for convienence
     textToken = text.lower()
     tkn0 = tknzr.tokenize(textToken)
-    print(f'tkn0[{type(tkn0)}]: ', tkn0)
+    # print(f'tkn0[{type(tkn0)}]: ', tkn0)
     mwtkn0 = mwtknzr.tokenize(tkn0)
-    print(f'mwtkn0[{type(mwtkn0)}]: ', mwtkn0)
+    # print(f'mwtkn0[{type(mwtkn0)}]: ', mwtkn0)
     filtered_tkn0 = [w for w in mwtkn0 if not w in stop_words]
-    print(f'filtered_tkn[{type(filtered_tkn0)}]: ', filtered_tkn0)
+    # print(f'filtered_tkn[{type(filtered_tkn0)}]: ', filtered_tkn0)
     filtered_tkn0Tag = tagger.tag(filtered_tkn0)
-    print(f'filtered_tkn0Tag[{type(filtered_tkn0Tag)}]: ', filtered_tkn0Tag)
+    # print(f'filtered_tkn0Tag[{type(filtered_tkn0Tag)}]: ', filtered_tkn0Tag)
 
     # shorten the message
     text = replace_AbbrName(textToken)
@@ -91,6 +91,7 @@ def reply_handler(update: Update, context: CallbackContext):
         if str(user_id) in tags_dict:
             tags_dict[str(user_id)].clear()
     else:
+        logger.info(f'reply:\n {reply}')
         tags_dict[str(user_id)]['tag'] = reply['tag'].copy()
         if 'slotvalue' in reply:
             tags_dict[str(user_id)]['slotvalue'] = reply['slotvalue'].copy()
