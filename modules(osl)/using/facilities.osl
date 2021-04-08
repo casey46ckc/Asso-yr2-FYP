@@ -9,6 +9,10 @@
     <fc_where_cmrm_default>|
     <fc_whichfhas_lounge>|
     <fc_where_collegehall_kec>|
+    <fc_where_collegetheatre_kec>|
+    <fc_where_enrolmentcentre_kec>|
+    <fc_where_office_kec>|
+    <fc_where_compcentr_kec>|
     <contact_kec>|
     <contact_cita>|
     <contact_iec>|
@@ -74,10 +78,22 @@
 <request_eng>:(I want to [ask|know])|Tell me [[more ]about];
 <office_hr>:office hour|office hr|operating hour|operating hr;
 <collegehall>:college hall|hall|collegehall;
+<collegetheatre>:collegetheatre|college theatre|theatre;
+<enrolmentcentre>:(enrolment (centre|center))|(enrol (centre|center));
+<office>:office|校務處;
+<compcentre>:((computer|comp) (centre|center|room|rm|rooms|rms)); 
 //All templates
 <ask_be:template>: [=ask,be=]$(ask) $(be);
 <verb_to_be:template>: [=verb,be=]$(verb) to $(be);
 //All grammars
+//*C:where is comp centre in kec
+<fc_where_compcentr_kec>:<?head()><where_beginning>[<article>]<compcentre{facilities=compcentre}> in <kec{campus=kec}><{@=place}>;
+//*C:where is office in kec
+<fc_where_office_kec>:<?head()><where_beginning>[<article>]<office{facilities=office}> in <kec{campus=kec}><{@=place}>;
+//*C:where is enrol centre in kec
+<fc_where_enrolmentcentre_kec>:<?head()><where_beginning>[<article>]<enrolmentcentre{facilities=enrolment centre}> in <kec{campus=kec}><{@=place}>;
+//*C:where is theatre in kec
+<fc_where_collegetheatre_kec>:<?head()><where_beginning>[<article>]<collegetheatre{facilities=college theatre}> in <kec{campus=kec}><{@=place}>;
 //*C:where is hall in kec
 <fc_where_collegehall_kec>:<?head()><where_beginning>[<article>]<collegehall{facilities=college hall}> in <kec{campus=kec}><{@=place}>;
 //*C:where is discuss rm in kec
