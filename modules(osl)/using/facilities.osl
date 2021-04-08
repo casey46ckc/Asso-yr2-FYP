@@ -1,5 +1,5 @@
 !slot <campus:internal.'{"ref":["地點"]}'>;
-!slot <office:internal.'{"ref":["地點"]}'>;
+!slot <officeslot:internal.'{"ref":["地點"]}'>;
 !slot <facilities:internal.'{"ref":["地點"]}'>;
 !intention <facilities>;
 !modifier <facilities> : contact|place|officehr;
@@ -80,7 +80,7 @@
 <collegehall>:college hall|hall|collegehall;
 <collegetheatre>:collegetheatre|college theatre|theatre;
 <enrolmentcentre>:(enrolment (centre|center))|(enrol (centre|center));
-<office>:office|校務處;
+<office_term>:office|校務處;
 <compcentre>:((computer|comp) (centre|center|room|rm|rooms|rms)); 
 //All templates
 <ask_be:template>: [=ask,be=]$(ask) $(be);
@@ -89,7 +89,7 @@
 //*C:where is comp centre in kec
 <fc_where_compcentr_kec>:<?head()><where_beginning>[<article>]<compcentre{facilities=compcentre}> in <kec{campus=kec}><{@=place}>;
 //*C:where is office in kec
-<fc_where_office_kec>:<?head()><where_beginning>[<article>]<office{facilities=office}> in <kec{campus=kec}><{@=place}>;
+<fc_where_office_kec>:<?head()><where_beginning>[<article>]<office_term{facilities=office}> in <kec{campus=kec}><{@=place}>;
 //*C:where is enrol centre in kec
 <fc_where_enrolmentcentre_kec>:<?head()><where_beginning>[<article>]<enrolmentcentre{facilities=enrolment centre}> in <kec{campus=kec}><{@=place}>;
 //*C:where is theatre in kec
@@ -119,45 +119,45 @@
 //*C:which floor has lounge
 <fc_whichfhas_lounge>:(Which floor)<have_has><cmroom_細{facilities=lounge}><{@=place}>;
 //*C:tell me the office hr of adc & unc
-<officehr2_adc_unc>:<?head()><request_eng>[<article>]<office_hr>of<adc_unc{office=adc_unc}>[office]<{@=officehr}>;
+<officehr2_adc_unc>:<?head()><request_eng>[<article>]<office_hr>of<adc_unc{officeslot=adc_unc}>[office]<{@=officehr}>;
 //*C:tell me the office hr of ftc
-<officehr2_ftc>:<?head()><request_eng>[<article>]<office_hr>of<ftc{office=ftc}>[office]<{@=officehr}>;
+<officehr2_ftc>:<?head()><request_eng>[<article>]<office_hr>of<ftc{officeslot=ftc}>[office]<{@=officehr}>;
 //*C:tell me the office hr of iec
-<officehr2_iec>:<?head()><request_eng>[<article>]<office_hr>of<iec{office=iec}>[office]<{@=officehr}>;
+<officehr2_iec>:<?head()><request_eng>[<article>]<office_hr>of<iec{officeslot=iec}>[office]<{@=officehr}>;
 //*C:tell me the office hr of cita
-<officehr2_cita>:<?head()><request_eng>[<article>]<office_hr>of<cita{office=cita}>[office]<{@=officehr}>;
+<officehr2_cita>:<?head()><request_eng>[<article>]<office_hr>of<cita{officeslot=cita}>[office]<{@=officehr}>;
 //*C:tell me the office hr of kec
-<officehr2_kec>:<?head()><request_eng>[<article>]<office_hr>of<kec{office=kec}>[office]<{@=officehr}>;
+<officehr2_kec>:<?head()><request_eng>[<article>]<office_hr>of<kec{officeslot=kec}>[office]<{@=officehr}>;
 //*C:what is the office hr of adc & unc
-<officehr_adc_unc>:<?head()><what_be>[<article>]<office_hr>of<adc_unc{office=adc_unc}>[office]<{@=officehr}>;
+<officehr_adc_unc>:<?head()><what_be>[<article>]<office_hr>of<adc_unc{officeslot=adc_unc}>[office]<{@=officehr}>;
 //*C:what is the office hr of ftc
-<officehr_ftc>:<?head()><what_be>[<article>]<office_hr>of<ftc{office=ftc}>[office]<{@=officehr}>;
+<officehr_ftc>:<?head()><what_be>[<article>]<office_hr>of<ftc{officeslot=ftc}>[office]<{@=officehr}>;
 //*C:what is the office hr of iec
-<officehr_iec>:<?head()><what_be>[<article>]<office_hr>of<iec{office=iec}>[office]<{@=officehr}>;
+<officehr_iec>:<?head()><what_be>[<article>]<office_hr>of<iec{officeslot=iec}>[office]<{@=officehr}>;
 //*C:what is the office hr of cita
-<officehr_cita>:<?head()><what_be>[<article>]<office_hr>of<cita{office=cita}>[office]<{@=officehr}>;
+<officehr_cita>:<?head()><what_be>[<article>]<office_hr>of<cita{officeslot=cita}>[office]<{@=officehr}>;
 //*C:what is the office hr of kec
-<officehr_kec>:<?head()><what_be>[<article>]<office_hr>of<kec{office=kec}>[office]<{@=officehr}>;
+<officehr_kec>:<?head()><what_be>[<article>]<office_hr>of<kec{officeslot=kec}>[office]<{@=officehr}>;
 //*C:what is the contact of adc & unc
-<contact2_adc_unc>:<?head()><what_be>[<article>]<contact>of<adc_unc{office=adc_unc}>[office]<{@=contact}>;
+<contact2_adc_unc>:<?head()><what_be>[<article>]<contact>of<adc_unc{officeslot=adc_unc}>[office]<{@=contact}>;
 //*C:what is the contact of ftc
-<contact2_ftc>:<?head()><what_be>[<article>]<contact>of<ftc{office=ftc}>[office]<{@=contact}>;
+<contact2_ftc>:<?head()><what_be>[<article>]<contact>of<ftc{officeslot=ftc}>[office]<{@=contact}>;
 //*C:what is the contact of iec
-<contact2_iec>:<?head()><what_be>[<article>]<contact>of<iec{office=iec}>[office]<{@=contact}>;
+<contact2_iec>:<?head()><what_be>[<article>]<contact>of<iec{officeslot=iec}>[office]<{@=contact}>;
 //*C:what is the contact of cita
-<contact2_cita>:<?head()><what_be>[<article>]<contact>of<cita{office=cita}>[office]<{@=contact}>;
+<contact2_cita>:<?head()><what_be>[<article>]<contact>of<cita{officeslot=cita}>[office]<{@=contact}>;
 //*C:what is the contact of kec
-<contact2_kec>:<?head()><what_be>[<article>]<contact>of<kec{office=kec}>[office]<{@=contact}>;
+<contact2_kec>:<?head()><what_be>[<article>]<contact>of<kec{officeslot=kec}>[office]<{@=contact}>;
 //*C:Tell me the contact of adc & unc
-<contact_adc_unc>:<?head()><request_eng>[<article>]<contact>of<adc_unc{office=adc_unc}>[office]<{@=contact}>;
+<contact_adc_unc>:<?head()><request_eng>[<article>]<contact>of<adc_unc{officeslot=adc_unc}>[office]<{@=contact}>;
 //*C:Tell me the contact of ftc
-<contact_ftc>:<?head()><request_eng>[<article>]<contact>of<ftc{office=ftc}>[office]<{@=contact}>;
+<contact_ftc>:<?head()><request_eng>[<article>]<contact>of<ftc{officeslot=ftc}>[office]<{@=contact}>;
 //*C:Tell me the contact of iec
-<contact_iec>:<?head()><request_eng>[<article>]<contact>of<iec{office=iec}>[office]<{@=contact}>;
+<contact_iec>:<?head()><request_eng>[<article>]<contact>of<iec{officeslot=iec}>[office]<{@=contact}>;
 //*C:Tell me the contact of cita
-<contact_cita>:<?head()><request_eng>[<article>]<contact>of<cita{office=cita}>[office]<{@=contact}>;
+<contact_cita>:<?head()><request_eng>[<article>]<contact>of<cita{officeslot=cita}>[office]<{@=contact}>;
 //*C:Tell me the contact of kec
-<contact_kec>:<?head()><request_eng>[<article>]<contact>of<kec{office=kec}>[office]<{@=contact}>;
+<contact_kec>:<?head()><request_eng>[<article>]<contact>of<kec{officeslot=kec}>[office]<{@=contact}>;
 //*C:which floor has common room
 <fc_whichfhas_cmrm>:(Which floor)<have_has><cmroom_大{facilities=common room}><{@=place}>;
 //*C:Tell me where lounge is
@@ -172,7 +172,7 @@
 <fc_tellme_studyrm>:[<request_eng>] (where|which floor) [<article>] <studyrm{facilities=study room}><be><{@=place}>;
 //*C:How can I get contact to the IEC
 //*C:How can I contact to KEC
-<campus_contact>:<?head()><How_to_contact>[<article>[Office of]]<campus_list{office=$}><{@=contact}>;
+<campus_contact>:<?head()><How_to_contact>[<article>[Office of]]<campus_list{officeslot=$}><{@=contact}>;
 //*C:which floor has discuss rm
 <fc_whichfhas_discussionrm>:(Which floor)<have_has><discussionrm{facilities=discussion room}><{@=place}>;
 //*C:which floor has lib
