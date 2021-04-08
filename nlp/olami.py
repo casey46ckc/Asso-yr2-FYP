@@ -178,7 +178,7 @@ class Olami:
             'tag': None,
             'response':None, 
             'status': "False",
-            'keyBoardLayout':None
+            'keyBoardLayout': ""
             }
 
         if intentTag is None:
