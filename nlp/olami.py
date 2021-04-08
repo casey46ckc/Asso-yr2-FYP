@@ -219,7 +219,7 @@ class Olami:
 
                 for jsonObj in li_jsonFiles:
                     if intentTag['tag'] == jsonObj['tag']:
-                        print("Tag found!\nintentTag: ", jsonObj['tag'])
+                        print("Tag found!\nintentTag: ", intentTag)
                         if len(slots_ptr) > 0:
                             # print("Triggered success! A.1")
                             if slots_value in jsonObj:
@@ -239,7 +239,7 @@ class Olami:
                                 break
                                 
                         else:
-                            # print("noslot response return.")
+                            print("noslot response return.")
                             if 'noslot' in jsonObj:
                                 ret_dict['tag'] = jsonObj['noslot']['return tag']
                                 ret_dict['status'] = jsonObj['noslot']['status']
@@ -254,12 +254,13 @@ class Olami:
                             else:
                                 print("Error: no noslot key can be found!")
                                 break
+                # Case: Tags cannot be handled
                 ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
                 ret_dict['status'] = "True"
                 intentTag['tag']['slots'].clear()
                 intentTag.clear()
                 return ret_dict
-        else: # Case: Tag cannot be handled
+        else: # Case: Pattern cannot be identified
             print("Tag not found!\nintentTag: ", intentTag['tag'])
             ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
             ret_dict['status'] = "True"
