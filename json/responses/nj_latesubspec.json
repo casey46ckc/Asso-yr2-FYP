@@ -11,6 +11,72 @@
         "status": "True",
         "return tag": {}
     },
+    "cityu": {
+        "response": [
+            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "WEEKDAY: XX:XX - XX:XX",
+            "SATURDAY: XX:XX - XX:XX",
+            "SUNDAY: XX:XX - XX:XX",
+            "You can refer to [HTTP] for more details."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "bu": {
+        "response": [
+            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "WEEKDAY: XX:XX - XX:XX",
+            "SATURDAY: XX:XX - XX:XX",
+            "SUNDAY: XX:XX - XX:XX",
+            "You can refer to [HTTP] for more details."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "lingu": {
+        "response": [
+            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "WEEKDAY: XX:XX - XX:XX",
+            "SATURDAY: XX:XX - XX:XX",
+            "SUNDAY: XX:XX - XX:XX",
+            "You can refer to [HTTP] for more details."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "edu": {
+        "response": [
+            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "WEEKDAY: XX:XX - XX:XX",
+            "SATURDAY: XX:XX - XX:XX",
+            "SUNDAY: XX:XX - XX:XX",
+            "You can refer to [HTTP] for more details."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "polyu": {
+        "response": [
+            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "WEEKDAY: XX:XX - XX:XX",
+            "SATURDAY: XX:XX - XX:XX",
+            "SUNDAY: XX:XX - XX:XX",
+            "You can refer to [HTTP] for more details."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "ust": {
+        "response": [
+            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "WEEKDAY: XX:XX - XX:XX",
+            "SATURDAY: XX:XX - XX:XX",
+            "SUNDAY: XX:XX - XX:XX",
+            "You can refer to [HTTP] for more details."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
     "hku": {
         "response": [
             "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
@@ -22,7 +88,7 @@
         "status": "True",
         "return tag": {}
     },
-    "cuhk": {
+    "cu": {
         "response": [
             "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
             "WEEKDAY: XX:XX - XX:XX",
