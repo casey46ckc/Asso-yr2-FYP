@@ -164,10 +164,10 @@
     },
     {
         "term": [
-            "study room",
-            "study rm",
             "study rooms",
-            "study rms"
+            "study room",
+            "study rms",
+            "study rm"
         ],
         "abbr": "study room"
     },
@@ -179,25 +179,25 @@
     },
     {
         "term": [
-            "multi-purpose studio",
             "multi-purpose studios",
+            "multi-purpose studio",
             "multi-purpose stu"
         ],
         "abbr": "multi purpose stu"
     },
     {
         "term": [
-            "student development & counselling services consultation room",
-            "student development & counselling services consultation rooms",
+            "student development and counselling services consultation rooms",
             "student development and counselling services consultation room",
-            "student development and counselling services consultation rooms"
+            "student development & counselling services consultation rooms",
+            "student development & counselling services consultation room"
         ],
         "abbr": "sdcscrm"
     },
     {
         "term": [
-            "principal's office",
-            "principal's offices"
+            "principal's offices",
+            "principal's office"
         ],
         "abbr": "principal office"
     }
