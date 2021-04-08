@@ -219,7 +219,7 @@ class Olami:
 
                 for jsonObj in li_jsonFiles:
                     if intentTag['tag'] == jsonObj['tag']:
-                        print("Tag found!\nintentTag: ", jsonObj['tag'])
+                        print("Tag found!\nintentTag: ", intentTag)
                         if len(slots_ptr) > 0:
                             # print("Triggered success! A.1")
                             if slots_value in jsonObj:
