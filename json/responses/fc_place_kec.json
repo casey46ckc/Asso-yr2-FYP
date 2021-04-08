@@ -103,6 +103,46 @@
 		"response":["***Yes, computer laboratories are on 9/F."],
 		"status":"True",
 		"return tag":{}
+	},
+	"kecclinicalskillslab":{
+		"response":["***Yes, clinical skills laboratory is on 10/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecperformartstu":{
+		"response":["***Yes, performing arts studio is on 10/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecmultipurstu":{
+		"response":["***Yes, multi-purpose studio is on 10/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecvastu":{
+		"response":["***Yes, visual arts studio is on 10/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecsdcscrm":{
+		"response":["***Yes, student development & counselling services consultation room is on 10/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kectecoff":{
+		"response":["***Yes, teacher offices are on 12-13/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecprinoff":{
+		"response":["***Yes, principal's office is on 13/F."],
+		"status":"True",
+		"return tag":{}
+	},
+	"kecconrm":{
+		"response":["***Yes, conference room is on 13/F."],
+		"status":"True",
+		"return tag":{}
 	}
 }
 	
