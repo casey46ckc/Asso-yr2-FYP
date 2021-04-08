@@ -6,20 +6,14 @@
     },
     "noslot": {
         "response": [
-            "***It depends on the university you want to apply and the programme you want to apply. For general requirement in applying the universities in Hong Kong, you should as least have GRADE 3 for both Chinese and English language subject and 5 subjects in GRADE 2 for HKDSE result. For the language subject, you can use the result of IELTS and IGCSE instead but the requirement for each univerisity and programme may vary. Which programe and university you want to apply/ have applied?",
-            "1. City University of Hong Kong",
-            "2. Hong Kong Baptist University",
-            "3. Lingnan University",
-            "4. The Chinese University of Hong Kong",
-            "5. The Education University of Hong Kong",
-            "6. The Hong Kong Polytechnic University",
-            "7. The Hong Kong University of Science and Technology",
-            "8. The University of Hong Kong",
-            "9. Hang Seng University of Hong Kong",
-            "10. Hong Kong Shue Yan University",
-            "11. The Open University of Hong Kong"
+            "***It depends on the university you want to apply and the programme you want to apply. For general requirement in applying the universities in Hong Kong, you should as least have GRADE 3 for both Chinese and English language subject and 5 subjects in GRADE 2 for HKDSE result. For the language subject, you can use the result of IELTS and IGCSE instead but the requirement for each univerisity and programme may vary. Which programe and university you want to apply/ have applied?"
         ],
-        "status": "True",
-        "return tag": {}
+        "status": "False",
+        "keyBoardLayout": "reply_kb_university",
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "whatis_requirement_nospecific_con",
+            "slots": []
+        }
     }
 }

@@ -85,21 +85,21 @@
 //*C:Others
 <others_ret>:<others{university=others}>;
 //*C:How to get into cuhk
-<howto_get_cuhk>:How to get into <cuhk{university=cu}><{@=howto_webpage_university}>;
+<howto_get_cuhk>:How to (get into|enter|apply) <cuhk{university=cu}><{@=howto_webpage_university}>;
 //*C:How to get into hku
-<howto_get_hku>:How to get into <hku{university=hku}><{@=howto_webpage_university}>;
+<howto_get_hku>:How to (get into|enter|apply) <hku{university=hku}><{@=howto_webpage_university}>;
 //*C:How to get into ust
-<howto_get_ust>:How to get into <hkust{university=ust}><{@=howto_webpage_university}>;
+<howto_get_ust>:How to (get into|enter|apply) <hkust{university=ust}><{@=howto_webpage_university}>;
 //*C:How to get into polyu
-<howto_get_polyu>:How to get into <polyu{university=polyu}><{@=howto_webpage_university}>;
+<howto_get_polyu>:How to (get into|enter|apply) <polyu{university=polyu}><{@=howto_webpage_university}>;
 //*C:How to get into edu
-<howto_get_edu>:How to get into <edu{university=edu}><{@=howto_webpage_university}>;
+<howto_get_edu>:How to (get into|enter|apply) <edu{university=edu}><{@=howto_webpage_university}>;
 //*C:How to get into lingu
-<howto_get_lingu>:How to get into <lingu{university=lingu}><{@=howto_webpage_university}>;
+<howto_get_lingu>:How to (get into|enter|apply) <lingu{university=lingu}><{@=howto_webpage_university}>;
 //*C:How to get into bu
-<howto_get_bu>:How to get into <hkbu{university=bu}><{@=howto_webpage_university}>;
+<howto_get_bu>:How to (get into|enter|apply) <hkbu{university=bu}><{@=howto_webpage_university}>;
 //*C:How to get into cityu
-<howto_get_cityu>:How to get into <cityu{university=cityu}><{@=howto_webpage_university}>;
+<howto_get_cityu>:How to (get into|enter|apply) <cityu{university=cityu}><{@=howto_webpage_university}>;
 //*C:Is it a must for year2 AD student to apply senior year Non JUPAS application
 <yn_essential_apply_year2>:Is it a must for year2 AD student to apply senior year non jupas application <{@=yn_essential_apply_year2}>;
 //*C:how to apply U

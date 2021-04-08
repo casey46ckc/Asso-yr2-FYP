@@ -1,0 +1,110 @@
+{
+    "tag": {
+        "category": "nonjupas",
+        "modifier": "yn_essential_referenceletter_con",
+        "slots": ["university"]
+    },
+    "noslot": {
+        "response": [
+            "***ERROR:should not go here"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "cityu": {
+        "response": [
+            "***The non-JUPAS application deadline of CityU is/are as followed:",
+            "Early round: 2020.11.15",
+            "Main round: 2021.01.04",
+            "You may refer to the following link for more details:",
+            "https://www.admo.cityu.edu.hk/direct/"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "bu": {
+        "response": [
+            "***The non-JUPAS application deadline of BU is/are as followed:",
+            "Early round: 2020.11.30",
+            "Main round: 2021.01.04",
+            "Extended round: 2021.05.31",
+            "You may refer to the following link for more details:",
+            "https://admissions.hkbu.edu.hk/en/"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "lingu": {
+        "response": [
+            "***The non-JUPAS application deadline of LingU is/are as followed:",
+            "Early round: 2020.12.07",
+            "Main round: 2021.05.17",
+            "Late round: 2021.07.30",
+            "You may refer to the following link for more details:",
+            "https://www.ln.edu.hk/admissions/ug/non-jupas/general-notes-to-applicants"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "edu": {
+        "response": [
+            "***The non-JUPAS application deadline of EdU is/are as followed:",
+            "Main round: 2021.01.12",
+            "Late round: 2021.05.12",
+            "You may refer to the following link for more details:",
+            "https://www.eduhk.hk/onlineappl/"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "polyu": {
+        "response": [
+            "***The non-JUPAS application deadline of PolyU is/are as followed:",
+            "Main round: 2021.02.08",
+            "You may refer to the following link for more details:",
+            "https://www38.polyu.edu.hk/eAdmission/index.do"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "ust": {
+        "response": [
+            "***The non-JUPAS application deadline of UST is/are as followed:",
+            "Early round: 2020.11.20",
+            "Main round: 2021.01.14",
+            "You may refer to the following link for more details:",
+            "https://join.ust.hk/apply"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "hku": {
+        "response": [
+            "***The non-JUPAS application deadline of HKU is/are as followed:",
+            "Early round: 2020.11.15",
+            "Main round: 2021.01.04",
+            "You may refer to the following link for more details:",
+            "https://aal.hku.hk/admissions/international/admissions-information"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "cu": {
+        "response": [
+            "***The non-JUPAS application deadline of CU is/are as followed:",
+            "Early round: 2020.11.18",
+            "Main round: 2021.02.18",
+            "You may refer to the following link for more details:",
+            "http://admission.cuhk.edu.hk/non-jupas-senior/application-details.html"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "others": {
+        "response": [
+            "***We don't have certain information. Please accept our apologies."
+        ],
+        "status": "True",
+        "return tag": {}
+    }
+}
