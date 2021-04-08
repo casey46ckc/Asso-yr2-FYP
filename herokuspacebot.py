@@ -90,7 +90,7 @@ def reply_handler(update: Update, context: CallbackContext):
     if reply['status'] == "True":
         if str(user_id) in tags_dict:
             tags_dict[str(user_id)].clear()
-    else:
+    elif reply['status'] == "False":
         logger.info(f'reply:\n {reply}')
         tags_dict[str(user_id)] = {}
         tags_dict[str(user_id)]['tag'] = reply['tag'].copy()
@@ -98,7 +98,7 @@ def reply_handler(update: Update, context: CallbackContext):
             tags_dict[str(user_id)]['slotsvalue'] = reply['slotsvalue']
 
     print(reply['response'])
-    if (len(reply['keyBoardLayout']) > 0):
+    if 'keyBoardLayout' in reply:
         print("keyBoardLayout triggered")
         update.message.reply_text('\n'.join(reply['response']), reply_markup=globals()[reply['keyBoardLayout']])
     else:
