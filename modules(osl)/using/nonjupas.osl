@@ -81,7 +81,7 @@
 //*C:HKU
 <hku_ret>:<hku{university=hku}>;
 //*C:CUHK
-<cuhk_ret>:<cuhk{university=cuhk}>;
+<cuhk_ret>:<cuhk{university=cu}>;
 //*C:Others
 <others_ret>:<others{university=others}>;
 //*C:How to get into cuhk
