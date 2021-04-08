@@ -56,7 +56,7 @@
 <iec>:Island East Campus|IEC;
 <kec>:KEC|Kowloon East Campus;
 <facilities_in_kec>:Discussion Room|Computer Lab|<CMRoom_大>|<CMRoom_細>|<Lib>|Study Room|study rooms;
-<adc_unc>:(admiralty centre ('&'|and) united centre)|(adc (and|'&') unc);
+<adc_unc>:(admiralty centre ('&'|and) united centre)|(adc (and|'&') unc)|adc_unc;
 <have_has>:have|had|has;
 <cita>:Clothing Industry Training Authority|Clothing Industry Training Authority Learning Centre|Clothing Industry Training Authority Learning Center|CITA Learning Centre|CITA Learning Center|CITA;
 <what_be>:What (is|are|am|was|were);
