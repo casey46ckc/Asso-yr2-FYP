@@ -3,7 +3,7 @@
         "category": "facilities",
         "modifier": "officehr",
         "slots": [
-            "facilities"
+            "office"
         ]
     },
     "noslot": {
