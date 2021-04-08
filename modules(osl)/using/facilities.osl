@@ -12,7 +12,23 @@
     <fc_where_collegetheatre_kec>|
     <fc_where_enrolmentcentre_kec>|
     <fc_where_office_kec>|
-    <fc_where_compcentr_kec>|
+    <fc_where_compcentre_kec>|
+    <fc_where_photocopyrm_kec>|
+    <fc_where_su_kec>|
+    <fc_where_socrm_kec>|
+    <fc_where_nurselab_kec>|
+    <fc_where_engvillage_kec>|
+    <fc_where_intscilab_kec>|
+    <fc_where_scilab_kec>|
+    <fc_where_complab_kec>|
+    <fc_where_clinicallab_kec>|
+    <fc_where_performartstu_kec>|
+    <fc_where_multipurstu_kec>|
+    <fc_where_vastu_kec>|
+    <fc_where_sdcscrm_kec>|
+    <fc_where_tecoff_kec>|
+    <fc_where_prinoff_kec>|
+    <fc_where_conrm_kec>|
     <contact_kec>|
     <contact_cita>|
     <contact_iec>|
@@ -81,13 +97,61 @@
 <collegetheatre>:collegetheatre|college theatre|theatre;
 <enrolmentcentre>:(enrolment (centre|center))|(enrol (centre|center));
 <office_term>:office|校務處;
-<compcentre>:((computer|comp) (centre|center|room|rm|rooms|rms)); 
+<compcentre>:((computer|comp) (centre|center|room|rm|rooms|rms));
+<photocopyrm>:((photocopy|photocopying|printing) (room|rm|rooms|rms));
+<su>:su|su office|student union|student union office; 
+<socrm>:((soc|society) (rm|room|rms|rooms|房))|(society activities (rm|room|rms|rooms));
+<nurselab>:((nursing|nurse) (lab|laboratory|labs|laboratories))|nursing skills laboratory;
+<engvillage>:((english|eng) village);
+<intscilab>:((int|integrated) (sci|science) (lab|labs|laboratory|laboratories));
+<scilab>:((sci|science) (lab|labs|laboratory|laboratories));
+<complab>:((comp|computer) (lab|labs|laboratory|laboratories));
+<clinicallab>:(clinical (lab|labs|laboratory|laboratories))|(clinical skills (lab|labs|laboratory|laboratories));
+<performartstu>:((perform|performing) (art|arts) (stu|studio|studios)); 
+<multipurstu>:(multi purpose (stu|studio|studios));
+<vastu>:(visual (art|arts) (stu|studio|studios))|(va (stu|studio|studios));
+<sdcscrm>:sdcscrm|(student development (and|'&') counselling services consultation (room|rooms));
+<tecoff>:((teacher|teachers) (office|offices));
+<prinoff>:(principal (office|offices));
+<conrm>:((conference|conferencing) (rm|room|rms|rooms));
 //All templates
 <ask_be:template>: [=ask,be=]$(ask) $(be);
 <verb_to_be:template>: [=verb,be=]$(verb) to $(be);
 //All grammars
+//*C:where is conference room in kec
+<fc_where_conrm_kec>:<?head()><where_beginning>[<article>]<conrm{facilities=conrm}> in <kec{campus=kec}><{@=place}>;
+//*C:where is principal office in kec
+<fc_where_prinoff_kec>:<?head()><where_beginning>[<article>]<prinoff{facilities=prinoff}> in <kec{campus=kec}><{@=place}>;
+//*C:where is teacher offices in kec
+<fc_where_tecoff_kec>:<?head()><where_beginning>[<article>]<tecoff{facilities=tecoff}> in <kec{campus=kec}><{@=place}>;
+//*C:where is sdcscrm in kec
+<fc_where_sdcscrm_kec>:<?head()><where_beginning>[<article>]<sdcscrm{facilities=sdcscrm}> in <kec{campus=kec}><{@=place}>;
+//*C:where is va stu in kec
+<fc_where_vastu_kec>:<?head()><where_beginning>[<article>]<vastu{facilities=vastu}> in <kec{campus=kec}><{@=place}>;
+//*C:where is multi purpose stu in kec
+<fc_where_multipurstu_kec>:<?head()><where_beginning>[<article>]<multipurstu{facilities=multipurstu}> in <kec{campus=kec}><{@=place}>;
+//*C:where is perform art stu in kec
+<fc_where_performartstu_kec>:<?head()><where_beginning>[<article>]<performartstu{facilities=performartstu}> in <kec{campus=kec}><{@=place}>;
+//*C:where is clinical lab in kec
+<fc_where_clinicallab_kec>:<?head()><where_beginning>[<article>]<clinicallab{facilities=clinicallab}> in <kec{campus=kec}><{@=place}>;
+//*C:where is comp lab in kec
+<fc_where_complab_kec>:<?head()><where_beginning>[<article>]<complab{facilities=complab}> in <kec{campus=kec}><{@=place}>;
+//*C:where is sci lab in kec
+<fc_where_scilab_kec>:<?head()><where_beginning>[<article>]<scilab{facilities=scilab}> in <kec{campus=kec}><{@=place}>;
+//*C:where is int sci lab in kec
+<fc_where_intscilab_kec>:<?head()><where_beginning>[<article>]<intscilab{facilities=intscilab}> in <kec{campus=kec}><{@=place}>;
+//*C:where is eng village in kec
+<fc_where_engvillage_kec>:<?head()><where_beginning>[<article>]<engvillage{facilities=engvillage}> in <kec{campus=kec}><{@=place}>;
+//*C:where is nurse lab in kec
+<fc_where_nurselab_kec>:<?head()><where_beginning>[<article>]<nurselab{facilities=nurselab}> in <kec{campus=kec}><{@=place}>;
+//*C:where is soc rm in kec
+<fc_where_socrm_kec>:<?head()><where_beginning>[<article>]<socrm{facilities=socrm}> in <kec{campus=kec}><{@=place}>;
+//*C:where is su in kec
+<fc_where_su_kec>:<?head()><where_beginning>[<article>]<su{facilities=su}> in <kec{campus=kec}><{@=place}>;
+//*C:where is photocopy rm in kec
+<fc_where_photocopyrm_kec>:<?head()><where_beginning>[<article>]<photocopyrm{facilities=photocopyrm}> in <kec{campus=kec}><{@=place}>;
 //*C:where is comp centre in kec
-<fc_where_compcentr_kec>:<?head()><where_beginning>[<article>]<compcentre{facilities=compcentre}> in <kec{campus=kec}><{@=place}>;
+<fc_where_compcentre_kec>:<?head()><where_beginning>[<article>]<compcentre{facilities=compcentre}> in <kec{campus=kec}><{@=place}>;
 //*C:where is office in kec
 <fc_where_office_kec>:<?head()><where_beginning>[<article>]<office_term{facilities=office}> in <kec{campus=kec}><{@=place}>;
 //*C:where is enrol centre in kec

@@ -176,5 +176,29 @@
             "non-jupas"
         ],
         "abbr": "non jupas"
+    },
+    {
+        "term": [
+            "multi-purpose studio",
+            "multi-purpose studios",
+            "multi-purpose stu"
+        ],
+        "abbr": "multi purpose stu"
+    },
+    {
+        "term": [
+            "student development & counselling services consultation room",
+            "student development & counselling services consultation rooms",
+            "student development and counselling services consultation room",
+            "student development and counselling services consultation rooms"
+        ],
+        "abbr": "sdcscrm"
+    },
+    {
+        "term": [
+            "principal's office",
+            "principal's offices"
+        ],
+        "abbr": "principal office"
     }
 ]
