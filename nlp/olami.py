@@ -182,6 +182,7 @@ class Olami:
             }
 
         if intentTag is None:
+            intentTag = {}
             intentTag['tag']={
                 'category':None,
                 'modifier':None
