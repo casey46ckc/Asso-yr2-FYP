@@ -236,6 +236,8 @@ class Olami:
                                 return ret_dict
                             else:
                                 print("Error: no slot_value key can be found!")
+                                break
+                                
                         else:
                             # print("noslot response return.")
                             if 'noslot' in jsonObj:
@@ -251,11 +253,12 @@ class Olami:
                                 return ret_dict
                             else:
                                 print("Error: no noslot key can be found!")
-                                ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
-                                ret_dict['status'] = "True"
-                                intentTag['tag']['slots'].clear()
-                                intentTag.clear()
-                                return ret_dict
+                                break
+                ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
+                ret_dict['status'] = "True"
+                intentTag['tag']['slots'].clear()
+                intentTag.clear()
+                return ret_dict
         else: # Case: Tag cannot be handled
             print("Tag not found!\nintentTag: ", intentTag['tag'])
             ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
