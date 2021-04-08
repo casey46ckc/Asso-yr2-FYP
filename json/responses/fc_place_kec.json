@@ -104,7 +104,7 @@
 		"status":"True",
 		"return tag":{}
 	},
-	"kecclinicalskillslab":{
+	"kecclinicallab":{
 		"response":["***Yes, clinical skills laboratory is on 10/F."],
 		"status":"True",
 		"return tag":{}

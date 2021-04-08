@@ -29,6 +29,27 @@
     <fc_where_tecoff_kec>|
     <fc_where_prinoff_kec>|
     <fc_where_conrm_kec>|
+    <fc_where_collegehall_default>|
+    <fc_where_collegetheatre_default>|
+    <fc_where_enrolmentcentre_default>|
+    <fc_where_office_default>|
+    <fc_where_compcentre_default>|
+    <fc_where_photocopyrm_default>|
+    <fc_where_su_default>|
+    <fc_where_socrm_default>|
+    <fc_where_nurselab_default>|
+    <fc_where_engvillage_default>|
+    <fc_where_intscilab_default>|
+    <fc_where_scilab_default>|
+    <fc_where_complab_default>|
+    <fc_where_clinicallab_default>|
+    <fc_where_performartstu_default>|
+    <fc_where_multipurstu_default>|
+    <fc_where_vastu_default>|
+    <fc_where_sdcscrm_default>|
+    <fc_where_tecoff_default>|
+    <fc_where_prinoff_default>|
+    <fc_where_conrm_default>|
     <contact_kec>|
     <contact_cita>|
     <contact_iec>|
@@ -170,6 +191,48 @@
 <fc_where_lounge_kec>:<?head()><where_beginning>[<article>]<cmroom_細{facilities=lounge}> in <kec{campus=kec}><{@=place}>;
 //*C:where is lib in kec
 <fc_where_lib_kec>:<?head()><where_beginning>[<article>]<lib{facilities=library}> in <kec{campus=kec}><{@=place}>;
+//*C:where is conference room 
+<fc_where_conrm_default>:<?head()><where_beginning>[<article>]<conrm{facilities=conrm}><{@=place}>;
+//*C:where is principal office 
+<fc_where_prinoff_default>:<?head()><where_beginning>[<article>]<prinoff{facilities=prinoff}><{@=place}>;
+//*C:where is teacher offices 
+<fc_where_tecoff_default>:<?head()><where_beginning>[<article>]<tecoff{facilities=tecoff}><{@=place}>;
+//*C:where is sdcscrm 
+<fc_where_sdcscrm_default>:<?head()><where_beginning>[<article>]<sdcscrm{facilities=sdcscrm}><{@=place}>;
+//*C:where is va stu 
+<fc_where_vastu_default>:<?head()><where_beginning>[<article>]<vastu{facilities=vastu}><{@=place}>;
+//*C:where is multi purpose stu 
+<fc_where_multipurstu_default>:<?head()><where_beginning>[<article>]<multipurstu{facilities=multipurstu}><{@=place}>;
+//*C:where is perform art stu 
+<fc_where_performartstu_default>:<?head()><where_beginning>[<article>]<performartstu{facilities=performartstu}><{@=place}>;
+//*C:where is clinical lab 
+<fc_where_clinicallab_default>:<?head()><where_beginning>[<article>]<clinicallab{facilities=clinicallab}><{@=place}>;
+//*C:where is comp lab 
+<fc_where_complab_default>:<?head()><where_beginning>[<article>]<complab{facilities=complab}><{@=place}>;
+//*C:where is sci lab 
+<fc_where_scilab_default>:<?head()><where_beginning>[<article>]<scilab{facilities=scilab}><{@=place}>;
+//*C:where is int sci lab 
+<fc_where_intscilab_default>:<?head()><where_beginning>[<article>]<intscilab{facilities=intscilab}><{@=place}>;
+//*C:where is eng village 
+<fc_where_engvillage_default>:<?head()><where_beginning>[<article>]<engvillage{facilities=engvillage}><{@=place}>;
+//*C:where is nurse lab 
+<fc_where_nurselab_default>:<?head()><where_beginning>[<article>]<nurselab{facilities=nurselab}><{@=place}>;
+//*C:where is soc rm 
+<fc_where_socrm_default>:<?head()><where_beginning>[<article>]<socrm{facilities=socrm}><{@=place}>;
+//*C:where is su 
+<fc_where_su_default>:<?head()><where_beginning>[<article>]<su{facilities=su}><{@=place}>;
+//*C:where is photocopy rm 
+<fc_where_photocopyrm_default>:<?head()><where_beginning>[<article>]<photocopyrm{facilities=photocopyrm}><{@=place}>;
+//*C:where is comp centre 
+<fc_where_compcentre_default>:<?head()><where_beginning>[<article>]<compcentre{facilities=compcentre}><{@=place}>;
+//*C:where is office 
+<fc_where_office_default>:<?head()><where_beginning>[<article>]<office_term{facilities=office}><{@=place}>;
+//*C:where is enrol centre 
+<fc_where_enrolmentcentre_default>:<?head()><where_beginning>[<article>]<enrolmentcentre{facilities=enrolment centre}><{@=place}>;
+//*C:where is theatre 
+<fc_where_collegetheatre_default>:<?head()><where_beginning>[<article>]<collegetheatre{facilities=college theatre}><{@=place}>;
+//*C:where is hall 
+<fc_where_collegehall_default>:<?head()><where_beginning>[<article>]<collegehall{facilities=college hall}><{@=place}>;
 //*C:where is discuss rm
 <fc_where_discussionrm_default>:<?head()><where_beginning>[<article>]<discussionrm{facilities=discussion room}><{@=place}>;
 //*C:where is study room
