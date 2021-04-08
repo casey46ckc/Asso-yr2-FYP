@@ -92,9 +92,10 @@ def reply_handler(update: Update, context: CallbackContext):
             tags_dict[str(user_id)].clear()
     else:
         logger.info(f'reply:\n {reply}')
+        tags_dict[str(user_id)] = {}
         tags_dict[str(user_id)]['tag'] = reply['tag'].copy()
-        if 'slotvalue' in reply:
-            tags_dict[str(user_id)]['slotvalue'] = reply['slotvalue'].copy()
+        if 'slotsvalue' in reply:
+            tags_dict[str(user_id)]['slotsvalue'] = reply['slotsvalue']
 
     print(reply['response'])
     if (len(reply['keyBoardLayout']) > 0):
