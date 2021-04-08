@@ -8,6 +8,7 @@
     <fc_where_lib_kec>|
     <fc_where_cmrm_default>|
     <fc_whichfhas_lounge>|
+    <fc_where_collegehall_kec>|
     <contact_kec>|
     <contact_cita>|
     <contact_iec>|
@@ -72,16 +73,33 @@
 <where_beginning>:Where is|Where are;
 <request_eng>:(I want to [ask|know])|Tell me [[more ]about];
 <office_hr>:office hour|office hr|operating hour|operating hr;
+<collegehall>:college hall|hall|collegehall;
 //All templates
 <ask_be:template>: [=ask,be=]$(ask) $(be);
 <verb_to_be:template>: [=verb,be=]$(verb) to $(be);
 //All grammars
+//*C:where is hall in kec
+<fc_where_collegehall_kec>:<?head()><where_beginning>[<article>]<collegehall{facilities=college hall}> in <kec{campus=kec}><{@=place}>;
+//*C:where is discuss rm in kec
+<fc_where_discussionrm_kec>:<?head()><where_beginning>[<article>]<discussionrm{facilities=discussion room}> in <kec{campus=kec}><{@=place}>;
 //*C:where is study room in kec
 <fc_where_studyrm_kec>:<?head()><where_beginning>[<article>]<studyrm{facilities=study room}> in <kec{campus=kec}><{@=place}>;
+//*C:where is common room in kec
+<fc_where_cmrm_kec>:<?head()><where_beginning>[<article>]<cmroom_大{facilities=common room}> in <kec{campus=kec}><{@=place}>;
+//*C:where is lounge in kec
+<fc_where_lounge_kec>:<?head()><where_beginning>[<article>]<cmroom_細{facilities=lounge}> in <kec{campus=kec}><{@=place}>;
 //*C:where is lib in kec
 <fc_where_lib_kec>:<?head()><where_beginning>[<article>]<lib{facilities=library}> in <kec{campus=kec}><{@=place}>;
+//*C:where is discuss rm
+<fc_where_discussionrm_default>:<?head()><where_beginning>[<article>]<discussionrm{facilities=discussion room}><{@=place}>;
+//*C:where is study room
+<fc_where_studyrm_default>:<?head()><where_beginning>[<article>]<studyrm{facilities=study room}><{@=place}>;
 //*C:where is common room
 <fc_where_cmrm_default>:<?head()><where_beginning>[<article>]<cmroom_大{facilities=common room}><{@=place}>;
+//*C:where is lounge
+<fc_where_lounge_default>:<?head()><where_beginning>[<article>]<cmroom_細{facilities=lounge}><{@=place}>;
+//*C:where is lib
+<fc_where_lib_default>:<?head()><where_beginning>[<article>]<lib{facilities=library}><{@=place}>;
 //*C:which floor has lounge
 <fc_whichfhas_lounge>:(Which floor)<have_has><cmroom_細{facilities=lounge}><{@=place}>;
 //*C:tell me the office hr of adc & unc
@@ -126,26 +144,16 @@
 <contact_kec>:<?head()><request_eng>[<article>]<contact>of<kec{office=kec}>[office]<{@=contact}>;
 //*C:which floor has common room
 <fc_whichfhas_cmrm>:(Which floor)<have_has><cmroom_大{facilities=common room}><{@=place}>;
-//*C:where is lounge in kec
-<fc_where_lounge_kec>:<?head()><where_beginning>[<article>]<cmroom_細{facilities=lounge}> in <kec{campus=kec}><{@=place}>;
 //*C:Tell me where lounge is
 <fc_tellme_lounge>:[<request_eng>] (where|which floor) [<article>] <cmroom_細{facilities=lounge}><be><{@=place}>;
 //*C:which floor has study room
 <fc_whichfhas_studyrm>:(Which floor)<have_has><studyrm{facilities=study room}><{@=place}>;
 //*C:Tell me where common room is
 <fc_tellme_cmrm>:[<request_eng>] (where|which floor) [<article>] <cmroom_大{facilities=common room}><be><{@=place}>;
-//*C:where is discuss rm in kec
-<fc_where_discussionrm_kec>:<?head()><where_beginning>[<article>]<discussionrm{facilities=discussion room}> in <kec{campus=kec}><{@=place}>;
 //*C:Tell me where discuss rm is
 <fc_tellme_discussionrm>:[<request_eng>] (where|which floor) [<article>] <discussionrm{facilities=discussion room}><be><{@=place}>;
 //*C:Tell me where study room is
 <fc_tellme_studyrm>:[<request_eng>] (where|which floor) [<article>] <studyrm{facilities=study room}><be><{@=place}>;
-//*C:where is study room
-<fc_where_studyrm_default>:<?head()><where_beginning>[<article>]<studyrm{facilities=study room}><{@=place}>;
-//*C:where is discuss rm
-<fc_where_discussionrm_default>:<?head()><where_beginning>[<article>]<discussionrm{facilities=discussion room}><{@=place}>;
-//*C:where is lib
-<fc_where_lib_default>:<?head()><where_beginning>[<article>]<lib{facilities=library}><{@=place}>;
 //*C:How can I get contact to the IEC
 //*C:How can I contact to KEC
 <campus_contact>:<?head()><How_to_contact>[<article>[Office of]]<campus_list{office=$}><{@=contact}>;
@@ -153,10 +161,6 @@
 <fc_whichfhas_discussionrm>:(Which floor)<have_has><discussionrm{facilities=discussion room}><{@=place}>;
 //*C:which floor has lib
 <fc_whichfhas_lib>:(Which floor)<have_has><lib{facilities=library}><{@=place}>;
-//*C:where is lounge
-<fc_where_lounge_default>:<?head()><where_beginning>[<article>]<cmroom_細{facilities=lounge}><{@=place}>;
 //*C:Tell me where lib is
 <fc_tellme_lib>:[<request_eng>] (where|which floor) [<article>] <lib{facilities=library}><be><{@=place}>;
-//*C:where is common room in kec
-<fc_where_cmrm_kec>:<?head()><where_beginning>[<article>]<cmroom_大{facilities=common room}> in <kec{campus=kec}><{@=place}>;
 //All context grammars
