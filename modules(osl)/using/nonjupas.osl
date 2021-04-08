@@ -14,6 +14,12 @@
     <yn_essential_apply_year2>|
     <howto_applyu>|
     <reference_letter_ask>|
+    <cityu_ret>|
+    <bu_ret>|
+    <lingu_ret>|
+    <edu_ret>|
+    <polyu_ret>|
+    <ust_ret>|
     <hku_ret>|
     <cuhk_ret>|
     <others_ret>|
@@ -60,6 +66,24 @@
 <hd>:hd|higher diploma|high dip;
 //All templates
 //All grammars
+//*C:cityu
+<cityu_ret>:<cityu{university=cityu}>;
+//*C:bu
+<bu_ret>:<hkbu{university=bu}>;
+//*C:lingu
+<lingu_ret>:<lingu{university=lingu}>;
+//*C:edu
+<edu_ret>:<edu{university=edu}>;
+//*C:polyu
+<polyu_ret>:<polyu{university=polyu}>;
+//*C:ust
+<ust_ret>:<hkust{university=ust}>;
+//*C:HKU
+<hku_ret>:<hku{university=hku}>;
+//*C:CUHK
+<cuhk_ret>:<cuhk{university=cuhk}>;
+//*C:Others
+<others_ret>:<others{university=others}>;
 //*C:How to get into cuhk
 <howto_get_cuhk>:How to get into <cuhk{university=cu}><{@=howto_webpage_university}>;
 //*C:How to get into hku
@@ -83,12 +107,6 @@
 <howto_applyu>:How to apply <university> <{@=howto_apply_university_general}>;
 //*C:Is it a must to have a reference letter
 <reference_letter_ask>:Is it a must to have a reference letter [for non jupas application] <{@=yn_essential_referenceletter}>;
-//*C:HKU
-<hku_ret>:<hku{university=hku}>;
-//*C:CUHK
-<cuhk_ret>:<cuhk{university=cuhk}>;
-//*C:Others
-<others_ret>:<others{university=others}>;
 //*C:what to prepare for non jupas
 <preparationfor_nj>:What [do I need] to prepare for non jupas [application] <{@=what_toprepare_general}>;
 //*C:what is non jupas?
