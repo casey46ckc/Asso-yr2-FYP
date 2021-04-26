@@ -2,7 +2,9 @@
     "tag": {
         "category": "nonjupas",
         "modifier": "",
-        "slots": ["university"]
+        "slots": [
+            "university"
+        ]
     },
     "noslot": {
         "response": [
@@ -17,14 +19,19 @@
         ],
         "status": "False",
         "keyBoardLayout": [
-						["KEYBOARDNAME"],
-						["nonjupas deadline"],
-						["link"]
-						],
+            [
+                "nonjupas deadline"
+            ],
+            [
+                "link"
+            ]
+        ],
         "return tag": {
             "category": "nonjupas",
             "modifier": "uni_basic_enquiry",
-            "slots": []
+            "slots": [
+                "university"
+            ]
         }
     },
     "bu": {
@@ -33,14 +40,19 @@
         ],
         "status": "False",
         "keyBoardLayout": [
-						["KEYBOARDNAME"],
-						["nonjupas deadline"],
-						["link"]
-						],
+            [
+                "nonjupas deadline"
+            ],
+            [
+                "link"
+            ]
+        ],
         "return tag": {
             "category": "nonjupas",
             "modifier": "uni_basic_enquiry",
-            "slots": []
+            "slots": [
+                "university"
+            ]
         }
     },
     "lingu": {
@@ -49,14 +61,19 @@
         ],
         "status": "False",
         "keyBoardLayout": [
-						["KEYBOARDNAME"],
-						["nonjupas deadline"],
-						["link"]
-						],
+            [
+                "nonjupas deadline"
+            ],
+            [
+                "link"
+            ]
+        ],
         "return tag": {
             "category": "nonjupas",
             "modifier": "uni_basic_enquiry",
-            "slots": []
+            "slots": [
+                "university"
+            ]
         }
     },
     "edu": {
@@ -65,14 +82,19 @@
         ],
         "status": "False",
         "keyBoardLayout": [
-						["KEYBOARDNAME"],
-						["nonjupas deadline"],
-						["link"]
-						],
+            [
+                "nonjupas deadline"
+            ],
+            [
+                "link"
+            ]
+        ],
         "return tag": {
             "category": "nonjupas",
             "modifier": "uni_basic_enquiry",
-            "slots": []
+            "slots": [
+                "university"
+            ]
         }
     },
     "polyu": {
@@ -81,14 +103,19 @@
         ],
         "status": "False",
         "keyBoardLayout": [
-						["KEYBOARDNAME"],
-						["nonjupas deadline"],
-						["link"]
-						],
+            [
+                "nonjupas deadline"
+            ],
+            [
+                "link"
+            ]
+        ],
         "return tag": {
             "category": "nonjupas",
             "modifier": "uni_basic_enquiry",
-            "slots": []
+            "slots": [
+                "university"
+            ]
         }
     },
     "ust": {
@@ -97,14 +124,19 @@
         ],
         "status": "False",
         "keyBoardLayout": [
-						["KEYBOARDNAME"],
-						["nonjupas deadline"],
-						["link"]
-						],
+            [
+                "nonjupas deadline"
+            ],
+            [
+                "link"
+            ]
+        ],
         "return tag": {
             "category": "nonjupas",
             "modifier": "uni_basic_enquiry",
-            "slots": []
+            "slots": [
+                "university"
+            ]
         }
     },
     "hku": {
@@ -113,14 +145,19 @@
         ],
         "status": "False",
         "keyBoardLayout": [
-						["KEYBOARDNAME"],
-						["nonjupas deadline"],
-						["link"]
-						],
+            [
+                "nonjupas deadline"
+            ],
+            [
+                "link"
+            ]
+        ],
         "return tag": {
             "category": "nonjupas",
             "modifier": "uni_basic_enquiry",
-            "slots": []
+            "slots": [
+                "university"
+            ]
         }
     },
     "cu": {
@@ -129,14 +166,19 @@
         ],
         "status": "False",
         "keyBoardLayout": [
-						["KEYBOARDNAME"],
-						["nonjupas deadline"],
-						["link"]
-						],
+            [
+                "nonjupas deadline"
+            ],
+            [
+                "link"
+            ]
+        ],
         "return tag": {
             "category": "nonjupas",
             "modifier": "uni_basic_enquiry",
-            "slots": []
+            "slots": [
+                "university"
+            ]
         }
     },
     "others": {
@@ -147,22 +189,3 @@
         "return tag": {}
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

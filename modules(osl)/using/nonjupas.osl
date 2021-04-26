@@ -1,5 +1,7 @@
 !slot <university:internal.'{"ref":["noun"]}'>;
 !slot <programme:internal.'{"ref":["noun"]}'>;
+!slot <deadline:internal.'{"ref":["noun"]}'>;
+!slot <link:internal.'{"ref":["noun"]}'>;
 !intention <nonjupas>;
 !modifier <nonjupas> : whenis_open_nospecific|test|what_toprepare_general|yn_num_referenceletter_matter|whenis_deadline|yn_essential_apply_year2|action_latetosubmit|yn_apply_year1|howto_webpage_university|whatis_requirement_nospecific|yn_apply_morethan1|whatis|howto_apply_university_general|yn_essential_referenceletter|schoolsupport_nospecific;
 
@@ -39,7 +41,9 @@
     <whenis_deadline_ust>|
     <whenis_deadline_hku>|
     <whenis_deadline_cu>|
-    <apply_multi_nj_ask>;
+    <apply_multi_nj_ask>|
+    <deadline_key>|
+    <link_key>;
 //All grammar-event
 
 //All context grammar-event
@@ -66,6 +70,10 @@
 <hd>:hd|higher diploma|high dip;
 //All templates
 //All grammars
+//*C:nonjupas deadline
+<deadline_key>:(nonjupas deadline)<{deadline=njdeadline}>;
+//*C:link
+<link_key>:link<{link=link}>;
 //*C:cityu
 <cityu_ret>:<cityu{university=cityu}>;
 //*C:bu
