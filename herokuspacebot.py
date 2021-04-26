@@ -43,6 +43,8 @@ reply_kb_university = ReplyKeyboardMarkup([
     ["Others"]],
     one_time_keyboard=True)
 
+
+
 # reply_kb_example = ReplyKeyboardMarkup([['Where is the library?'],['Tell me the contact of KEC']], one_time_keyboard=True)
 
 # initial the nltk parts
@@ -60,6 +62,25 @@ stop_words = set(stopwords.words('english'))
 
 # initialize the list of information for class schedule
 clList = readClSchedule('schedule/MTT_2021S2_Custom.xls')
+
+def createKeyBoardLayout(btnStringList: list)->ReplyKeyboardMarkup:
+    for btsString in btnStringList:
+        if isinstance(btsString, list):
+            if len(btsString) == 1:
+                for tmp_str in btsString:
+                    if isinstance(tmp_str, str):
+                        pass
+                    else:
+                        return ReplyKeyboardMarkup([[""]], one_time_keyboard=True)
+            else:
+                return ReplyKeyboardMarkup([[""]], one_time_keyboard=True)
+        else:
+            return ReplyKeyboardMarkup([[""]], one_time_keyboard=True)
+    return ReplyKeyboardMarkup(btnStringList, one_time_keyboard=True)
+
+
+
+
 
 def reply_handler(update: Update, context: CallbackContext):
     text = update.message.text
@@ -101,7 +122,7 @@ def reply_handler(update: Update, context: CallbackContext):
     if 'keyBoardLayout' in reply:
         if len(reply['keyBoardLayout']) > 0:
             print("keyBoardLayout triggered")
-            update.message.reply_text('\n'.join(reply['response']), reply_markup=globals()[reply['keyBoardLayout']])
+            update.message.reply_text('\n'.join(reply['response']), reply_markup=createKeyBoardLayout(reply['keyBoardLayout']]))
         else:
             update.message.reply_text('\n'.join(reply['response']), reply_markup=ReplyKeyboardRemove())
     else:

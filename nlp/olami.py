@@ -1,7 +1,6 @@
 import configparser
 import json
 import logging
-import readjson
 import time
 from hashlib import md5
 
