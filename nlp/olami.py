@@ -229,6 +229,8 @@ class Olami:
                         
                 # return response through Json
 
+                logger.info(f'After mix: {intentTag}')
+
                 for jsonObj in li_jsonFiles:
                     if intentTag['tag'] == jsonObj['tag']:
                         print("Tag found!\nintentTag: ", intentTag)
