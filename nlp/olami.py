@@ -216,7 +216,7 @@ class Olami:
                     slots_ptr = nli_obj['semantic'][0]['slots']
                     for x in range(len(slots_ptr)):
                         intentTag['tag']['slots'].append(slots_ptr[x]['name'])
-                        if x != 0:
+                        if len(slots_value) != 0:
                             slots_value += ('+' + slots_ptr[x]['value'])
                         else:
                             slots_value += slots_ptr[x]['value']
