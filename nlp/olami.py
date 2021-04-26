@@ -189,10 +189,15 @@ class Olami:
                 'modifier':None
                 }
         else:
-            print("Intent tag passed.\nintentTag:", intentTag['tag'], "\nBefore combining")
+            print("Intent tag passed.\nintentTag:", intentTag, "\nBefore combining")
         
         if 'slots' not in intentTag['tag']:
             intentTag['tag']['slots'] = []
+
+        if 'slotsvalue' in intentTag:
+            slot_value = intentTag['slotsvalue']
+        else:
+            slot_value = ""
 
         intent_category = nli_obj['type']
         if intent_category != 'ds':
@@ -209,10 +214,12 @@ class Olami:
                 
                 if 'slots' in nli_obj['semantic'][0]:
                     slots_ptr = nli_obj['semantic'][0]['slots']
-                    slots_value = ""
                     for x in range(len(slots_ptr)):
                         intentTag['tag']['slots'].append(slots_ptr[x]['name'])
-                        slots_value += slots_ptr[x]['value']
+                        if x != 0:
+                            slots_value += ('+' + slots_ptr[x]['value'])
+                        else:
+                            slots_value += slots_ptr[x]['value']
                     if len(slots_value) > 0:
                         print("slots_value:", slots_value)
                         
