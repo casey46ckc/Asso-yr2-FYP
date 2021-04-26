@@ -1,7 +1,6 @@
 !slot <university:internal.'{"ref":["noun"]}'>;
 !slot <programme:internal.'{"ref":["noun"]}'>;
-!slot <deadline:internal.'{"ref":["noun"]}'>;
-!slot <link:internal.'{"ref":["noun"]}'>;
+!slot <keyboardvalue:internal.'{"ref":["noun"]}'>;
 !intention <nonjupas>;
 !modifier <nonjupas> : whenis_open_nospecific|test|what_toprepare_general|yn_num_referenceletter_matter|whenis_deadline|yn_essential_apply_year2|action_latetosubmit|yn_apply_year1|howto_webpage_university|whatis_requirement_nospecific|yn_apply_morethan1|whatis|howto_apply_university_general|yn_essential_referenceletter|schoolsupport_nospecific;
 
@@ -71,9 +70,9 @@
 //All templates
 //All grammars
 //*C:nonjupas deadline
-<deadline_key>:(nonjupas deadline)<{deadline=njdeadline}>;
+<deadline_key>:(nonjupas deadline)<{keyboardvalue=njdeadline}>;
 //*C:link
-<link_key>:link<{link=link}>;
+<link_key>:link<{keyboardvalue=link}>;
 //*C:cityu
 <cityu_ret>:<cityu{university=cityu}>;
 //*C:bu

@@ -2,7 +2,7 @@
     "tag": {
         "category": "nonjupas",
         "modifier": "uni_basic_enquiry",
-        "slots": ["university","keyboard_value"]
+        "slots": ["university","keyboardvalue"]
     },
     "noslot": {
         "response": [
