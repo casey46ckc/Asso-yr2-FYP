@@ -2,8 +2,9 @@ import configparser
 import json
 import logging
 import time
+import readjson
 from hashlib import md5
-from .. import readjson
+
 
 
 import requests
