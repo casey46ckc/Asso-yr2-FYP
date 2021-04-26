@@ -1,0 +1,168 @@
+{
+    "tag": {
+        "category": "nonjupas",
+        "modifier": "",
+        "slots": ["university"]
+    },
+    "noslot": {
+        "response": [
+            "***ERROR:should not go here"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "cityu": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+						["KEYBOARDNAME"],
+						["nonjupas deadline"],
+						["link"]
+						],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "uni_basic_enquiry",
+            "slots": []
+        }
+    },
+    "bu": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+						["KEYBOARDNAME"],
+						["nonjupas deadline"],
+						["link"]
+						],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "uni_basic_enquiry",
+            "slots": []
+        }
+    },
+    "lingu": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+						["KEYBOARDNAME"],
+						["nonjupas deadline"],
+						["link"]
+						],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "uni_basic_enquiry",
+            "slots": []
+        }
+    },
+    "edu": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+						["KEYBOARDNAME"],
+						["nonjupas deadline"],
+						["link"]
+						],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "uni_basic_enquiry",
+            "slots": []
+        }
+    },
+    "polyu": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+						["KEYBOARDNAME"],
+						["nonjupas deadline"],
+						["link"]
+						],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "uni_basic_enquiry",
+            "slots": []
+        }
+    },
+    "ust": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+						["KEYBOARDNAME"],
+						["nonjupas deadline"],
+						["link"]
+						],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "uni_basic_enquiry",
+            "slots": []
+        }
+    },
+    "hku": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+						["KEYBOARDNAME"],
+						["nonjupas deadline"],
+						["link"]
+						],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "uni_basic_enquiry",
+            "slots": []
+        }
+    },
+    "cu": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+						["KEYBOARDNAME"],
+						["nonjupas deadline"],
+						["link"]
+						],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "uni_basic_enquiry",
+            "slots": []
+        }
+    },
+    "others": {
+        "response": [
+            "***We don't have certain information. Please accept our apologies."
+        ],
+        "status": "True",
+        "return tag": {}
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

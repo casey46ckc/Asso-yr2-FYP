@@ -1,0 +1,151 @@
+{
+    "tag": {
+        "category": "nonjupas",
+        "modifier": "uni_basic_enquiry",
+        "slots": ["university","keyboard_value"]
+    },
+    "noslot": {
+        "response": [
+            "***ERROR:should not go here"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "cityu+njdeadline": {
+        "response": [
+            "***The non-JUPAS application deadline of CityU is/are as followed:",
+            "Early round: 2020.11.15",
+            "Main round: 2021.01.04"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "bu+njdeadline": {
+        "response": [
+            "***The non-JUPAS application deadline of BU is/are as followed:",
+            "Early round: 2020.11.30",
+            "Main round: 2021.01.04",
+            "Extended round: 2021.05.31"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "lingu+njdeadline": {
+        "response": [
+            "***The non-JUPAS application deadline of LingU is/are as followed:",
+            "Early round: 2020.12.07",
+            "Main round: 2021.05.17",
+            "Late round: 2021.07.30"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "edu+njdeadline": {
+        "response": [
+            "***The non-JUPAS application deadline of EdU is/are as followed:",
+            "Main round: 2021.01.12",
+            "Late round: 2021.05.12"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "polyu+njdeadline": {
+        "response": [
+            "***The non-JUPAS application deadline of PolyU is/are as followed:",
+            "Main round: 2021.02.08"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "ust+njdeadline": {
+        "response": [
+            "***The non-JUPAS application deadline of UST is/are as followed:",
+            "Early round: 2020.11.20",
+            "Main round: 2021.01.14"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "hku+njdeadline": {
+        "response": [
+            "***The non-JUPAS application deadline of HKU is/are as followed:",
+            "Early round: 2020.11.15",
+            "Main round: 2021.01.04"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "cu+njdeadline": {
+        "response": [
+            "***The non-JUPAS application deadline of CU is/are as followed:",
+            "Early round: 2020.11.18",
+            "Main round: 2021.02.18"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "cityu+link": {
+        "response": [
+            "You may refer to the following link for more details:",
+            "https://www.admo.cityu.edu.hk/direct/"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "bu+link": {
+        "response": [
+            "You may refer to the following link for more details:",
+            "https://admissions.hkbu.edu.hk/en/"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "lingu+link": {
+        "response": [
+            "You may refer to the following link for more details:",
+            "https://www.ln.edu.hk/admissions/ug/non-jupas/general-notes-to-applicants"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "edu+link": {
+        "response": [
+            "You may refer to the following link for more details:",
+            "https://www.eduhk.hk/onlineappl/"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "polyu+link": {
+        "response": [
+            "You may refer to the following link for more details:",
+            "https://www38.polyu.edu.hk/eAdmission/index.do"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "ust+link": {
+        "response": [
+            "You may refer to the following link for more details:",
+            "https://join.ust.hk/apply"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "hku+link": {
+        "response": [
+            "You may refer to the following link for more details:",
+            "https://aal.hku.hk/admissions/international/admissions-information"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "cu+link": {
+        "response": [
+            "You may refer to the following link for more details:",
+            "http://admission.cuhk.edu.hk/non-jupas-senior/application-details.html"
+        ],
+        "status": "True",
+        "return tag": {}
+    }
+}
