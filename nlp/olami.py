@@ -179,7 +179,7 @@ class Olami:
             'tag': None,
             'response':None, 
             'status': "False",
-            'keyBoardLayout': ""
+            'keyBoardLayout': []
             }
 
         if intentTag is None:
@@ -195,9 +195,9 @@ class Olami:
             intentTag['tag']['slots'] = []
 
         if 'slotsvalue' in intentTag:
-            slot_value = intentTag['slotsvalue']
+            slots_value = intentTag['slotsvalue']
         else:
-            slot_value = ""
+            slots_value = ""
 
         intent_category = nli_obj['type']
         if intent_category != 'ds':
