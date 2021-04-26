@@ -185,13 +185,13 @@ class Olami:
         if intentTag is None:
             intentTag = {}
             intentTag['tag']={
-                'category':None,
-                'modifier':None
+                'category':"",
+                'modifier':""
                 }
         else:
             print("Intent tag passed.\nintentTag:", intentTag, "\nBefore combining")
         
-        if len(intentTag['tag']['modifier'])== 0:
+        if len(intentTag['tag']['modifier']) == 0:
             intentTag['tag']['modifier'] = ""
 
         if 'slots' not in intentTag['tag']:
