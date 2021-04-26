@@ -203,7 +203,7 @@ class Olami:
         if intent_category != 'ds':
             desc = nli_obj['desc_obj']
 
-            logger.info(desc)
+            logger.info(f'{nli_obj}')
 
             if len(intent_category) > 0:
                 intentTag['tag']['category'] = intent_category
