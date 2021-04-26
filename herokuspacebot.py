@@ -116,7 +116,7 @@ def reply_handler(update: Update, context: CallbackContext):
         tags_dict[str(user_id)] = {}
         tags_dict[str(user_id)]['tag'] = reply['tag'].copy()
         if 'slotsvalue' in reply:
-            logger.info(f'returned slotsvalue: {reply['slotsvalue']}')
+            logger.info(f'returned slotsvalue: {reply["slotsvalue"]}')
             tags_dict[str(user_id)]['slotsvalue'] = reply['slotsvalue'].copy()
 
     print(reply['response'])
