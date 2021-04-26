@@ -191,6 +191,9 @@ class Olami:
         else:
             print("Intent tag passed.\nintentTag:", intentTag, "\nBefore combining")
         
+        if len(intentTag['tag']['modifier'])== 0:
+            intentTag['tag']['modifier'] = ""
+
         if 'slots' not in intentTag['tag']:
             intentTag['tag']['slots'] = []
 
@@ -213,8 +216,6 @@ class Olami:
                     modifier = nli_obj['semantic'][0]['modifier']
                     if len(modifier) > 0:
                         intentTag['tag']['modifier'] = modifier[0]
-                    else:
-                        intentTag['tag']['modifier'] = ""
                 
                 if 'slots' in nli_obj['semantic'][0]:
                     slots_ptr = nli_obj['semantic'][0]['slots']
