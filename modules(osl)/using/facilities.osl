@@ -86,7 +86,38 @@
     <fc_whichfhas_lib>|
     <fc_where_lounge_default>|
     <fc_tellme_lib>|
-    <fc_where_cmrm_kec>;
+    <fc_where_cmrm_kec>|
+    <lib_key>|
+    <cmroom_small_key>|
+    <iec_key>|
+    <kec_key>|
+    <adc_unc_key>|
+    <cita_key>|
+    <ftc_key>|
+    <discussionrm_key>|
+    <cmroom_big_key>|
+    <studyrm_key>|
+    <collegehall_key>|
+    <collegetheatre_key>|
+    <enrolmentcentre_key>|
+    <office_term_key>|
+    <compcentre_key>|
+    <photocopyrm_key>|
+    <nurselab_key>|
+    <su_key>|
+    <socrm_key>|
+    <engvillage_key>|
+    <intscilab_key>|
+    <scilab_key>|
+    <complab_key>|
+    <clinicallab_key>|
+    <performartstu_key>|
+    <multipurstu_key>|
+    <vastu_key>|
+    <sdcscrm_key>|
+    <tecoff_key>|
+    <prinoff_key>|
+    <conrm_key>;
 //All grammar-event
 
 //All context grammar-event
@@ -139,6 +170,68 @@
 <ask_be:template>: [=ask,be=]$(ask) $(be);
 <verb_to_be:template>: [=verb,be=]$(verb) to $(be);
 //All grammars
+//*C:lib
+<lib_key>:<lib{facilities=lib}>;
+//*C:細 com
+<cmroom_small_key>:<cmroom_細{facilities=small_com}>;
+//*C:iec
+<iec_key>:<iec{facilities=iec}>;
+//*C:kec
+<kec_key>:<kec{facilities=kec}>;
+//*C:adc_unc
+<adc_unc_key>:<adc_unc{facilities=adc_unc}>;
+//*C:cita
+<cita_key>:<cita{facilities=cita}>;
+//*C:ftc
+<ftc_key>:<ftc{facilities=ftc}>;
+//*C:discussion room
+<discussionrm_key>:<discussionrm{facilities=discussionrm}>;
+//*C:大 com
+<cmroom_big_key>:<cmroom_大{facilities=big_com}>;
+//*C:study room
+<studyrm_key>:<studyrm{facilities=study_room}>;
+//*C:hall
+<collegehall_key>:<collegehall{facilities=hall}>;
+//*C:theatre
+<collegetheatre_key>:<collegetheatre{facilities=college_theatre}>;
+//*C:enrolment centre
+<enrolmentcentre_key>:<enrolmentcentre{facilities=enrolcentre}>;
+//*C:office
+<office_term_key>:<office_term{facilities=office}>;
+//*C:computer centre
+<compcentre_key>:<compcentre{facilities=computer_centre}>;
+//*C:photocopy room
+<photocopyrm_key>:<photocopyrm{facilities=photocopyrm}>;
+//*C:su
+<su_key>:<su{facilities=su}>;
+//*C:soc room
+<socrm_key>:<socrm{facilities=soc_room}>;
+//*C:nurse lab
+<nurselab_key>:<nurselab{facilities=nurse_lab}>;
+//*C:english village
+<engvillage_key>:<engvillage{facilities=eng_village}>;
+//*C:integrated science lab
+<intscilab_key>:<intscilab{facilities=int_scilab}>;
+//*C:science lab
+<scilab_key>:<scilab{facilities=sci_lab}>;
+//*C:computer lab
+<complab_key>:<complab{facilities=comp_lab}>;
+//*C:clinical lab
+<clinicallab_key>:<clinicallab{facilities=clinical_lab}>;
+//*C:perform art studio
+<performartstu_key>:<performartstu{facilities=perform_art_stu}>;
+//*C:multi purpose studio
+<multipurstu_key>:<multipurstu{facilities=multi_pur_stu}>;
+//*C:visual art studio
+<vastu_key>:<vastu{facilities=va_stu}>;
+//*C:sdcscrm
+<sdcscrm_key>:<sdcscrm{facilities=sdcscrm}>;
+//*C:teacher office
+<tecoff_key>:<tecoff{facilities=teach_office}>;
+//*C:principal office
+<prinoff_key>:<prinoff{facilities=prin_office}>;
+//*C:conference room
+<conrm_key>:<conrm{facilities=conference_room}>;
 //*C:where is conference room in kec
 <fc_where_conrm_kec>:<?head()><where_beginning>[<article>]<conrm{facilities=conrm}> in <kec{campus=kec}><{@=place}>;
 //*C:where is principal office in kec
