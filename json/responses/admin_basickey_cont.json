@@ -23,5 +23,42 @@
         ],
         "status": "True",
         "return tag": {}
+    },
+    "refletter+supportdoc": {
+        "response": [
+            "1. Login to Learner Portal > My Resources > Community College> Student Self-service > My Future > Apply for Reference Letter",
+            "link: https://learner.hkuspace.hku.hk/lp/respportal/",
+            "2. Use the function 'View Application Record(s) / Status' and click 'Covering Sheet' for details of checklist."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "refletter+quantity": {
+        "response": [
+            "You may invite at most TWO College Lecturers to be your referee (i.e. a single referee, or two referees -- A and B). However, each set of university application should be supported by ONE referee only. For example, three university applications can be supported by the same referee, OR with two of them being supported by Referee A while the rest by Referee B. Please also note that each student can only apply for a maximum of 8 reference letters per academic year."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "refletter+status": {
+        "response": [
+            "1. Login to Learner Portal > My Resources > Community College> Student Self-service > My Future > Apply for Reference Letter",
+            "link: https://learner.hkuspace.hku.hk/lp/respportal/",
+            "2. Use the function 'Apply for Reference Letter to Support My University Application' and click 'View Application Record(s) / Status' to check the application status.",
+            "**The 'Lecturer Notified' status will be shown after an email notification on your reference letter application has been sent to the College Lecturer concerned.",
+            "**The 'Reject' status will be shown if the Lecturer refuses to act as your referee and you should contact the Lecturer concerned direct to collect your unsuccessful application documents.",
+            "**The 'Letter Sent' status (with the sent out date) will appear after the College Office has sent out the reference letter to the university / institution concerned.",
+            "Please check with your referees when the Application Status 'Letter Sent' is still not being shown in the system 3 weeks after the release of your First Semester Notification of Results."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "refletter+faqs": {
+        "response": [
+            "If you want to know more, you may refer to this link:",
+            "https://cc8.hkuspace.hku.hk/~sdcs/cgi-bin/des_faq.php"
+        ],
+        "status": "True",
+        "return tag": {}
     }
 }

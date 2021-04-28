@@ -19,7 +19,11 @@
         ],
         "status": "False",
         "keyBoardLayout": [
-            ["apply method"]
+            ["apply method"],
+            ["supporting doc"],
+            ["quantity"],
+            ["status"],
+            ["FAQs"]
         ],
         "return tag": {
             "category": "admin",
