@@ -60,7 +60,7 @@
     },
     "kec+contact": {
         "response": [
-            "***The KEC office hotline is 3762 2000.",
+            "***The office hotline of Kowloon East Campus is 3762 2000.",
             "Please contact them within their office hour:",
             "0830 - 1930 (Weekdays)",
             "0830 - 1730 (Saturday)",
@@ -71,7 +71,12 @@
     },
     "adc_unc+location": {
         "response": [
-            "28 Wang Hoi Road, Kowloon Bay, Kowloon (Exit B, Kowloon Bay MTR Station)",
+            "Admiralty Learning Centre",
+            "2/F & 3/F, Admiralty Centre, 18 Harcourt Road, Hong Kong (access via the shopping arcade escalators through Exit A, Admiralty MTR Station)",
+            "You can find out more details with this link",
+            "https://hkuspace.hku.hk/learning-centre#Admiralty%20Learning%20Centre",
+            "United Learning Centre",
+            "6/F & 34/F, United Centre, 95 Queensway, Hong Kong (Exit D, Admiralty MTR Station)",
             "You can find out more details with this link",
             "https://hkuspace.hku.hk/learning-centre#United%20Learning%20Centre"
         ],
@@ -80,7 +85,7 @@
     },
     "adc_unc+officehr": {
         "response":  [
-            "The office hour of ADC & UNC is:",
+            "The office hour of Admiralty Learning Centre is:",
             "0830 - 1930 (Weekdays)",
             "0830 - 1730 (Saturday)"
         ],
@@ -89,10 +94,11 @@
     },
     "adc_unc+contact": {
         "response": [
-            "***The ADC & UNC office hotline is 2910 7620.",
+            "***The office hotline of Admiralty Learning Centre is 3761 1111.",
             "Please contact them within their office hour:",
             "0830 - 1930 (Weekdays)",
-            "0830 - 1730 (Saturday)"
+            "0830 - 1730 (Saturday)",
+            "***The office hotline of United Learning Centre is 2910 7600."
         ],
         "status": "True",
         "return tag": {}
@@ -108,7 +114,7 @@
     },
     "cita+officehr": {
         "response":  [
-            "The office hour of CITA is:",
+            "The office hour of CITA Learning Centre is:",
             "0900 - 2000 (Weekdays)",
             "0900 - 1800 (Saturday)"
         ],
@@ -117,7 +123,7 @@
     },
     "cita+contact": {
         "response": [
-            "***The CITA office hotline is 3762 0110.",
+            "***The office hotline of CITA Learning Centre is 3762 0110.",
             "Please contact them within their office hour:",
             "0900 - 2000 (Weekdays)",
             "0900 - 1800 (Saturday)"
@@ -136,7 +142,7 @@
     },
     "ftc+officehr": {
         "response":  [
-            "The office hour of FTC is:",
+            "The office hour of Fortress Tower Learning Centre is:",
             "0830 - 1930 (Weekdays)"
         ],
         "status": "True",
@@ -144,7 +150,7 @@
     },
     "ftc+contact": {
         "response": [
-            "***The FTC office hotline is 3762 0988.",
+            "***The office hotline of Fortress Tower Learning Centre is 3762 0988.",
             "Please contact them within their office hour:",
             "0830 - 1930 (Weekdays)"
         ],
