@@ -208,7 +208,7 @@ class Olami:
 
         intent_category = nli_obj['type']
         if intent_category != 'ds':
-            desc = nli_obj['desc_obj']
+            # desc = nli_obj['desc_obj']
 
             logger.info(f'{nli_obj}')
 
@@ -217,12 +217,12 @@ class Olami:
 
             if 'semantic' in nli_obj:
                 if 'modifier' in nli_obj['semantic'][0]:
-                    modifier = nli_obj['semantic'][0]['modifier']
+                    modifier = nli_obj['semantic'][0]['modifier'].copy()
                     if len(modifier) > 0:
                         intentTag['tag']['modifier'] = modifier[0]
                 
                 if 'slots' in nli_obj['semantic'][0]:
-                    slots_ptr = nli_obj['semantic'][0]['slots']
+                    slots_ptr = nli_obj['semantic'][0]['slots'].copy()
                     for x in range(len(slots_ptr)):
                         intentTag['tag']['slots'].append(slots_ptr[x]['name'])
                         if len(slots_value) != 0:

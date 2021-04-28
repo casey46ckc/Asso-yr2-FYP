@@ -24,7 +24,7 @@
 			["contact"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -42,7 +42,7 @@
 			["contact"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -60,7 +60,7 @@
 			["contact"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -78,7 +78,7 @@
 			["contact"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -96,7 +96,7 @@
 			["contact"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -113,7 +113,7 @@
             ["opening hr"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -129,7 +129,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -145,7 +145,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -161,7 +161,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -179,7 +179,7 @@
             ]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -197,7 +197,7 @@
             ]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -213,7 +213,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -229,7 +229,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -247,7 +247,7 @@
 			["contact"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -263,7 +263,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -279,7 +279,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -295,7 +295,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -311,7 +311,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -327,7 +327,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -343,7 +343,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -359,7 +359,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -375,7 +375,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -391,7 +391,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -407,7 +407,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -423,7 +423,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -439,7 +439,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -455,7 +455,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -471,7 +471,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -487,7 +487,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -503,7 +503,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -519,7 +519,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
@@ -535,7 +535,7 @@
             ["location"]
         ],
         "return tag": {
-            "category": "nonjupas",
+            "category": "facilities",
             "modifier": "fc_basickey_cont",
             "slots": [
                 "facilities"
