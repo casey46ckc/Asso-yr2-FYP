@@ -239,7 +239,7 @@ class Olami:
                             # print("Triggered success! A.1")
                             if slots_value in jsonObj:
                                 ret_dict['tag'] = jsonObj[slots_value]['return tag']
-                                if 'slots' in jsonObj[slots_value]['return tag']
+                                if 'slots' in jsonObj[slots_value]['return tag']:
                                     ret_dict['tag']['slots'] = jsonObj[slots_value]['return tag']['slots']
                                 else:
                                     ret_dict['tag']['slots'] = jsonObj['tag']['slots']
@@ -261,7 +261,7 @@ class Olami:
                             print("noslot response return.")
                             if 'noslot' in jsonObj:
                                 ret_dict['tag'] = jsonObj['noslot']['return tag']
-                                if 'slots' in jsonObj['noslot']['return tag']
+                                if 'slots' in jsonObj['noslot']['return tag']:
                                     ret_dict['tag']['slots'] = jsonObj['noslot']['return tag']['slots']
                                 else:
                                     ret_dict['tag']['slots'] = jsonObj['tag']['slots']
