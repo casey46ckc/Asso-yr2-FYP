@@ -350,6 +350,22 @@
             ]
         }
     },
+    "netlab": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            ["location"]
+        ],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "fc_basickey_cont",
+            "slots": [
+                "facilities"
+            ]
+        }
+    },
     "int_scilab": {
         "response": [
             "Please select what you want to ask?"

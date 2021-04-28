@@ -108,6 +108,7 @@
     <su_key>|
     <socrm_key>|
     <engvillage_key>|
+    <netlab_key>|
     <intscilab_key>|
     <scilab_key>|
     <complab_key>|
@@ -160,6 +161,7 @@
 <socrm>:((soc|society) (rm|room|rms|rooms|房))|(society activities (rm|room|rms|rooms));
 <nurselab>:((nursing|nurse) (lab|laboratory|labs|laboratories))|nursing skills laboratory;
 <engvillage>:((english|eng) village);
+<netlab>:((network|net) (lab|laboratory|labs|laboratories));
 <intscilab>:((int|integrated) (sci|science) (lab|labs|laboratory|laboratories));
 <scilab>:((sci|science) (lab|labs|laboratory|laboratories));
 <complab>:((comp|computer) (lab|labs|laboratory|laboratories));
@@ -224,6 +226,8 @@
 <nurselab_key>:<nurselab{facilities=nurse_lab}>;
 //*C:english village
 <engvillage_key>:<engvillage{facilities=eng_village}>;
+//*C:network lab
+<netlab_key>:<netlab{facilities=netlab}>;
 //*C:integrated science lab
 <intscilab_key>:<intscilab{facilities=int_scilab}>;
 //*C:science lab
