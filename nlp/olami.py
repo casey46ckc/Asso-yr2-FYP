@@ -277,15 +277,11 @@ class Olami:
                 # Case: Tags cannot be handled
                 ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
                 ret_dict['status'] = "True"
-                intentTagC['tag']['slots'].clear()
-                intentTagC.clear()
                 return ret_dict
         else: # Case: Pattern cannot be identified
             print("Tag not found!\nintentTag: ", intentTag['tag'])
             ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
             ret_dict['status'] = "True"
-            intentTagC['tag']['slots'].clear()
-            intentTagC.clear()
             return ret_dict
 """
                         if intent_category == "greet": #moved greet module to json

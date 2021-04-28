@@ -126,7 +126,8 @@
         ],
         "status": "False",
         "keyBoardLayout": [
-            ["location"]
+            ["location"],
+            ["opening hr"]
         ],
         "return tag": {
             "category": "facilities",
@@ -158,7 +159,8 @@
         ],
         "status": "False",
         "keyBoardLayout": [
-            ["location"]
+            ["location"],
+            ["opening hr"]
         ],
         "return tag": {
             "category": "facilities",
@@ -174,9 +176,7 @@
         ],
         "status": "False",
         "keyBoardLayout": [
-            [
-                "location"
-            ]
+            ["location"]
         ],
         "return tag": {
             "category": "facilities",
