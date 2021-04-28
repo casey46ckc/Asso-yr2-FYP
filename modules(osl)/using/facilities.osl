@@ -182,7 +182,7 @@
 <location_keyboard>:location<{keyboardvalue=location}>;
 //*C:contact
 <contact_keyboard>:contact<{keyboardvalue=contact}>;
-//opening hr
+//*C:opening hr
 <openhr_keyboard>:(opening hr)<{keyboardvalue=openhr}>;
 //*C:lib
 <lib_key>:<lib{facilities=lib}>;
