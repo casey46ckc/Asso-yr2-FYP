@@ -243,16 +243,16 @@ class Olami:
                             # print("Triggered success! A.1")
                             if slots_value in jsonObj:
                                 logger.info(f"found return tag:{jsonObj[slots_value]['return tag']}")
-                                ret_dict['tag'] = jsonObj[slots_value]['return tag']
+                                ret_dict['tag'] = jsonObj[slots_value]['return tag'].copy()
                                 ret_dict['slotsvalue'] = slots_value
                                 ret_dict['status'] = jsonObj[slots_value]['status']
-                                ret_dict['response'] = jsonObj[slots_value]['response']
+                                ret_dict['response'] = jsonObj[slots_value]['response'].copy()
                                 if 'keyBoardLayout' in jsonObj[slots_value]:
-                                    ret_dict['keyBoardLayout'] = jsonObj[slots_value]['keyBoardLayout']
+                                    ret_dict['keyBoardLayout'] = jsonObj[slots_value]['keyBoardLayout'].copy()
                                 else:
                                     ret_dict['keyBoardLayout'] = ""
-                                intentTag['tag']['slots'].clear()
-                                intentTag.clear()
+                                #intentTag['tag']['slots'].clear()
+                                #intentTag.clear()
                                 return ret_dict
                             else:
                                 print("Error: no slot_value key can be found!")
@@ -262,16 +262,16 @@ class Olami:
                             print("noslot response return.")
                             if 'noslot' in jsonObj:
                                 logger.info(f"found return tag:{jsonObj['noslot']['return tag']}")
-                                ret_dict['tag'] = jsonObj['noslot']['return tag']
+                                ret_dict['tag'] = jsonObj['noslot']['return tag'].copy()
                                 ret_dict['slotsvalue'] = slots_value
                                 ret_dict['status'] = jsonObj['noslot']['status']
-                                ret_dict['response'] = jsonObj['noslot']['response']
+                                ret_dict['response'] = jsonObj['noslot']['response'].copy()
                                 if 'keyBoardLayout' in jsonObj['noslot']:
-                                    ret_dict['keyBoardLayout'] = jsonObj['noslot']['keyBoardLayout']
+                                    ret_dict['keyBoardLayout'] = jsonObj['noslot']['keyBoardLayout'].copy()
                                 else:
                                     ret_dict['keyBoardLayout'] = ""
-                                intentTag['tag']['slots'].clear()
-                                intentTag.clear()
+                                #intentTag['tag']['slots'].clear()
+                                #intentTag.clear()
                                 return ret_dict
                             else:
                                 print("Error: no noslot key can be found!")
