@@ -15,7 +15,7 @@
         "response": [
             "494 King’s Road, North Point, Hong Kong (Exit B3, North Point MTR Station)",
             "You can find out more details with this link",
-            "https://hkuspace.hku.hk/learning-centre#Kowloon%20East%20Campus"
+            "https://hkuspace.hku.hk/learning-centre#Island%20East%20Campus"
         ],
         "status": "True",
         "return tag": {}
@@ -73,7 +73,7 @@
         "response": [
             "28 Wang Hoi Road, Kowloon Bay, Kowloon (Exit B, Kowloon Bay MTR Station)",
             "You can find out more details with this link",
-            "https://hkuspace.hku.hk/learning-centre#Kowloon%20East%20Campus"
+            "https://hkuspace.hku.hk/learning-centre#United%20Learning%20Centre"
         ],
         "status": "True",
         "return tag": {}
@@ -101,7 +101,7 @@
         "response": [
             "63 Tai Yip Street, Kowloon Bay, Kowloon (Exit A, Kowloon Bay MTR Station)",
             "You can find out more details with this link",
-            "https://hkuspace.hku.hk/learning-centre#Kowloon%20East%20Campus"
+            "https://hkuspace.hku.hk/learning-centre#CITA%20Learning%20Centre"
         ],
         "status": "True",
         "return tag": {}
@@ -129,7 +129,7 @@
         "response": [
             "1/F , 4/F, 10/F, 14/F, 19/F & 22/F, Fortress Tower, 250 King’s Road, North Point, Hong Kong (Exit B, Fortress Hill MTR Station)",
             "You can find out more details with this link",
-            "https://hkuspace.hku.hk/learning-centre#Kowloon%20East%20Campus"
+            "https://hkuspace.hku.hk/learning-centre#Fortress%20Tower%20Learning%20Centre"
         ],
         "status": "True",
         "return tag": {}
@@ -160,7 +160,9 @@
     },
     "lib+openinghr": {
         "response": [
-            "xxxxxxxxx"
+            "The opening hour of library is:",
+            "0800 - 2200 (Weekdays)",
+            "0830 - 2200 (Saturday)"
         ],
         "status": "True",
         "return tag": {}
@@ -168,6 +170,16 @@
     "small_com+location": {
         "response": [
             "Lounge & cyber station is on 3/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "small_com+openinghr": {
+        "response": [
+            "The opening hour of Lounge & cyber station is:",
+            "0800 - 2200 (Weekdays)",
+            "0830 - 2200 (Saturday)",
+            "0830 - 2200 (Sunday)"
         ],
         "status": "True",
         "return tag": {}
@@ -187,6 +199,16 @@
         "status": "True",
         "return tag": {}
     },
+    "big_com+openinghr": {
+        "response": [
+            "The opening hour of Common room is:",
+            "0800 - 2200 (Weekdays)",
+            "0830 - 2200 (Saturday)",
+            "0830 - 2200 (Sunday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
     "study_room+location": {
         "response": [
             "There are 4 study rooms in KEC on 4/F, 6/F and 7/F.", 
@@ -194,8 +216,7 @@
         ],
         "status": "True",
         "return tag": {}
-    }
-    ,
+    },
     "hall+location": {
         "response": [
             "College hall is on G/F."
@@ -225,7 +246,11 @@
         "return tag": {}
     },"office+contact": {
         "response": [
-            "The KEC office hotline is 3762 2000."
+            "The KEC office hotline is 3762 2000.",
+            "Please contact them within their office hour:",
+            "0830 - 1930 (Weekdays)",
+            "0830 - 1730 (Saturday)",
+            "0830 - 1630 (Sunday)"
         ],
         "status": "True",
         "return tag": {}
