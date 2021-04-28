@@ -13,7 +13,9 @@
     },
     "iec+location": {
         "response": [
-            "xxxxxxxxx"
+            "494 King’s Road, North Point, Hong Kong (Exit B3, North Point MTR Station)",
+            "You can find out more details with this link",
+            "https://hkuspace.hku.hk/learning-centre#Kowloon%20East%20Campus"
         ],
         "status": "True",
         "return tag": {}
@@ -39,7 +41,9 @@
     },
 	"kec+location": {
         "response": [
-            "xxxxxxxxx"
+            "28 Wang Hoi Road, Kowloon Bay, Kowloon (Exit B, Kowloon Bay MTR Station)",
+            "You can find out more details with this link",
+            "https://hkuspace.hku.hk/learning-centre#Kowloon%20East%20Campus"
         ],
         "status": "True",
         "return tag": {}
@@ -67,7 +71,9 @@
     },
     "adc_unc+location": {
         "response": [
-            "xxxxxxxxx"
+            "28 Wang Hoi Road, Kowloon Bay, Kowloon (Exit B, Kowloon Bay MTR Station)",
+            "You can find out more details with this link",
+            "https://hkuspace.hku.hk/learning-centre#Kowloon%20East%20Campus"
         ],
         "status": "True",
         "return tag": {}
@@ -93,7 +99,9 @@
     },
     "cita+location": {
         "response": [
-            "xxxxxxxxx"
+            "63 Tai Yip Street, Kowloon Bay, Kowloon (Exit A, Kowloon Bay MTR Station)",
+            "You can find out more details with this link",
+            "https://hkuspace.hku.hk/learning-centre#Kowloon%20East%20Campus"
         ],
         "status": "True",
         "return tag": {}
@@ -119,7 +127,9 @@
     },
     "ftc+location": {
         "response": [
-            "xxxxxxxxx"
+            "1/F , 4/F, 10/F, 14/F, 19/F & 22/F, Fortress Tower, 250 King’s Road, North Point, Hong Kong (Exit B, Fortress Hill MTR Station)",
+            "You can find out more details with this link",
+            "https://hkuspace.hku.hk/learning-centre#Kowloon%20East%20Campus"
         ],
         "status": "True",
         "return tag": {}
@@ -219,7 +229,7 @@
         ],
         "status": "True",
         "return tag": {}
-    },"office+office hr": {
+    },"office+officehr": {
         "response": [
             "The office hours of KEC office are as followed:",
             "0830 - 1930 (Weekdays)",
@@ -267,6 +277,13 @@
     "eng_village+location": {
         "response": [
             "English village is on 4/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "netlab+location": {
+        "response": [
+            "Network laboratory is on 4/F."
         ],
         "status": "True",
         "return tag": {}
