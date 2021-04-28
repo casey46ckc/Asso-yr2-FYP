@@ -200,5 +200,14 @@
             "principal's office"
         ],
         "abbr": "principal office"
+    },
+    {
+        "term": [
+            "College Principal's Recommendation Scheme",
+            "College Principal Recommendation Scheme",
+            "Principal's Recommendation Scheme",
+            "Principal Recommendation Scheme"
+        ],
+        "abbr": "cprs"
     }
 ]

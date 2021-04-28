@@ -32,5 +32,24 @@
                 "keyword"
             ]
         }
+    },
+    "cprs": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            ["details"],
+            ["apply method"],
+            ["status"],
+            ["FAQs"]
+        ],
+        "return tag": {
+            "category": "admin",
+            "modifier": "admin_basickey_cont",
+            "slots": [
+                "keyword"
+            ]
+        }
     }
 }

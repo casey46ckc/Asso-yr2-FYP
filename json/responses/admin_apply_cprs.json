@@ -1,0 +1,24 @@
+{
+    "tag": {
+        "category": "admin",
+        "modifier": "cprs_apply",
+        "slots": []
+    },
+    "noslot": {
+        "response": [
+            "This scheme is introduced to support our students for admission to the government-funded degree",
+            "programmes of our parent university (HKU) and it covers your First Choice Programme only. The",
+            "College Principal will recommend a list of outstanding students to the faculties and departments based",
+            "on your academic performance and contribution to the College and the community.",
+            "",
+            "To apply for the Scheme, students should first create the relevant university application record and",
+            "provide the specified information via the function 'College Principal's Recommendation Scheme' by a",
+            "stipulated deadline. Late and incomplete application will not be considered. (Applicable Period: January to February)",
+            "",
+            "Login to Learner Portal > My Resources > Community College> Student Self-service > My Future > College Principal's Recommendation Scheme (HKU)",
+            "link: https://learner.hkuspace.hku.hk/lp/respportal/"
+        ],
+        "status": "True",
+        "return tag": {}
+    }
+}

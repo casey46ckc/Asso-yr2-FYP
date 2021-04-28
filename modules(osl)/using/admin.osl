@@ -1,0 +1,51 @@
+!slot <keyboardvalue:internal.'{"ref":["noun"]}'>;
+!slot <keyword:internal.'{"ref":["noun"]}'>;
+!intention <admin>;
+!modifier <admin> : ref_letter|cprs_apply;
+
+<admin>:<am_keyb>|
+    <supportdoc_keyb>|
+    <quan_keyb>|
+    <status_keyb>|
+    <faqs_keyb>| 
+    <details_keyb>|
+    <ref_letter_word>|
+    <cprs_word>|
+    <how_ref_letter>|
+    <how_cprs>;
+//All grammar-event
+
+//All context grammar-event
+
+//All rules
+<what_be>:What (is|are|am|was|were);
+<be>:be|is|am|are|was|were;
+<have_has>:have|had|has;
+<article>:the|a|an;
+<ref_letter>:((reference|ref) (letter|letters));
+<cprs>:College Principal Recommendation Scheme|Principal Recommendation Scheme|cprs;
+//All templates
+<verb_to_be:template>: [=verb,be=]$(verb) to $(be);
+<ask_be:template>: [=ask,be=]$(ask) $(be);
+//All grammars
+//*C:details
+<details_keyb>:details<{keyboardvalue=details}>;
+//*C:faqs
+<faqs_keyb>:faqs<{keyboardvalue=faqs}>;
+//*C:status
+<status_keyb>:status<{keyboardvalue=status}>;
+//*C:quantity
+<quan_keyb>:quantity<{keyboardvalue=quantity}>;
+//*C:supporting doc
+<supportdoc_keyb>:(supporting doc)<{keyboardvalue=supportdoc}>;
+//*C:apply method
+<am_keyb>:(apply method)<{keyboardvalue=am}>;
+//*C:ref letter
+<ref_letter_word>:<ref_letter{keyword=refletter}>;
+//*C:cprs
+<cprs_word>:<cprs{keyword=cprs}>;
+//*C:how to apply ref letter
+<how_ref_letter>:how (to|can i|do i) apply [for] [<article>] <ref_letter><{@=ref_letter}>;
+//*C:how to apply cprs
+<how_cprs>:(how to|how can i|how do i|<what_be>) [apply] [for] [<article>] <cprs><{@=cprs_apply}>;
+//All context grammars
