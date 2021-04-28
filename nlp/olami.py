@@ -3,6 +3,7 @@ import json
 import logging
 import time
 import readjson
+from copy import deepcopy 
 from hashlib import md5
 
 
@@ -193,7 +194,7 @@ class Olami:
                 'modifier':""
                 }
         else:
-            intentTagC = intentTag.deepcopy()
+            intentTagC = deepcopy(intentTag)
             print("Intent tag passed.\nintentTag:", intentTagC, "\nBefore combining")
         
         if len(intentTagC['tag']['modifier']) == 0:
@@ -218,12 +219,12 @@ class Olami:
 
             if 'semantic' in nli_obj:
                 if 'modifier' in nli_obj['semantic'][0]:
-                    modifier = nli_obj['semantic'][0]['modifier'].deepcopy()
+                    modifier = deepcopy(nli_obj['semantic'][0]['modifier'])
                     if len(modifier) > 0:
                         intentTagC['tag']['modifier'] = modifier[0]
                 
                 if 'slots' in nli_obj['semantic'][0]:
-                    slots_ptr = nli_obj['semantic'][0]['slots'].deepcopy()
+                    slots_ptr = deepcopy(nli_obj['semantic'][0]['slots'])
                     for x in range(len(slots_ptr)):
                         intentTagC['tag']['slots'].append(slots_ptr[x]['name'])
                         if len(slots_value) != 0:
@@ -244,16 +245,14 @@ class Olami:
                             # print("Triggered success! A.1")
                             if slots_value in jsonObj:
                                 logger.info(f"found return tag:{jsonObj[slots_value]['return tag']}")
-                                ret_dict['tag'] = jsonObj[slots_value]['return tag'].deepcopy()
+                                ret_dict['tag'] = deepcopy(jsonObj[slots_value]['return tag'])
                                 ret_dict['slotsvalue'] = slots_value
                                 ret_dict['status'] = jsonObj[slots_value]['status']
-                                ret_dict['response'] = jsonObj[slots_value]['response'].deepcopy()
+                                ret_dict['response'] = deepcopy(jsonObj[slots_value]['response'])
                                 if 'keyBoardLayout' in jsonObj[slots_value]:
-                                    ret_dict['keyBoardLayout'] = jsonObj[slots_value]['keyBoardLayout'].deepcopy()
+                                    ret_dict['keyBoardLayout'] = deepcopy(jsonObj[slots_value]['keyBoardLayout'])
                                 else:
                                     ret_dict['keyBoardLayout'] = ""
-                                intentTagC['tag']['slots'].clear()
-                                intentTagC.clear()
                                 return ret_dict
                             else:
                                 print("Error: no slot_value key can be found!")
@@ -263,16 +262,14 @@ class Olami:
                             print("noslot response return.")
                             if 'noslot' in jsonObj:
                                 logger.info(f"found return tag:{jsonObj['noslot']['return tag']}")
-                                ret_dict['tag'] = jsonObj['noslot']['return tag'].deepcopy()
+                                ret_dict['tag'] = deepcopy(jsonObj['noslot']['return tag'])
                                 ret_dict['slotsvalue'] = slots_value
                                 ret_dict['status'] = jsonObj['noslot']['status']
-                                ret_dict['response'] = jsonObj['noslot']['response'].deepcopy()
+                                ret_dict['response'] = deepcopy(jsonObj['noslot']['response'])
                                 if 'keyBoardLayout' in jsonObj['noslot']:
-                                    ret_dict['keyBoardLayout'] = jsonObj['noslot']['keyBoardLayout'].deepcopy()
+                                    ret_dict['keyBoardLayout'] = deepcopy(jsonObj['noslot']['keyBoardLayout'])
                                 else:
                                     ret_dict['keyBoardLayout'] = ""
-                                intentTagC['tag']['slots'].clear()
-                                intentTagC.clear()
                                 return ret_dict
                             else:
                                 print("Error: no noslot key can be found!")
