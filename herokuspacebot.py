@@ -110,7 +110,8 @@ def reply_handler(update: Update, context: CallbackContext):
 
     if reply['status'] == "True":
         if str(user_id) in tags_dict:
-            del tags_dict[str(user_id)]
+            tags_dict[str(user_id)].clear()
+            tags_dict[str(user_id)] = None
     elif reply['status'] == "False":
         logger.info(f'reply:\n {reply}')
         tags_dict[str(user_id)] = {}
