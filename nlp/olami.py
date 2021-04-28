@@ -235,11 +235,11 @@ class Olami:
                         
                 # return response through Json
 
-                logger.info(f'After mix: {intentTag}')
+                logger.info(f'After mix: {intentTagC}')
 
                 for jsonObj in li_jsonFiles:
-                    if intentTag['tag'] == jsonObj['tag']:
-                        print("Tag found!\nintentTag: ", intentTag)
+                    if intentTagC['tag'] == jsonObj['tag']:
+                        print("Tag found!\nintentTag: ", intentTagC)
                         if len(slots_ptr) > 0:
                             # print("Triggered success! A.1")
                             if slots_value in jsonObj:
