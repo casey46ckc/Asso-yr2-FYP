@@ -239,10 +239,6 @@ class Olami:
                             # print("Triggered success! A.1")
                             if slots_value in jsonObj:
                                 ret_dict['tag'] = jsonObj[slots_value]['return tag']
-                                if 'slots' in jsonObj[slots_value]['return tag']:
-                                    ret_dict['tag']['slots'] = jsonObj[slots_value]['return tag']['slots']
-                                else:
-                                    ret_dict['tag']['slots'] = jsonObj['tag']['slots']
                                 ret_dict['slotsvalue'] = slots_value
                                 ret_dict['status'] = jsonObj[slots_value]['status']
                                 ret_dict['response'] = jsonObj[slots_value]['response']
@@ -250,8 +246,8 @@ class Olami:
                                     ret_dict['keyBoardLayout'] = jsonObj[slots_value]['keyBoardLayout']
                                 else:
                                     ret_dict['keyBoardLayout'] = ""
-                                intentTag['tag']['slots'].clear()
-                                intentTag.clear()
+                                #intentTag['tag']['slots'].clear()
+                                #intentTag.clear()
                                 return ret_dict
                             else:
                                 print("Error: no slot_value key can be found!")
@@ -261,10 +257,6 @@ class Olami:
                             print("noslot response return.")
                             if 'noslot' in jsonObj:
                                 ret_dict['tag'] = jsonObj['noslot']['return tag']
-                                if 'slots' in jsonObj['noslot']['return tag']:
-                                    ret_dict['tag']['slots'] = jsonObj['noslot']['return tag']['slots']
-                                else:
-                                    ret_dict['tag']['slots'] = jsonObj['tag']['slots']
                                 ret_dict['slotsvalue'] = slots_value
                                 ret_dict['status'] = jsonObj['noslot']['status']
                                 ret_dict['response'] = jsonObj['noslot']['response']
@@ -272,8 +264,8 @@ class Olami:
                                     ret_dict['keyBoardLayout'] = jsonObj['noslot']['keyBoardLayout']
                                 else:
                                     ret_dict['keyBoardLayout'] = ""
-                                intentTag['tag']['slots'].clear()
-                                intentTag.clear()
+                                #intentTag['tag']['slots'].clear()
+                                #intentTag.clear()
                                 return ret_dict
                             else:
                                 print("Error: no noslot key can be found!")
