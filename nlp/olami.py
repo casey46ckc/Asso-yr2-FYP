@@ -193,7 +193,7 @@ class Olami:
                 'modifier':""
                 }
         else:
-            intentTagC = intentTag.copy()
+            intentTagC = intentTag.deepcopy()
             print("Intent tag passed.\nintentTag:", intentTagC, "\nBefore combining")
         
         if len(intentTagC['tag']['modifier']) == 0:
@@ -218,12 +218,12 @@ class Olami:
 
             if 'semantic' in nli_obj:
                 if 'modifier' in nli_obj['semantic'][0]:
-                    modifier = nli_obj['semantic'][0]['modifier'].copy()
+                    modifier = nli_obj['semantic'][0]['modifier'].deepcopy()
                     if len(modifier) > 0:
                         intentTagC['tag']['modifier'] = modifier[0]
                 
                 if 'slots' in nli_obj['semantic'][0]:
-                    slots_ptr = nli_obj['semantic'][0]['slots'].copy()
+                    slots_ptr = nli_obj['semantic'][0]['slots'].deepcopy()
                     for x in range(len(slots_ptr)):
                         intentTagC['tag']['slots'].append(slots_ptr[x]['name'])
                         if len(slots_value) != 0:
@@ -244,12 +244,12 @@ class Olami:
                             # print("Triggered success! A.1")
                             if slots_value in jsonObj:
                                 logger.info(f"found return tag:{jsonObj[slots_value]['return tag']}")
-                                ret_dict['tag'] = jsonObj[slots_value]['return tag'].copy()
+                                ret_dict['tag'] = jsonObj[slots_value]['return tag'].deepcopy()
                                 ret_dict['slotsvalue'] = slots_value
                                 ret_dict['status'] = jsonObj[slots_value]['status']
-                                ret_dict['response'] = jsonObj[slots_value]['response'].copy()
+                                ret_dict['response'] = jsonObj[slots_value]['response'].deepcopy()
                                 if 'keyBoardLayout' in jsonObj[slots_value]:
-                                    ret_dict['keyBoardLayout'] = jsonObj[slots_value]['keyBoardLayout'].copy()
+                                    ret_dict['keyBoardLayout'] = jsonObj[slots_value]['keyBoardLayout'].deepcopy()
                                 else:
                                     ret_dict['keyBoardLayout'] = ""
                                 intentTagC['tag']['slots'].clear()
@@ -263,12 +263,12 @@ class Olami:
                             print("noslot response return.")
                             if 'noslot' in jsonObj:
                                 logger.info(f"found return tag:{jsonObj['noslot']['return tag']}")
-                                ret_dict['tag'] = jsonObj['noslot']['return tag'].copy()
+                                ret_dict['tag'] = jsonObj['noslot']['return tag'].deepcopy()
                                 ret_dict['slotsvalue'] = slots_value
                                 ret_dict['status'] = jsonObj['noslot']['status']
-                                ret_dict['response'] = jsonObj['noslot']['response'].copy()
+                                ret_dict['response'] = jsonObj['noslot']['response'].deepcopy()
                                 if 'keyBoardLayout' in jsonObj['noslot']:
-                                    ret_dict['keyBoardLayout'] = jsonObj['noslot']['keyBoardLayout'].copy()
+                                    ret_dict['keyBoardLayout'] = jsonObj['noslot']['keyBoardLayout'].deepcopy()
                                 else:
                                     ret_dict['keyBoardLayout'] = ""
                                 intentTagC['tag']['slots'].clear()
