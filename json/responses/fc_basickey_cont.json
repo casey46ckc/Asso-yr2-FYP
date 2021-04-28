@@ -1,6 +1,6 @@
 {
     "tag": {
-        "category": "nonjupas",
+        "category": "facilities",
         "modifier": "fc_basickey_cont",
         "slots": ["facilities","keyboardvalue"]
     },
