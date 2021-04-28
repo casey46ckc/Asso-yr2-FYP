@@ -185,4 +185,167 @@
         "status": "True",
         "return tag": {}
     }
+    ,
+    "hall+location": {
+        "response": [
+            "College hall is on G/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "college_theatre+location": {
+        "response": [
+            "College theatre is on 1/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "enrolcentre+location": {
+        "response": [
+            "Enrolment centre is on 1/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "office+location": {
+        "response": [
+            "Campus office is on 2/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },"office+contact": {
+        "response": [
+            "The KEC office hotline is 3762 2000."
+        ],
+        "status": "True",
+        "return tag": {}
+    },"office+office hr": {
+        "response": [
+            "The office hours of KEC office are as followed:",
+            "0830 - 1930 (Weekdays)",
+            "0830 - 1730 (Saturday)",
+            "0830 - 1630 (Sunday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "computer_centre+location": {
+        "response": [
+            "Computer centre is on 3/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "photocopyrm+location": {
+        "response": [
+            "Photocopying room is on 3/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "su+location": {
+        "response": [
+            "Student union office is on 3/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "soc_room+location": {
+        "response": [
+            "Societies activities room is on 3/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "nurse_lab+location": {
+        "response": [
+            "Nursing skills laboratory is on 3/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "eng_village+location": {
+        "response": [
+            "English village is on 4/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "int_scilab+location": {
+        "response": [
+            "Integrated science laboratories are on 8/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "sci_lab+location": {
+        "response": [
+            "Science laboratories are on 9/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "comp_lab+location": {
+        "response": [
+            "Computer laboratories are on 9/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "clinical_lab+location": {
+        "response": [
+            "Clinical skills laboratory is on 10/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "perform_art_stu+location": {
+        "response": [
+            "Performing arts studio is on 10/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "multi_pur_stu+location": {
+        "response": [
+            "Multi-purpose studio is on 10/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "va_stu+location": {
+        "response": [
+            "Visual arts studio is on 10/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "sdcscrm+location": {
+        "response": [
+            "Student development & counselling services consultation room is on 10/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "teach_office+location": {
+        "response": [
+            "Teacher offices are on 12-13/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "prin_office+location": {
+        "response": [
+            "Principal's office is on 13/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "conference_room+location": {
+        "response": [
+            "Conference room is on 13/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    }
 }
