@@ -2,7 +2,7 @@ import configparser
 import logging
 import os
 from readjson import replace_AbbrName, read_multiwords_json, read_json
-
+from copy import deepcopy
 import telegram
 
 
@@ -110,12 +110,11 @@ def reply_handler(update: Update, context: CallbackContext):
 
     if reply['status'] == "True":
         if str(user_id) in tags_dict:
-            tags_dict[str(user_id)].clear()
-            tags_dict[str(user_id)] = None
+            del tags_dict[str(user_id)]
     elif reply['status'] == "False":
         logger.info(f'reply:\n {reply}')
         tags_dict[str(user_id)] = {}
-        tags_dict[str(user_id)]['tag'] = reply['tag'].copy()
+        tags_dict[str(user_id)]['tag'] = deepcopy(reply['tag'])
         if 'slotsvalue' in reply:
             logger.info(f'returned slotsvalue: {reply["slotsvalue"]}')
             tags_dict[str(user_id)]['slotsvalue'] = reply['slotsvalue']
