@@ -1,0 +1,22 @@
+{
+    "tag": {
+        "category": "admin",
+        "modifier": "withdrawcollege",
+        "slots": []
+    },
+    "noslot": {
+        "response": [
+            "You should follow the procedures below :",
+            "1. Write to myfuture@hkuspace.hku.hk to request for activation of the 'Withdraw study from the College' function, if you find that this function is not available in your MyFuture account.",
+            "Login to Learner Portal > My Resources > Community College> Student Self-service > My Future > Apply for withdrawal study from the College",
+            "link: https://learner.hkuspace.hku.hk/lp/respportal/",
+            "2. Click 'Withdraw study from the College'",
+            "3. Update, if necessary and confirm your contact details",
+            "4. Fill-in the Questionnaire",
+            "5. Register your application for withdrawal online step by step and return the signed 'Declaration Form' together with the Facilities Access Card and Student ID Card to the College Office in person",
+            "6. Submit your application for intermediate award online subject to your fulfillment of the award requirements."
+        ],
+        "status": "True",
+        "return tag": {}
+    }
+}

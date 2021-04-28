@@ -51,5 +51,22 @@
                 "keyword"
             ]
         }
+    },
+    "withdraw": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            ["procedures"],
+            ["FAQs"]
+        ],
+        "return tag": {
+            "category": "admin",
+            "modifier": "admin_basickey_cont",
+            "slots": [
+                "keyword"
+            ]
+        }
     }
 }
