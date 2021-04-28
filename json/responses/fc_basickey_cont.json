@@ -164,7 +164,7 @@
         "status": "True",
         "return tag": {}
     },
-    "lib+openinghr": {
+    "lib+openhr": {
         "response": [
             "The opening hour of library is:",
             "0800 - 2200 (Weekdays)",
@@ -180,7 +180,7 @@
         "status": "True",
         "return tag": {}
     },
-    "small_com+openinghr": {
+    "small_com+openhr": {
         "response": [
             "The opening hour of Lounge & cyber station is:",
             "0800 - 2200 (Weekdays)",
@@ -205,7 +205,7 @@
         "status": "True",
         "return tag": {}
     },
-    "big_com+openinghr": {
+    "big_com+openhr": {
         "response": [
             "The opening hour of Common room is:",
             "0800 - 2200 (Weekdays)",
