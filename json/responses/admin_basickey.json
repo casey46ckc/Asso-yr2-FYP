@@ -1,0 +1,32 @@
+{
+    "tag": {
+        "category": "admin",
+        "modifier": "",
+        "slots": [
+            "keyword"
+        ]
+    },
+    "noslot": {
+        "response": [
+            "***ERROR:should not go here"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "refletter": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            ["apply method"]
+        ],
+        "return tag": {
+            "category": "admin",
+            "modifier": "admin_basickey_cont",
+            "slots": [
+                "keyword"
+            ]
+        }
+    }
+}
