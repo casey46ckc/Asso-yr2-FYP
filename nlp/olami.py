@@ -187,22 +187,23 @@ class Olami:
             }
 
         if intentTag is None:
-            intentTag = {}
-            intentTag['tag']={
+            intentTagC = {}
+            intentTagC['tag']={
                 'category':"",
                 'modifier':""
                 }
         else:
-            print("Intent tag passed.\nintentTag:", intentTag, "\nBefore combining")
+            intentTagC = intentTag.copy()
+            print("Intent tag passed.\nintentTag:", intentTagC, "\nBefore combining")
         
-        if len(intentTag['tag']['modifier']) == 0:
-            intentTag['tag']['modifier'] = ""
+        if len(intentTagC['tag']['modifier']) == 0:
+            intentTagC['tag']['modifier'] = ""
 
-        if 'slots' not in intentTag['tag']:
-            intentTag['tag']['slots'] = []
+        if 'slots' not in intentTagC['tag']:
+            intentTagC['tag']['slots'] = []
 
-        if 'slotsvalue' in intentTag:
-            slots_value = intentTag['slotsvalue']
+        if 'slotsvalue' in intentTagC:
+            slots_value = intentTagC['slotsvalue']
         else:
             slots_value = ""
 
@@ -213,18 +214,18 @@ class Olami:
             logger.info(f'{nli_obj}')
 
             if len(intent_category) > 0:
-                intentTag['tag']['category'] = intent_category
+                intentTagC['tag']['category'] = intent_category
 
             if 'semantic' in nli_obj:
                 if 'modifier' in nli_obj['semantic'][0]:
                     modifier = nli_obj['semantic'][0]['modifier'].copy()
                     if len(modifier) > 0:
-                        intentTag['tag']['modifier'] = modifier[0]
+                        intentTagC['tag']['modifier'] = modifier[0]
                 
                 if 'slots' in nli_obj['semantic'][0]:
                     slots_ptr = nli_obj['semantic'][0]['slots'].copy()
                     for x in range(len(slots_ptr)):
-                        intentTag['tag']['slots'].append(slots_ptr[x]['name'])
+                        intentTagC['tag']['slots'].append(slots_ptr[x]['name'])
                         if len(slots_value) != 0:
                             slots_value += ('+' + slots_ptr[x]['value'])
                         else:
@@ -251,8 +252,8 @@ class Olami:
                                     ret_dict['keyBoardLayout'] = jsonObj[slots_value]['keyBoardLayout'].copy()
                                 else:
                                     ret_dict['keyBoardLayout'] = ""
-                                #intentTag['tag']['slots'].clear()
-                                #intentTag.clear()
+                                intentTagC['tag']['slots'].clear()
+                                intentTagC.clear()
                                 return ret_dict
                             else:
                                 print("Error: no slot_value key can be found!")
@@ -270,8 +271,8 @@ class Olami:
                                     ret_dict['keyBoardLayout'] = jsonObj['noslot']['keyBoardLayout'].copy()
                                 else:
                                     ret_dict['keyBoardLayout'] = ""
-                                #intentTag['tag']['slots'].clear()
-                                #intentTag.clear()
+                                intentTagC['tag']['slots'].clear()
+                                intentTagC.clear()
                                 return ret_dict
                             else:
                                 print("Error: no noslot key can be found!")
@@ -279,15 +280,15 @@ class Olami:
                 # Case: Tags cannot be handled
                 ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
                 ret_dict['status'] = "True"
-                intentTag['tag']['slots'].clear()
-                intentTag.clear()
+                intentTagC['tag']['slots'].clear()
+                intentTagC.clear()
                 return ret_dict
         else: # Case: Pattern cannot be identified
             print("Tag not found!\nintentTag: ", intentTag['tag'])
             ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
             ret_dict['status'] = "True"
-            intentTag['tag']['slots'].clear()
-            intentTag.clear()
+            intentTagC['tag']['slots'].clear()
+            intentTagC.clear()
             return ret_dict
 """
                         if intent_category == "greet": #moved greet module to json
