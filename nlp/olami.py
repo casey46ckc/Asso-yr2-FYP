@@ -3,6 +3,7 @@ import json
 import logging
 import time
 import readjson
+from copy import deepcopy 
 from hashlib import md5
 
 
