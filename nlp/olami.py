@@ -279,7 +279,7 @@ class Olami:
                 ret_dict['status'] = "True"
                 return ret_dict
         else: # Case: Pattern cannot be identified
-            print("Tag not found!\nintentTag: ", intentTag['tag'])
+            print("Tag not found!\nintentTag: ", intentTagC['tag'])
             ret_dict['response'] = ["Sorry. I cannot get your meaning. Can you ask in other manner?"]
             ret_dict['status'] = "True"
             return ret_dict
