@@ -1,0 +1,188 @@
+{
+    "tag": {
+        "category": "nonjupas",
+        "modifier": "fc_basickey_cont",
+        "slots": ["facilities","keyboardvalue"]
+    },
+    "noslot": {
+        "response": [
+            "***ERROR:should not go here"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "iec+location": {
+        "response": [
+            "xxxxxxxxx"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "iec+officehr": {
+        "response":  [
+            "The office hour of IEC is:",
+            "0830 - 1930 (Weekdays)",
+            "0830 - 1730 (Saturday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "iec+contact": {
+        "response": [
+            "***The IEC office hotline is 3762 0033.",
+            "Please contact them within their office hour:",
+            "0830 - 1930 (Weekdays)",
+            "0830 - 1730 (Saturday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+	"kec+location": {
+        "response": [
+            "xxxxxxxxx"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "kec+officehr": {
+        "response":  [
+            "The office hour of KEC is:",
+            "0830 - 1930 (Weekdays)",
+            "0830 - 1730 (Saturday)",
+            "0830 - 1630 (Sunday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "kec+contact": {
+        "response": [
+            "***The KEC office hotline is 3762 2000.",
+            "Please contact them within their office hour:",
+            "0830 - 1930 (Weekdays)",
+            "0830 - 1730 (Saturday)",
+            "0830 - 1630 (Sunday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "adc_unc+location": {
+        "response": [
+            "xxxxxxxxx"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "adc_unc+officehr": {
+        "response":  [
+            "The office hour of ADC & UNC is:",
+            "0830 - 1930 (Weekdays)",
+            "0830 - 1730 (Saturday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "adc_unc+contact": {
+        "response": [
+            "***The ADC & UNC office hotline is 2910 7620.",
+            "Please contact them within their office hour:",
+            "0830 - 1930 (Weekdays)",
+            "0830 - 1730 (Saturday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "cita+location": {
+        "response": [
+            "xxxxxxxxx"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "cita+officehr": {
+        "response":  [
+            "The office hour of CITA is:",
+            "0900 - 2000 (Weekdays)",
+            "0900 - 1800 (Saturday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "cita+contact": {
+        "response": [
+            "***The CITA office hotline is 3762 0110.",
+            "Please contact them within their office hour:",
+            "0900 - 2000 (Weekdays)",
+            "0900 - 1800 (Saturday)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "ftc+location": {
+        "response": [
+            "xxxxxxxxx"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "ftc+officehr": {
+        "response":  [
+            "The office hour of FTC is:",
+            "0830 - 1930 (Weekdays)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "ftc+contact": {
+        "response": [
+            "***The FTC office hotline is 3762 0988.",
+            "Please contact them within their office hour:",
+            "0830 - 1930 (Weekdays)"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "lib+location": {
+        "response": [
+            "Library & multi-media learning centre is on 4/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "lib+openinghr": {
+        "response": [
+            "xxxxxxxxx"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "small_com+location": {
+        "response": [
+            "Lounge & cyber station is on 3/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "discussionrm+location": {
+        "response": [
+            "There are 4 discussion rooms in KEC on 2/F.",
+			"They are KEC201, KEC202, KEC203, KEC204."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "big_com+location": {
+        "response": [
+            "Common room is on 3/F."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "study_room+location": {
+        "response": [
+            "There are 4 study rooms in KEC on 4/F, 6/F and 7/F.", 
+			"They are KEC403, KEC603, KEC610, KEC708."
+        ],
+        "status": "True",
+        "return tag": {}
+    }
+}

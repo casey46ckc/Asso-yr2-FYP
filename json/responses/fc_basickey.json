@@ -1,0 +1,229 @@
+{
+    "tag": {
+        "category": "nonjupas",
+        "modifier": "",
+        "slots": [
+            "facilities"
+        ]
+    },
+    "noslot": {
+        "response": [
+            "***ERROR:should not go here"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "iec": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            [
+                "location"
+            ],
+			[
+				"office hr"
+			],
+			[
+				"contact"
+			]
+        ],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "fc_basickey_cont",
+            "slots": [
+                "facilities"
+            ]
+        }
+    },
+    "kec": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            [
+                "location"
+            ],
+			[
+				"office hr"
+			],
+			[
+				"contact"
+			]
+        ],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "fc_basickey_cont",
+            "slots": [
+                "facilities"
+            ]
+        }
+    },
+    "adc_unc": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            [
+                "location"
+            ],
+			[
+				"office hr"
+			],
+			[
+				"contact"
+			]
+        ],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "fc_basickey_cont",
+            "slots": [
+                "facilities"
+            ]
+        }
+    },
+    "cita": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            [
+                "location"
+            ],
+			[
+				"office hr"
+			],
+			[
+				"contact"
+			]
+        ],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "fc_basickey_cont",
+            "slots": [
+                "facilities"
+            ]
+        }
+    },
+    "ftc": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            [
+                "location"
+            ],
+			[
+				"office hr"
+			],
+			[
+				"contact"
+			]
+        ],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "fc_basickey_cont",
+            "slots": [
+                "facilities"
+            ]
+        }
+    },
+    "lib": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            [
+                "location"
+            ],
+            [
+                "opening hr"
+            ]
+        ],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "fc_basickey_cont",
+            "slots": [
+                "facilities"
+            ]
+        }
+    },
+    "small-com": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            [
+                "location"
+            ]
+        ],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "fc_basickey_cont",
+            "slots": [
+                "facilities"
+            ]
+        }
+    },
+    "discussionrm": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            [
+                "location"
+            ]
+        ],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "fc_basickey_cont",
+            "slots": [
+                "facilities"
+            ]
+        }
+    },
+    "big_com": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            [
+                "location"
+            ]
+        ],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "fc_basickey_cont",
+            "slots": [
+                "facilities"
+            ]
+        }
+    },
+    "study_room": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            [
+                "location"
+            ]
+        ],
+        "return tag": {
+            "category": "nonjupas",
+            "modifier": "fc_basickey_cont",
+            "slots": [
+                "facilities"
+            ]
+        }
+    }
+}

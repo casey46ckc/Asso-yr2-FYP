@@ -1,6 +1,7 @@
 !slot <campus:internal.'{"ref":["地點"]}'>;
 !slot <officeslot:internal.'{"ref":["地點"]}'>;
 !slot <facilities:internal.'{"ref":["地點"]}'>;
+!slot <keyboardvalue:internal.'{"ref":["noun"]}'>;
 !intention <facilities>;
 !modifier <facilities> : contact|place|officehr;
 
@@ -117,7 +118,11 @@
     <sdcscrm_key>|
     <tecoff_key>|
     <prinoff_key>|
-    <conrm_key>;
+    <conrm_key>|
+    <location_keyboard>|
+    <contact_keyboard>|
+    <openhr_keyboard>|
+    <officehr_keyboard>;
 //All grammar-event
 
 //All context grammar-event
@@ -166,10 +171,19 @@
 <tecoff>:((teacher|teachers) (office|offices));
 <prinoff>:(principal (office|offices));
 <conrm>:((conference|conferencing) (rm|room|rms|rooms));
+<openhr_key>:((opening|open) (hour|hours|hr|hrs));
 //All templates
 <ask_be:template>: [=ask,be=]$(ask) $(be);
 <verb_to_be:template>: [=verb,be=]$(verb) to $(be);
 //All grammars
+//*C:office hr
+<officehr_keyboard>:(office hr)<{keyboardvalue=officehr}>;
+//*C:location
+<location_keyboard>:location<{keyboardvalue=location}>;
+//*C:contact
+<contact_keyboard>:contact<{keyboardvalue=contact}>;
+//opening hr
+<openhr_keyboard>:(opening hr)<{keyboardvalue=openhr}>;
 //*C:lib
 <lib_key>:<lib{facilities=lib}>;
 //*C:細 com
