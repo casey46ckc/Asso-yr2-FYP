@@ -1,7 +1,7 @@
 !slot <keyboardvalue:internal.'{"ref":["noun"]}'>;
 !slot <keyword:internal.'{"ref":["noun"]}'>;
 !intention <admin>;
-!modifier <admin> : ref_letter|cprs_apply|withdrawcollege;
+!modifier <admin> : ref_letter|cprs_apply|withdrawcollege|applytranscript;
 
 <admin>:<am_keyb>|
     <supportdoc_keyb>|
@@ -13,9 +13,11 @@
     <ref_letter_word>|
     <cprs_word>|
     <withdraw_word>|
+    <transcript_word>|
     <how_ref_letter>|
     <how_cprs>|
-    <how_withdraw>;
+    <how_withdraw>|
+    <how_transcript>;
 //All grammar-event
 
 //All context grammar-event
@@ -27,6 +29,7 @@
 <article>:the|a|an;
 <ref_letter>:((reference|ref) (letter|letters));
 <cprs>:College Principal Recommendation Scheme|Principal Recommendation Scheme|cprs;
+<transcript>:transcript|transcripts|report|reports|(academic (transcript|transcripts|report|reports));
 //All templates
 <verb_to_be:template>: [=verb,be=]$(verb) to $(be);
 <ask_be:template>: [=ask,be=]$(ask) $(be);
@@ -51,10 +54,14 @@
 <cprs_word>:<cprs{keyword=cprs}>;
 //*C:withdraw
 <withdraw_word>:(withdraw [<article>](college|school)|withdraw)<{keyword=withdraw}>;
+//*C:transcript
+<transcript_word>:<transcript{keyword=transcript}>;
 //*C:how to apply ref letter
 <how_ref_letter>:how (to|can i|do i) apply [for] [<article>] <ref_letter><{@=ref_letter}>;
 //*C:how to apply cprs
 <how_cprs>:(how to|how can i|how do i|<what_be>) [apply] [for] [<article>] <cprs><{@=cprs_apply}>;
 //*C:how to withdraw college
 <how_withdraw>:how (to|can i|do i) [apply] withdraw [<article>] college<{@=withdrawcollege}>;
+//*C:how to apply transcript
+<how_transcript>:how (to|can i|do i) [apply] [for] [<article>] <transcript><{@=applytranscript}>;
 //All context grammars

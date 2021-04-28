@@ -68,5 +68,22 @@
                 "keyword"
             ]
         }
+    },
+    "transcript": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            ["apply method"],
+            ["FAQs"]
+        ],
+        "return tag": {
+            "category": "admin",
+            "modifier": "admin_basickey_cont",
+            "slots": [
+                "keyword"
+            ]
+        }
     }
 }

@@ -122,5 +122,25 @@
         ],
         "status": "True",
         "return tag": {}
+    },
+    "transcript+am": {
+        "response": [
+            "You should follow the procedures below :",
+            "1. Login to Learner Portal > My Resources > Community College> Student Self-service > My Future > Apply for Transcript(s) and make payment online",
+            "link: https://learner.hkuspace.hku.hk/lp/respportal/",
+            "",
+            "User Guide for Online Transcript Application:",
+            "https://cc8.hkuspace.hku.hk/~sdcs/cgi-bin/UserGuide_OnlineTranscript.pdf"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "transcript+faqs": {
+        "response": [
+            "If you want to know more, you may refer to this link:",
+            "https://cc8.hkuspace.hku.hk/~sdcs/cgi-bin/des_faq.php"
+        ],
+        "status": "True",
+        "return tag": {}
     }
 }
