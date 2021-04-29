@@ -1,0 +1,67 @@
+{
+    "tag": {
+        "category": "finance",
+        "modifier": "",
+        "slots": [
+            "keyword"
+        ]
+    },
+    "noslot": {
+        "response": [
+            "ERROR:should not go here"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "fin_support": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            ["details"],
+            ["link"]
+        ],
+        "return tag": {
+            "category": "finance",
+            "modifier": "fs_basickey_cont",
+            "slots": [
+                "keyword"
+            ]
+        }
+    },
+    "nlsps": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            ["details"],
+            ["link"]
+        ],
+        "return tag": {
+            "category": "finance",
+            "modifier": "fs_basickey_cont",
+            "slots": [
+                "keyword"
+            ]
+        }
+    },
+    "fasp": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            ["details"],
+            ["link"]
+        ],
+        "return tag": {
+            "category": "finance",
+            "modifier": "fs_basickey_cont",
+            "slots": [
+                "keyword"
+            ]
+        }
+    }
+}

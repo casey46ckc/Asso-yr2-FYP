@@ -1,8 +1,14 @@
-!slot <financial_support:internal.'{"ref":["noun"]}'>;
+!slot <keyboardvalue:internal.'{"ref":["noun"]}'>;
+!slot <keyword:internal.'{"ref":["noun"]}'>;
 !intention <finance>;
 !modifier <finance> : fs_method|fs_ask|fs_link;
 
-<finance>:<fs_method>|
+<finance>:<details_keyb>|
+    <link_keyb>|
+    <fasp_word>|
+    <nlsps_word>|
+    <fs_word>|
+    <fs_method>|
     <fs_support_ask>|
     <fs_link>;
 //All grammar-event
@@ -10,13 +16,26 @@
 //All context grammar-event
 
 //All rules
+<fin_support>:financial support|fs|fin support|financial assistance|fin assistance;
+<fasp>:Financial Assistance Scheme for Post-secondary Students|fasp;
+<nlsps>:Non-means-tested Loan Scheme for Post-secondary Students|nlsps;
 //All templates
 //All grammars
+//*C:details
+<details_keyb>:details<{keyboardvalue=details}>;
+//*C:link
+<link_keyb>:link<{keyboardvalue=link}>;
+//*C:nlsps
+<nlsps_word>:<nlsps{keyword=nlsps}> [link];
+//*C:fasp
+<fasp_word>:<fasp{keyword=fasp}> [link];
+//*C:financial support
+<fs_word>:<fin_support{keyword=fin_support}> [link];
 //*C:Where to apply financial support
-<fs_method>:Where to apply financial support  <{@=fs_method}>;
+<fs_method>:where (to|can i|do i) apply <fin_support><{@=fs_method}>;
 //*C:how to apply financial support
 //*A:You can apply Financial Assistance Scheme for Post-secondary Students (FASP) or Non-means-tested Loan Scheme for Post-secondary Students (NLSPS).
-<fs_support_ask>:How to apply financial support [in hkuspace]<{@=fs_ask}>;
+<fs_support_ask>:How (to|can i|do i) apply <fin_support> [in hkuspace]<{@=fs_ask}>;
 //*C:is there link to the financial support page
-<fs_link>:[is there] link (of|to) [the] financial support [page] <{@=fs_link}>;
+<fs_link>:[is there] link (of|to) [the] <fin_support> [page] <{@=fs_link}>;
 //All context grammars

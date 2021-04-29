@@ -209,5 +209,17 @@
             "principal recommendation scheme"
         ],
         "abbr": "cprs"
+    },
+    {
+        "term": [
+            "financial assistance scheme for post-secondary students"
+        ],
+        "abbr": "fasp"
+    },
+    {
+        "term": [
+            "non-means-tested loan scheme for post-secondary students"
+        ],
+        "abbr": "nlsps"
     }
 ]

@@ -1,0 +1,71 @@
+{
+    "tag": {
+        "category": "finance",
+        "modifier": "fs_basickey_cont",
+        "slots": [
+            "keyword",
+            "keyboardvalue"
+        ]
+    },
+    "noslot": {
+        "response": [
+            "ERROR:should not go here"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "fin_support+details": {
+        "response": [
+            "You can apply Financial Assistance Scheme for Post-secondary Students (FASP) or Non-means-tested Loan Scheme for Post-secondary Students (NLSPS)."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "fin_support+link": {
+        "response": [
+			"You can get more information from:",
+			"1. FASP: https://www.wfsfaa.gov.hk/sfo/en/postsecondary/fasp/overview.htm",
+			"2. NLSPS: https://www.wfsfaa.gov.hk/sfo/en/postsecondary/nlsps/overview.htm"
+		],
+        "status": "True",
+        "return tag": {}
+    },
+    "nlspst+details": {
+        "response": [
+            "Overview:",
+            "The NLSPS is used to complement the Financial Assistance Scheme for Post-secondary Students (FASP) to provide loan(s) to eligible students to settle tuition fees of locally-accredited, self-financing full-time post-secondary education programmes at the level of associate degree, higher diploma or degree.",
+            "",
+            "For students who are covered under the Tertiary Student Finance Scheme - Publicly-funded Programmes (TSFS), please refer to the details of the Non-means-tested Loan Scheme for Full-time Tertiary Students (NLSFT).",
+            "",
+            "For students pursuing specific post-secondary/continuing and professional education courses, please refer to the details of the Extended Non-means-tested Loan Scheme (ENLS)."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "nlsps+link": {
+        "response": [
+			"You can get more information from:",
+			"NLSPS: https://www.wfsfaa.gov.hk/sfo/en/postsecondary/nlsps/overview.htm"
+		],
+        "status": "True",
+        "return tag": {}
+    },
+    "fasp+details": {
+        "response": [
+            "Overview:",
+            "FASP provides means-tested financial assistance to needy full-time students pursuing locally-accredited, self-financing post-secondary education programmes at the level of associate degree, higher diploma or degree. The scheme aims to provide financial assistance to needy students so that no eligible students will be denied access to post-secondary education because of lack of means.",
+            "",
+            "Financial assistance is provided in the form of grant and / or loan. The maximum level of assistance is made up of: (i) tuition fees grant (ii) academic expenses grant and (iii) living expenses loan. Living expenses loan is interest-bearing at 1% per annum chargeable from the commencement of the repayment period. The ceilings of the assistance will be reviewed annually. Please refer to the Level of Financial Assistance for details."
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "fasp+link": {
+        "response": [
+			"You can get more information from:",
+            "FASP: https://www.wfsfaa.gov.hk/sfo/en/postsecondary/fasp/overview.htm"
+		],
+        "status": "True",
+        "return tag": {}
+    }
+}
