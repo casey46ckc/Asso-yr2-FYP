@@ -22,7 +22,7 @@ from schedule.schedule import TheSemesterTimeSchedule, collect_result_V1, readCl
 start_message = []
 
 # initialize the help message for /help command
-help_message = ['Where is <facility name in KEC>?', 'Which floor <facility name in KEC> is?', 'Tell me the contact of <block name of HKUSpace>?']
+help_message = ['You may call 3762 2222 or email to ccad@hkuspace.hku.hk for further enquiries.']
 
 # initial the reply keyboard from start
 reply_kb_start = ReplyKeyboardMarkup([['Guideline'],['Help']], one_time_keyboard=True)
