@@ -1,7 +1,7 @@
 !slot <keyboardvalue:internal.'{"ref":["noun"]}'>;
 !slot <keyword:internal.'{"ref":["noun"]}'>;
 !intention <admin>;
-!modifier <admin> : ref_letter|cprs_apply|withdrawcollege|applytranscript;
+!modifier <admin> : ref_letter|cprs_apply|withdrawcollege|applytranscript|adddropclass;
 
 <admin>:<am_keyb>|
     <supportdoc_keyb>|
@@ -17,7 +17,8 @@
     <how_ref_letter>|
     <how_cprs>|
     <how_withdraw>|
-    <how_transcript>;
+    <how_transcript>|
+    <how_adddrop>;
 //All grammar-event
 
 //All context grammar-event
@@ -30,6 +31,7 @@
 <ref_letter>:((reference|ref) (letter|letters));
 <cprs>:College Principal Recommendation Scheme|Principal Recommendation Scheme|cprs;
 <transcript>:transcript|transcripts|report|reports|(academic (transcript|transcripts|report|reports));
+<adddrop>:add|drop|swap|((add|drop|swap) (class|classes|course|courses));
 //All templates
 <verb_to_be:template>: [=verb,be=]$(verb) to $(be);
 <ask_be:template>: [=ask,be=]$(ask) $(be);
@@ -64,4 +66,6 @@
 <how_withdraw>:how (to|can i|do i) [apply] withdraw [<article>] college<{@=withdrawcollege}>;
 //*C:how to apply transcript
 <how_transcript>:how (to|can i|do i) [apply] [for] [<article>] <transcript><{@=applytranscript}>;
+//*C:how to add class
+<how_adddrop>:how (to|can i|do i) <adddrop><{@=adddropclass}>;
 //All context grammars
