@@ -6,7 +6,7 @@
 	},
 	"noslot": {
 		"response": [
-			"***You may call XXXX-XXXX or email to XXXX@gmail.com for further enquiries."
+			"You may call XXXX-XXXX or email to XXXX@gmail.com for further enquiries."
 		],
 		"status": "True",
 		"return tag": {}

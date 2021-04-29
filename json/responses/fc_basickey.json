@@ -8,7 +8,7 @@
     },
     "noslot": {
         "response": [
-            "***ERROR:should not go here"
+            "ERROR:should not go here"
         ],
         "status": "True",
         "return tag": {}

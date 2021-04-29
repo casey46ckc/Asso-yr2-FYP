@@ -6,7 +6,7 @@
     },
     "noslot": {
         "response": [
-            "***You can apply non-jupas application when you are year 1 student,  but bare in mind that some universities may only consider senior level student and some might only consider junior level student.Which university you want to apply / have applied?"
+            "You can apply non-jupas application when you are year 1 student,  but bare in mind that some universities may only consider senior level student and some might only consider junior level student.Which university you want to apply / have applied?"
         ],
         "status": "False",
         "keyBoardLayout": [

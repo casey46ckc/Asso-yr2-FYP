@@ -6,14 +6,14 @@
     },
     "noslot": {
         "response": [
-            "***ERROR:should not go here"
+            "ERROR:should not go here"
         ],
         "status": "True",
         "return tag": {}
     },
     "cityu": {
         "response": [
-            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
             "WEEKDAY: XX:XX - XX:XX",
             "SATURDAY: XX:XX - XX:XX",
             "SUNDAY: XX:XX - XX:XX",
@@ -24,7 +24,7 @@
     },
     "bu": {
         "response": [
-            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
             "WEEKDAY: XX:XX - XX:XX",
             "SATURDAY: XX:XX - XX:XX",
             "SUNDAY: XX:XX - XX:XX",
@@ -35,7 +35,7 @@
     },
     "lingu": {
         "response": [
-            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
             "WEEKDAY: XX:XX - XX:XX",
             "SATURDAY: XX:XX - XX:XX",
             "SUNDAY: XX:XX - XX:XX",
@@ -46,7 +46,7 @@
     },
     "edu": {
         "response": [
-            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
             "WEEKDAY: XX:XX - XX:XX",
             "SATURDAY: XX:XX - XX:XX",
             "SUNDAY: XX:XX - XX:XX",
@@ -57,7 +57,7 @@
     },
     "polyu": {
         "response": [
-            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
             "WEEKDAY: XX:XX - XX:XX",
             "SATURDAY: XX:XX - XX:XX",
             "SUNDAY: XX:XX - XX:XX",
@@ -68,7 +68,7 @@
     },
     "ust": {
         "response": [
-            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
             "WEEKDAY: XX:XX - XX:XX",
             "SATURDAY: XX:XX - XX:XX",
             "SUNDAY: XX:XX - XX:XX",
@@ -79,7 +79,7 @@
     },
     "hku": {
         "response": [
-            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
             "WEEKDAY: XX:XX - XX:XX",
             "SATURDAY: XX:XX - XX:XX",
             "SUNDAY: XX:XX - XX:XX",
@@ -90,7 +90,7 @@
     },
     "cu": {
         "response": [
-            "***The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
             "WEEKDAY: XX:XX - XX:XX",
             "SATURDAY: XX:XX - XX:XX",
             "SUNDAY: XX:XX - XX:XX",
@@ -101,7 +101,7 @@
     },
     "others": {
         "response": [
-            "***We don't have certain information. Please accept our apologies."
+            "We don't have certain information. Please accept our apologies."
         ],
         "status": "True",
         "return tag": {}

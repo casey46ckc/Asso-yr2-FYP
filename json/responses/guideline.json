@@ -5,7 +5,7 @@
 		"slots": []
 	},
 	"noslot": {
-		"response":["***Spacebot can provide you the answers with the aspects of “SCHOOL FACILITIES AND SERVICES”, “NON-JUPAS APPLICATION”, “FINANCIAL SUPPORT”, “ONLINE PLATFORM ISSUES”, and “SCHOOL ADMINISTRATION AFFAIRS”. You can bring up questions related to these areas."],
+		"response":["Spacebot can provide you the answers with the aspects of “SCHOOL FACILITIES AND SERVICES”, “NON-JUPAS APPLICATION”, “FINANCIAL SUPPORT”, “ONLINE PLATFORM ISSUES”, and “SCHOOL ADMINISTRATION AFFAIRS”. You can bring up questions related to these areas."],
 		"status": "True",
 		"return tag": {}
 	}

@@ -8,14 +8,14 @@
 	},
 	"noslot": {
 		"response": [
-			"***ERROR:should not go here"
+			"ERROR:should not go here"
 		],
 		"status": "True",
 		"return tag": {}
 	},
 	"cityu": {
 		"response": [
-			"***You can apply from CityU non-jupas page. The link is as followed:",
+			"You can apply from CityU non-jupas page. The link is as followed:",
 			"https://www.admo.cityu.edu.hk/direct/"
 		],
 		"status": "True",
@@ -23,7 +23,7 @@
 	},
 	"bu": {
 		"response": [
-			"***You can apply from BU non-jupas page. The link is as followed:",
+			"You can apply from BU non-jupas page. The link is as followed:",
 			"https://admissions.hkbu.edu.hk/en/"
 		],
 		"status": "True",
@@ -31,7 +31,7 @@
 	},
 	"lingu": {
 		"response":  [
-			"***You can apply from LingU non-jupas page. The link is as followed:",
+			"You can apply from LingU non-jupas page. The link is as followed:",
 			"https://www.ln.edu.hk/admissions/ug/non-jupas/general-notes-to-applicants"
 		],
 		"status": "True",
@@ -39,7 +39,7 @@
 	},
 	"edu": {
 		"response":  [
-			"***You can apply from EdU non-jupas page. The link is as followed:",
+			"You can apply from EdU non-jupas page. The link is as followed:",
 			"https://www.eduhk.hk/onlineappl/"
 		],
 		"status": "True",
@@ -47,7 +47,7 @@
 	},
 	"polyu": {
 		"response":[
-			"***You can apply from PolyU non-jupas page. The link is as followed:",
+			"You can apply from PolyU non-jupas page. The link is as followed:",
 			"https://www38.polyu.edu.hk/eAdmission/index.do"
 		],
 		"status": "True",
@@ -55,7 +55,7 @@
 	},
 	"ust": {
 		"response":[
-			"***You can apply from UST non-jupas page. The link is as followed:",
+			"You can apply from UST non-jupas page. The link is as followed:",
 			"https://join.ust.hk/apply"
 		],
 		"status": "True",
@@ -63,7 +63,7 @@
 	},
 	"hku": {
 		"response":[
-			"***You can apply from HKU non-jupas page. The link is as followed:",
+			"You can apply from HKU non-jupas page. The link is as followed:",
 			"https://aal.hku.hk/admissions/international/admissions-information"
 		],
 		"status": "True",
@@ -71,7 +71,7 @@
 	},
 	"cu": {
 		"response":[
-			"***You can apply from CU non-jupas page. The link is as followed:",
+			"You can apply from CU non-jupas page. The link is as followed:",
 			"http://admission.cuhk.edu.hk/non-jupas-senior/application-details.html"
 		],
 		"status": "True",

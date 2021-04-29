@@ -8,14 +8,14 @@
     },
     "noslot": {
         "response": [
-            "***ERROR:should not go here"
+            "ERROR:should not go here"
         ],
         "status": "True",
         "return tag": {}
     },
     "kec": {
         "response": [
-            "***The KEC office hotline is 3762 2000.",
+            "The KEC office hotline is 3762 2000.",
             "Please contact them within their office hour:",
             "0830 - 1930 (Weekdays)",
             "0830 - 1730 (Saturday)",
@@ -26,7 +26,7 @@
     },
     "cita": {
         "response": [
-            "***The CITA office hotline is 3762 0110.",
+            "The CITA office hotline is 3762 0110.",
             "Please contact them within their office hour:",
             "0900 - 2000 (Weekdays)",
             "0900 - 1800 (Saturday)"
@@ -36,7 +36,7 @@
     },
     "iec": {
         "response": [
-            "***The IEC office hotline is 3762 0033.",
+            "The IEC office hotline is 3762 0033.",
             "Please contact them within their office hour:",
             "0830 - 1930 (Weekdays)",
             "0830 - 1730 (Saturday)"
@@ -46,7 +46,7 @@
     },
     "ftc": {
         "response": [
-            "***The FTC office hotline is 3762 0988.",
+            "The FTC office hotline is 3762 0988.",
             "Please contact them within their office hour:",
             "0830 - 1930 (Weekdays)"
         ],
@@ -55,7 +55,7 @@
     },
     "adc_unc": {
         "response": [
-            "***The ADC & UNC office hotline is 2910 7620.",
+            "The ADC & UNC office hotline is 2910 7620.",
             "Please contact them within their office hour:",
             "0830 - 1930 (Weekdays)",
             "0830 - 1730 (Saturday)"

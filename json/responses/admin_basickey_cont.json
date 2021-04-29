@@ -6,7 +6,7 @@
     },
     "noslot": {
         "response": [
-            "***ERROR:should not go here"
+            "ERROR:should not go here"
         ],
         "status": "True",
         "return tag": {}
@@ -15,7 +15,7 @@
         "response": [
             "You should follow the steps below to apply for a reference letter :",
             "1. Obtain prior consent of the College Lecturer whom you wish him / her to be your referee before submitting your application online.",
-            "2. Login to Learner Portal > My Resources > Community College> Student Self-service > My Future > Apply for Reference Letter",
+            "2. Login to Learner Portal > My Resources > Community College > Student Self-service > My Future > Apply for Reference Letter",
             "link: https://learner.hkuspace.hku.hk/lp/respportal/",
             "3. Use the function 'Apply for Reference Letter to support my University Application' and click 'Create my University Record(s)' to create the university application record(s).",
             "4. Click 'Apply for Reference Letter' to indicate which university you wish to submit a reference letter.",
@@ -26,7 +26,7 @@
     },
     "refletter+supportdoc": {
         "response": [
-            "1. Login to Learner Portal > My Resources > Community College> Student Self-service > My Future > Apply for Reference Letter",
+            "1. Login to Learner Portal > My Resources > Community College > Student Self-service > My Future > Apply for Reference Letter",
             "link: https://learner.hkuspace.hku.hk/lp/respportal/",
             "2. Use the function 'View Application Record(s) / Status' and click 'Covering Sheet' for details of checklist."
         ],
@@ -42,7 +42,7 @@
     },
     "refletter+status": {
         "response": [
-            "1. Login to Learner Portal > My Resources > Community College> Student Self-service > My Future > Apply for Reference Letter",
+            "1. Login to Learner Portal > My Resources > Community College > Student Self-service > My Future > Apply for Reference Letter",
             "link: https://learner.hkuspace.hku.hk/lp/respportal/",
             "2. Use the function 'Apply for Reference Letter to Support My University Application' and click 'View Application Record(s) / Status' to check the application status.",
             "**The 'Lecturer Notified' status will be shown after an email notification on your reference letter application has been sent to the College Lecturer concerned.",
@@ -77,7 +77,7 @@
             "provide the specified information via the function 'College Principal's Recommendation Scheme' by a",
             "stipulated deadline. Late and incomplete application will not be considered. (Applicable Period: January to February)",
             "",
-            "Login to Learner Portal > My Resources > Community College> Student Self-service > My Future > College Principal's Recommendation Scheme (HKU)",
+            "Login to Learner Portal > My Resources > Community College > Student Self-service > My Future > College Principal's Recommendation Scheme (HKU)",
             "link: https://learner.hkuspace.hku.hk/lp/respportal/"
         ],
         "status": "True",
@@ -85,7 +85,7 @@
     },
     "cprs+status": {
         "response": [
-            "1. Login to Learner Portal > My Resources > Community College> Student Self-service > My Future > College Principal's Recommendation Scheme (HKU)",
+            "1. Login to Learner Portal > My Resources > Community College > Student Self-service > My Future > College Principal's Recommendation Scheme (HKU)",
             "link: https://learner.hkuspace.hku.hk/lp/respportal/",
             "2. Use the function 'Apply for College Principal's Recommendation Scheme (HKU)' and click 'View Application Result' to check the result (usually in late-March)."
         ],
@@ -104,7 +104,7 @@
         "response": [
             "You should follow the procedures below :",
             "1. Write to myfuture@hkuspace.hku.hk to request for activation of the 'Withdraw study from the College' function, if you find that this function is not available in your MyFuture account.",
-            "Login to Learner Portal > My Resources > Community College> Student Self-service > My Future > Apply for withdrawal study from the College",
+            "Login to Learner Portal > My Resources > Community College > Student Self-service > My Future > Apply for withdrawal study from the College",
             "link: https://learner.hkuspace.hku.hk/lp/respportal/",
             "2. Click 'Withdraw study from the College'",
             "3. Update, if necessary and confirm your contact details",
@@ -126,7 +126,7 @@
     "transcript+am": {
         "response": [
             "You should follow the procedures below :",
-            "1. Login to Learner Portal > My Resources > Community College> Student Self-service > My Future > Apply for Transcript(s) and make payment online",
+            "1. Login to Learner Portal > My Resources > Community College > Student Self-service > My Future > Apply for Transcript(s) and make payment online",
             "link: https://learner.hkuspace.hku.hk/lp/respportal/",
             "",
             "User Guide for Online Transcript Application:",
@@ -139,6 +139,16 @@
         "response": [
             "If you want to know more, you may refer to this link:",
             "https://cc8.hkuspace.hku.hk/~sdcs/cgi-bin/des_faq.php"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "adddrop+procedures": {
+        "response": [
+            "You should follow the steps:",
+            "1. Login to Learner Portal > My Resources > Community College > Student Self-service > My Future > Course/Class Add/Drop/Swap Exercise",
+            "link: https://learner.hkuspace.hku.hk/lp/respportal/",
+            "2. Use the function 'Enter the Course/Class Add/Drop/Swap platform during open period of class add drop"
         ],
         "status": "True",
         "return tag": {}

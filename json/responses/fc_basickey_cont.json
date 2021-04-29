@@ -6,7 +6,7 @@
     },
     "noslot": {
         "response": [
-            "***ERROR:should not go here"
+            "ERROR:should not go here"
         ],
         "status": "True",
         "return tag": {}
@@ -31,7 +31,7 @@
     },
     "iec+contact": {
         "response": [
-            "***The IEC office hotline is 3762 0033.",
+            "The IEC office hotline is 3762 0033.",
             "Please contact them within their office hour:",
             "0830 - 1930 (Weekdays)",
             "0830 - 1730 (Saturday)"
@@ -60,7 +60,7 @@
     },
     "kec+contact": {
         "response": [
-            "***The office hotline of Kowloon East Campus is 3762 2000.",
+            "The office hotline of Kowloon East Campus is 3762 2000.",
             "Please contact them within their office hour:",
             "0830 - 1930 (Weekdays)",
             "0830 - 1730 (Saturday)",
@@ -94,11 +94,11 @@
     },
     "adc_unc+contact": {
         "response": [
-            "***The office hotline of Admiralty Learning Centre is 3761 1111.",
+            "The office hotline of Admiralty Learning Centre is 3761 1111.",
             "Please contact them within their office hour:",
             "0830 - 1930 (Weekdays)",
             "0830 - 1730 (Saturday)",
-            "***The office hotline of United Learning Centre is 2910 7600."
+            "The office hotline of United Learning Centre is 2910 7600."
         ],
         "status": "True",
         "return tag": {}
@@ -123,7 +123,7 @@
     },
     "cita+contact": {
         "response": [
-            "***The office hotline of CITA Learning Centre is 3762 0110.",
+            "The office hotline of CITA Learning Centre is 3762 0110.",
             "Please contact them within their office hour:",
             "0900 - 2000 (Weekdays)",
             "0900 - 1800 (Saturday)"
@@ -150,7 +150,7 @@
     },
     "ftc+contact": {
         "response": [
-            "***The office hotline of Fortress Tower Learning Centre is 3762 0988.",
+            "The office hotline of Fortress Tower Learning Centre is 3762 0988.",
             "Please contact them within their office hour:",
             "0830 - 1930 (Weekdays)"
         ],

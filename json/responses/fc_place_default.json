@@ -5,142 +5,142 @@
 		"slots": ["facilities"]
 	},
 	"noslot":{
-		"response": ["***"],
+		"response": [""],
 		"status": "True",
 		"return tag":{}
 	},	
 	"library":{
-		"response": ["***Yes, library & multi-media learning centre is on 4/F."],
+		"response": ["Yes, library & multi-media learning centre is on 4/F."],
 		"status": "True",
 		"return tag":{}
 	},
 	"lounge":{
-		"response":["***Yes, lounge & cyber station is on 3/F."],
+		"response":["Yes, lounge & cyber station is on 3/F."],
 		"status":"True",
 		"return tag":{}
 	},
     "commonroom":{
-		"response":["***Yes, common room is on 3/F."],
+		"response":["Yes, common room is on 3/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"studyroom":{
-		"response":["***There are 4 study rooms in KEC. They are KEC403, KEC603, KEC610, KEC708"],
+		"response":["There are 4 study rooms in KEC. They are KEC403, KEC603, KEC610, KEC708"],
 		"status":"True",
 		"return tag":{}
 	},
 	"discussionroom":{
-		"response":["***There are 4 discussion rooms in KEC. They are KEC201, KEC202, KEC203, KEC204"],
+		"response":["There are 4 discussion rooms in KEC. They are KEC201, KEC202, KEC203, KEC204"],
 		"status":"True",
 		"return tag":{}
 	},
 	"collegehall":{
-		"response":["***Yes, college hall is on G/F."],
+		"response":["Yes, college hall is on G/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"collegetheatre":{
-		"response":["***Yes, colllege theatre is on 1/F."],
+		"response":["Yes, colllege theatre is on 1/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"enrolmentcentre":{
-		"response":["***Yes, enrolment centre is on 1/F."],
+		"response":["Yes, enrolment centre is on 1/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"office":{
-		"response":["***Yes, campus office is on 2/F."],
+		"response":["Yes, campus office is on 2/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"comprm":{
-		"response":["***Yes, computer centre is on 3/F."],
+		"response":["Yes, computer centre is on 3/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"photocopyrm":{
-		"response":["***Yes, photocopying room is on 3/F."],
+		"response":["Yes, photocopying room is on 3/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"su":{
-		"response":["***Yes, student union office is on 3/F."],
+		"response":["Yes, student union office is on 3/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"socrm":{
-		"response":["***Yes, societies activities room is on 3/F."],
+		"response":["Yes, societies activities room is on 3/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"nurselab":{
-		"response":["***Yes, nursing skills laboratory is on 3/F."],
+		"response":["Yes, nursing skills laboratory is on 3/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"engvillage":{
-		"response":["***Yes, english village is on 4/F."],
+		"response":["Yes, english village is on 4/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"networklab":{
-		"response":["***Yes, network laboratory is on 4/F."],
+		"response":["Yes, network laboratory is on 4/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"intscilab":{
-		"response":["***Yes, integrated science laboratories are on 8/F."],
+		"response":["Yes, integrated science laboratories are on 8/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"scilab":{
-		"response":["***Yes, science laboratories are on 9/F."],
+		"response":["Yes, science laboratories are on 9/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"complab":{
-		"response":["***Yes, computer laboratories are on 9/F."],
+		"response":["Yes, computer laboratories are on 9/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"clinicalskillslab":{
-		"response":["***Yes, clinical skills laboratory is on 10/F."],
+		"response":["Yes, clinical skills laboratory is on 10/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"performartstu":{
-		"response":["***Yes, performing arts studio is on 10/F."],
+		"response":["Yes, performing arts studio is on 10/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"multipurstu":{
-		"response":["***Yes, multi-purpose studio is on 10/F."],
+		"response":["Yes, multi-purpose studio is on 10/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"vastu":{
-		"response":["***Yes, visual arts studio is on 10/F."],
+		"response":["Yes, visual arts studio is on 10/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"sdcscrm":{
-		"response":["***Yes, student development & counselling services consultation room is on 10/F."],
+		"response":["Yes, student development & counselling services consultation room is on 10/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"tecoff":{
-		"response":["***Yes, teacher offices are on 12-13/F."],
+		"response":["Yes, teacher offices are on 12-13/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"prinoff":{
-		"response":["***Yes, principal's office is on 13/F."],
+		"response":["Yes, principal's office is on 13/F."],
 		"status":"True",
 		"return tag":{}
 	},
 	"conrm":{
-		"response":["***Yes, conference room is on 13/F."],
+		"response":["Yes, conference room is on 13/F."],
 		"status":"True",
 		"return tag":{}
 	}

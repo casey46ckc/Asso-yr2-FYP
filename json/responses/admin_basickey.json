@@ -8,7 +8,7 @@
     },
     "noslot": {
         "response": [
-            "***ERROR:should not go here"
+            "ERROR:should not go here"
         ],
         "status": "True",
         "return tag": {}
@@ -77,6 +77,22 @@
         "keyBoardLayout": [
             ["apply method"],
             ["FAQs"]
+        ],
+        "return tag": {
+            "category": "admin",
+            "modifier": "admin_basickey_cont",
+            "slots": [
+                "keyword"
+            ]
+        }
+    },
+    "adddrop": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            ["procedures"]
         ],
         "return tag": {
             "category": "admin",

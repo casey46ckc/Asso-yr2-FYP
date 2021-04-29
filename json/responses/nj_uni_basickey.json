@@ -8,7 +8,7 @@
     },
     "noslot": {
         "response": [
-            "***ERROR:should not go here"
+            "ERROR:should not go here"
         ],
         "status": "True",
         "return tag": {}
@@ -183,7 +183,7 @@
     },
     "others": {
         "response": [
-            "***We don't have certain information. Please accept our apologies."
+            "We don't have certain information. Please accept our apologies."
         ],
         "status": "True",
         "return tag": {}

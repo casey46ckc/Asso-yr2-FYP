@@ -6,7 +6,7 @@
     },
     "noslot": {
         "response": [
-            "***Each university and programme may vary. Which programe and university you want to apply/ have applied?"
+            "Each university and programme may vary. Which programe and university you want to apply/ have applied?"
         ],
         "status": "False",
         "keyBoardLayout": [
