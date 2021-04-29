@@ -135,7 +135,7 @@ def start_handler(update: Update, context: CallbackContext):
 
 def help_handler(update: Update, context: CallbackContext):
     """Send a message when the command /help is issued."""
-    update.message.reply_text("Solution:\n" + "\n".join(help_message), reply_markup=reply_kb_start)
+    update.message.reply_text("Solution:\n" + "\n".join(help_message))
 
 def clSchedule_handler(update: Update, context: CallbackContext):
     """Send a message when the command /spacedule is issued."""
