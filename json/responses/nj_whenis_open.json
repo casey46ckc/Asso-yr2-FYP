@@ -6,7 +6,18 @@
     },
     "noslot": {
         "response": [
-            "***You can apply non-jupas application once it is open. Each university may vary. Which university you want to apply?"
+            ["City University of Hong Kong"],
+            ["Hong Kong Baptist University"],
+            ["Lingnan University"],
+            ["The Chinese University of Hong Kong"],
+            ["The Education University of Hong Kong"],
+            ["The Hong Kong Polytechnic University"],
+            ["The Hong Kong University of Science and Technology"],
+            ["The University of Hong Kong"],
+            ["Hang Seng University of Hong Kong"],
+            ["Hong Kong Shue Yan University"],
+            [ "The Open University of Hong Kong"],
+            ["Others"]
         ],
         "status": "False",
         "keyBoardLayout": "reply_kb_university",

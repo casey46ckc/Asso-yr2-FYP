@@ -9,7 +9,20 @@
             "***You can apply non-jupas application when you are year 1 student,  but bare in mind that some universities may only consider senior level student and some might only consider junior level student.Which university you want to apply / have applied?"
         ],
         "status": "False",
-        "keyBoardLayout": "reply_kb_university",
+        "keyBoardLayout": [
+            ["City University of Hong Kong"],
+            ["Hong Kong Baptist University"],
+            ["Lingnan University"],
+            ["The Chinese University of Hong Kong"],
+            ["The Education University of Hong Kong"],
+            ["The Hong Kong Polytechnic University"],
+            ["The Hong Kong University of Science and Technology"],
+            ["The University of Hong Kong"],
+            ["Hang Seng University of Hong Kong"],
+            ["Hong Kong Shue Yan University"],
+            [ "The Open University of Hong Kong"],
+            ["Others"]
+        ],
         "return tag": {
             "category": "nonjupas",
             "modifier": "yn_apply_year1_con",
