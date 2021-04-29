@@ -1,0 +1,16 @@
+{
+    "tag": {
+        "category": "admin",
+        "modifier": "bkdiscuss",
+        "slots": []
+    },
+    "noslot": {
+        "response": [
+            "You should follow the steps:",
+            "1. Login to Learner Portal > My Resources > Community College > Student Self-service > My Future > KEC Library Discussion Room Booking System",
+            "link: https://learner.hkuspace.hku.hk/lp/respportal/"
+        ],
+        "status": "True",
+        "return tag": {}
+    }
+}

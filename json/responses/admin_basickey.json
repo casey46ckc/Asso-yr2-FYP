@@ -101,5 +101,37 @@
                 "keyword"
             ]
         }
+    },
+    "locker": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            ["apply method"]
+        ],
+        "return tag": {
+            "category": "admin",
+            "modifier": "admin_basickey_cont",
+            "slots": [
+                "keyword"
+            ]
+        }
+    },
+    "bkdiscusrm": {
+        "response": [
+            "Please select what you want to ask?"
+        ],
+        "status": "False",
+        "keyBoardLayout": [
+            ["procedures"]
+        ],
+        "return tag": {
+            "category": "admin",
+            "modifier": "admin_basickey_cont",
+            "slots": [
+                "keyword"
+            ]
+        }
     }
 }

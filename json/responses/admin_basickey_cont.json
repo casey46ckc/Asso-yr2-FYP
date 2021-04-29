@@ -152,5 +152,23 @@
         ],
         "status": "True",
         "return tag": {}
+    },
+    "locker+am": {
+        "response": [
+            "You should follow the steps:",
+            "1. Login to Learner Portal > My Resources > Community College > Student Self-service > My Future > Locker Application",
+            "link: https://learner.hkuspace.hku.hk/lp/respportal/"
+        ],
+        "status": "True",
+        "return tag": {}
+    },
+    "bkdiscusrm+procedures": {
+        "response": [
+            "You should follow the steps:",
+            "1. Login to Learner Portal > My Resources > Community College > Student Self-service > My Future > KEC Library Discussion Room Booking System",
+            "link: https://learner.hkuspace.hku.hk/lp/respportal/"
+        ],
+        "status": "True",
+        "return tag": {}
     }
 }
