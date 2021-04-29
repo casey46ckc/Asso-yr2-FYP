@@ -69,6 +69,8 @@
 <hd>:hd|higher diploma|high dip;
 //All templates
 //All grammars
+//*C:contact us
+<contact_us_key>:(contact us)<{keyboardvalue=contact_us}>
 //*C:nonjupas deadline
 <deadline_key>:(nonjupas deadline)<{keyboardvalue=njdeadline}>;
 //*C:link

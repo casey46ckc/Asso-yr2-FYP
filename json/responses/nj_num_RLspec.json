@@ -13,89 +13,77 @@
     },
     "cityu": {
         "response": [
-            "The non-JUPAS application deadline of CityU is/are as followed:",
-            "Early round: 2020.11.15",
-            "Main round: 2021.01.04",
-            "You may refer to the following link for more details:",
-            "https://www.admo.cityu.edu.hk/direct/"
+            "The telephone of admission office is 3442 9094, and the office hours are as followed:",
+            "Monday - Friday: 9:15 am - 12:30 pm",
+            "                 1:45 pm - 5:15 pm",
+            "Saturday:        9:15 am - 12:00 noon",
+            "You can refer to https://www.admo.cityu.edu.hk/direct/ for more details."
         ],
         "status": "True",
         "return tag": {}
     },
     "bu": {
         "response": [
-            "The non-JUPAS application deadline of BU is/are as followed:",
-            "Early round: 2020.11.30",
-            "Main round: 2021.01.04",
-            "Extended round: 2021.05.31",
-            "You may refer to the following link for more details:",
-            "https://admissions.hkbu.edu.hk/en/"
+            "The telephone of admission office is 3411 2200, and the office hours are as followed:",
+            "Monday to Friday: 9:00 a.m. - 1:00 p.m. and 2:00 p.m. - 5:30 p.m.",
+            "Saturday, Sunday and Public Holidays: Closed",
+            "You can refer to https://admissions.hkbu.edu.hk/en/ for more details."
         ],
         "status": "True",
         "return tag": {}
     },
     "lingu": {
         "response": [
-            "The non-JUPAS application deadline of LingU is/are as followed:",
-            "Early round: 2020.12.07",
-            "Main round: 2021.05.17",
-            "Late round: 2021.07.30",
-            "You may refer to the following link for more details:",
-            "https://www.ln.edu.hk/admissions/ug/non-jupas/general-notes-to-applicants"
+            "The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "WEEKDAY: XX:XX - XX:XX",
+            "SATURDAY: XX:XX - XX:XX",
+            "SUNDAY: XX:XX - XX:XX",
+            "You can refer to https://www.ln.edu.hk/admissions/ug/non-jupas/general-notes-to-applicants for more details."
         ],
         "status": "True",
         "return tag": {}
     },
     "edu": {
         "response": [
-            "The non-JUPAS application deadline of EdU is/are as followed:",
-            "Main round: 2021.01.12",
-            "Late round: 2021.05.12",
-            "You may refer to the following link for more details:",
-            "https://www.eduhk.hk/onlineappl/"
+            "The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
+            "WEEKDAY: XX:XX - XX:XX",
+            "SATURDAY: XX:XX - XX:XX",
+            "SUNDAY: XX:XX - XX:XX",
+            "You can refer to https://www.eduhk.hk/onlineappl/ for more details."
         ],
         "status": "True",
         "return tag": {}
     },
     "polyu": {
         "response": [
-            "The non-JUPAS application deadline of PolyU is/are as followed:",
-            "Main round: 2021.02.08",
-            "You may refer to the following link for more details:",
-            "https://www38.polyu.edu.hk/eAdmission/index.do"
+            "Contact PolyU at ar.webapp@polyu.edu.hk",
+            "You can refer to https://www38.polyu.edu.hk/eAdmission/index.do for more details."
         ],
         "status": "True",
         "return tag": {}
     },
     "ust": {
         "response": [
-            "The non-JUPAS application deadline of UST is/are as followed:",
-            "Early round: 2020.11.20",
-            "Main round: 2021.01.14",
-            "You may refer to the following link for more details:",
-            "https://join.ust.hk/apply"
+            "The telephone of admission office is 2623 1118, and the office hours are as followed:",
+            "Mondays to Fridays: 9:00 am - 5:30 pm",
+            "Except Hong Kong Public Holidays",
+            "You can refer to https://join.ust.hk/apply for more details."
         ],
         "status": "True",
         "return tag": {}
     },
     "hku": {
         "response": [
-            "The non-JUPAS application deadline of HKU is/are as followed:",
-            "Early round: 2020.11.15",
-            "Main round: 2021.01.04",
-            "You may refer to the following link for more details:",
-            "https://aal.hku.hk/admissions/international/admissions-information"
+            "You can refer to https://admissions.hku.hk/contact-us for further enquiry."
         ],
         "status": "True",
         "return tag": {}
     },
     "cu": {
         "response": [
-            "The non-JUPAS application deadline of CU is/are as followed:",
-            "Early round: 2020.11.18",
-            "Main round: 2021.02.18",
-            "You may refer to the following link for more details:",
-            "http://admission.cuhk.edu.hk/non-jupas-senior/application-details.html"
+            "The telephone of admission office is 3943 1537 / 3943 8946, and the office hours are as followed:",
+            "Email: senioryear@cuhk.edu.hk",
+            "You can refer to http://admission.cuhk.edu.hk/non-jupas-senior/application-details.html for more details."
         ],
         "status": "True",
         "return tag": {}
