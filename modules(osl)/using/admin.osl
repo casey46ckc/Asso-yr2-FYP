@@ -14,6 +14,7 @@
     <cprs_word>|
     <withdraw_word>|
     <transcript_word>|
+    <adddrop_word>|
     <how_ref_letter>|
     <how_cprs>|
     <how_withdraw>|
@@ -31,7 +32,7 @@
 <ref_letter>:((reference|ref) (letter|letters));
 <cprs>:College Principal Recommendation Scheme|Principal Recommendation Scheme|cprs;
 <transcript>:transcript|transcripts|report|reports|(academic (transcript|transcripts|report|reports));
-<adddrop>:add|drop|swap|((add|drop|swap) (class|classes|course|courses));
+<adddrop>:add|drop|swap|((add|drop|swap) (class|classes|course|courses))|(add drop);
 //All templates
 <verb_to_be:template>: [=verb,be=]$(verb) to $(be);
 <ask_be:template>: [=ask,be=]$(ask) $(be);
@@ -58,6 +59,8 @@
 <withdraw_word>:(withdraw [<article>](college|school)|withdraw)<{keyword=withdraw}>;
 //*C:transcript
 <transcript_word>:<transcript{keyword=transcript}>;
+//*C:add
+<adddrop_word>:<adddrop{keyword=adddrop}>;
 //*C:how to apply ref letter
 <how_ref_letter>:how (to|can i|do i) apply [for] [<article>] <ref_letter><{@=ref_letter}>;
 //*C:how to apply cprs
