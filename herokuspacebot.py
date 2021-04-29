@@ -19,7 +19,7 @@ from nltk.corpus import stopwords
 from schedule.schedule import TheSemesterTimeSchedule, collect_result_V1, readClSchedule, codeValidity, getRank
 
 # initialize the greeting message for /start command
-start_message = []
+start_message = ['For new user, please press Guideline keyboard button to check the operation procedures.']
 
 # initialize the help message for /help command
 help_message = ['You may call 3762 2222 or email to ccad@hkuspace.hku.hk for further enquiries.']
@@ -131,11 +131,11 @@ def reply_handler(update: Update, context: CallbackContext):
 
 def start_handler(update: Update, context: CallbackContext):
     """Send a message when the command /start is issued."""
-    update.message.reply_text("Greetings! Welcome to spacebot", reply_markup=reply_kb_start)
+    update.message.reply_text("Greetings! Welcome to spacebot\n" + "\n".join(start_message), reply_markup=reply_kb_start)
 
 def help_handler(update: Update, context: CallbackContext):
     """Send a message when the command /help is issued."""
-    update.message.reply_text("Commands now supported:\n" + "\n".join(help_message), reply_markup=reply_kb_start)
+    update.message.reply_text("Solution:\n" + "\n".join(help_message), reply_markup=reply_kb_start)
 
 def clSchedule_handler(update: Update, context: CallbackContext):
     """Send a message when the command /spacedule is issued."""
