@@ -54,7 +54,7 @@
         "status": "False",
         "keyBoardLayout": [
             ["details"],
-            ["website"]
+            ["website."]
         ],
         "return tag": {
             "category": "finance",
