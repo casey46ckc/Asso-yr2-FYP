@@ -21,7 +21,7 @@
         "status": "True",
         "return tag": {}
     },
-    "fin_support+link": {
+    "fin_support+website": {
         "response": [
 			"You can get more information from:",
 			"1. FASP: https://www.wfsfaa.gov.hk/sfo/en/postsecondary/fasp/overview.htm",
@@ -30,7 +30,7 @@
         "status": "True",
         "return tag": {}
     },
-    "nlspst+details": {
+    "nlsps+details": {
         "response": [
             "Overview:",
             "The NLSPS is used to complement the Financial Assistance Scheme for Post-secondary Students (FASP) to provide loan(s) to eligible students to settle tuition fees of locally-accredited, self-financing full-time post-secondary education programmes at the level of associate degree, higher diploma or degree.",
@@ -42,7 +42,7 @@
         "status": "True",
         "return tag": {}
     },
-    "nlsps+link": {
+    "nlsps+website": {
         "response": [
 			"You can get more information from:",
 			"NLSPS: https://www.wfsfaa.gov.hk/sfo/en/postsecondary/nlsps/overview.htm"
@@ -60,7 +60,7 @@
         "status": "True",
         "return tag": {}
     },
-    "fasp+link": {
+    "fasp+website": {
         "response": [
 			"You can get more information from:",
             "FASP: https://www.wfsfaa.gov.hk/sfo/en/postsecondary/fasp/overview.htm"

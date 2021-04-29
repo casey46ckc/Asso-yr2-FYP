@@ -20,7 +20,7 @@
         "status": "False",
         "keyBoardLayout": [
             ["details"],
-            ["link"]
+            ["website"]
         ],
         "return tag": {
             "category": "finance",
@@ -37,7 +37,7 @@
         "status": "False",
         "keyBoardLayout": [
             ["details"],
-            ["link"]
+            ["website"]
         ],
         "return tag": {
             "category": "finance",
@@ -54,7 +54,7 @@
         "status": "False",
         "keyBoardLayout": [
             ["details"],
-            ["link"]
+            ["website"]
         ],
         "return tag": {
             "category": "finance",

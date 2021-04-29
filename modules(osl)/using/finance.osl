@@ -4,7 +4,7 @@
 !modifier <finance> : fs_method|fs_ask|fs_link;
 
 <finance>:<details_keyb>|
-    <link_keyb>|
+    <website_keyb>|
     <fasp_word>|
     <nlsps_word>|
     <fs_word>|
@@ -23,8 +23,8 @@
 //All grammars
 //*C:details
 <details_keyb>:details<{keyboardvalue=details}>;
-//*C:link
-<link_keyb>:link<{keyboardvalue=link}>;
+//*C:website
+<website_keyb>:website<{keyboardvalue=website}>;
 //*C:nlsps
 <nlsps_word>:<nlsps{keyword=nlsps}> [link];
 //*C:fasp
