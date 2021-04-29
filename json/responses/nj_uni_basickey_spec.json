@@ -148,7 +148,7 @@
         "status": "True",
         "return tag": {}
     },
-    "cityu+contact_us": {
+    "cityu+us_contact": {
         "response": [
             "The telephone of admission office is 3442 9094, and the office hours are as followed:",
             "Monday - Friday: 9:15 am - 12:30 pm",
@@ -159,7 +159,7 @@
         "status": "True",
         "return tag": {}
     },
-    "bu+contact_us": {
+    "bu+us_contact": {
         "response": [
             "The telephone of admission office is 3411 2200, and the office hours are as followed:",
             "Monday to Friday: 9:00 a.m. - 1:00 p.m. and 2:00 p.m. - 5:30 p.m.",
@@ -169,7 +169,7 @@
         "status": "True",
         "return tag": {}
     },
-    "lingu+contact_us": {
+    "lingu+us_contact": {
         "response": [
             "The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
             "WEEKDAY: XX:XX - XX:XX",
@@ -180,7 +180,7 @@
         "status": "True",
         "return tag": {}
     },
-    "edu+contact_us": {
+    "edu+us_contact": {
         "response": [
             "The telephone of admission office is [XXXX-XXXX], and the office hours are as followed:",
             "WEEKDAY: XX:XX - XX:XX",
@@ -191,7 +191,7 @@
         "status": "True",
         "return tag": {}
     },
-    "polyu+contact_us": {
+    "polyu+us_contact": {
         "response": [
             "Contact PolyU at ar.webapp@polyu.edu.hk",
             "You can refer to https://www38.polyu.edu.hk/eAdmission/index.do for more details."
@@ -199,7 +199,7 @@
         "status": "True",
         "return tag": {}
     },
-    "ust+contact_us": {
+    "ust+us_contact": {
         "response": [
             "The telephone of admission office is 2623 1118, and the office hours are as followed:",
             "Mondays to Fridays: 9:00 am - 5:30 pm",
@@ -209,14 +209,14 @@
         "status": "True",
         "return tag": {}
     },
-    "hku+contact_us": {
+    "hku+us_contact": {
         "response": [
             "You can refer to https://admissions.hku.hk/contact-us for further enquiry."
         ],
         "status": "True",
         "return tag": {}
     },
-    "cu+contact_us": {
+    "cu+us_contact": {
         "response": [
             "The telephone of admission office is 3943 1537 / 3943 8946, and the office hours are as followed:",
             "Email: senioryear@cuhk.edu.hk",

@@ -70,7 +70,7 @@
 //All templates
 //All grammars
 //*C:contact us
-<contact_us_key>:(contact us)<{keyboardvalue=contact_us}>
+<contact_us_key>:(contact us)<{keyboardvalue=us_contact}>;
 //*C:nonjupas deadline
 <deadline_key>:(nonjupas deadline)<{keyboardvalue=njdeadline}>;
 //*C:link
