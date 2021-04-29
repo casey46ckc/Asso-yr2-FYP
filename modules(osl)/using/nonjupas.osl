@@ -42,7 +42,8 @@
     <whenis_deadline_cu>|
     <apply_multi_nj_ask>|
     <deadline_key>|
-    <link_key>;
+    <link_key>|
+    <enquiry_key>;
 //All grammar-event
 
 //All context grammar-event
@@ -69,8 +70,8 @@
 <hd>:hd|higher diploma|high dip;
 //All templates
 //All grammars
-//*C:contact us
-<contact_us_key>:(contact us)<{keyboardvalue=us_contact}>;
+//*C:enquiry method
+<enquiry_key>:(enquiry method)<{keyboardvalue=em}>;
 //*C:nonjupas deadline
 <deadline_key>:(nonjupas deadline)<{keyboardvalue=njdeadline}>;
 //*C:link
