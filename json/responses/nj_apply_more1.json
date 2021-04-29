@@ -26,7 +26,7 @@
         "return tag": {
             "category": "nonjupas",
             "modifier": "yn_apply_morethan1_con",
-            "slots": ["university"]
+            "slots": []
         }
     }
 }
