@@ -1,61 +1,420 @@
 !slot <campus:internal.'{"ref":["地點"]}'>;
-!slot <office:internal.'{"ref":["地點"]}'>;
+!slot <officeslot:internal.'{"ref":["地點"]}'>;
 !slot <facilities:internal.'{"ref":["地點"]}'>;
+!slot <keyboardvalue:internal.'{"ref":["noun"]}'>;
 !intention <facilities>;
-!modifier <facilities> : contact|place;
-!modifier <facilities> : contact|place;
+!modifier <facilities> : contact|place|officehr;
 
-<facilities>:<contact_place2>|
-    <facilities_place_1>|
-    <facilities_place_3>|
+<facilities>:<fc_where_studyrm_kec>|
+    <fc_where_lib_kec>|
+    <fc_where_cmrm_default>|
+    <fc_whichfhas_lounge>|
+    <fc_where_collegehall_kec>|
+    <fc_where_collegetheatre_kec>|
+    <fc_where_enrolmentcentre_kec>|
+    <fc_where_office_kec>|
+    <fc_where_compcentre_kec>|
+    <fc_where_photocopyrm_kec>|
+    <fc_where_su_kec>|
+    <fc_where_socrm_kec>|
+    <fc_where_nurselab_kec>|
+    <fc_where_engvillage_kec>|
+    <fc_where_intscilab_kec>|
+    <fc_where_scilab_kec>|
+    <fc_where_complab_kec>|
+    <fc_where_clinicallab_kec>|
+    <fc_where_performartstu_kec>|
+    <fc_where_multipurstu_kec>|
+    <fc_where_vastu_kec>|
+    <fc_where_sdcscrm_kec>|
+    <fc_where_tecoff_kec>|
+    <fc_where_prinoff_kec>|
+    <fc_where_conrm_kec>|
+    <fc_where_collegehall_default>|
+    <fc_where_collegetheatre_default>|
+    <fc_where_enrolmentcentre_default>|
+    <fc_where_office_default>|
+    <fc_where_compcentre_default>|
+    <fc_where_photocopyrm_default>|
+    <fc_where_su_default>|
+    <fc_where_socrm_default>|
+    <fc_where_nurselab_default>|
+    <fc_where_engvillage_default>|
+    <fc_where_intscilab_default>|
+    <fc_where_scilab_default>|
+    <fc_where_complab_default>|
+    <fc_where_clinicallab_default>|
+    <fc_where_performartstu_default>|
+    <fc_where_multipurstu_default>|
+    <fc_where_vastu_default>|
+    <fc_where_sdcscrm_default>|
+    <fc_where_tecoff_default>|
+    <fc_where_prinoff_default>|
+    <fc_where_conrm_default>|
+    <contact_kec>|
+    <contact_cita>|
+    <contact_iec>|
+    <contact_ftc>|
+    <contact_adc_unc>|
+    <contact2_kec>|
+    <contact2_cita>|
+    <contact2_iec>|
+    <contact2_ftc>|
+    <contact2_adc_unc>|
+    <officehr_kec>|
+    <officehr_cita>|
+    <officehr_iec>|
+    <officehr_ftc>|
+    <officehr_adc_unc>|
+    <officehr2_kec>|
+    <officehr2_cita>|
+    <officehr2_iec>|
+    <officehr2_ftc>|
+    <officehr2_adc_unc>|
+    <fc_whichfhas_cmrm>|
+    <fc_where_lounge_kec>|
+    <fc_tellme_lounge>|
+    <fc_whichfhas_studyrm>|
+    <fc_tellme_cmrm>|
+    <fc_where_discussionrm_kec>|
+    <fc_tellme_discussionrm>|
+    <fc_tellme_studyrm>|
+    <fc_where_studyrm_default>|
+    <fc_where_discussionrm_default>|
+    <fc_where_lib_default>|
     <campus_contact>|
-    <facilities_place5>|
-    <facilities_place4>|
-    <fundamental_test>;
+    <fc_whichfhas_discussionrm>|
+    <fc_whichfhas_lib>|
+    <fc_where_lounge_default>|
+    <fc_tellme_lib>|
+    <fc_where_cmrm_kec>|
+    <lib_key>|
+    <cmroom_small_key>|
+    <iec_key>|
+    <kec_key>|
+    <adc_unc_key>|
+    <cita_key>|
+    <ftc_key>|
+    <discussionrm_key>|
+    <cmroom_big_key>|
+    <studyrm_key>|
+    <collegehall_key>|
+    <collegetheatre_key>|
+    <enrolmentcentre_key>|
+    <office_term_key>|
+    <compcentre_key>|
+    <photocopyrm_key>|
+    <nurselab_key>|
+    <su_key>|
+    <socrm_key>|
+    <engvillage_key>|
+    <netlab_key>|
+    <intscilab_key>|
+    <scilab_key>|
+    <complab_key>|
+    <clinicallab_key>|
+    <performartstu_key>|
+    <multipurstu_key>|
+    <vastu_key>|
+    <sdcscrm_key>|
+    <tecoff_key>|
+    <prinoff_key>|
+    <conrm_key>|
+    <location_keyboard>|
+    <contact_keyboard>|
+    <openhr_keyboard>|
+    <officehr_keyboard>;
 //All grammar-event
 
 //All context grammar-event
 
 //All rules
-<cmroom_細>:Lounge Room|細 com|細 common|Lounge rm|細common|細com;
+<cmroom_細>:Lounge Room|細 com|細 common|Lounge rm|細common|細com|lounge|student lounge;
+<be>:be|is|am|are|was|were;
 <lib>:Library|Lib|Libra|圖書館;
 <iec>:Island East Campus|IEC;
 <kec>:KEC|Kowloon East Campus;
-<adc_unc>:(Admiralty Centre ('&'|and) United Centre)|(ADC (and|'&') UNC);
-<facilities_in_kec>:Discussion Room|Computer Lab|<CMRoom_大>|<CMRoom_細>|<Lib>|Study Room;
+<facilities_in_kec>:Discussion Room|Computer Lab|<CMRoom_大>|<CMRoom_細>|<Lib>|Study Room|study rooms;
+<adc_unc>:(admiralty centre ('&'|and) united centre)|(adc (and|'&') unc)|adc_unc;
 <have_has>:have|had|has;
-<what_is>:What is;
+<cita>:Clothing Industry Training Authority|Clothing Industry Training Authority Learning Centre|Clothing Industry Training Authority Learning Center|CITA Learning Centre|CITA Learning Center|CITA;
+<what_be>:What (is|are|am|was|were);
 <ftc>:Fortress Tower Centre|FTC|Fortress Tower Center;
+<discussionrm>:discussion room|discussion rm|discuss room|discuss rm;
 <contact>:contact' '[detail|details|number];
 <cmroom_大>:Common Room|大 com|大common|cm rm|cm room|cmrm|com room|com rm;
 <request_chi>:(我(想|[需]要)[知|知道|了解])|[話|講[畀|比|俾]]我知;
-<article>:the;
+<article>:the|a|an;
 <campus_list>:<KEC>|<CITA>|<FTC>|<IEC>|<ADC_UNC>;
+<studyrm>:study room|study rooms;
 <how_to_contact>:(How can I (get [<article>] <contact> of|[get [to]] <contact> to))|How to <contact>;
-<cita>:Clothing Industry Training Authority|CITA;
-<where_beginning>:Where is;
+<where_beginning>:Where is|Where are;
 <request_eng>:(I want to [ask|know])|Tell me [[more ]about];
+<office_hr>:office hour|office hr|operating hour|operating hr;
+<collegehall>:college hall|hall|collegehall;
+<collegetheatre>:collegetheatre|college theatre|theatre;
+<enrolmentcentre>:(enrolment (centre|center))|(enrol (centre|center));
+<office_term>:office|校務處;
+<compcentre>:((computer|comp) (centre|center|room|rm|rooms|rms));
+<photocopyrm>:((photocopy|photocopying|printing) (room|rm|rooms|rms));
+<su>:su|su office|student union|student union office; 
+<socrm>:((soc|society) (rm|room|rms|rooms|房))|(society activities (rm|room|rms|rooms));
+<nurselab>:((nursing|nurse) (lab|laboratory|labs|laboratories))|nursing skills laboratory;
+<engvillage>:((english|eng) village);
+<netlab>:((network|net) (lab|laboratory|labs|laboratories));
+<intscilab>:((int|integrated) (sci|science) (lab|labs|laboratory|laboratories));
+<scilab>:((sci|science) (lab|labs|laboratory|laboratories));
+<complab>:((comp|computer) (lab|labs|laboratory|laboratories));
+<clinicallab>:(clinical (lab|labs|laboratory|laboratories))|(clinical skills (lab|labs|laboratory|laboratories));
+<performartstu>:((perform|performing) (art|arts) (stu|studio|studios)); 
+<multipurstu>:(multi purpose (stu|studio|studios));
+<vastu>:(visual (art|arts) (stu|studio|studios))|(va (stu|studio|studios));
+<sdcscrm>:sdcscrm|(student development (and|'&') counselling services consultation (room|rooms));
+<tecoff>:((teacher|teachers) (office|offices));
+<prinoff>:(principal (office|offices));
+<conrm>:((conference|conferencing) (rm|room|rms|rooms));
+<openhr_key>:((opening|open) (hour|hours|hr|hrs));
 //All templates
 <ask_be:template>: [=ask,be=]$(ask) $(be);
 <verb_to_be:template>: [=verb,be=]$(verb) to $(be);
 //All grammars
-//*C:Tell me the contact of KEC
-<contact_place2>:<?head()><request_eng>[<article>]<contact>of<campus_list{office=$}><{@=contact}>[Office];
-//*C:where is the library
-//*C:where is the common room
+//*C:office hr
+<officehr_keyboard>:(office hr)<{keyboardvalue=officehr}>;
+//*C:location
+<location_keyboard>:location<{keyboardvalue=location}>;
+//*C:contact
+<contact_keyboard>:contact<{keyboardvalue=contact}>;
+//*C:opening hr
+<openhr_keyboard>:(opening hr)<{keyboardvalue=openhr}>;
+//*C:lib
+<lib_key>:<lib{facilities=lib}>;
+//*C:細 com
+<cmroom_small_key>:<cmroom_細{facilities=small_com}>;
+//*C:iec
+<iec_key>:<iec{facilities=iec}>;
+//*C:kec
+<kec_key>:<kec{facilities=kec}>;
+//*C:adc_unc
+<adc_unc_key>:<adc_unc{facilities=adc_unc}>;
+//*C:cita
+<cita_key>:<cita{facilities=cita}>;
+//*C:ftc
+<ftc_key>:<ftc{facilities=ftc}>;
+//*C:discussion room
+<discussionrm_key>:<discussionrm{facilities=discussionrm}>;
+//*C:大 com
+<cmroom_big_key>:<cmroom_大{facilities=big_com}>;
+//*C:study room
+<studyrm_key>:<studyrm{facilities=study_room}>;
+//*C:hall
+<collegehall_key>:<collegehall{facilities=hall}>;
+//*C:theatre
+<collegetheatre_key>:<collegetheatre{facilities=college_theatre}>;
+//*C:enrolment centre
+<enrolmentcentre_key>:<enrolmentcentre{facilities=enrolcentre}>;
+//*C:office
+<office_term_key>:<office_term{facilities=office}>;
+//*C:computer centre
+<compcentre_key>:<compcentre{facilities=computer_centre}>;
+//*C:photocopy room
+<photocopyrm_key>:<photocopyrm{facilities=photocopyrm}>;
+//*C:su
+<su_key>:<su{facilities=su}>;
+//*C:soc room
+<socrm_key>:<socrm{facilities=soc_room}>;
+//*C:nurse lab
+<nurselab_key>:<nurselab{facilities=nurse_lab}>;
+//*C:english village
+<engvillage_key>:<engvillage{facilities=eng_village}>;
+//*C:network lab
+<netlab_key>:<netlab{facilities=netlab}>;
+//*C:integrated science lab
+<intscilab_key>:<intscilab{facilities=int_scilab}>;
+//*C:science lab
+<scilab_key>:<scilab{facilities=sci_lab}>;
+//*C:computer lab
+<complab_key>:<complab{facilities=comp_lab}>;
+//*C:clinical lab
+<clinicallab_key>:<clinicallab{facilities=clinical_lab}>;
+//*C:perform art studio
+<performartstu_key>:<performartstu{facilities=perform_art_stu}>;
+//*C:multi purpose studio
+<multipurstu_key>:<multipurstu{facilities=multi_pur_stu}>;
+//*C:visual art studio
+<vastu_key>:<vastu{facilities=va_stu}>;
+//*C:sdcscrm
+<sdcscrm_key>:<sdcscrm{facilities=sdcscrm}>;
+//*C:teacher office
+<tecoff_key>:<tecoff{facilities=teach_office}>;
+//*C:principal office
+<prinoff_key>:<prinoff{facilities=prin_office}>;
+//*C:conference room
+<conrm_key>:<conrm{facilities=conference_room}>;
+//*C:where is conference room in kec
+<fc_where_conrm_kec>:<?head()><where_beginning>[<article>]<conrm{facilities=conrm}> in <kec{campus=kec}><{@=place}>;
+//*C:where is principal office in kec
+<fc_where_prinoff_kec>:<?head()><where_beginning>[<article>]<prinoff{facilities=prinoff}> in <kec{campus=kec}><{@=place}>;
+//*C:where is teacher offices in kec
+<fc_where_tecoff_kec>:<?head()><where_beginning>[<article>]<tecoff{facilities=tecoff}> in <kec{campus=kec}><{@=place}>;
+//*C:where is sdcscrm in kec
+<fc_where_sdcscrm_kec>:<?head()><where_beginning>[<article>]<sdcscrm{facilities=sdcscrm}> in <kec{campus=kec}><{@=place}>;
+//*C:where is va stu in kec
+<fc_where_vastu_kec>:<?head()><where_beginning>[<article>]<vastu{facilities=vastu}> in <kec{campus=kec}><{@=place}>;
+//*C:where is multi purpose stu in kec
+<fc_where_multipurstu_kec>:<?head()><where_beginning>[<article>]<multipurstu{facilities=multipurstu}> in <kec{campus=kec}><{@=place}>;
+//*C:where is perform art stu in kec
+<fc_where_performartstu_kec>:<?head()><where_beginning>[<article>]<performartstu{facilities=performartstu}> in <kec{campus=kec}><{@=place}>;
+//*C:where is clinical lab in kec
+<fc_where_clinicallab_kec>:<?head()><where_beginning>[<article>]<clinicallab{facilities=clinicallab}> in <kec{campus=kec}><{@=place}>;
+//*C:where is comp lab in kec
+<fc_where_complab_kec>:<?head()><where_beginning>[<article>]<complab{facilities=complab}> in <kec{campus=kec}><{@=place}>;
+//*C:where is sci lab in kec
+<fc_where_scilab_kec>:<?head()><where_beginning>[<article>]<scilab{facilities=scilab}> in <kec{campus=kec}><{@=place}>;
+//*C:where is int sci lab in kec
+<fc_where_intscilab_kec>:<?head()><where_beginning>[<article>]<intscilab{facilities=intscilab}> in <kec{campus=kec}><{@=place}>;
+//*C:where is eng village in kec
+<fc_where_engvillage_kec>:<?head()><where_beginning>[<article>]<engvillage{facilities=engvillage}> in <kec{campus=kec}><{@=place}>;
+//*C:where is nurse lab in kec
+<fc_where_nurselab_kec>:<?head()><where_beginning>[<article>]<nurselab{facilities=nurselab}> in <kec{campus=kec}><{@=place}>;
+//*C:where is soc rm in kec
+<fc_where_socrm_kec>:<?head()><where_beginning>[<article>]<socrm{facilities=socrm}> in <kec{campus=kec}><{@=place}>;
+//*C:where is su in kec
+<fc_where_su_kec>:<?head()><where_beginning>[<article>]<su{facilities=su}> in <kec{campus=kec}><{@=place}>;
+//*C:where is photocopy rm in kec
+<fc_where_photocopyrm_kec>:<?head()><where_beginning>[<article>]<photocopyrm{facilities=photocopyrm}> in <kec{campus=kec}><{@=place}>;
+//*C:where is comp centre in kec
+<fc_where_compcentre_kec>:<?head()><where_beginning>[<article>]<compcentre{facilities=compcentre}> in <kec{campus=kec}><{@=place}>;
+//*C:where is office in kec
+<fc_where_office_kec>:<?head()><where_beginning>[<article>]<office_term{facilities=office}> in <kec{campus=kec}><{@=place}>;
+//*C:where is enrol centre in kec
+<fc_where_enrolmentcentre_kec>:<?head()><where_beginning>[<article>]<enrolmentcentre{facilities=enrolment centre}> in <kec{campus=kec}><{@=place}>;
+//*C:where is theatre in kec
+<fc_where_collegetheatre_kec>:<?head()><where_beginning>[<article>]<collegetheatre{facilities=college theatre}> in <kec{campus=kec}><{@=place}>;
+//*C:where is hall in kec
+<fc_where_collegehall_kec>:<?head()><where_beginning>[<article>]<collegehall{facilities=college hall}> in <kec{campus=kec}><{@=place}>;
+//*C:where is discuss rm in kec
+<fc_where_discussionrm_kec>:<?head()><where_beginning>[<article>]<discussionrm{facilities=discussion room}> in <kec{campus=kec}><{@=place}>;
+//*C:where is study room in kec
+<fc_where_studyrm_kec>:<?head()><where_beginning>[<article>]<studyrm{facilities=study room}> in <kec{campus=kec}><{@=place}>;
+//*C:where is common room in kec
+<fc_where_cmrm_kec>:<?head()><where_beginning>[<article>]<cmroom_大{facilities=common room}> in <kec{campus=kec}><{@=place}>;
+//*C:where is lounge in kec
+<fc_where_lounge_kec>:<?head()><where_beginning>[<article>]<cmroom_細{facilities=lounge}> in <kec{campus=kec}><{@=place}>;
+//*C:where is lib in kec
+<fc_where_lib_kec>:<?head()><where_beginning>[<article>]<lib{facilities=library}> in <kec{campus=kec}><{@=place}>;
+//*C:where is conference room 
+<fc_where_conrm_default>:<?head()><where_beginning>[<article>]<conrm{facilities=conrm}><{@=place}>;
+//*C:where is principal office 
+<fc_where_prinoff_default>:<?head()><where_beginning>[<article>]<prinoff{facilities=prinoff}><{@=place}>;
+//*C:where is teacher offices 
+<fc_where_tecoff_default>:<?head()><where_beginning>[<article>]<tecoff{facilities=tecoff}><{@=place}>;
+//*C:where is sdcscrm 
+<fc_where_sdcscrm_default>:<?head()><where_beginning>[<article>]<sdcscrm{facilities=sdcscrm}><{@=place}>;
+//*C:where is va stu 
+<fc_where_vastu_default>:<?head()><where_beginning>[<article>]<vastu{facilities=vastu}><{@=place}>;
+//*C:where is multi purpose stu 
+<fc_where_multipurstu_default>:<?head()><where_beginning>[<article>]<multipurstu{facilities=multipurstu}><{@=place}>;
+//*C:where is perform art stu 
+<fc_where_performartstu_default>:<?head()><where_beginning>[<article>]<performartstu{facilities=performartstu}><{@=place}>;
+//*C:where is clinical lab 
+<fc_where_clinicallab_default>:<?head()><where_beginning>[<article>]<clinicallab{facilities=clinicallab}><{@=place}>;
+//*C:where is comp lab 
+<fc_where_complab_default>:<?head()><where_beginning>[<article>]<complab{facilities=complab}><{@=place}>;
+//*C:where is sci lab 
+<fc_where_scilab_default>:<?head()><where_beginning>[<article>]<scilab{facilities=scilab}><{@=place}>;
+//*C:where is int sci lab 
+<fc_where_intscilab_default>:<?head()><where_beginning>[<article>]<intscilab{facilities=intscilab}><{@=place}>;
+//*C:where is eng village 
+<fc_where_engvillage_default>:<?head()><where_beginning>[<article>]<engvillage{facilities=engvillage}><{@=place}>;
+//*C:where is nurse lab 
+<fc_where_nurselab_default>:<?head()><where_beginning>[<article>]<nurselab{facilities=nurselab}><{@=place}>;
+//*C:where is soc rm 
+<fc_where_socrm_default>:<?head()><where_beginning>[<article>]<socrm{facilities=socrm}><{@=place}>;
+//*C:where is su 
+<fc_where_su_default>:<?head()><where_beginning>[<article>]<su{facilities=su}><{@=place}>;
+//*C:where is photocopy rm 
+<fc_where_photocopyrm_default>:<?head()><where_beginning>[<article>]<photocopyrm{facilities=photocopyrm}><{@=place}>;
+//*C:where is comp centre 
+<fc_where_compcentre_default>:<?head()><where_beginning>[<article>]<compcentre{facilities=compcentre}><{@=place}>;
+//*C:where is office 
+<fc_where_office_default>:<?head()><where_beginning>[<article>]<office_term{facilities=office}><{@=place}>;
+//*C:where is enrol centre 
+<fc_where_enrolmentcentre_default>:<?head()><where_beginning>[<article>]<enrolmentcentre{facilities=enrolment centre}><{@=place}>;
+//*C:where is theatre 
+<fc_where_collegetheatre_default>:<?head()><where_beginning>[<article>]<collegetheatre{facilities=college theatre}><{@=place}>;
+//*C:where is hall 
+<fc_where_collegehall_default>:<?head()><where_beginning>[<article>]<collegehall{facilities=college hall}><{@=place}>;
+//*C:where is discuss rm
+<fc_where_discussionrm_default>:<?head()><where_beginning>[<article>]<discussionrm{facilities=discussion room}><{@=place}>;
+//*C:where is study room
+<fc_where_studyrm_default>:<?head()><where_beginning>[<article>]<studyrm{facilities=study room}><{@=place}>;
 //*C:where is common room
-//*A:nice try
-<facilities_place_1>:<?head()><where_beginning>[<article>]<facilities_in_kec{facilities=$}><{@=place}>;
-//*C:where the library is
-//*C:Tell me where lib is
-<facilities_place_3>:[<request_eng>] (where|which floor) [<article>] <facilities_in_kec{facilities=$}><{@=place}> is;
-//*C:How can I contact to KEC
+<fc_where_cmrm_default>:<?head()><where_beginning>[<article>]<cmroom_大{facilities=common room}><{@=place}>;
+//*C:where is lounge
+<fc_where_lounge_default>:<?head()><where_beginning>[<article>]<cmroom_細{facilities=lounge}><{@=place}>;
+//*C:where is lib
+<fc_where_lib_default>:<?head()><where_beginning>[<article>]<lib{facilities=library}><{@=place}>;
+//*C:which floor has lounge
+<fc_whichfhas_lounge>:(Which floor)<have_has><cmroom_細{facilities=lounge}><{@=place}>;
+//*C:tell me the office hr of adc & unc
+<officehr2_adc_unc>:<?head()><request_eng>[<article>]<office_hr>of<adc_unc{officeslot=adc_unc}>[office]<{@=officehr}>;
+//*C:tell me the office hr of ftc
+<officehr2_ftc>:<?head()><request_eng>[<article>]<office_hr>of<ftc{officeslot=ftc}>[office]<{@=officehr}>;
+//*C:tell me the office hr of iec
+<officehr2_iec>:<?head()><request_eng>[<article>]<office_hr>of<iec{officeslot=iec}>[office]<{@=officehr}>;
+//*C:tell me the office hr of cita
+<officehr2_cita>:<?head()><request_eng>[<article>]<office_hr>of<cita{officeslot=cita}>[office]<{@=officehr}>;
+//*C:tell me the office hr of kec
+<officehr2_kec>:<?head()><request_eng>[<article>]<office_hr>of<kec{officeslot=kec}>[office]<{@=officehr}>;
+//*C:what is the office hr of adc & unc
+<officehr_adc_unc>:<?head()><what_be>[<article>]<office_hr>of<adc_unc{officeslot=adc_unc}>[office]<{@=officehr}>;
+//*C:what is the office hr of ftc
+<officehr_ftc>:<?head()><what_be>[<article>]<office_hr>of<ftc{officeslot=ftc}>[office]<{@=officehr}>;
+//*C:what is the office hr of iec
+<officehr_iec>:<?head()><what_be>[<article>]<office_hr>of<iec{officeslot=iec}>[office]<{@=officehr}>;
+//*C:what is the office hr of cita
+<officehr_cita>:<?head()><what_be>[<article>]<office_hr>of<cita{officeslot=cita}>[office]<{@=officehr}>;
+//*C:what is the office hr of kec
+<officehr_kec>:<?head()><what_be>[<article>]<office_hr>of<kec{officeslot=kec}>[office]<{@=officehr}>;
+//*C:what is the contact of adc & unc
+<contact2_adc_unc>:<?head()><what_be>[<article>]<contact>of<adc_unc{officeslot=adc_unc}>[office]<{@=contact}>;
+//*C:what is the contact of ftc
+<contact2_ftc>:<?head()><what_be>[<article>]<contact>of<ftc{officeslot=ftc}>[office]<{@=contact}>;
+//*C:what is the contact of iec
+<contact2_iec>:<?head()><what_be>[<article>]<contact>of<iec{officeslot=iec}>[office]<{@=contact}>;
+//*C:what is the contact of cita
+<contact2_cita>:<?head()><what_be>[<article>]<contact>of<cita{officeslot=cita}>[office]<{@=contact}>;
+//*C:what is the contact of kec
+<contact2_kec>:<?head()><what_be>[<article>]<contact>of<kec{officeslot=kec}>[office]<{@=contact}>;
+//*C:Tell me the contact of adc & unc
+<contact_adc_unc>:<?head()><request_eng>[<article>]<contact>of<adc_unc{officeslot=adc_unc}>[office]<{@=contact}>;
+//*C:Tell me the contact of ftc
+<contact_ftc>:<?head()><request_eng>[<article>]<contact>of<ftc{officeslot=ftc}>[office]<{@=contact}>;
+//*C:Tell me the contact of iec
+<contact_iec>:<?head()><request_eng>[<article>]<contact>of<iec{officeslot=iec}>[office]<{@=contact}>;
+//*C:Tell me the contact of cita
+<contact_cita>:<?head()><request_eng>[<article>]<contact>of<cita{officeslot=cita}>[office]<{@=contact}>;
+//*C:Tell me the contact of kec
+<contact_kec>:<?head()><request_eng>[<article>]<contact>of<kec{officeslot=kec}>[office]<{@=contact}>;
+//*C:which floor has common room
+<fc_whichfhas_cmrm>:(Which floor)<have_has><cmroom_大{facilities=common room}><{@=place}>;
+//*C:Tell me where lounge is
+<fc_tellme_lounge>:[<request_eng>] (where|which floor) [<article>] <cmroom_細{facilities=lounge}><be><{@=place}>;
+//*C:which floor has study room
+<fc_whichfhas_studyrm>:(Which floor)<have_has><studyrm{facilities=study room}><{@=place}>;
+//*C:Tell me where common room is
+<fc_tellme_cmrm>:[<request_eng>] (where|which floor) [<article>] <cmroom_大{facilities=common room}><be><{@=place}>;
+//*C:Tell me where discuss rm is
+<fc_tellme_discussionrm>:[<request_eng>] (where|which floor) [<article>] <discussionrm{facilities=discussion room}><be><{@=place}>;
+//*C:Tell me where study room is
+<fc_tellme_studyrm>:[<request_eng>] (where|which floor) [<article>] <studyrm{facilities=study room}><be><{@=place}>;
 //*C:How can I get contact to the IEC
-<campus_contact>:<?head()><How_to_contact>[<article>[Office of]]<campus_list{office=$}><{@=contact}>;
-//*C:Which floor cm rm belongs to
-<facilities_place5>:Which floor[<article>]<facilities_in_kec{facilities=$}><{@=place}>belongs to;
+//*C:How can I contact to KEC
+<campus_contact>:<?head()><How_to_contact>[<article>[Office of]]<campus_list{officeslot=$}><{@=contact}>;
+//*C:which floor has discuss rm
+<fc_whichfhas_discussionrm>:(Which floor)<have_has><discussionrm{facilities=discussion room}><{@=place}>;
 //*C:which floor has lib
-<facilities_place4>:(Which floor)<have_has><facilities_in_kec{facilities=$}><{@=place}>;
-//*C:library
-<fundamental_test>:<facilities_in_kec{facilities=$}><{@=place}>;
+<fc_whichfhas_lib>:(Which floor)<have_has><lib{facilities=library}><{@=place}>;
+//*C:Tell me where lib is
+<fc_tellme_lib>:[<request_eng>] (where|which floor) [<article>] <lib{facilities=library}><be><{@=place}>;
 //All context grammars
