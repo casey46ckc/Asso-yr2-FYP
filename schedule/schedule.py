@@ -133,7 +133,7 @@ def countSkyGroundLesson(timeTable) -> int:
                 start = sum(timeTable[k + 1: k + 4, i])
                 end = sum(timeTable[k + 4:, i])
                 # print(f"curr: {timeTable[k, i]}\t start: {start}\t end: {end}")
-                if timeTable[k, i] > 0 and start == 0 and end == 0:
+                if timeTable[k, i] > 0 and start == 0 and end > 0:
                     skyGroundCounter += 1
     return skyGroundCounter
 
