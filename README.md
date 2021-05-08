@@ -96,11 +96,15 @@ Steps to communicate with the Spacebot
 1. Type the tag name “fypspacebot” in the search bar and select it
 2. Click the start button
 
+Operation samples:
 Questions you may ask/ valid input messages
 1. hi/hello/bye     
 2. Tell me the contact of (KEC/Kowloon east campus/IEC/island east campus/fortress tower centre/ fortress tower center)?
 3. Where is the (library/lib/libra/common room/大com/細com/com rm/study room/discussion room/computer lab)?
 4. Which floor is (library/lib/libra/common room/大com/細com/com rm/study room/discussion room/computer lab)?
+
+For further details, you may refer to a tutorial video of this chatbot with the link below:
+https://www.youtube.com/watch?v=3612EMSlVAI
 
 Remarks:
 **Punctuations are considered as skipper in Olami and they are not considered in processing, therefore, users are not necessary to add a “?”. The chatbot recognize it’s a question from the “wh” keywords.**
